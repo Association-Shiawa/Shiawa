@@ -1,0 +1,4 @@
+services:
+#    shiawa_event.example:
+#        class: Shiawa\EventBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

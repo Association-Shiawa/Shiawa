@@ -1,3 +1,11 @@
+shiawa_event:
+    resource: "@ShiawaEventBundle/Resources/config/routing.yml"
+    prefix:   /
+
+shiawa_blog:
+    resource: "@ShiawaBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /
