@@ -1,1 +1,38 @@
-Hello World!
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Listes des articles</title>
+</head>
+<body>
+    Wow pleins d'articles
+
+    <ul>
+    {% for article in listArticles %}
+        <li>
+
+        </li>
+
+    {% else %}
+        <li>Pas (encore !) d'article</li>
+    {% endfor %}
+    </ul>
+
+    {% if nbPages == 1 %}
+    {% else %}
+    <ul class="pagination">
+        <li class="{%  if page == 1 %}disabled{% endif %}">
+            <a href="{{ path('shiawa_blog_anime_article_list', {'page': page-1}) }}">
+                <i class="material-icons">chevron_left</i></a></li>
+        {% for p in range(1, nbPages) %}
+            <li class="{% if p == page %}active{% else %}waves-effect{% endif %}">
+                <a href="{{ path('shiawa_blog_anime_article_list', {'page': p}) }}">{{ p }}</a>
+            </li>
+        {% endfor %}
+        <li class="waves-effect {%  if page >= nbPages %}disabled{% endif %}"><a href="{{ path
+            ('shiawa_blog_anime_article_list', {'page': page+1}) }}"><i
+                        class="material-icons">chevron_right</i></a></li>
+    </ul>
+    {% endif %}
+</body>
+</html>

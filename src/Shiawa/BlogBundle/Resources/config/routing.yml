@@ -1,7 +1,7 @@
+shiawa_blog_article:
+    resource: "@ShiawaBlogBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+
 shiawa_blog_anime_homepage:
     path:     /anime/blog/
-    defaults: { _controller: ShiawaBlogBundle:Default:index }
-
-shiawa_blog_anime__article_view:
-    path:     /anime/article/
-    defaults: { _controller: ShiawaBlogBundle:Article:view }
+    defaults: { _controller: ShiawaBlogBundle:Blog:index }
