@@ -1,0 +1,62 @@
+ .articles, .row{
+    width:100%;
+    position: relative;
+    height: 330px;
+    transition: 0.4s ease;
+    .art{
+        position: relative;
+        height: 100%;
+        display: block;
+        box-sizing: content-box;
+        width: 33.33333%;
+        float:left;
+        background: rgba(0,0,0,0.90);
+        overflow: hidden;
+        padding: 0px;
+        margin: 0px;
+        img{
+            height: 100%;
+            position: relative;
+            width: 100%;
+            bottom:0;
+            transition: 0.4s ease;
+        }
+
+        &:hover{
+
+            img{
+                transform-origin: top 0 left 0;
+                transform: scale(1.15) skewY(5deg);
+            }
+            .overlay-art{
+                background: rgba(0,0,0,0.75);
+            }
+        }
+
+        .overlay-art{
+            background: rgba(0,0,0,0.35);
+            width: 100%;
+            position: absolute;
+            top:0;
+            bottom:0;
+        }
+        .zoning-art{
+            position: absolute;
+            top:0;
+            bottom:0;
+            color: white;
+            padding: 30px;
+            text-shadow: 1px 1px 2px black;
+            .title-art{
+                font-family: 'Raleway', sans-serif;
+                color: white;
+                font-size: 40px;
+                text-align: justify;
+            }
+            a{
+                margin-top: 25px;
+            }
+        }
+
+    }
+ }

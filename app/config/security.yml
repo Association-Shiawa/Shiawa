@@ -1,20 +1,37 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        Shiawa\UserBundle\Entity\User: sha512
+    role_hierarchy:
+        ROLE_ADHERENT:    ROLE_USER
+        ROLE_AUTHOR:    ROLE_USER
+        ROLE_ADMIN:       [ROLE_AUTHOR, ROLE_USER, ROLE_ADHERENT]
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory: ~
+        main:
+            id: fos_user.user_provider.username
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-
         main:
-            anonymous: ~
+            pattern: ^/
+            anonymous: true
+            provider: main
+            form_login:
+              login_path: login
+              check_path: login_check
+            logout:
+              path:       logout
+              target:     /
+            remember_me:
+              secret:     %secret% # %secret% est un paramètre de parameter
             # activate different ways to authenticate
 
             # http_basic: ~
@@ -22,3 +39,7 @@ security:
 
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+    access_control:
+            #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+            - { path: ^/admin, roles: ROLE_EDITOR }

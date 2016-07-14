@@ -14,4 +14,10 @@ class CoreController extends Controller
 
         return $this->render('AppBundle:Core:index.html.twig', array());
     }
+
+    public function animeIndexAction(Request $request)
+    {
+
+        return $this->render('AppBundle:Core:index.html.twig', array());
+    }
 }

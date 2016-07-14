@@ -4,12 +4,15 @@ namespace Shiawa\BlogBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Shiawa\UserBundle as User;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Article
  *
  * @ORM\Table(name="shiawa_article")
  * @ORM\Entity(repositoryClass="Shiawa\BlogBundle\Repository\ArticleRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Article
 {
@@ -32,7 +35,8 @@ class Article
     /**
      * @var string
      *
-     * @ORM\Column(name="slug", type="string", length=255)
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(name="slug", type="string", length=255, unique=true)
      */
     private $slug;
 
@@ -65,6 +69,14 @@ class Article
     private $createdAt;
 
     /**
+     * @var \DateTime
+     *
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
+    /**
      * @ORM\Column(name="published", type="boolean")
      */
     private $published = true;
@@ -77,32 +89,47 @@ class Article
     private $viewed = 0;
 
     /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
-     */
-    private $updatedAt;
-
-    /**
      *
      * @ORM\ManyToOne(targetEntity="Shiawa\BlogBundle\Entity\Category")
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
 
-    //private $author;
+    /**
+     *
+     * @ORM\ManyToMany(targetEntity="Shiawa\BlogBundle\Entity\Tag", cascade={"persist"})
+     * @ORM\JoinTable(name="shiawa_article_tag")
+     */
+    private $tags;
+
+    /**
+     * @var User $author
+     *
+     * @ORM\ManyToOne(targetEntity="Shiawa\UserBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $author;
+
 
 
     public function __construct()
     {
         $this->createdAt = new \DateTime();
-        $this->categories   = new ArrayCollection();
+        $this->tags   = new ArrayCollection();
+    }
+
+    /**
+     * @ORM\PostLoad
+     */
+    public function increaseViewed()
+    {
+        $this->viewed++;
     }
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -131,78 +158,6 @@ class Article
     public function getTitle()
     {
         return $this->title;
-    }
-
-    /**
-     * Set content
-     *
-     * @param string $content
-     *
-     * @return Article
-     */
-    public function setContent($content)
-    {
-        $this->content = $content;
-
-        return $this;
-    }
-
-    /**
-     * Get content
-     *
-     * @return string
-     */
-    public function getContent()
-    {
-        return $this->content;
-    }
-
-    /**
-     * Set createdAt
-     *
-     * @param \DateTime $createdAt
-     *
-     * @return Article
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
-
-    /**
-     * Get createdAt
-     *
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
-    /**
-     * Set updatedAt
-     *
-     * @param \DateTime $updatedAt
-     *
-     * @return Article
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
-
-        return $this;
-    }
-
-    /**
-     * Get updatedAt
-     *
-     * @return \DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updatedAt;
     }
 
     /**
@@ -278,6 +233,102 @@ class Article
     }
 
     /**
+     * Set content
+     *
+     * @param string $content
+     *
+     * @return Article
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return Article
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Article
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Set published
+     *
+     * @param boolean $published
+     *
+     * @return Article
+     */
+    public function setPublished($published)
+    {
+        $this->published = $published;
+
+        return $this;
+    }
+
+    /**
+     * Get published
+     *
+     * @return boolean
+     */
+    public function getPublished()
+    {
+        return $this->published;
+    }
+
+    /**
      * Set viewed
      *
      * @param integer $viewed
@@ -318,7 +369,7 @@ class Article
     /**
      * Get category
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @return \Shiawa\BlogBundle\Entity\Category
      */
     public function getCategory()
     {
@@ -326,26 +377,60 @@ class Article
     }
 
     /**
-     * Set published
+     * Add tag
      *
-     * @param boolean $published
+     * @param \Shiawa\BlogBundle\Entity\Tag $tag
      *
      * @return Article
      */
-    public function setPublished($published)
+    public function addTag(\Shiawa\BlogBundle\Entity\Tag $tag)
     {
-        $this->published = $published;
+        $this->tags[] = $tag;
 
         return $this;
     }
 
     /**
-     * Get published
+     * Remove tag
      *
-     * @return boolean
+     * @param \Shiawa\BlogBundle\Entity\Tag $tag
      */
-    public function getPublished()
+    public function removeTag(\Shiawa\BlogBundle\Entity\Tag $tag)
     {
-        return $this->published;
+        $this->tags->removeElement($tag);
+    }
+
+    /**
+     * Get tags
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * Set author
+     *
+     * @param \Shiawa\UserBundle\Entity\User $author
+     *
+     * @return Article
+     */
+    public function setAuthor(\Shiawa\UserBundle\Entity\User $author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return \Shiawa\UserBundle\Entity\User
+     */
+    public function getAuthor()
+    {
+        return $this->author;
     }
 }

@@ -1,0 +1,223 @@
+<?php
+
+namespace Shiawa\BlogBundle\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM;
+use Shiawa\UserBundle as User;
+use Gedmo\Mapping\Annotation as Gedmo;
+
+/**
+ * AnimeReview
+ *
+ * @ORM\Table(name="shiawa_anime_review")
+ * @ORM\Entity(repositoryClass="Shiawa\BlogBundle\Repository\AnimeReviewRepository")
+ */
+class AnimeReview
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=255)
+     */
+    private $slug;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @var \DateTime
+     *
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
+    /**
+     * @var string
+     *
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(name="anime_title", type="string", length=255)
+     */
+    private $animeTitle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255)
+     */
+    private $image;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="introduction", type="text")
+     */
+    private $introduction;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="studio", type="string", length=255)
+     */
+    private $studio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="licenced_at", type="string", length=255)
+     */
+    private $licencedAt;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="synopsis", type="text")
+     */
+    private $synopsis;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="critic_scenario", type="text")
+     */
+    private $criticScenario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="critic_graphisms", type="text")
+     */
+    private $criticGraphisms;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="critic_soundtrack", type="text")
+     */
+    private $criticSoundtrack;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="critic_consistency", type="text")
+     */
+    private $criticConsistency;
+
+    /**
+     *
+     * @ORM\Column(name="note_scenario", type="integer")
+     */
+    private $noteScenario;
+
+    /**
+     *
+     * @ORM\Column(name="note_graphism", type="integer")
+     */
+    private $noteGraphism;
+
+    /**
+     *
+     * @ORM\Column(name="note_soundtrack", type="integer")
+     */
+    private $noteSoundtrack;
+
+    /**
+     *
+     * @ORM\Column(name="note_characters", type="integer")
+     */
+    private $noteCharacters;
+
+    /**
+     *
+     * @ORM\Column(name="note_consistency", type="integer")
+     */
+    private $noteConsistency;
+
+    /**
+     *
+     * @ORM\Column(name="editor", type="string", length=255)
+     */
+    private $editor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="conclusion", type="text")
+     */
+    private $conclusion;
+
+    /**
+     *
+     * @ORM\Column(name="first_episode", type="string", length=255)
+     */
+    private $firstEpisode;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Shiawa\BlogBundle\Entity\AnimeCharacter", cascade={"persist"})
+     * @ORM\JoinTable(name="shiawa_anime_review_character")
+     */
+    private $characters;
+
+    /**
+     *
+     * @ORM\ManyToMany(targetEntity="Shiawa\BlogBundle\Entity\Tag", cascade={"persist"})
+     * @ORM\JoinTable(name="shiawa_article_tag")
+     */
+    private $tags;
+
+    /**
+     * @var User $author
+     *
+     * @ORM\ManyToOne(targetEntity="Shiawa\UserBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $author;
+
+    /**
+     * @ORM\Column(name="published", type="boolean")
+     */
+    private $published = true;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="viewed", type="bigint")
+     */
+    private $viewed = 0;
+
+
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+        $this->tags   = new ArrayCollection();
+    }
+
+    /**
+     * @ORM\PostLoad
+     */
+    public function increaseViewed()
+    {
+        $this->viewed++;
+    }
+}

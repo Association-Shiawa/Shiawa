@@ -1,3 +1,7 @@
+shiawa_user:
+    resource: "@ShiawaUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 shiawa_event:
     resource: "@ShiawaEventBundle/Resources/config/routing.yml"
     prefix:   /
@@ -9,3 +13,14 @@ shiawa_blog:
 app:
     resource: "@AppBundle/Resources/config/routing.yml"
     prefix:   /
+
+login:
+    path: /login
+    defaults:
+        _controller: ShiawaUserBundle:Security:login
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout

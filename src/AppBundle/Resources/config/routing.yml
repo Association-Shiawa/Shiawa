@@ -1,3 +1,12 @@
-app_homepage:
+shiawa_homepage:
     path:     /
     defaults: { _controller: AppBundle:Core:index }
+
+shiawa_anime_homepage:
+    path: /
+    host:     "{category}.{domain}"
+    defaults:
+        _controller: AppBundle:Core:animeIndex
+        domain: %domain%
+    requirements:
+        domain: %domain%

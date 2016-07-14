@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+SHIAWA
+-->
+<html>
+<head>
+    <title>{% block title %}Shiawa.fr{% endblock %} - Site actualité otaku</title>
+    <meta charset="UTF-8">
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="fr-FR" />
+    <meta name="Language" content="fr">
+    <!-- Schema.dc -->
+    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="DC.coverage" content="France" />
+    <meta name="DC.description" content="La description de la page ici :D" /> <!-- A MODIFIER -->
+    <meta name="DC.format" content="text/html" />
+    <meta name="DC.identifier" content="http://shiawa.fr" />
+    <meta name="DC.publisher" content="Association Shiawa - Shiawa.fr" />
+    <meta name="DC.title" content="Le titre de la page" /> <!-- A MODIFIER -->
+    <meta name="DC.type" content="Text" />
+    <meta name="description" content="La description de la page ici :D version DC"> <!-- A MODIFIER -->
+    <meta name="keywords" content="Shiawa , Shiawa.fr, anime, animes, fansub, japanimation, japan, mangas, manga, streaming, scantrads, scan, stream, drama, OST, AMV, Association, Japon, Cosplay">
+    <!-- RSN : FB -->
+    <meta property="og:url" content="L'url Actuel" /> <!-- A MODIFIER -->
+    <meta property="og:image" content="Une image ici " /> <!-- A MODIFIER -->
+    <meta property="og:title" content="Le titre ici ..." /> <!-- A MODIFIER -->
+    <meta property="og:description" content="La description de maxi 300 caracs ici" /> <!-- A MODIFIER -->
+    <!-- Google Verification -->
+    <meta name="google-site-verification" content="kEB2-IqD2qVsqdPFPrEd-yYeIc1epBeaDePVshpBmBg" />
+
+    {% block stylesheets %}
+        <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/style-accueil.css') }}"  media="screen,projection"/>
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+
+
+{% endblock %}
+
+{% block footer %}
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Association SHIAWA</h5>
+                    <p class="grey-text text-lighten-4">
+                        L'association SHIAWA, propose du contenu de qualité en terme d'informations, issu de nos partenaires.
+                    </p>
+                    <p class="grey-text text-lighten-4">
+                        Nous agissons aussi dans l'évenementiel, nous participons à la réussite des salons principalement dans le sud de la France. Vidéos, Interviews, Jeux, nos pandas s'occupent de tout !
+                    </p>
+                    <hr />
+                    <div class='row'>
+                        <!-- RSN -->
+                        <div class='col s12'>
+                            <a class="grey-text text-lighten-3" href="#!">Facebook</a>
+                            <a class="grey-text text-lighten-3" href="#!">Youtube</a>
+                            <a class="grey-text text-lighten-3" href="#!">Twitter</a>
+                            <a class="grey-text text-lighten-3" href="#!">Instagram</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col l3 offset-l2 s12">
+                    <h5 class="white-text">Ils nous font confiance</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3 btn waves-effect pink" href="#!">Crunchyroll</a></li>
+                        <li><a class="grey-text text-lighten-3 btn waves-effect pink" href="#!">Anime Digital Network</a></li>
+                        <li><a class="grey-text text-lighten-3 btn waves-effect pink" href="#!">Gaïa Lib</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 Tous droits réservés. Site soumis à la licence Creative Common V4.0.
+                <div class='right'>
+                    <a class="grey-text text-lighten-4" href="#!">Site développé par l'association</a>
+                    &nbsp;&nbsp;&nbsp;<a class="grey-text text-lighten-4" href="#!">Contactez-nous</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block javascript %}
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="{{ asset('js/bin/materialize.min.js') }}"></script>
+    <script src="{{ asset('js/shiawa_functions.js') }}"></script>
+
+    <script type="text/javascript">
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 5, // Creates a dropdown of 15 years to control year
+            format: 'yyyy-mm-dd'
+        });
+    </script>
+{% endblock %}
+
+</body>
+</html>

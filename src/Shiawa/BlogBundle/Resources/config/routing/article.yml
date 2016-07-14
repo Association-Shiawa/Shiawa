@@ -1,24 +1,25 @@
-shiawa_blog_anime_article_list:
-    path:     /anime/blog/{page}
+shiawa_article_list:
+    path:     /{category}/{page}
     defaults:
         _controller: ShiawaBlogBundle:Article:index
         page: 1
     requirements:
       page: \d*
+      category: anime|manga|japon|cosplay
 
-shiawa_blog_anime_article_view:
-    path:     /anime/article/{id}
+shiawa_article_view:
+    path:     /{category}/{slug}
     defaults: { _controller: ShiawaBlogBundle:Article:view }
 
 shiawa_blog_article_create:
     path:     /create
-    defaults: { _controller: "ShiawaBlogBundle:Article:create" }
+    defaults: { _controller: "ShiawaBlogBundle:Article:add" }
     methods:  [GET, POST]
 
-shiawa_blog_article_edit:
-    path:     /{id}/edit
+shiawa_article_edit:
+    path:     /{slug}/edit
     defaults: { _controller: "ShiawaBlogBundle:Article:edit" }
 
-shiawa_blog_article_delete:
-    path:     /{id}/delete
+shiawa_article_delete:
+    path:     /{slug}/delete
     defaults: { _controller: "ShiawaBlogBundle:Article:delete" }

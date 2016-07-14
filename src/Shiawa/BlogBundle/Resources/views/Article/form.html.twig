@@ -1,0 +1,77 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+
+    <div class="input-field">
+        {{ form_errors(form.category) }}
+        {{ form_widget(form.category, {'attr': {'class': ''}}) }}
+        {{ form_label(form.category, "Choisissez la categorie de l'article", {'label_attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.title, "Titre de l'article", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.title) }}
+        {{ form_widget(form.title, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.image, "Url pour une image", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.image) }}
+        {{ form_widget(form.image, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.summary, "Résumé de l'annonce", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.summary) }}
+        {{ form_widget(form.summary, {'attr': {'class': 'materialize-textarea'}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.content, "Contenu de l'annonce", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.content) }}
+        {{ form_widget(form.content, {'attr': {'class': 'materialize-textarea'}}) }}
+    </div>
+
+    {% if form.tags.vars.choices is defined %}
+        {% if form.tags.vars.choices|length == 0 %}
+            <p></p>
+
+            <div style="display: none;">{{ form_row(form.tags) }}</div>
+        {% else %}
+        <div class="input-field">
+            {{ form_errors(form.tags) }}
+            {{ form_widget(form.tags, {'attr': {'class': ''}}) }}
+            {{ form_label(form.tags, "Choisissez les tags de l'article", {'label_attr': {'class': ''}}) }}
+        </div>
+        {% endif %}
+    {% endif %}
+
+    {{ form_row(form.tags) }}
+    <a href="#" id="add_tag" class="btn-flat blue lighten-2 white-text">Ajouter un tag</a>
+
+    {% if form.createdAt is defined %}
+        <div class="input-field">
+            {{ form_label(form.createdAt, "Date", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.title) }}
+            {{ form_widget(form.createdAt, {'attr': {'class': 'datepicker'}}) }}
+        </div>
+    {% endif %}
+
+        {{ form_label(form.published, "Publier", {'label_attr': {'class': ''}}) }}
+    <div class="switch">
+        <label>
+            Non
+            {{ form_widget(form.published, {'attr': {'class': ''}}) }}
+            <span class="lever"></span>
+            Oui
+        </label>
+        {{ form_errors(form.published) }}
+    </div>
+
+    <div class="center-align">
+        {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+    </div>
+
+    {{ form_rest(form) }}
+{{ form_end(form) }}

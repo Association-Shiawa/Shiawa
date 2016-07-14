@@ -2,7 +2,11 @@
 
 namespace Shiawa\BlogBundle\Controller;
 
+use Shiawa\BlogBundle\Entity\Article;
+use Shiawa\BlogBundle\Form\ArticleEditType;
+use Shiawa\BlogBundle\Form\ArticleType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -14,7 +18,7 @@ class ArticleController extends Controller
             return new NotFoundHttpException('Page "'.$page.'" inexistante');
         }
 
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $artRep = $em->getRepository('ShiawaBlogBundle:Article');
 
         $nbPerPage = 3;
@@ -34,23 +38,110 @@ class ArticleController extends Controller
         ));
     }
 
-    public function viewAction()
+    public function viewAction($id)
     {
-        return $this->render('ShiawaBlogBundle:Article:view.html.twig');
+        $article = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('ShiawaBlogBundle:Article')
+            ->find($id);
+
+
+        return $this->render('ShiawaBlogBundle:Article:view.html.twig', array(
+            'article' => $article
+        ));
     }
 
-    public function addAction()
+    /**
+     * @Security("has_role('ROLE_AUTHOR')")
+     */
+    public function addAction(Request $request)
     {
-        return $this->render('ShiawaBlogBundle:Article:view.html.twig');
+        $article = new Article();
+        $article->setCreatedAt(new \Datetime());
+
+        $form = $this->createForm(ArticleType::class, $article);
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($article);
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('notice', 'Article bien enregistré');
+
+            return $this->redirectToRoute('shiawa_article_view', array(
+                'slug' => $article->getSlug(),
+                'category' => $article->getCategory()
+            ));
+        }
+
+        return $this->render('ShiawaBlogBundle:Article:add.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 
-    public function editAction()
+    /**
+     * @Security("has_role('ROLE_AUTHOR')")
+     */
+    public function editAction($slug)
     {
-        return $this->render('ShiawaBlogBundle:Article:add.html.twig');
+        $article = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('ShiawaBlogBundle:Article')
+            ->find($slug);
+
+        if (null === $article) {
+            throw new NotFoundHttpException("L'annonce ".$slug." n'existe pas.");
+        }
+
+        $form = $this->createForm(ArticleEditType::class, $article);
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($article);
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('notice', 'Article bien modifié');
+
+            return $this->redirectToRoute('shiawa_article_view', array(
+                'slug' => $article->getSlug(),
+                'category' => $article->getCategory()
+            ));
+        }
+
+        return $this->render('ShiawaBlogBundle:Article:add.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 
-    public function deleteAction()
+    /**
+     * @Security("has_role('ROLE_ADMIN')")
+     */
+    public function deleteAction($slug)
     {
-        return $this->render('ShiawaBlogBundle:Article:edit.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $article = $em->getRepository('ShiawaBlogBundle:Article')->find($slug);
+
+        if (null === $article) {
+            throw new NotFoundHttpException("L'annonce ".$slug." n'existe pas.");
+        }
+
+        // On crée un formulaire vide, qui ne contiendra que le champ CSRF
+        // Cela permet de protéger la suppression d'annonce contre cette faille
+        $form = $this->get('form.factory')->create();
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+            $em->remove($article);
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('info', "L'article a bien été supprimé.");
+
+            return $this->redirectToRoute('shiawa_homepage');
+        }
+
+        return $this->render('OCPlatformBundle:Advert:delete.html.twig', array(
+            'article' => $article,
+            'form'   => $form->createView(),
+        ));
     }
 }

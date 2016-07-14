@@ -7,6 +7,7 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    domain: shiawa.fr
 
 framework:
     #esi:             ~
@@ -66,3 +67,16 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# Stof\DoctrineExtensionsBundle configuration
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true
+            blameable: true
+            timestampable: true
+
+fos_user:
+    db_driver:     orm                       # Le type de BDD à utiliser, nous utilisons l'ORM Doctrine depuis le début
+    firewall_name: main                      # Le nom du firewall derrière lequel on utilisera ces utilisateurs
+    user_class:    Shiawa\UserBundle\Entity\User # La classe de l'entité User que nous utilisons
