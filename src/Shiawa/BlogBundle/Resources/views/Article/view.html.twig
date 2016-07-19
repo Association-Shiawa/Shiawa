@@ -1,0 +1,118 @@
+{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+
+{% block stylesheets %}
+    <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/style-anim.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/horizontal_sly.css') }}"  media="screen,projection"/>
+{% endblock %}
+
+{% block title %}
+   {{ article.title }} - Shiawa.fr
+{% endblock %}
+
+{% block content %}
+    <!-- CONTENT -->
+<div class='col s12 m6 offset-m1'>
+    <div class='card z-depth-1'>
+
+        <div class='card-content'>
+
+            <h1 class='title-section toupper'>
+                {{ article.title|title }}
+            </h1>
+
+            <div class='divider'></div>
+
+            <div class='content-article'>
+
+                {{ article.content }}
+
+                <div class='card grey lighten-4'>
+                    <div class='card-content'>
+                        <p>Les mots clés de l'article</p>
+                        <div class='divider'></div>
+                        <br />
+                        {% for tag in article.tags %}
+                          <div class="chip" id="tag-{{ tag.id }}">{{ tag.name }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card-action">
+            <a href="#">Publié le {{ article.createdAt|date('d/m/Y') }}</a>
+
+            {% set title = "Title of Your iFrame Tab"|url_encode %}
+            {% set url = app.request.uri|url_encode %}
+
+            <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[url]={{ url }}', 'sharer',
+            'toolbar=0,status=0,width=700,height=455');" href="javascript: void(0)" class='btn blue lighten-1 right'>Partager sur Facebook</a>
+            <div class='clear'></div>
+           {% include "ShiawaBlogBundle:Article:author_card.html.twig" %}
+
+        </div>
+
+    </div>
+
+    {% if linkedContent is not empty %}
+    <div class='card z-depth-1' >
+        <div class='card-content' >
+            <h2 class='title-section'>Nous vous conseillons aussi...</h2>
+
+            <div class='row'>
+
+                    {% for content in linkedContent %}
+                    <div class='col m6 s12'>
+                        <div class='article-pw'>
+                            <h5 class='title-article'>
+                                <a href='
+                                {% if content.content is defined  %}
+                                    {{ path('shiawa_article_view', {'slug': content.slug, 'category': content
+                                    .category.slug}) }}
+                                {% else %}
+                                    {{ path('shiawa_anime_review_view', {'slug': content.slug}) }}
+                                {% endif %}
+                                '>
+                                    {{ content.title }}
+                                </a>
+                            </h5>
+                            <hr />
+                            <a href='
+                                {% if content.content is defined  %}
+                                    {{ path('shiawa_article_view', {'slug': content.slug, 'category': content
+                                .category.slug}) }}
+                                {% else %}
+                                    {{ path('shiawa_anime_review_view', {'slug': content.slug}) }}
+                                {% endif %}
+                            '>
+                                <img src='{{ content.image }}' style='width:100%;background-size: cover' />
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% include "AppBundle:Core:comments.html.twig" %}
+</div>
+
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+        {% if is_granted('ROLE_AUTHOR') %}
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large pink lighten-2" href="{{ path("shiawa_article_edit", {'slug': article
+                    .slug}) }}">
+                    <i class="large material-icons">mode_edit</i>
+                </a>
+            </div>
+        {% endif %}
+    {% endif %}
+
+{{ parent() }}
+{% endblock %}

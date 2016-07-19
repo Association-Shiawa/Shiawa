@@ -1,0 +1,20 @@
+<div class='card z-depth-0 pink lighten-5'>
+    <div class='card-content'>
+        <div class='row'>
+            <div class='col m2'>
+                {% if article.author.image is defined %}
+                    <img src="{{ article.author.image }}" alt="" class="circle responsive-img" >
+                {% endif %}
+            </div>
+            <div class='col m10'>
+                <h3 class='author-article'><a class='pink-text lighten-2' href='#'>{{ article
+                        .author.username }}</a></h3>
+                {% if article.author.description is not empty %}
+                    <p>{{ article.author.description }}</p>
+                {% else %}
+                    <p>Pas de description de l'auteur</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

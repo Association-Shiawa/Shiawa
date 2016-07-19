@@ -1,7 +1,35 @@
 shiawa_blog_article:
     resource: "@ShiawaBlogBundle/Resources/config/routing/article.yml"
-    prefix:   /article
+    prefix:   /
 
 shiawa_blog_anime_review:
     resource: "@ShiawaBlogBundle/Resources/config/routing/review.yml"
-    prefix:   /anime/review
+    prefix:   /
+
+shiawa_blog_anime:
+    resource: "@ShiawaBlogBundle/Resources/config/routing/anime.yml"
+    prefix:   /
+
+shiawa_blog_anime_character:
+    resource: "@ShiawaBlogBundle/Resources/config/routing/anime_character.yml"
+    prefix:   /
+
+shiawa_blog_category:
+    resource: "@ShiawaBlogBundle/Resources/config/routing/category.yml"
+    prefix:   /
+
+shiawa_blog_editor:
+    resource: "@ShiawaBlogBundle/Resources/config/routing/editor.yml"
+    prefix:   /
+
+shiawa_blog_episode:
+    resource: "@ShiawaBlogBundle/Resources/config/routing/episode.yml"
+    prefix:   /
+
+shiawa_blog_studio:
+    resource: "@ShiawaBlogBundle/Resources/config/routing/studio.yml"
+    prefix:   /
+
+shiawa_blog_tag:
+    resource: "@ShiawaBlogBundle/Resources/config/routing/tag.yml"
+    prefix:   /

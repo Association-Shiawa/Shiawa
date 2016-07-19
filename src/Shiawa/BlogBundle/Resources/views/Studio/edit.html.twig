@@ -1,0 +1,21 @@
+{% extends "ShiawaBlogBundle:Studio:layout.html.twig" %}
+
+{% block title %}Modification de studio - {{ parent() }}{% endblock %}
+
+{% block body %}
+<main class="container">
+    <h3>Editez le studio</h3>
+
+    {{ include("ShiawaBlogBundle:Studio:form.html.twig") }}
+</main>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+{% endblock %}

@@ -18,6 +18,6 @@ class ArticleEditType extends AbstractType
 
     public function getParent()
     {
-        return AdvertType::class;
+        return ArticleType::class;
     }
 }

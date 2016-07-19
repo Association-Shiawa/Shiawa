@@ -1,0 +1,26 @@
+{% extends "ShiawaBlogBundle:AnimeCharacter:layout.html.twig" %}
+
+{% block title %}
+    Supprimer un article - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <h2>Supprimer un article</h2>
+
+    <p>
+        Etes-vous certain de vouloir supprimer l'article "{{ article.title }}" ?
+    </p>
+
+    {# On met l'id de l'annonce dans la route de l'action du formulaire #}
+    <form action="{{ path('shiawa_article_delete', {'slug': article.slug}) }}" method="post">
+        <a href="{{ path('shiawa_article_view', {'slug': article.slug}) }}" class="btn-flat">
+            Retour à l'article
+        </a>
+        {# Ici j'ai écrit le bouton de soumission à la main #}
+        <input type="submit" value="Supprimer" class="btn-flat red" />
+        {# Ceci va générer le champ CSRF #}
+        {{ form_rest(form) }}
+    </form>
+
+{% endblock %}

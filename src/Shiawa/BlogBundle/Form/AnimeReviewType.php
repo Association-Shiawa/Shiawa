@@ -2,7 +2,11 @@
 
 namespace Shiawa\BlogBundle\Form;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -16,15 +20,17 @@ class AnimeReviewType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('slug')
-            ->add('createdAt', 'datetime')
-            ->add('updatedAt', 'datetime')
-            ->add('animeTitle')
+            ->add('createdAt', DateType::class, array(
+                'widget' => 'single_text',
+                'html5' => false
+            ))
+            ->add('anime', EntityType::class, array(
+                'class'        => 'ShiawaBlogBundle:Anime',
+                'choice_label' => 'title',
+                'multiple'     => false
+            ))
             ->add('image')
             ->add('introduction')
-            ->add('studio')
-            ->add('licencedAt')
-            ->add('synopsis')
             ->add('criticScenario')
             ->add('criticGraphisms')
             ->add('criticSoundtrack')
@@ -34,14 +40,15 @@ class AnimeReviewType extends AbstractType
             ->add('noteSoundtrack')
             ->add('noteCharacters')
             ->add('noteConsistency')
-            ->add('editor')
             ->add('conclusion')
-            ->add('firstEpisode')
             ->add('published')
-            ->add('viewed')
-            ->add('characters')
-            ->add('tags')
-            ->add('author')
+            ->add('tags', CollectionType::class, array(
+                'entry_type'   => TagType::class,
+                'allow_add'    => true,
+                'allow_delete' => true,
+                'required' => false
+            ))
+            ->add('save',      SubmitType::class);
         ;
     }
     

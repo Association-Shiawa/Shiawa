@@ -1,0 +1,82 @@
+{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+
+{% block stylesheets %}
+    <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/style-anim.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/horizontal_sly.css') }}"  media="screen,projection"/>
+{% endblock %}
+
+{% block title %}
+   {{ category.name }} - Shiawa.fr
+{% endblock %}
+
+{% block content %}
+    <!-- CONTENT -->
+    <div class='col s12 m6 offset-m1'>
+        <div class='card z-depth-1'>
+
+            <div class='card-content'>
+
+                <div class='center'>
+                    <h1 class='title-section toupper'>
+                        {{ category.name }}
+                    </h1>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class='card z-depth-1'>
+            <div class='card-content'>
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    /*
+                     var disqus_config = function () {
+                     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                     };
+                     */
+                    (function () {  // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '//shiawa.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', + new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();</script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    </div>
+
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+        {% if is_granted('ROLE_AUTHOR') %}
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large pink lighten-2" href="{{ path("shiawa_category_edit", {'slug': category
+                    .slug}) }}">
+                    <i class="large material-icons">mode_edit</i>
+                </a>
+            </div>
+        {% endif %}
+    {% endif %}
+
+{{ parent() }}
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function () {
+            $('.car2').carousel({
+                dist: - 100,
+                padding: 0,
+                fullWidth: true
+            });
+        });
+    </script>
+{% endblock %}

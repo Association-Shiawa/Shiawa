@@ -1,6 +1,7 @@
 <?php
 
 namespace Shiawa\BlogBundle\Repository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * AnimeCharacterRepository
@@ -10,4 +11,16 @@ namespace Shiawa\BlogBundle\Repository;
  */
 class AnimeCharacterRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getCharacters($page, $nbPerPage)
+    {
+        $query = $this->createQueryBuilder('a')
+            ->orderBy('a.name', 'ASC')
+            ->getQuery();
+
+        $query
+            ->setFirstResult(($page-1)* $nbPerPage)
+            ->setMaxResults($nbPerPage);
+
+        return new Paginator($query, true);
+    }
 }

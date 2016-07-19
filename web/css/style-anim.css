@@ -8151,14 +8151,15 @@ html, body {
 }
 
 .circle-note {
-  width: 150px;
-  height: 150px;
-  border-radius: 250px;
-  font-size: 75px;
-  background-color: #212121;
-  color: #f06292;
-  line-height: 145px;
-  text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 250px;
+    font-size: 75px;
+    background-color: #212121;
+    color: #f06292;
+    line-height: 145px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .author-article {

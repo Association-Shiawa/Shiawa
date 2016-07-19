@@ -1,0 +1,21 @@
+{% extends "ShiawaBlogBundle:Category:layout.html.twig" %}
+
+{% block title %}Modification d'une categorie - {{ parent() }}{% endblock %}
+
+{% block body %}
+<main class="container">
+    <h3>Editez la categorie</h3>
+
+    {{ include("ShiawaBlogBundle:Category:form.html.twig") }}
+</main>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+{% endblock %}

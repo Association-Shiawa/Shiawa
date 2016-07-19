@@ -2,6 +2,7 @@
 
 namespace Shiawa\BlogBundle\Repository;
 use Doctrine\ORM\Tools\Pagination\Paginator;
+use Shiawa\BlogBundle\Entity\AnimeReview;
 
 /**
  * ArticleRepository
@@ -11,10 +12,16 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
  */
 class ArticleRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function getArticles($page, $nbPerPage)
+    public function getArticles($page, $nbPerPage, $category = null)
     {
-        $query = $this->createQueryBuilder('a')
-            ->orderBy('a.createdAt', 'DESC')
+        $query = $this->createQueryBuilder('a');
+
+        if($category != null) {
+            $query->where('a.category = :category')
+                ->setParameter('category', $category);
+        }
+
+            $query->orderBy('a.createdAt', 'DESC')
             ->getQuery();
 
         $query
@@ -22,5 +29,44 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
             ->setMaxResults($nbPerPage);
 
         return new Paginator($query, true);
+    }
+
+    public function  getLastArticles($nb, $category = null) {
+        $query = $this->createQueryBuilder('a');
+
+        if($category != null) {
+            $query->where('a.category = :category')
+                ->setParameter('category', $category);
+        }
+
+        $query->orderBy('a.createdAt', 'DESC')
+        ->setMaxResults($nb);
+
+        return $query->getQuery()->getResult();
+    }
+
+    public function findByTags($tags, $limit, $id = null) {
+
+        $query = $this->createQueryBuilder('a')
+            ->leftJoin('a.tags', 't')
+        ;
+
+        for($i=0; $i < count($tags); $i++) {
+            $query->orWhere('t.id = :tag'.$i);
+        }
+
+        for($i=0; $i < count($tags); $i++) {
+            $query->setParameter('tag'.$i, $tags[$i]);
+        }
+
+        if($id != null){
+            $query->andWhere('a.id != :id')
+                ->setParameter('id', $id);
+        }
+
+        $query->distinct()
+            ->setMaxResults($limit);
+
+        return $query->getQuery()->getResult();
     }
 }

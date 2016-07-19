@@ -1,6 +1,7 @@
 <?php
 
 namespace Shiawa\BlogBundle\Repository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * ReviewRepository
@@ -10,4 +11,24 @@ namespace Shiawa\BlogBundle\Repository;
  */
 class AnimeReviewRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getReview($page, $nbPerPage)
+    {
+        $query = $this->createQueryBuilder('ar')
+            ->orderBy('ar.createdAt', 'DESC')
+            ->getQuery();
+
+        $query
+            ->setFirstResult(($page-1)* $nbPerPage)
+            ->setMaxResults($nbPerPage);
+
+        return new Paginator($query, true);
+    }
+
+    public function  getLast($nb) {
+        $query = $this->createQueryBuilder('ar')
+            ->orderBy('ar.createdAt', 'DESC')
+            ->setMaxResults($nb);
+
+        return $query->getQuery()->getResult();
+    }
 }

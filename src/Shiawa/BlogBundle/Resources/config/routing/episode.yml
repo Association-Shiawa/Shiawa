@@ -1,0 +1,24 @@
+shiawa_episode_list:
+    path:     /anime/episodes/{page}
+    defaults:
+        _controller: ShiawaBlogBundle:Episode:index
+        page: 1
+    requirements:
+      page: \d*
+
+shiawa_episode_view:
+    path:     /anime/episode/{slug}
+    defaults: { _controller: ShiawaBlogBundle:Episode:view }
+
+shiawa_episode_create:
+    path:     /admin/episode/create
+    defaults: { _controller: "ShiawaBlogBundle:Episode:add" }
+    methods:  [GET, POST]
+
+shiawa_episode_edit:
+    path:     /admin/episode/{slug}/edit
+    defaults: { _controller: "ShiawaBlogBundle:Episode:edit" }
+
+shiawa_episode_delete:
+    path:     /admin/episode/{slug}/delete
+    defaults: { _controller: "ShiawaBlogBundle:Episode:delete" }

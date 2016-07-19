@@ -2,7 +2,9 @@
 
 namespace Shiawa\BlogBundle\Form;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -17,6 +19,13 @@ class AnimeCharacterType extends AbstractType
         $builder
             ->add('name')
             ->add('avatar')
+            ->add('anime', EntityType::class, array(
+                'class'        => 'ShiawaBlogBundle:Anime',
+                'choice_label' => 'title',
+                'multiple'     => false,
+                'required'     => false
+            ))
+            ->add('submit', SubmitType::class)
         ;
     }
     

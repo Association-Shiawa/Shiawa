@@ -10,4 +10,26 @@ namespace Shiawa\UserBundle\Repository;
  */
 class UserRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findByRole($role)
+    {
+        $qb = $this->createQueryBuilder('u')
+            ->where('u.roles LIKE :roles')
+            ->setParameter('roles', '%"'.$role.'"%');
+
+        return $qb->getQuery()->getResult();
+    }
+
+    public function findByRoles(Array $roles)
+    {
+        $qb = $this->createQueryBuilder('u');
+
+            foreach($roles as $role)
+            {
+                $qb->orwhere('u.roles LIKE :roles')
+                ->setParameter('roles', '%"'.$role.'"%');
+            }
+
+
+        return $qb->getQuery()->getResult();
+    }
 }

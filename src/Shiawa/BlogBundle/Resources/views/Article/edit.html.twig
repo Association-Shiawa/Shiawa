@@ -3,9 +3,11 @@
 {% block title %}Modification d'article - {{ parent() }}{% endblock %}
 
 {% block body %}
+<main class="container">
     <h3>Editez l'article</h3>
 
     {{ include("ShiawaBlogBundle:Article:form.html.twig") }}
+</main>
 {% endblock %}
 
 {% block javascript %}
@@ -19,7 +21,7 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            var $container = $('div#article_tags');
+            var $container = $('div#article_edit_tags');
 
             var index = $container.find(':input').length;
 

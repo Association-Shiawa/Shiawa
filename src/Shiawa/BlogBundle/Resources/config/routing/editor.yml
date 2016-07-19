@@ -1,0 +1,24 @@
+shiawa_editor_list:
+    path:     /anime/editeur/{page}
+    defaults:
+        _controller: ShiawaBlogBundle:Editor:index
+        page: 1
+    requirements:
+      page: \d*
+
+shiawa_editor_view:
+    path:     /anime/editeur/{slug}
+    defaults: { _controller: ShiawaBlogBundle:Editor:view }
+
+shiawa_editor_create:
+    path:     /admin/editeur/create
+    defaults: { _controller: "ShiawaBlogBundle:Editor:add" }
+    methods:  [GET, POST]
+
+shiawa_editor_edit:
+    path:     /admin/editeur/{slug}/edit
+    defaults: { _controller: "ShiawaBlogBundle:Editor:edit" }
+
+shiawa_editor_delete:
+    path:     /admin/editeur/{slug}/delete
+    defaults: { _controller: "ShiawaBlogBundle:Editor:delete" }

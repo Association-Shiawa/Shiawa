@@ -50,6 +50,20 @@ class User extends BaseUser
      */
     private $description;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mal_account", type="string", length=255, nullable=true)
+     */
+    private $malAccount;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="notification", type="boolean")
+     */
+    private $notification = false;
+
 
     /**
      * Get id
@@ -133,4 +147,3 @@ class User extends BaseUser
         return $this->description;
     }
 }
-

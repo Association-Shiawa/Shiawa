@@ -1,0 +1,147 @@
+{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+
+{% block stylesheets %}
+    <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/style-anim.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/horizontal_sly.css') }}"  media="screen,projection"/>
+{% endblock %}
+
+{% block title %}
+   {{ event.name }} - Shiawa.fr
+{% endblock %}
+
+{% block content %}
+    <!-- CONTENT -->
+<div class='col s12 m6 offset-m1'>
+    <div class='card z-depth-1'>
+        <div class="card-image" style="max-height: 500px; overflow: hidden;">
+            <img src="{{ event.image }}">
+        </div>
+        <div class='card-content'>
+
+            <h1 class='title-section toupper'>
+                {{ event.name|title }}
+            </h1>
+
+
+            <div class='divider'></div>
+
+            <div class='content-article'>
+               <p class="card-panel">
+                   {% set now = "now"|date('Ymd') %}
+
+                   {% if  now > event.endAt|date('Ymd') %}
+                       A eu lieu
+                       {% if event.beginAt == event.endAt %}
+                           le {{ event.beginAt|date('d/m/Y') }}
+                       {% else %}
+                           du {{ event.beginAt|date('d/m/Y') }} au {{ event.endAt|date('d/m/Y') }}
+                       {% endif %}
+                   {% elseif now  <= event.endAt|date('Ymd') and now >= event.beginAt|date('Ymd') %}
+                       L'évenement est actuellement en cours ! Vous y êtes ? Venez nous voir ! Sinon, n'hésitez pas à
+                       suivre Shiawa lors de l'événément sur les réseaux sociaux ! :D
+                   {% else %}
+                       {% if event.beginAt == event.endAt %}
+                           le {{ event.beginAt|date('d/m/Y') }}
+                       {% else %}
+                           du {{ event.beginAt|date('d/m/Y') }} au {{ event.endAt|date('d/m/Y') }}
+                       {% endif %}
+                   {% endif %}
+               </p>
+
+                <ul class="collection">
+                    <li class="collection-item"><b>Adresse :</b> {{ event.adress}}</li>
+                    <li class="collection-item"><b>Nom du lieu :</b> {{ event.place}}</li>
+                    <li class="collection-item"><b>Site web :</b> <a href="{{ event.website}}">Site web de "{{ event
+                            .name }}"</a></li>
+                </ul>
+
+                <p>
+                    {% if event.description is empty %}
+                        Plus d'informations à venir.
+                    {% else %}
+                        {{ event.description }}
+                    {% endif %}
+                </p>
+
+
+            </div>
+
+        </div>
+
+        <div class="card-action">
+            {% if  now > event.endAt|date('Ymd') %}
+                L'événement a eu lieu
+                {% if event.beginAt == event.endAt %}
+                    le <a href="#"> {{ event.beginAt|date('d/m/Y') }}</a>
+                {% else %}
+                    du <a href="#"> {{ event.beginAt|date('d/m/Y') }}</a> au <a href="#">{{ event.endAt|date('d/m/Y') }}</a>
+                {% endif %}
+            {% elseif now  <= event.endAt|date('Ymd') and now >= event.beginAt|date('Ymd') %}
+                <a href="">Evénement en cours</a>
+            {% else %}
+                {% if event.beginAt == event.endAt %}
+                    L'événement a eu lieu le <a href="#"> {{ event.beginAt|date('d/m/Y') }}</a>
+                {% else %}
+                    L'événement a eu lieu du <a href="#"> {{ event.beginAt|date('d/m/Y') }}</a> au <a href="#">{{
+                    event.endAt|date('d/m/Y') }}</a>
+                {% endif %}
+            {% endif %}
+
+            {% set title = "Title of Your iFrame Tab"|url_encode %}
+            {% set url = app.request.uri|url_encode %}
+
+            <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[url]={{ url }}', 'sharer',
+            'toolbar=0,status=0,width=700,height=455');" href="javascript: void(0)" class='btn blue lighten-1 right'>Partager sur Facebook</a>
+            <div class='clear'></div>
+
+        </div>
+
+    </div>
+
+    {% if event.articles is not empty %}
+    <div class='card z-depth-1' >
+        <div class='card-content' >
+            <h2 class='title-section'>Les articles liés à cet événement</h2>
+
+            <div class='row'>
+
+                {% for article in event.articles %}
+                <div class='col m6 s12'>
+                    <div class='article-pw'>
+                        <h5 class='title-article'><a href='#'>{{ article.title }}</a></h5>
+                        <hr />
+                        <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category' : article.category
+                            .name})
+                        }}'><img src='{{
+                            article
+                            .image }}'
+                                                                                style='width:100%;
+                        background-size: cover'
+                                    /></a>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% include "AppBundle:Core:comments.html.twig" %}
+</div>
+
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+        {% if is_granted('ROLE_AUTHOR') %}
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large pink lighten-2" href="{{ path("shiawa_event_edit", {'slug': event
+                    .slug}) }}">
+                    <i class="large material-icons">mode_edit</i>
+                </a>
+            </div>
+        {% endif %}
+    {% endif %}
+
+{{ parent() }}
+{% endblock %}

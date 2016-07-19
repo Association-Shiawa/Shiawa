@@ -1,0 +1,24 @@
+shiawa_anime_list:
+    path:     /anime/all/{page}
+    defaults:
+        _controller: ShiawaBlogBundle:Anime:index
+        page: 1
+    requirements:
+      page: \d*
+
+shiawa_anime_view:
+    path:     /anime/fiche/{slug}
+    defaults: { _controller: ShiawaBlogBundle:Anime:view }
+
+shiawa_anime_create:
+    path:     /admin/anime/create
+    defaults: { _controller: "ShiawaBlogBundle:Anime:add" }
+    methods:  [GET, POST]
+
+shiawa_anime_edit:
+    path:     /admin/anime/{slug}/edit
+    defaults: { _controller: "ShiawaBlogBundle:Anime:edit" }
+
+shiawa_anime_delete:
+    path:     /admin/anime/{slug}/delete
+    defaults: { _controller: "ShiawaBlogBundle:Anime:delete" }

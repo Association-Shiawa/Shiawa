@@ -1,0 +1,34 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+    <div class="input-field">
+        {{ form_label(form.title, "Titre de l'épisode", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.title) }}
+        {{ form_widget(form.title, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.numEpisode, "Numéro de l'épisode", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.numEpisode) }}
+        {{ form_widget(form.numEpisode, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.embed, "Lien de player intégré", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.embed) }}
+        {{ form_widget(form.embed, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_errors(form.anime) }}
+        {{ form_widget(form.anime, {'attr': {'class': ''}}) }}
+        {{ form_label(form.anime, "Choisir l'anime auquel il appartient", {'label_attr': {'class': ''}}) }}
+    </div>
+
+    <div class="center-align">
+        {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+    </div>
+
+    {{ form_rest(form) }}
+{{ form_end(form) }}

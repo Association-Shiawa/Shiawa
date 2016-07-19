@@ -1,0 +1,22 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+    <div class="input-field">
+        {{ form_label(form.name, "Nom de l'éditeur Français", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.name) }}
+        {{ form_widget(form.name, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.website, "Url du site de l'éditeur Français", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.website) }}
+        {{ form_widget(form.website, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="center-align">
+        {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+    </div>
+
+    {{ form_rest(form) }}
+{{ form_end(form) }}

@@ -1,0 +1,24 @@
+shiawa_studio_list:
+    path:     /anime/studios/{page}
+    defaults:
+        _controller: ShiawaBlogBundle:Studio:index
+        page: 1
+    requirements:
+      page: \d*
+
+shiawa_studio_view:
+    path:     /anime/studio/{slug}
+    defaults: { _controller: ShiawaBlogBundle:Studio:view }
+
+shiawa_studio_create:
+    path:     /admin/studio/create
+    defaults: { _controller: "ShiawaBlogBundle:Studio:add" }
+    methods:  [GET, POST]
+
+shiawa_studio_edit:
+    path:     /admin/studio/{slug}/edit
+    defaults: { _controller: "ShiawaBlogBundle:Studio:edit" }
+
+shiawa_studio_delete:
+    path:     /admin/studio/{slug}/delete
+    defaults: { _controller: "ShiawaBlogBundle:Studio:delete" }

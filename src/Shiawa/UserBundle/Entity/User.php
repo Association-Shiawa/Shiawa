@@ -25,13 +25,6 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=255, unique=true)
-     */
-    //private $email;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="preference", type="string", length=255, nullable=true)
      */
     private $preference;
@@ -49,6 +42,20 @@ class User extends BaseUser
      * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mal_account", type="string", length=255, nullable=true)
+     */
+    private $malAccount;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="notification", type="boolean")
+     */
+    private $notification = false;
 
 
     /**
@@ -131,5 +138,53 @@ class User extends BaseUser
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set malAccount
+     *
+     * @param string $malAccount
+     *
+     * @return User
+     */
+    public function setMalAccount($malAccount)
+    {
+        $this->malAccount = $malAccount;
+
+        return $this;
+    }
+
+    /**
+     * Get malAccount
+     *
+     * @return string
+     */
+    public function getMalAccount()
+    {
+        return $this->malAccount;
+    }
+
+    /**
+     * Set notification
+     *
+     * @param boolean $notification
+     *
+     * @return User
+     */
+    public function setNotification($notification)
+    {
+        $this->notification = $notification;
+
+        return $this;
+    }
+
+    /**
+     * Get notification
+     *
+     * @return boolean
+     */
+    public function getNotification()
+    {
+        return $this->notification;
     }
 }

@@ -6,7 +6,8 @@
     {% block body %}
         <!-- DEBUT BLOC -->
         <div id="header-full-width">
-            <video autoplay loop poster="" id="bgvid">
+            <video autoplay loop poster="{{ asset('imgs/poster.jpg') }}" id="bgvid">
+                <source src="{{ asset('bann.webm') }}" type="video/webm">
                 <source src="{{ asset('bann.mp4') }}" type="video/mp4">
             </video>
             <div class='overlay'></div>
@@ -53,11 +54,13 @@
                 <span>Naviguez sur nos nouvelles plateformes !</span>
                 <div class='zoning-button'>
                     <!-- Pour les 3 bouttons de nos sites -->
-                    <a class="waves-effect waves-light btn-large pink lighten-1">COSPLAY</a>
+                    <a data-position="left" data-delay="50" data-tooltip="En construction !"
+                       class="waves-effect waves-light btn-large pink lighten-1 disabled tooltipped">COSPLAY</a>
 
-                    <a class="waves-effect waves-light btn-large pink lighten-1">ANIMES & MANGA</a>
+                    <a href="{{ path('shiawa_anime_homepage') }}" class="waves-effect waves-light btn-large pink lighten-1">ANIMES & MANGA</a>
 
-                    <a class="waves-effect waves-light btn-large pink lighten-1">JAPON</a>
+                    <a data-position="right" data-delay="50" data-tooltip="En construction !" class="waves-effect
+                    waves-light btn-large pink lighten-1 disabled tooltipped">JAPON</a>
                 </div>
 
             </div>
@@ -72,53 +75,22 @@
         <section>
 
             <div class='article'>
-                <div class='col l4 m6 s12'>
+                {% for article in lastArticles %}
+                <article class='col l4 m6 s12'>
                     <div class="art">
-                        <img src='https://littleanimeblog.files.wordpress.com/2016/03/hai-furi.jpg' />
+                        <img src='{{ article.image }}' />
                         <div class='overlay-art'></div>
                         <div class='zoning-art'>
-                            <span class='title-art truncate'>mon titre</span>
-                                    <span class='content'>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des
-                                        morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, </span>
-                            <a href='#' class='btn pink lighten-1 btn-large btn-large right'>En savoir plus</a>
+                            <h3 class='title-art truncate'>{{ article.title }}</h3>
+                                    <span class='content'>{{ article.summary }}</span>
+                            <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
+                                .category.name|lower}) }}'
+                               class='btn
+                            pink lighten-1 btn-large btn-large right'>En savoir plus</a>
                         </div>
                     </div>
-                </div>
-
-                <div class='col l4 m6 s12'>
-                    <div class="art">
-                        <img src='https://littleanimeblog.files.wordpress.com/2016/03/hai-furi.jpg' />
-                        <div class='overlay-art'></div>
-                        <div class='zoning-art'>
-                            <span class='title-art truncate'>mon titre</span>
-                                    <span class='content'>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des
-                                        morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, </span>
-                            <a href='#' class='btn pink lighten-1 btn-large btn-large right'>En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='col l4 m6 s12'>
-                    <div class="art">
-                        <img src='https://littleanimeblog.files.wordpress.com/2016/03/hai-furi.jpg' />
-                        <div class='overlay-art'></div>
-                        <div class='zoning-art'>
-                            <span class='title-art truncate'>mon titre</span>
-                                    <span class='content'>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des
-                                        morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, </span>
-                            <a href='#' class='btn pink lighten-1 btn-large btn-large right'>En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-                <div class='col l4 m6 s12 hide-on-large-only hide-on-small-only'>
-                    <div class="art">
-                        <img src='https://littleanimeblog.files.wordpress.com/2016/03/hai-furi.jpg' />
-                        <div class='overlay-art'></div>
-                        <div class='art4 center-block'>
-                            <a href='#' class='btn pink lighten-1 btn-large btn-large right'>En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
+                </article>
+                {% endfor %}
             </div>
 
         </section>
@@ -136,10 +108,11 @@
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">Anime & Manga</span>
-                            <p><a href="#">Rejoignez notre communauté et notre site entièrement dédié aux actualités et critiques d'anime et mangas.</a></p>
+                            <p><a href="{{ path('shiawa_anime_homepage')}}">Rejoignez notre communauté et notre site entièrement dédié aux actualités et critiques d'anime et mangas.</a></p>
                         </div>
                         <div class="card-action right-align">
-                            <a href="#">Visiter l'espace Anime & Manga</a>
+                            <a href="{{ path('shiawa_anime_homepage')}}" class="btn-flat pink lighten-1
+                            white-text">Visiter l'espace Anime & Manga</a>
                         </div>
                     </div>
                 </div>
@@ -153,7 +126,7 @@
                             <p><a href="#">Passionné de coutûre ou juste curieux, entre sur notre site dédié au cosplay avec des photos, des vidéos et pleins d'astuces !</a></p>
                         </div>
                         <div class="card-action right-align">
-                            <a href="#">Visiter l'espace Cosplay</a>
+                            <a href="#" class="btn disabled">Visiter l'espace Cosplay</a>
                         </div>
                     </div>
                 </div>
@@ -167,7 +140,7 @@
                             <p><a href="#">Un pays si coloré qu'on ne sait plus où regarder, entrez sur notre espace Japon pour connaître les grandes lignes de cette riche culture et du patrimoine local.</a></p>
                         </div>
                         <div class="card-action right-align">
-                            <a href="#">Visiter l'espace Japon</a>
+                            <a href="#" class="btn disabled">Visiter l'espace Japon</a>
                         </div>
                     </div>
                 </div>
@@ -183,82 +156,42 @@
             <div class='clearfix'></div>
 
             <div class="carousel">
+                {% if adherents is empty %}
+                    <div class='carousel-item'>
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="//placehold.it/500x500" />
+                                <span class="card-title">Nos adhérents ici</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Sa description :)</p>
+                            </div>
+                            <div class="card-action">
+                                <!--<a href=#">Son profil</a>-->
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    {% for user in adherents %}
+                    <div class='carousel-item'>
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="{% if user.avatar is null %}https://www.mautic.org/media/images/default_avatar.png{% else %}{{
+                                user
+                                .avatar }}{% endif %}" />
+                                <span class="card-title">{{ user.username }}</span>
+                            </div>
+                            <div class="card-content">
+                                <p>{% if user.description is null %}{% else %}{{ user.description }}{% endif %}</p>
+                            </div>
+                            <div class="card-action">
+                                <!--<a href=#">Son profil</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
 
-                <div class='carousel-item'>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="//placehold.it/500x500" />
-                            <span class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class='carousel-item'>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="//placehold.it/500x500" />
-                            <span class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class='carousel-item'>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="//placehold.it/500x500" />
-                            <span class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class='carousel-item'>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="//placehold.it/500x500" />
-                            <span class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class='carousel-item'>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="//placehold.it/500x500" />
-                            <span class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class='clearfix'></div>
@@ -320,40 +253,44 @@
                 </div>
             </div>
             <div class="row">
+                {% for event in events %}
                 <div class='col l6 m6 s12'>
                     <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="http://lorempixel.com/1920/1080">
+                        <div class="card-image waves-effect waves-block waves-light" style="max-height: 500px; overflow: hidden;">
+                            <img class="activator" src="{{ event.image }}">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Evenement 1<i class="material-icons right">more_vert</i></span>
+                            <span class="card-title activator grey-text text-darken-4">{{ event.name }}<i
+                                        class="material-icons
+                            right">more_vert</i></span>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            <span class="card-title grey-text text-darken-4">{{ event.name }}<i class="material-icons right">close</i></span>
+                            <p class="grey-text text-darken-4">
+                                {% set now = "now"|date('Ymd') %}
+
+                                {% if now  <= event.endAt|date('Ymd') and now >= event.beginAt|date('Ymd') %}
+                                    L'évenement est actuellement en cours ! Vous y êtes ? Venez nous voir ! Sinon, n'hésitez pas à
+                                    suivre Shiawa lors de l'événément sur les réseaux sociaux ! :D
+                                {% else %}
+                                    {% if event.beginAt == event.endAt %}
+                                        A lieu le {{ event.beginAt|date('d/m/Y') }}
+                                    {% else %}
+                                        A lieu du {{ event.beginAt|date('d/m/Y') }} au {{ event.endAt|date('d/m/Y') }}
+                                    {% endif %}
+                                {% endif %}
+                            </p>
+                            <a href="{{ path('shiawa_event_view', {'slug': event.slug}) }}">Voir
+                                l'évènement</a>
                         </div>
                         <div class='card-action'>
-                            <p><a href="#">Lien de l'évènement 1</a></p>
+                            <p><a href="{{ path('shiawa_event_view', {'slug': event.slug}) }}">Lien de
+                                    l'évènement</a></p>
                         </div>
                     </div>
                 </div>
-                <div class='col l6 m6 s12'>
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="http://lorempixel.com/1920/1080">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Evenement 2<i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                        </div>
-                        <div class='card-action'>
-                            <p><a href="#">Lien de l'évènement 2</a></p>
-                        </div>
-                    </div>
-                </div>
+            {% endfor %}
+
             </div>
         </section>
     {% endblock %}

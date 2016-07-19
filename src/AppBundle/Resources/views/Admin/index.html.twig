@@ -1,0 +1,121 @@
+{% extends "AppBundle:Core:layout.html.twig" %}
+
+
+{% block menu %}
+    <!-- Menu -->
+    <div class='navbar-fixed'>
+        <nav>
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">Shiawa Cosplay</a></li>
+                <li><a href="#!">Shiawa Japon</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Accueil Shiawa</a></li>
+            </ul>
+            <ul id="dropdown2" class="dropdown-content">
+                <li><a href="#!">Shiawa Cosplay</a></li>
+                <li><a href="#!">Shiawa Japon</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Accueil Shiawa</a></li>
+            </ul>
+            <div class="nav-wrapper grey darken-3">
+                <a href="{{ path('shiawa_admin_homepage') }}" class="brand-logo">Administration</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="http://shiawa.fr/gestion/htdocs/">Dolibarr</a></li>
+                    <li class='pink darken-1'><a class="dropdown-button" href="#" data-activates="dropdown1">Administration<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <a href="#" data-activates="slide-out" class="button-collapse2"><i class="material-icons">arrow_left</i></a>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="{{ path('shiawa_anime_homepage') }}">Anime & Manga</a></li>
+                    <li><a href="mobile.html">Cosplay</a></li>
+                    <li><a href="mobile.html">Japon</a></li>
+                    <li><a class="dropdown-button" href="#" data-activates="dropdown2">Administration<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+
+                <div id="slide-out" class="side-nav">
+                    <div class="center-align">
+                        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                            <img src='
+                            {% if app.user.avatar is null %}
+                           https://www.mautic.org/media/images/default_avatar.png
+                            {% else %}
+                            {{ app.user.avatar }}
+                            {% endif %}
+                        ' class='responsive-img'>
+                        {% endif %}
+                    </div>
+                    <ul>
+                        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                            {% if is_granted('ROLE_AUTHOR') %}
+                                <li><a href="{{ path('shiawa_admin_homepage') }}">Dashboard Admin</a></li>
+                                <li><a href='{{ path('shiawa_article_create') }}'>Ajouter un Article</a></li>
+                                <li class="no-padding blue-grey">
+                                    <ul class="collapsible collapsible-accordion">
+                                        <li>
+                                            <a class="collapsible-header">Gestion Japanimation<i
+                                                        class="material-icons right">dropdown</i></a>
+                                            <div class="collapsible-body">
+                                                <ul>
+                                                    <li><a href='{{ path('shiawa_anime_create') }}'>Ajouter un Anime</a></li>
+                                                    <li><a href='{{ path('shiawa_episode_create') }}'>Ajouter un Episode</a></li>
+                                                    <li><a href=''>Ajouter un Personnage</a></li>
+                                                    <li><a href='{{ path('shiawa_studio_create') }}'>Ajouter un Studio</a></li>
+                                                    <li><a href='{{ path('shiawa_editor_create') }}'>Ajouter un Editeur</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href='{{ path('shiawa_anime_review_create') }}'>Ajouter une Critique</a></li>
+                                <li><a href='{{ path('shiawa_event_create') }}'>Ajouter un Evenement</a></li>
+                                <li><a href=''>Ajouter un Utilisateur [SOON]</a></li>
+                            {% endif %}
+                            <li class='red'><a href='{{ path('fos_user_security_logout') }}'>Deconnexion</a></li>
+                        {% else %}
+                            <li class='green'><a href='{{ path('fos_user_security_login') }}'>Connexion</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <!-- CONTENT -->
+    <div class='container'>
+        <div class='row'>
+            <div class="col s12 m8 offset-m2">
+                    {# On affiche tous les messages flash dont le nom est « info » #}
+                    {% for message in app.session.flashbag.get('notice') %}
+                        <p class="card-panel green">Information : {{ message }}</p>
+                    {% endfor %}
+            </div>
+            <div class='col s12 m8 offset-m2'>
+
+                <div class='card z-depth-1'>
+                    <div class='card-content'>
+                        <div class="collection">
+                            <a href="#!" class="collection-item">Ajouter un utilisateur [SOON]</a>
+                            <a href="{{ path('shiawa_anime_create') }}" class="collection-item">Ajouter un anime</a>
+                            <a href="{{ path('shiawa_article_create') }}" class="collection-item">Ajouter un article</a>
+                            <a href="{{ path('shiawa_event_create') }}" class="collection-item">Ajouter un Evenement</a>
+                            <a href="{{ path('shiawa_anime_review_create') }}" class="collection-item">Ajouter une
+                                review</a>
+                            <a href="#!" class="collection-item">Ajouter un personnage [SOON]</a>
+                            <a href="{{ path('shiawa_studio_create') }}" class="collection-item">Ajouter un studio</a>
+                            <a href="{{ path('shiawa_editor_create') }}" class="collection-item">Ajouter un Editeur</a>
+                            <a href="{{ path('shiawa_episode_create') }}" class="collection-item">Ajouter un Episode</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+{% endblock %}

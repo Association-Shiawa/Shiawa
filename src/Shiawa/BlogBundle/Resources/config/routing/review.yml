@@ -1,24 +1,24 @@
-shiawa_blog_anime_review_list:
-    path:    /{page}
+shiawa_anime_review_list:
+    path:    /anime/review/{page}
     defaults:
-        _controller: ShiawaBlogBundle:Review:index
+        _controller: ShiawaBlogBundle:AnimeReview:index
         page: 1
     requirements:
       page: \d*
 
-shiawa_blog_anime_review_view:
-    path:     /{id}
-    defaults: { _controller: ShiawaBlogBundle:Review:view }
+shiawa_anime_review_view:
+    path:     /anime/review/{slug}
+    defaults: { _controller: ShiawaBlogBundle:AnimeReview:view }
 
-shiawa_blog_anime_review_create:
-    path:     /create
-    defaults: { _controller: "ShiawaBlogBundle:Review:add" }
+shiawa_anime_review_create:
+    path:     /admin/review/create
+    defaults: { _controller: "ShiawaBlogBundle:AnimeReview:add" }
     methods:  [GET, POST]
 
-shiawa_blog_anime_review_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "ShiawaBlogBundle:Review:edit" }
+shiawa_anime_review_edit:
+    path:     /admin/review/{slug}/edit
+    defaults: { _controller: "ShiawaBlogBundle:AnimeReview:edit" }
 
-shiawa_blog_anime_review_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "ShiawaBlogBundle:Review:delete" }
+shiawa_anime_review_delete:
+    path:     /admin/review/{slug}/delete
+    defaults: { _controller: "ShiawaBlogBundle:AnimeReview:delete" }

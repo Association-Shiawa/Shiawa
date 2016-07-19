@@ -22,6 +22,12 @@ class ArticleType extends AbstractType
         $builder
             ->add('title')
             ->add('image')
+            ->add('event', EntityType::class, array(
+                'class'        => 'ShiawaEventBundle:Event',
+                'choice_label' => 'name',
+                'multiple'     => false,
+                'required'     => false
+            ))
             ->add('summary')
             ->add('content')
             ->add('createdAt', DateType::class, array(

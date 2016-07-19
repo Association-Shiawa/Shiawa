@@ -1,0 +1,133 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+
+<div class="input-field">
+    {{ form_label(form.title, "Titre de l'article", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.title) }}
+    {{ form_widget(form.title, {'attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.image, "Url pour une image", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.image) }}
+    {{ form_widget(form.image, {'attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_errors(form.anime) }}
+    {{ form_widget(form.anime, {'attr': {'class': ''}}) }}
+    {{ form_label(form.anime, "Choisir l'anime", {'label_attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.introduction, "Introduction de la review", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.introduction) }}
+    {{ form_widget(form.introduction, {'attr': {'class': 'materialize-textarea'}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.criticScenario, "Critique du scénario", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.criticScenario) }}
+    {{ form_widget(form.criticScenario, {'attr': {'class': 'materialize-textarea'}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.noteScenario, "Note pour le scénario", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.noteScenario) }}
+    {{ form_widget(form.noteScenario, {'attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.criticGraphisms, "Critique du Graphisme", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.criticGraphisms) }}
+    {{ form_widget(form.criticGraphisms, {'attr': {'class': 'materialize-textarea'}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.noteGraphism, "Note pour le Graphisme", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.noteGraphism) }}
+    {{ form_widget(form.noteGraphism, {'attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.criticSoundtrack, "Critique de l'ambiance sonore", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.criticSoundtrack) }}
+    {{ form_widget(form.criticSoundtrack, {'attr': {'class': 'materialize-textarea'}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.noteSoundtrack, "Note pour l'ambiance sonore", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.noteSoundtrack) }}
+    {{ form_widget(form.noteSoundtrack, {'attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.criticConsistency, "Critique de la cohérence scénaristique & personnages", {'label_attr':
+        {'class': ''}}) }}
+    {{ form_errors(form.criticConsistency) }}
+    {{ form_widget(form.criticConsistency, {'attr': {'class': 'materialize-textarea'}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.noteConsistency, "Note pour la cohérence scénaristique", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.noteConsistency) }}
+    {{ form_widget(form.noteConsistency, {'attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.noteCharacters, "Note pour les personnages", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.noteCharacters) }}
+    {{ form_widget(form.noteCharacters, {'attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.conclusion, "Conclusion de la Critique", {'label_attr':
+        {'class': ''}}) }}
+    {{ form_errors(form.conclusion) }}
+    {{ form_widget(form.conclusion, {'attr': {'class': 'materialize-textarea'}}) }}
+</div>
+
+{% if form.tags.vars.choices is defined %}
+    {% if form.tags.vars.choices|length == 0 %}
+        <p></p>
+
+        <div style="display: none;">{{ form_row(form.tags) }}</div>
+    {% else %}
+        <div class="input-field">
+            {{ form_errors(form.tags) }}
+            {{ form_widget(form.tags, {'attr': {'class': ''}}) }}
+            {{ form_label(form.tags, "Choisissez les tags de l'article", {'label_attr': {'class': ''}}) }}
+        </div>
+    {% endif %}
+{% endif %}
+
+    {{ form_row(form.tags) }}
+<a href="#" id="add_tag" class="btn-flat blue lighten-2 white-text">Ajouter un tag</a>
+
+{% if form.createdAt is defined %}
+    <div class="input-field">
+        {{ form_label(form.createdAt, "Date", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.title) }}
+        {{ form_widget(form.createdAt, {'attr': {'class': 'datepicker'}}) }}
+    </div>
+{% endif %}
+
+        {{ form_label(form.published, "Publier", {'label_attr': {'class': ''}}) }}
+<div class="switch">
+    <label>
+        Non
+        {{ form_widget(form.published, {'attr': {'class': ''}}) }}
+        <span class="lever"></span>
+        Oui
+    </label>
+    {{ form_errors(form.published) }}
+</div>
+
+<div class="center-align">
+    {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+</div>
+
+{{ form_rest(form) }}
+{{ form_end(form) }}

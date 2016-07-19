@@ -1,0 +1,21 @@
+{% extends "ShiawaBlogBundle:AnimeCharacter:layout.html.twig" %}
+
+{% block title %}Modification de personnage - {{ parent() }}{% endblock %}
+
+{% block body %}
+<main class="container">
+    <h3>Editez le personnage</h3>
+
+    {{ include("ShiawaBlogBundle:AnimeCharacter:form.html.twig") }}
+</main>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+{% endblock %}

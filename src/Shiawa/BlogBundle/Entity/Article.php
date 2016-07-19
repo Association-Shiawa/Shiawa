@@ -12,7 +12,6 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *
  * @ORM\Table(name="shiawa_article")
  * @ORM\Entity(repositoryClass="Shiawa\BlogBundle\Repository\ArticleRepository")
- * @ORM\HasLifecycleCallbacks()
  */
 class Article
 {
@@ -82,13 +81,6 @@ class Article
     private $published = true;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="viewed", type="bigint")
-     */
-    private $viewed = 0;
-
-    /**
      *
      * @ORM\ManyToOne(targetEntity="Shiawa\BlogBundle\Entity\Category")
      * @ORM\JoinColumn(nullable=false)
@@ -105,10 +97,19 @@ class Article
     /**
      * @var User $author
      *
+     * @Gedmo\Blameable(on="create")
      * @ORM\ManyToOne(targetEntity="Shiawa\UserBundle\Entity\User")
      * @ORM\JoinColumn(nullable=false)
      */
     private $author;
+
+    /**
+     * @var Event $event
+     *
+     * @ORM\ManyToOne(targetEntity="Shiawa\EventBundle\Entity\Event", inversedBy="articles")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $event;
 
 
 
@@ -116,14 +117,6 @@ class Article
     {
         $this->createdAt = new \DateTime();
         $this->tags   = new ArrayCollection();
-    }
-
-    /**
-     * @ORM\PostLoad
-     */
-    public function increaseViewed()
-    {
-        $this->viewed++;
     }
 
     /**
@@ -432,5 +425,29 @@ class Article
     public function getAuthor()
     {
         return $this->author;
+    }
+
+    /**
+     * Set event
+     *
+     * @param \Shiawa\EventBundle\Entity\Event $event
+     *
+     * @return Article
+     */
+    public function setEvent(\Shiawa\EventBundle\Entity\Event $event = null)
+    {
+        $this->event = $event;
+
+        return $this;
+    }
+
+    /**
+     * Get event
+     *
+     * @return \Shiawa\EventBundle\Entity\Event
+     */
+    public function getEvent()
+    {
+        return $this->event;
     }
 }

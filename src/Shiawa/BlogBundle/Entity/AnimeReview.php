@@ -34,9 +34,19 @@ class AnimeReview
     /**
      * @var string
      *
+     * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(name="slug", type="string", length=255)
      */
     private $slug;
+
+    /**
+     * @var User $author
+     *
+     * @Gedmo\Blameable(on="create")
+     * @ORM\ManyToOne(targetEntity="Shiawa\UserBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $author;
 
     /**
      * @var \DateTime
@@ -56,14 +66,6 @@ class AnimeReview
     /**
      * @var string
      *
-     * @Gedmo\Slug(fields={"title"})
-     * @ORM\Column(name="anime_title", type="string", length=255)
-     */
-    private $animeTitle;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="image", type="string", length=255)
      */
     private $image;
@@ -74,27 +76,6 @@ class AnimeReview
      * @ORM\Column(name="introduction", type="text")
      */
     private $introduction;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="studio", type="string", length=255)
-     */
-    private $studio;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="licenced_at", type="string", length=255)
-     */
-    private $licencedAt;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="synopsis", type="text")
-     */
-    private $synopsis;
 
     /**
      * @var string
@@ -155,12 +136,6 @@ class AnimeReview
     private $noteConsistency;
 
     /**
-     *
-     * @ORM\Column(name="editor", type="string", length=255)
-     */
-    private $editor;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="conclusion", type="text")
@@ -168,57 +143,28 @@ class AnimeReview
     private $conclusion;
 
     /**
-     *
-     * @ORM\Column(name="first_episode", type="string", length=255)
+     * @ORM\OneToOne(targetEntity="Shiawa\BlogBundle\Entity\Anime", cascade={"persist"}, inversedBy="review")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $firstEpisode;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="Shiawa\BlogBundle\Entity\AnimeCharacter", cascade={"persist"})
-     * @ORM\JoinTable(name="shiawa_anime_review_character")
-     */
-    private $characters;
+    private $anime;
 
     /**
      *
      * @ORM\ManyToMany(targetEntity="Shiawa\BlogBundle\Entity\Tag", cascade={"persist"})
-     * @ORM\JoinTable(name="shiawa_review_tag")
+     * @ORM\JoinTable(name="shiawa_anime_review_tag")
      */
     private $tags;
-
-    /**
-     * @var User $author
-     *
-     * @ORM\ManyToOne(targetEntity="Shiawa\UserBundle\Entity\User")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $author;
 
     /**
      * @ORM\Column(name="published", type="boolean")
      */
     private $published = true;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="viewed", type="bigint")
-     */
-    private $viewed = 0;
-
 
     public function __construct()
     {
         $this->createdAt = new \DateTime();
         $this->tags   = new ArrayCollection();
-    }
-
-    /**
-     * @ORM\PostLoad
-     */
-    public function increaseViewed()
-    {
-        $this->viewed++;
     }
 
     /**
@@ -328,30 +274,6 @@ class AnimeReview
     }
 
     /**
-     * Set animeTitle
-     *
-     * @param string $animeTitle
-     *
-     * @return AnimeReview
-     */
-    public function setAnimeTitle($animeTitle)
-    {
-        $this->animeTitle = $animeTitle;
-
-        return $this;
-    }
-
-    /**
-     * Get animeTitle
-     *
-     * @return string
-     */
-    public function getAnimeTitle()
-    {
-        return $this->animeTitle;
-    }
-
-    /**
      * Set image
      *
      * @param string $image
@@ -397,78 +319,6 @@ class AnimeReview
     public function getIntroduction()
     {
         return $this->introduction;
-    }
-
-    /**
-     * Set studio
-     *
-     * @param string $studio
-     *
-     * @return AnimeReview
-     */
-    public function setStudio($studio)
-    {
-        $this->studio = $studio;
-
-        return $this;
-    }
-
-    /**
-     * Get studio
-     *
-     * @return string
-     */
-    public function getStudio()
-    {
-        return $this->studio;
-    }
-
-    /**
-     * Set licencedAt
-     *
-     * @param string $licencedAt
-     *
-     * @return AnimeReview
-     */
-    public function setLicencedAt($licencedAt)
-    {
-        $this->licencedAt = $licencedAt;
-
-        return $this;
-    }
-
-    /**
-     * Get licencedAt
-     *
-     * @return string
-     */
-    public function getLicencedAt()
-    {
-        return $this->licencedAt;
-    }
-
-    /**
-     * Set synopsis
-     *
-     * @param string $synopsis
-     *
-     * @return AnimeReview
-     */
-    public function setSynopsis($synopsis)
-    {
-        $this->synopsis = $synopsis;
-
-        return $this;
-    }
-
-    /**
-     * Get synopsis
-     *
-     * @return string
-     */
-    public function getSynopsis()
-    {
-        return $this->synopsis;
     }
 
     /**
@@ -688,30 +538,6 @@ class AnimeReview
     }
 
     /**
-     * Set editor
-     *
-     * @param string $editor
-     *
-     * @return AnimeReview
-     */
-    public function setEditor($editor)
-    {
-        $this->editor = $editor;
-
-        return $this;
-    }
-
-    /**
-     * Get editor
-     *
-     * @return string
-     */
-    public function getEditor()
-    {
-        return $this->editor;
-    }
-
-    /**
      * Set conclusion
      *
      * @param string $conclusion
@@ -781,30 +607,6 @@ class AnimeReview
     public function getPublished()
     {
         return $this->published;
-    }
-
-    /**
-     * Set viewed
-     *
-     * @param integer $viewed
-     *
-     * @return AnimeReview
-     */
-    public function setViewed($viewed)
-    {
-        $this->viewed = $viewed;
-
-        return $this;
-    }
-
-    /**
-     * Get viewed
-     *
-     * @return integer
-     */
-    public function getViewed()
-    {
-        return $this->viewed;
     }
 
     /**
@@ -897,5 +699,29 @@ class AnimeReview
     public function getAuthor()
     {
         return $this->author;
+    }
+
+    /**
+     * Set anime
+     *
+     * @param \Shiawa\BlogBundle\Entity\Anime $anime
+     *
+     * @return AnimeReview
+     */
+    public function setAnime(\Shiawa\BlogBundle\Entity\Anime $anime)
+    {
+        $this->anime = $anime;
+
+        return $this;
+    }
+
+    /**
+     * Get anime
+     *
+     * @return \Shiawa\BlogBundle\Entity\Anime
+     */
+    public function getAnime()
+    {
+        return $this->anime;
     }
 }

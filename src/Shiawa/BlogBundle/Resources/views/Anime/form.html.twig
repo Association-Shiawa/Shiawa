@@ -1,0 +1,63 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+    <div class="input-field">
+        {{ form_label(form.title, "Titre de l'anime", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.title) }}
+        {{ form_widget(form.title, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.image, "Url pour une image", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.image) }}
+        {{ form_widget(form.image, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.nbrEpisode, "Le nombre d'épisode pour cet anime", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.nbrEpisode) }}
+        {{ form_widget(form.nbrEpisode, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_errors(form.type) }}
+        {{ form_widget(form.type, {'attr': {'class': ''}}) }}
+        {{ form_label(form.type, "Genre de l'anime", {'label_attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.synopsis, "Synopsis de l'anime", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.synopsis) }}
+        {{ form_widget(form.synopsis, {'attr': {'class': 'materialize-textarea'}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_errors(form.editor) }}
+        {{ form_widget(form.editor, {'attr': {'class': ''}}) }}
+        {{ form_label(form.editor, "Editeur français de l'anime", {'label_attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_errors(form.studio) }}
+        {{ form_widget(form.studio, {'attr': {'class': ''}}) }}
+        {{ form_label(form.studio, "Studio de l'anime", {'label_attr': {'class': ''}}) }}
+    </div>
+
+    {{ form_label(form.isNew, "Fait-il parti de la saison en cours ?", {'label_attr': {'class': ''}}) }}
+    <div class="switch">
+        <label>
+            Non
+            {{ form_widget(form.isNew, {'attr': {'class': ''}}) }}
+            <span class="lever"></span>
+            Oui
+        </label>
+        {{ form_errors(form.isNew) }}
+    </div>
+
+    <div class="center-align">
+        {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+    </div>
+
+    {{ form_rest(form) }}
+{{ form_end(form) }}
