@@ -1,0 +1,24 @@
+shiawa_category_list:
+    path:     /admin/categories/{page}
+    defaults:
+        _controller: ShiawaBlogBundle:Category:index
+        page: 1
+    requirements:
+      page: \d*
+
+shiawa_category_view:
+    path:     /admin/categorie/fiche/{slug}
+    defaults: { _controller: ShiawaBlogBundle:Category:view }
+
+shiawa_category_create:
+    path:     /admin/categorie/create
+    defaults: { _controller: "ShiawaBlogBundle:Category:add" }
+    methods:  [GET, POST]
+
+shiawa_category_edit:
+    path:     /admin/categorie/{slug}/edit
+    defaults: { _controller: "ShiawaBlogBundle:Category:edit" }
+
+shiawa_category_delete:
+    path:     /admin/categorie/{slug}/delete
+    defaults: { _controller: "ShiawaBlogBundle:Category:delete" }

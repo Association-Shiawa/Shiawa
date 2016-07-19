@@ -1,0 +1,24 @@
+shiawa_event_list:
+    path:     /events/{page}
+    defaults:
+        _controller: ShiawaEventBundle:Event:index
+        page: 1
+    requirements:
+      page: \d*
+
+shiawa_event_view:
+    path:     /event/{slug}
+    defaults: { _controller: ShiawaEventBundle:Event:view }
+
+shiawa_event_create:
+    path:     /admin/event/create
+    defaults: { _controller: "ShiawaEventBundle:Event:add" }
+    methods:  [GET, POST]
+
+shiawa_event_edit:
+    path:     /admin/event/{slug}/edit
+    defaults: { _controller: "ShiawaEventBundle:Event:edit" }
+
+shiawa_event_delete:
+    path:     /admin/event/{slug}/delete
+    defaults: { _controller: "ShiawaEventBundle:Event:delete" }

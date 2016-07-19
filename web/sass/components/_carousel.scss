@@ -1,0 +1,34 @@
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 700px;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  transform-origin: 0% 0%;
+  .carousel-item {
+    margin-top: -150px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &.carousel-slider {
+    top: 0;
+    left: 0;
+    height: 0;
+
+    .carousel-item {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

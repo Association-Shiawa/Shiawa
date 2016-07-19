@@ -1,0 +1,79 @@
+{% extends "AppBundle:Anime:layout.html.twig" %}
+
+{% block  anime_news%}
+    {{ render(controller("ShiawaBlogBundle:Anime:news")) }}
+{% endblock %}
+
+{% block content %}
+    <!-- CONTENT -->
+    <div class='col s12 m8'>
+        <!-- LAST ANIME -->
+        {% if lastEpisodes is not empty %}
+        <div class='card z-depth-1 row'>
+
+            <div class='card-content'>
+
+                <h2 class='title-section'>Les derniers épisodes ajoutés<small>Retrouvez les derniers épisodes de nos partenaires !</small></h2>
+
+                <ul class="collection">
+                    {% for episode in lastEpisodes %}
+                    <li class="collection-item avatar">
+                        <img src="{{ episode.anime.image }}" alt="{{ episode.anime.title }}" class="circle">
+                        <span class="title">
+                            <a href='{{ path('shiawa_anime_view', {"slug": episode.anime.slug}) }}'>
+                                <b>{{ episode.anime.title }}</b>
+                            </a>
+                            <span class="badge pink lighten-2 white-text">
+                                <a href="{{ path('shiawa_episode_view', {"slug": episode.slug}) }}" class="white-text">
+                                    Episode n°{{ episode.numEpisode }}
+                                </a>
+                            </span>
+                        </span>
+                        <p>Plateforme : {% if episode.anime.editor.name is defined %}{{ episode.anime.editor.name
+                            }}{% else %}Non renseigné{%
+                            endif
+                            %}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <div class='center'><a href='{{ path('shiawa_episode_list')}}'>Voir plus d'épisodes</a></div>
+
+            </div>
+
+        </div>
+        {% endif %}
+
+    <!-- LAST ARTICLES -->
+        <div class='row'>
+            <div class='col s12'>
+                <div class='card z-depth-1' >
+                    <div class='card-content' >
+                        <h2 class='title-section'>Nos derniers articles<small>Un peu de lecture sur les anime !</small></h2>
+
+                        <aside class='row'>
+
+                            {% for article in lastAnimeArticles %}
+                            <div class='col m6 s12'>
+                                <div class='article-pw'>
+                                    <h5 class='title-article'><a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
+                                .category.name|lower}) }}'>{{ article.title }}</a></h5>
+                                    <hr />
+                                    <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
+                                        .category.name|lower}) }}'><img src='{{ article.image }}' style='width:100%;
+                                    background-size: cover' /></a>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </aside>
+                        <div class='center'>
+                            <a href='{{ path('shiawa_article_list', {'category': 'anime'}) }}'>Voir plus d'articles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

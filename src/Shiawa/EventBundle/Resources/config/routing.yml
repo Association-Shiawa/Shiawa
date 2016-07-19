@@ -1,3 +1,2 @@
-shiawa_event_homepage:
-    path:     /
-    defaults: { _controller: ShiawaEventBundle:Default:index }
+shiawa_blog_article:
+    resource: "@ShiawaEventBundle/Resources/config/routing/event.yml"

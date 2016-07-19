@@ -1,0 +1,69 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+    <div class="input-field">
+        {{ form_label(form.name, "Titre de l'événément", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.name) }}
+        {{ form_widget(form.name, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.image, "Url pour une image", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.image) }}
+        {{ form_widget(form.image, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.beginAt, "Date de début", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.beginAt) }}
+        {{ form_widget(form.beginAt, {'attr': {'class': 'datepicker'}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.endAt, "Date de fin", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.endAt) }}
+        {{ form_widget(form.endAt, {'attr': {'class': 'datepicker'}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.adress, "Adresse", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.adress) }}
+        {{ form_widget(form.adress, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.place, "Nom du lieu", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.place) }}
+        {{ form_widget(form.place, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.website, "Site web de l'évenement ou page facebook", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.website) }}
+        {{ form_widget(form.website, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.description, "Description de l'événément (facultatif)", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.description) }}
+        {{ form_widget(form.description, {'attr': {'class': ''}}) }}
+    </div>
+
+    {{ form_label(form.isPublic, "Evenement public ? ", {'label_attr': {'class': ''}}) }}
+    <div class="switch">
+        <label>
+            Non
+            {{ form_widget(form.isPublic, {'attr': {'class': ''}}) }}
+            <span class="lever"></span>
+            Oui
+        </label>
+        {{ form_errors(form.isPublic) }}
+    </div>
+
+    <div class="center-align">
+        {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+    </div>
+
+    {{ form_rest(form) }}
+{{ form_end(form) }}

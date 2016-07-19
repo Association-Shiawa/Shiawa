@@ -1,0 +1,267 @@
+{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+
+{% block stylesheets %}
+    <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/style-anim.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/horizontal_sly.css') }}"  media="screen,projection"/>
+{% endblock %}
+
+{% block title %}
+    {{ review.title }} - Shiawa.fr
+{% endblock %}
+
+{% block content %}
+    <!-- CONTENT -->
+    <div class='col s12 m6 offset-m1'>
+        <div class='card z-depth-1'>
+            <div class="card-image">
+                <img src="{{ review.image }}">
+                <span class="card-title"><b>{{ review.title }}</b></span>
+            </div>
+            <div class='card-content'>
+                <p>
+                    {{ review.introduction }}
+                </p>
+                <br />
+                <div class='divider'></div>
+                <br />
+                <nav>
+                    <div class="nav-wrapper">
+                        <div class="col s12">
+                            <span class="breadcrumb">Présentation de l'anime : <a href="{{ path('shiawa_anime_view',
+                                {'slug' : review.anime.slug}
+                                ) }}">{{ review.anime
+                                    .title
+                                }}</a></span>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class='card grey lighten-4'>
+                    <div class='card-content'>
+                        <p>{{ review.anime.synopsis }}</p>
+
+                        <ul class="collection with-header">
+                            <li class="collection-header"><p><b class='pink-text'>Quelques informations</b></p></li>
+                            <li class="collection-item"><b>Année de production: </b> {{ review.anime.createdAt|date
+                                ('Y') }}
+                            </li>
+                            <li class="collection-item"><b>Nombre d'épisodes: </b> {{ review.anime.nbrEpisode }}
+                                épisodes</li>
+                            <li class="collection-item"><b>Studio d'animation: </b> {% if review.anime.studio.name is
+                                defined %}{{ review.anime.studio.name }}{% else %}Non renseigné{% endif %}</li>
+                            <li class="collection-item"><b>Editeur Français: </b> {% if review.anime.editor.name is
+                                defined %}{{ review.anime.editor.name }}{% else %}Non renseigné{% endif %}</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Le scénario -->
+                <nav class='title-crit'>
+                    <div class="nav-wrapper">
+                        <div class="col s12">
+                            <span href="#!" class="breadcrumb left">Le scénario</span>
+                            <span href="#!" class="breadcrumb right"><span class='badge white
+                            pink-text'><b>{{ review.noteScenario }}/5</b></span></span>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class='content-article'>
+                    {{ review.criticScenario }}
+                 </div>
+
+
+                <!-- Le graphisme -->
+                <nav class='title-crit'>
+                    <div class="nav-wrapper">
+                        <div class="col s12">
+                            <span href="#!" class="breadcrumb left">Les graphismes et l'animation</span>
+                            <span href="#!" class="breadcrumb right"><span class='badge white
+                            pink-text'><b>{{ review.noteGraphism }}/5</b></span></span>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class='content-article'>
+                    {{ review.criticGraphisms }}
+                </div>
+
+                <!-- La musique -->
+                <nav class='title-crit'>
+                    <div class="nav-wrapper">
+                        <div class="col s12">
+                            <span href="#!" class="breadcrumb left">Les musiques et sons d'ambiance</span>
+                            <span href="#!" class="breadcrumb right"><span class='badge white
+                            pink-text'><b>{{ review.noteSoundtrack }}/5</b></span></span>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class='content-article'>
+                    {{ review.criticSoundtrack }}
+                </div>
+
+                <!-- La cohérence -->
+                <nav class='title-crit'>
+                    <div class="nav-wrapper">
+                        <div class="col s12">
+                            <span href="#!" class="breadcrumb left">Cohérence scénaristique & personnages</span>
+                            <span href="#!" class="breadcrumb right"><span class='badge white
+                            pink-text'><b>{{ review.noteConsistency }}/5</b></span></span>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class='content-article'>
+                    {{ review.criticConsistency }}
+                </div>
+
+                <!-- Les personnages -->
+                <nav class='title-crit'>
+                    <div class="nav-wrapper">
+                        <div class="col s12">
+                            <span href="#!" class="breadcrumb left">Les personnages</span>
+                            <span href="#!" class="breadcrumb right"><span class='badge white
+                            pink-text'><b>{{ review.noteCharacters }}/5</b></span></span>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class='content-article'>
+                    {% if review.anime.characters is empty %}
+                    <p class="card-panel">
+                        Pas de personnage disponible. :(
+                    </p>
+                    {% else %}
+                    <p class="center-align"><b>Faites défiler avec votre souris les différents personnages de la série</b></p>
+                    <div class="car2">
+                        {% for character in review.anime.characters %}
+                        <a class="carousel-item" href="#one!">
+                            <div class='card waves-effect'>
+                                <div class='card-image'>
+                                    <img src="{{ character.avatar }}">
+                                    <div class='card-title'>{{ character.name }}</div>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
+
+                    </div>
+                    {% endif %}
+
+                </div>
+
+
+                <!-- La conclusion + premier EP -->
+                <nav class='title-crit'>
+                    <div class="nav-wrapper">
+                        <div class="col s12">
+                            <span href="#!" class="breadcrumb left">Conclusion</span>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class='content-article'>
+                    <div class='row valign-wrapper'>
+                        <div class='col m4 valign center-align'>
+                            <div class='circle-note valign center-align centered'>{{ ((review.noteGraphism + review
+                                .noteSoundtrack + review.noteScenario + review.noteCharacters + review
+                                .noteConsistency)/25)*20
+                                }}</div>
+                            <small>La note attribuée est sur 20</small>
+                        </div>
+                        <div class='col m8'>
+                            {{ review.conclusion }}
+                        </div>
+                    </div>
+                </div>
+
+
+                <nav class='title-crit'>
+                    <div class="nav-wrapper">
+                        <div class="col s12">
+                            <span href="#!" class="breadcrumb left">Découvrez le premier épisode</span>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class='content-article'>
+                    {% if review.anime.episodes[0].embed is not defined %}
+
+                        <p class="card-panel">
+                            Le premier épisode n'est pas disponible !
+                        </p>
+
+                    {% else %}
+
+                    <div class="video-container">
+                        <iframe width="853" height="480" src="http://animedigitalnetwork.fr/embedded/tales-of-zestiria-the-x/7463" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    {% endif %}
+                </div>
+
+
+            </div>
+
+            <div class='card grey lighten-4'>
+                <div class='card-content'>
+                    <p>Les mots clés de la review</p>
+                    <div class='divider'></div>
+                    <br />
+                    {% for tag in review.tags %}
+                        <div class="chip" id="tag-{{ tag.id }}">{{ tag.name }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="card-action">
+                <a href="#">Publié le 08 juillet 2016</a>
+                <?php
+                            $title = urlencode('Title of Your iFrame Tab');
+
+                            $url = urlencode('http://shiawa.fr/article-38');
+                            ?>
+                <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[url]=<?php echo $url; ?>', 'sharer', 'toolbar=0,status=0,width=700,height=455');" href="javascript: void(0)" class='btn blue lighten-1 right'>Partager sur Facebook</a>
+                <div class='clear'></div>
+                {% include "ShiawaBlogBundle:AnimeReview:author_card.html.twig" %}
+
+            </div>
+
+        </div>
+
+
+        {% include "AppBundle:Core:comments.html.twig" %}
+    </div>
+
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+        {% if is_granted('ROLE_AUTHOR') %}
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large pink lighten-2" href="{{ path("shiawa_anime_review_edit", {'slug':
+                    review
+                    .slug}) }}">
+                    <i class="large material-icons">mode_edit</i>
+                </a>
+            </div>
+        {% endif %}
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function () {
+            $('.car2').carousel({
+                dist: - 100,
+                padding: 0,
+                fullWidth: true
+            });
+        });
+    </script>
+{% endblock %}

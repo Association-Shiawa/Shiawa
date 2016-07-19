@@ -1,0 +1,205 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23 avr. 2016, 23:28:19
+    Author     : Fabien
+*/
+@import "materialize.scss";
+
+html, body{
+    width: 100%;
+}
+#header-full-width{
+    height: 100vh;
+
+    video#bgvid {
+        position: absolute; right: 0; bottom: 0;
+        min-width: 100%; min-height: 100%;
+        width: auto; height: auto; z-index: -100;
+        background: no-repeat;
+        background-size: cover;
+    }
+
+    .overlay{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        background: url('../imgs/watermark.png') rgba(0, 0, 0, 0.65);
+    }
+
+    .zoning-title{
+        position: absolute;
+        width: 100%;
+        //background: green;
+        top: 10%;
+        text-align:center;
+        h1{
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            font-size: 120px;
+            margin-bottom: 0px
+        }
+        svg{
+            fill: white;
+        }
+        span{
+            color: white;
+            font-weight: 600;
+        }
+        .zoning-button{
+            margin-top: 15px;
+            a{
+                display: inline-block;
+                margin: 2px 12px;
+            }
+        }
+    }
+    .scrolling{
+        position: absolute;
+        width:100%;
+        top:87%;
+        text-align: center;
+        i{
+            color: white;
+            transform: rotate(180deg);
+        }
+    }
+
+}
+.article{
+    @extend .row;
+    margin: 0;
+    .col{
+        padding: 0;
+    }
+}
+.art{
+    position: relative;
+    height: 340px;
+    background: rgba(0,0,0,0.90);
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    img{
+        height: 100%;
+        background-size: contain;
+        position: relative;
+        bottom:0;
+        transition: 0.4s ease;
+    }
+
+    &:hover{
+
+        img{
+            transform-origin: top 0 left 0;
+            transform: scale(1.15) skewY(5deg);
+        }
+        .overlay-art{
+            background: rgba(0,0,0,0.75);
+        }
+    }
+
+    .overlay-art{
+        background: rgba(0,0,0,0.35);
+        width: 100%;
+        position: absolute;
+        top:0;
+        bottom:0;
+    }
+    .zoning-art{
+        position: absolute;
+        top:0;
+        bottom:0;
+        color: white;
+        padding: 30px;
+        text-shadow: 1px 1px 2px black;
+        .title-art{
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            font-size: 40px;
+            text-align: justify;
+        }
+        a{
+            margin-top: 25px;
+        }
+        @media(max-width:1280px){
+            font-size: 13px;
+            .title-art{
+                font-size: 20px;
+            }
+        }
+    }
+
+}
+
+
+.banner-sites{
+    clear: both;
+    background: #ec407a;
+    color: white;
+    margin: 0;
+    padding: 55px 30px;
+    h2{
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+    }
+    span{
+        font-size: 1.2em;
+        line-height: 2em;
+    }
+}
+
+.association{
+    background: #fff;
+    color: #ec407a;
+    margin: 0;
+    padding: 55px 30px;
+    h2{
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+    }
+    span{
+        font-size: 1.2em;
+        line-height: 2em;
+    }
+}
+.clear{
+    clear: both;
+}
+
+.slider-activities{
+    width: 100%;
+    position: relative;
+    margin-top: -120px;
+    h2{
+        padding: 0px 30px;
+        color: #414141; 
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+    }
+    h4{
+       padding: 0px 30px;
+    }
+}
+
+#events-shiawa{
+    
+    clear: both;
+    background: #ec407a;
+    color: white;
+    margin-top: 50px;
+    padding: 55px 30px;
+
+    h2{
+        color: white; 
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+    }
+}
+
+

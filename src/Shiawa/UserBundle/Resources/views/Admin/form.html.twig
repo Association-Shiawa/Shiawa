@@ -1,0 +1,36 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+<div class="input-field">
+    {{ form_label(form.username, "Nom de l'utilisateur", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.username) }}
+    {{ form_widget(form.username, {'attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.email, "Email de l'utilisateur", {'label_attr': {'class': ''}}) }}
+    {{ form_errors(form.email) }}
+    {{ form_widget(form.email, {'attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_label(form.plainPassword, "Mot de passe de l'utilisateur (conseillé : nom.prenom)", {'label_attr': {'class':
+        ''}}) }}
+    {{ form_errors(form.plainPassword) }}
+    {{ form_widget(form.plainPassword, {'attr': {'class': ''}}) }}
+</div>
+
+<div class="input-field">
+    {{ form_errors(form.roles) }}
+    {{ form_widget(form.roles, {'attr': {'class': ''}}) }}
+    {{ form_label(form.roles, "Rôles de l'utilisateur (conseillé : nom.prenom)", {'label_attr': {'class':
+        ''}}) }}
+</div>
+
+<div class="center-align">
+    {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+</div>
+
+{{ form_rest(form) }}
+{{ form_end(form) }}

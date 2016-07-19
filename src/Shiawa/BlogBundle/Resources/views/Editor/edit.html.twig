@@ -1,0 +1,22 @@
+{% extends "ShiawaBlogBundle:Anime:layout.html.twig" %}
+
+{% block title %}Modification d'éditeur - {{ parent() }}{% endblock %}
+
+{% block body %}
+<main class="container">
+    <h3>Editez l'éditeur</h3>
+
+    {{ include("ShiawaBlogBundle:Editor:form.html.twig") }}
+</main>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+
+{% endblock %}
