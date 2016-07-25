@@ -13,8 +13,8 @@ class UserRepository extends \Doctrine\ORM\EntityRepository
     public function findByRole($role)
     {
         $qb = $this->createQueryBuilder('u')
-            ->where('u.roles LIKE :roles')
-            ->setParameter('roles', '%"'.$role.'"%');
+            ->where('u.roles LIKE :role')
+            ->setParameter('role', '%"'.$role.'"%');
 
         return $qb->getQuery()->getResult();
     }
@@ -23,13 +23,16 @@ class UserRepository extends \Doctrine\ORM\EntityRepository
     {
         $qb = $this->createQueryBuilder('u');
 
-            foreach($roles as $role)
-            {
-                $qb->orwhere('u.roles LIKE :roles')
-                ->setParameter('roles', '%"'.$role.'"%');
-            }
+        for($i = 0; $i < count($roles); $i++)
+        {
+            $qb->orwhere('u.roles LIKE :role'.$i);
+        }
 
+        for($i = 0; $i < count($roles); $i++)
+        {
+            $qb->setParameter('role'.$i, '%"'.$roles[$i].'"%');
+        }
 
-        return $qb->getQuery()->getResult();
+        return $qb->distinct()->getQuery()->getResult();
     }
 }

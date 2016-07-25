@@ -25,9 +25,23 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=255, unique=true)
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
      */
-    //private $email;
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="surname", type="string", length=255, nullable=true)
+     */
+    private $surname;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="birthdate", type="date", nullable=true)
+     */
+    private $birthdate;
 
     /**
      * @var string
@@ -145,5 +159,53 @@ class User extends BaseUser
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set malAccount
+     *
+     * @param string $malAccount
+     *
+     * @return User
+     */
+    public function setMalAccount($malAccount)
+    {
+        $this->malAccount = $malAccount;
+
+        return $this;
+    }
+
+    /**
+     * Get malAccount
+     *
+     * @return string
+     */
+    public function getMalAccount()
+    {
+        return $this->malAccount;
+    }
+
+    /**
+     * Set notification
+     *
+     * @param boolean $notification
+     *
+     * @return User
+     */
+    public function setNotification($notification)
+    {
+        $this->notification = $notification;
+
+        return $this;
+    }
+
+    /**
+     * Get notification
+     *
+     * @return boolean
+     */
+    public function getNotification()
+    {
+        return $this->notification;
     }
 }

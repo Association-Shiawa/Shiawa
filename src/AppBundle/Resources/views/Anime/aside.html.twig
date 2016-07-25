@@ -14,21 +14,23 @@
     </div>
 
     {% if lastReview is not null %}
+    {% for review in lastReview %}
     <div class='card z-depth-1'>
 
         <div class='card-content'>
 
             <h2 class='title-section'>La dernière critique<small>L'anime comme vous ne l'avez jamais vu !</small></h2>
             <div class="card-image">
-                <a href='{{ path('shiawa_anime_review_view', {'slug': lastReview.slug}) }}'> <img src="{{ lastReview
+                <a href='{{ path('shiawa_anime_review_view', {'slug': review.slug}) }}'> <img src="{{ review
                     .image }}">
-                    <span class="card-title">{{ lastReview.title }}</span></a>
+                    <span class="card-title">{{ review.title }}</span></a>
             </div>
         </div>
         <div class='card-action center-align'>
             <a href='{{ path('shiawa_anime_review_list') }}'>Voir plus de critiques</a>
         </div>
     </div>
+    {% endfor %}
     {% endif %}
 
     {% if nextEvent is not empty %}
@@ -43,19 +45,22 @@
                     <span class='right badge pink lighten-2 white-text'>
                         {% set now = "now"|date('Ymd') %}
 
-                         {% if now  <= nextEvent.endAt|date('Ymd') and now >= nextEvent.beginAt|date('Ymd') %}
+                        {% set diff = date(event.beginAt).diff(date("now")) %}
+                        {% set diffDays = diff.days %}
+
+                         {% if now  <= event.endAt|date('Ymd') and now >= event.beginAt|date('Ymd') %}
                              En cours
-                         {% elseif  now > nextEvent.endAt|date('Ymd')  %}
-                            Il y a {{ "now"|date('d')- nextEvent.beginAt|date('d')}} jours
+                         {% elseif  now > event.endAt|date('Ymd')  %}
+                            Il y a {{ diffDays }} jours
                          {% else %}
-                             Dans {{ "now"|date('d')- nextEvent.beginAt|date('d')}} jours
+                             Dans {{ diffDays }} jours
                          {% endif %}
                     </span>
                 </small>
             </h2>
             <div class="card-image" style="max-height: 300px; overflow: hidden;">
-                <a href='{{ path('shiawa_event_view', {'slug': nextEvent.slug}) }}'> <img src="{{ nextEvent.image }}">
-                    <span class="card-title">{{ nextEvent.name|title }}</span></a>
+                <a href='{{ path('shiawa_event_view', {'slug': event.slug}) }}'> <img src="{{ event.image }}">
+                    <span class="card-title">{{ event.name|title }}</span></a>
             </div>
         </div>
         <div class='card-action center-align'>

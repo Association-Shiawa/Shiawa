@@ -8,7 +8,7 @@ security:
         ROLE_ADHERENT:    ROLE_USER
         ROLE_AUTHOR:    ROLE_USER
         ROLE_ADMIN:       [ROLE_AUTHOR, ROLE_USER, ROLE_ADHERENT]
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ADHERENT, ROLE_ALLOWED_TO_SWITCH]
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:

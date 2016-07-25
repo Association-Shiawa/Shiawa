@@ -14,7 +14,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
     public function getEvents($page, $nbPerPage)
     {
         $query = $this->createQueryBuilder('e')
-            ->orderBy('e.$beginAt', 'DESC')
+            ->orderBy('e.beginAt', 'ASC')
             ->getQuery();
 
         $query
@@ -27,7 +27,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
     public function getNext($limit)
     {
         $query = $this->createQueryBuilder('e')
-            ->where('e.beginAt >= :now')
+            ->where('e.endAt >= :now')
             ->setParameter('now', new \DateTime('now'))
             ->orderBy('e.beginAt', 'ASC')
             ->getQuery()

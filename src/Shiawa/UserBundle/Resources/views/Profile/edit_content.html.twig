@@ -1,8 +1,78 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
-    {{ form_widget(form) }}
+
+    <div class="input-field">
+        {{ form_label(form.username, "Ton pseudo", {'label_attr': {'class': ''}}) }}
+        <div class="red-text">
+            {{ form_errors(form.username, {'attr': {'class': 'red white-text'}}) }}
+        </div>
+        {{ form_widget(form.username, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.email, "Ton adresse e-mail", {'label_attr': {'class': ''}}) }}
+        <div class="red-text">
+            {{ form_errors(form.email) }}
+        </div>
+        {{ form_widget(form.email, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.avatar, "Ton avatar", {'label_attr': {'class': ''}}) }}
+        <div class="red-text">
+            {{ form_errors(form.avatar) }}
+        </div>
+        {{ form_widget(form.avatar, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        <div class="red-text">
+            {{ form_errors(form.name) }}
+        </div>
+        {{ form_label(form.name, "Ton prénom (facultatif). Il ne sera vu que par toi-même", {'label_attr': {'class':
+            ''}}) }}
+        {{ form_widget(form.name, {'attr': {'class': ''}}) }}
+    </div>
+
+    <div class="input-field">
+        <div class="red-text">
+            {{ form_errors(form.surname) }}
+        </div>
+        {{ form_label(form.surname, "Nom de famille de l'utilisateur. Cette information est privée", {'label_attr': {'class': ''}}) }}
+        {{ form_widget(form.surname, {'attr': {'class': ''}}) }}
+    </div>
+
+
+    <div class="input-field">
+        <div class="red-text">
+            {{ form_errors(form.birthdate, {'attr': {'class': 'red white-text'}}) }}
+        </div>
+        {{ form_label(form.birthdate, "Ta date de naissance. Cette information est privée", {'label_attr': {'class':
+            ''}}) }}
+        {{ form_widget(form.birthdate, {'attr': {'class': 'birthdate'}}) }}
+    </div>
+
+    <div class="input-field">
+        {{ form_label(form.description, "Une description publique !", {'label_attr': {'class': ''}}) }}
+        <div class="red-text">
+            {{ form_errors(form.description) }}
+        </div>
+        {{ form_widget(form.description, {'attr': {'class': 'materialize-textarea'}}) }}
+    </div>
+
+    <span class="divider"></span>
+
+    <div class="input-field">
+        {{ form_label(form.current_password, "Pour valider les changements, entre ton mot de passe", {'label_attr':
+            {'class': ''}}) }}
+        {{ form_errors(form.current_password, {'attr': {'class': 'red white-text'}}) }}
+        {{ form_widget(form.current_password, {'attr': {'class': ''}}) }}
+    </div>
+
+    {{ form_rest(form) }}
+
     <div>
-        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" class="btn-flat pink lighten-2 white-text"/>
     </div>
 {{ form_end(form) }}

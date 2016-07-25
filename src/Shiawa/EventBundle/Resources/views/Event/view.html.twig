@@ -1,5 +1,27 @@
 {% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
 
+{% block DC_description %}
+    {% for letter in event.description|split('')|slice(0,300) %}{{ letter }}{% else %}{{ event.name|title }} -
+        Evenement auquel vous pouvez retrouver Shiawa !{%
+    endfor %}...
+{% endblock %}
+
+{% block desc %}
+    {% for letter in event.description|split('')|slice(0,155) %}{{ letter }}{% else %}{{ event.name|title }} -
+        Evenement auquel vous pouvez retrouver Shiawa !{% endfor %}...
+{% endblock %}
+
+{%  block OG_desc %}
+    {% for letter in event.description|split('')|slice(0,300) %}{{ letter }}{% else %}{{ event.name|title }} -
+        Evenement auquel vous pouvez retrouver Shiawa !{% endfor %}...
+{% endblock %}
+
+{% block DC_title %}{{ event.name|title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_title %}{{ event.name|title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_image %}{{ event.image }}{% endblock %}
+
 {% block stylesheets %}
     <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -31,6 +53,9 @@
                <p class="card-panel">
                    {% set now = "now"|date('Ymd') %}
 
+                   {% set diff = date(event.beginAt).diff(date("now")) %}
+                   {% set diffDays = diff.days %}
+
                    {% if  now > event.endAt|date('Ymd') %}
                        A eu lieu
                        {% if event.beginAt == event.endAt %}
@@ -42,6 +67,7 @@
                        L'évenement est actuellement en cours ! Vous y êtes ? Venez nous voir ! Sinon, n'hésitez pas à
                        suivre Shiawa lors de l'événément sur les réseaux sociaux ! :D
                    {% else %}
+                       Aura lieu
                        {% if event.beginAt == event.endAt %}
                            le {{ event.beginAt|date('d/m/Y') }}
                        {% else %}
@@ -81,10 +107,11 @@
             {% elseif now  <= event.endAt|date('Ymd') and now >= event.beginAt|date('Ymd') %}
                 <a href="">Evénement en cours</a>
             {% else %}
+                L'événement aura lieu
                 {% if event.beginAt == event.endAt %}
-                    L'événement a eu lieu le <a href="#"> {{ event.beginAt|date('d/m/Y') }}</a>
+                    le <a href="#"> {{ event.beginAt|date('d/m/Y') }}</a>
                 {% else %}
-                    L'événement a eu lieu du <a href="#"> {{ event.beginAt|date('d/m/Y') }}</a> au <a href="#">{{
+                     du <a href="#"> {{ event.beginAt|date('d/m/Y') }}</a>au <a href="#">{{
                     event.endAt|date('d/m/Y') }}</a>
                 {% endif %}
             {% endif %}

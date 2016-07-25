@@ -1,0 +1,21 @@
+{% extends "AppBundle:Anime:layout.html.twig" %}
+
+{% block title %}Modification d'un utilisateur - {{ parent() }}{% endblock %}
+
+{% block body %}
+    <main class="container">
+        <h3>Formulaire d'édition d'un utilisateur</h3>
+
+        {{ include("ShiawaUserBundle:Admin:form.html.twig") }}
+    </main>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+{% endblock %}

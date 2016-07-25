@@ -19,7 +19,7 @@ class CoreController extends Controller
         $adherents = $this->getDoctrine()
             ->getManager()
             ->getRepository('ShiawaUserBundle:User')
-            ->findByRoles(['ROLE_ADHERENT', 'ROLE_ADMIN']);
+            ->findByRoles(['ROLE_ADHERENT', 'ROLE_ADMIN', 'ROLE_SUPER_ADMIN']);
 
         $events = $this->getDoctrine()
             ->getManager()
@@ -71,7 +71,7 @@ class CoreController extends Controller
             ->getNext(1);
 
         return $this->render('AppBundle:Anime:aside.html.twig', array(
-            'lastReview' => $lastReview[0],
+            'lastReview' => $lastReview,
             'nextEvent' => $nextEvent
         ));
     }

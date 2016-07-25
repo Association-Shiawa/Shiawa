@@ -1,5 +1,23 @@
 {% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
 
+{% block DC_description %}
+    {% for letter in article.content|split('')|slice(0,300) %}{{ letter }}{% endfor %}
+{% endblock %}
+
+{% block desc %}
+    {% for letter in article.content|split('')|slice(0,155) %}{{ letter }}{% endfor %}
+{% endblock %}
+
+{%  block OG_desc %}
+    {% for letter in article.content|split('')|slice(0,300) %}{{ letter }}{% endfor %}
+{% endblock %}
+
+{% block DC_title %}{{ article.title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_title %}{{ article.title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_image %}{{ article.image }}{% endblock %}
+
 {% block stylesheets %}
     <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,7 +44,7 @@
 
             <div class='content-article'>
 
-                {{ article.content }}
+                {{ article.content|raw }}
 
                 <div class='card grey lighten-4'>
                     <div class='card-content'>
@@ -46,11 +64,8 @@
         <div class="card-action">
             <a href="#">Publié le {{ article.createdAt|date('d/m/Y') }}</a>
 
-            {% set title = "Title of Your iFrame Tab"|url_encode %}
-            {% set url = app.request.uri|url_encode %}
 
-            <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[url]={{ url }}', 'sharer',
-            'toolbar=0,status=0,width=700,height=455');" href="javascript: void(0)" class='btn blue lighten-1 right'>Partager sur Facebook</a>
+            {% include "AppBundle:Rsn:fb.html.twig" %}
             <div class='clear'></div>
            {% include "ShiawaBlogBundle:Article:author_card.html.twig" %}
 

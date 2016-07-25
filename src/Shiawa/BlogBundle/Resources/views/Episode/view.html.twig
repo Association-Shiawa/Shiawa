@@ -1,5 +1,23 @@
 {% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
 
+{% block DC_description %}
+    {% for letter in episode.anime.synopsis|split('')|slice(0,300) %}{{ letter }}{% endfor %}
+{% endblock %}
+
+{% block desc %}
+    {% for letter in episode.anime.synopsis|split('')|slice(0,155) %}{{ letter }}{% endfor %}
+{% endblock %}
+
+{%  block OG_desc %}
+    {% for letter in episode.anime.synopsis|split('')|slice(0,300) %}{{ letter }}{% endfor %}
+{% endblock %}
+
+{% block DC_title %}{{ episode.title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_title %}{{ episode.title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_image %}{{ episode.anime.image }}{% endblock %}
+
 {% block stylesheets %}
     <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -70,6 +88,7 @@
                             </li>
                             {% endfor %}
                         </ul>
+                        {% include "AppBundle:Rsn:fb.html.twig" %}
                     </div>
                 </div>
 
