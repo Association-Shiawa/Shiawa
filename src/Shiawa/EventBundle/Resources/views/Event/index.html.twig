@@ -1,29 +1,27 @@
-{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+{% extends "ShiawaEventBundle:Event:layout.html.twig" %}
 
 {% block body %}
     <section class="row">
-    {% for article in listArticles %}
+    {% for event in listEvents %}
 
         <div class='col l3 m4 s12'>
             <div class="card">
                 <div class="card-image">
-                    <img src="{{ article.image }}">
-                    <a href="{{ path('shiawa_article_view', {'slug': article.slug, 'category': article.category
-                        .name|lower})}}" class="card-title">
-                        {{ article.title }} - {{ article.createdAt|date('d/m/Y') }}
+                    <img src="{{ event.image }}">
+                    <a href="{{ path('shiawa_event_view', {'slug': event.slug})}}" class="card-title">
+                        {{ event.name }} - {{ event.beginAt|date('d/m/Y') }}
                     </a>
                 </div>
                 <div class="card-action">
-                    <a href="{{ path('shiawa_article_view', {'slug': article.slug, 'category': article.category
-                        .name|lower})}}" class="pink-text text-accent-1">
-                        Lire : {{ article.title }}
+                    <a href="{{ path('shiawa_event_view', {'slug': event.slug})}}" class="pink-text text-accent-1">
+                        Lire : {{ event.name }}
                     </a>
                 </div>
             </div>
         </div>
 
     {% else %}
-        Pas (encore !) d'article
+        Pas (encore !) d'événements
     {% endfor %}
     </section>
 

@@ -2,11 +2,11 @@ shiawa_user_homepage:
     path:     /user
     defaults: { _controller: ShiawaUserBundle:User:index }
 
-shiawa_user_admin_add:
+shiawa_user_admin_create:
     path:     /admin/user/create
     defaults: { _controller: ShiawaUserBundle:User:AdminRegister }
 
-shiawa_user_admin_test:
-    path:     /admin/user/test
-    defaults: { _controller: ShiawaUserBundle:User:test }
+shiawa_user_admin_edit:
+    path:     /admin/user/{user}/edit
+    defaults: { _controller: ShiawaUserBundle:User:AdminEdit }
 

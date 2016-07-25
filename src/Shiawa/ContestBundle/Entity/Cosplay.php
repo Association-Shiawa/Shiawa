@@ -1,0 +1,270 @@
+<?php
+
+namespace Shiawa\ContestBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+
+/**
+ * Cosplay
+ *
+ * @ORM\Table(name="shiawa_contest_cosplay")
+ * @ORM\Entity(repositoryClass="Shiawa\ContestBundle\Repository\CosplayRepository")
+ */
+class Cosplay
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="characterName", type="string", length=255)
+     */
+    private $characterName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="serieName", type="string", length=255)
+     */
+    private $serieName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="serieType", type="string", length=255)
+     */
+    private $serieType;
+
+    /**
+     * @var string
+     *
+     * @Gedmo\Slug(fields={"characterName"})
+     * @ORM\Column(name="slug", type="string", length=255, unique=true)
+     */
+    private $slug;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255, nullable=true)
+     */
+    private $image;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="createdParts", type="text", nullable=true)
+     */
+    private $createdParts;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="costumisedParts", type="text", nullable=true)
+     */
+    private $costumisedParts;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="boughtParts", type="text", nullable=true)
+     */
+    private $boughtParts;
+
+    /**
+     * @var User $cosplayer
+     *
+     * @Gedmo\Blameable(on="create")
+     * @ORM\ManyToOne(targetEntity="Shiawa\UserBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $cosplayer;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set characterName
+     *
+     * @param string $characterName
+     *
+     * @return Cosplay
+     */
+    public function setCharacterName($characterName)
+    {
+        $this->characterName = $characterName;
+
+        return $this;
+    }
+
+    /**
+     * Get characterName
+     *
+     * @return string
+     */
+    public function getCharacterName()
+    {
+        return $this->characterName;
+    }
+
+    /**
+     * Set serieName
+     *
+     * @param string $serieName
+     *
+     * @return Cosplay
+     */
+    public function setSerieName($serieName)
+    {
+        $this->serieName = $serieName;
+
+        return $this;
+    }
+
+    /**
+     * Get serieName
+     *
+     * @return string
+     */
+    public function getSerieName()
+    {
+        return $this->serieName;
+    }
+
+    /**
+     * Set serieType
+     *
+     * @param string $serieType
+     *
+     * @return Cosplay
+     */
+    public function setSerieType($serieType)
+    {
+        $this->serieType = $serieType;
+
+        return $this;
+    }
+
+    /**
+     * Get serieType
+     *
+     * @return string
+     */
+    public function getSerieType()
+    {
+        return $this->serieType;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Cosplay
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Set createdParts
+     *
+     * @param string $createdParts
+     *
+     * @return Cosplay
+     */
+    public function setCreatedParts($createdParts)
+    {
+        $this->createdParts = $createdParts;
+
+        return $this;
+    }
+
+    /**
+     * Get createdParts
+     *
+     * @return string
+     */
+    public function getCreatedParts()
+    {
+        return $this->createdParts;
+    }
+
+    /**
+     * Set costumisedParts
+     *
+     * @param string $costumisedParts
+     *
+     * @return Cosplay
+     */
+    public function setCostumisedParts($costumisedParts)
+    {
+        $this->costumisedParts = $costumisedParts;
+
+        return $this;
+    }
+
+    /**
+     * Get costumisedParts
+     *
+     * @return string
+     */
+    public function getCostumisedParts()
+    {
+        return $this->costumisedParts;
+    }
+
+    /**
+     * Set boughtParts
+     *
+     * @param string $boughtParts
+     *
+     * @return Cosplay
+     */
+    public function setBoughtParts($boughtParts)
+    {
+        $this->boughtParts = $boughtParts;
+
+        return $this;
+    }
+
+    /**
+     * Get boughtParts
+     *
+     * @return string
+     */
+    public function getBoughtParts()
+    {
+        return $this->boughtParts;
+    }
+}
+

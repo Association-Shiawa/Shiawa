@@ -3,8 +3,40 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
-    {% if targetUrl %}
-    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
-    {% endif %}
-{% endblock fos_user_content %}
+    <div class="container">
+        <div class="row">
+            <h1 class="center-align">Confirmation d'inscription</h1>
+            <div class="col m8 offset-m2 s12">
+                <div class="card-panel">
+                    <h2 class="center-align">
+                        Bienvenue parmis les pandas !
+                    </h2>
+                    {% block fos_user_confirmed %}
+                        <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+                        {% if targetUrl %}
+                            <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+                        {% endif %}
+                    {% endblock fos_user_confirmed %}
+                </div>
+
+                <div class="card-panel">
+                    <h3 class="center-align">
+                        Profitez de notre plateforme
+                    </h3>
+                    <ul class="collection">
+                        <li class="collection-item">De nombreux articles</li>
+                        <li class="collection-item">Des critiques d'Anime</li>
+                        <li class="collection-item">Des photos et vidéos de conventions</li>
+                        <li class="collection-item">Les dernières actualités sur la Japanimation</li>
+                    </ul>
+                    <h4 class="center-align">
+                        La plateforme évolue continuellement
+                    </h4>
+                    <p>
+                        De nouvelles fonctionnalités arrivent tous les jours !
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

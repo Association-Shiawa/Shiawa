@@ -21,7 +21,7 @@ class AnimeController extends Controller
         $em = $this->getDoctrine()->getManager();
         $animeRep = $em->getRepository('ShiawaBlogBundle:Anime');
 
-        $nbPerPage = 5;
+        $nbPerPage = 16;
 
         $listAnimes = $animeRep->getAnimes($page, $nbPerPage);
         $nbPage = ceil(count($listAnimes)/$nbPerPage);

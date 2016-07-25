@@ -1,6 +1,8 @@
-{% extends "AppBundle:Anime:layout.html.twig" %}
+{% extends "AppBundle:Core:layout.html.twig" %}
 
-{% block title %}Se connecter - {{ parent() }}{% endblock %}
+{% block menu %}
+    {% include "ShiawaUserBundle:User:nav.html.twig" %}
+{% endblock %}
 
 {% block body %}
 
@@ -14,33 +16,9 @@
     {% endfor %}
 
 
+    {% block fos_user_content %}
+    {% endblock fos_user_content %}
 
-    <div class="container" style="margin-top: 150px;margin-bottom: 150px;">
-        <main class="row">
-            <main class="col m6 offset-m3">
-                <div class="section">
-                    <h1>Bienvenue sur Shiawa !</h1>
-                    <div class="row">
-                        <div class="col m6 center-align">
-                            Déjà inscrit ? <a href="{{ path('fos_user_security_login') }}" class="btn-flat green
-                                lighten-2 white-text">Se
-                                connecter</a>
-                        </div>
-                        <div class="col m6 center-align">
-                            Nouveau sur Shiawa ? <a href="{{ path('fos_user_registration_register')
-                            }}" class="btn-flat pink white-text">S'enregistrer</a>
-                        </div>
-                    </div>
-                    <div class="card-panel">
-                        {# On définit ce block, dans lequel vont venir s'insérer les autres vues du bundle #}
-                        {% block fos_user_content %}
-                        {% endblock fos_user_content %}
-                    </div>
-                </div>
-            </main>
-        </main>
-
-    </div>
 
 
 {% endblock %}
