@@ -1,12 +1,18 @@
 <div class='card z-depth-0 pink lighten-5'>
     <div class='card-content'>
         <div class='row'>
-            <div class='col m2'>
-                {% if article.author.image is defined %}
-                    <img src="{{ article.author.image }}" alt="" class="circle responsive-img" >
+            <div class='col m3'>
+                {% if article.author.avatar is not null %}
+                    <div class="valign-wrapper">
+                        <div class="valign">
+                            <div class="circle" style="width: 100px; height: 100px; overflow: hidden;">
+                                <img src="{{ article.author.avatar }}" alt="" class="circle responsive-img" >
+                            </div>
+                        </div>
+                    </div>
                 {% endif %}
             </div>
-            <div class='col m10'>
+            <div class='col m9'>
                 <h3 class='author-article'><a class='pink-text lighten-2' href='#'>{{ article
                         .author.username }}</a></h3>
                 {% if article.author.description is not empty %}

@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Shiawa\BlogBundle\ShiawaBlogBundle(),
             new Shiawa\EventBundle\ShiawaEventBundle(),
             new Shiawa\UserBundle\ShiawaUserBundle(),
+            new Shiawa\ContestBundle\ShiawaContestBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

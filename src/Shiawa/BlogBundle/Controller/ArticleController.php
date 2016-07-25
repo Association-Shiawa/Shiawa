@@ -24,13 +24,13 @@ class ArticleController extends Controller
         $category = $this->getDoctrine()
             ->getManager()
             ->getRepository('ShiawaBlogBundle:Category')
-            ->findByName($categoryName)
+            ->findOneByName($categoryName)
         ;
 
         $em = $this->getDoctrine()->getManager();
         $artRep = $em->getRepository('ShiawaBlogBundle:Article');
 
-        $nbPerPage = 5;
+        $nbPerPage = 9;
 
         $listArticles = $artRep->getArticles($page, $nbPerPage, $category);
         $nbPage = ceil(count($listArticles)/$nbPerPage);
@@ -43,7 +43,8 @@ class ArticleController extends Controller
         return $this->render('ShiawaBlogBundle:Article:index.html.twig', array(
             'listArticles' => $listArticles,
             'page' => $page,
-            'nbPages' => $nbPage
+            'nbPages' => $nbPage,
+            'category' => $category
         ));
     }
 

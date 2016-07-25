@@ -1,102 +1,59 @@
-{% block menulist %}
-    <!-- Menulist -->
-    <div class='navbar-fixed'>
-        <nav>
-            <ul id="dropdown1" class="dropdown-content">
-                <!--<li><a href="#!">Shiawa Cosplay</a></li>
-                <li><a href="#!">Shiawa Japon</a></li>-->
-                <li class="divider"></li>
-                <li><a href="{{ path('shiawa_homepage') }}">Accueil Shiawa</a></li>
-            </ul>
-            <ul id="dropdown2" class="dropdown-content">
-                <!--<li><a href="#!">Shiawa Cosplay</a></li>
-                <li><a href="#!">Shiawa Japon</a></li>-->
-                <li class="divider"></li>
-                <li><a href="{{ path('shiawa_homepage') }}">Accueil Shiawa</a></li>
-            </ul>
-            <div class="nav-wrapper grey darken-3">
-                <a href="{{ path('shiawa_anime_homepage') }}" class="brand-logo">Anime &amp; Manga</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li>
-                        <a href="{{ path('shiawa_anime_homepage') }}">Accueil</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('shiawa_episode_list') }}">Nouveautés</a>
-                    </li>
-                    <li class=''>
-                        <a  href="{{ path('shiawa_article_list', {'category': 'anime'})
-                        }}">Articles</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('shiawa_anime_review_list') }}">Critiques</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('shiawa_anime_list') }}">Les séries</a>
-                    </li>
-                    <li class='pink darken-1'><a class="dropdown-button" href="#" data-activates="dropdown1">Shiawa Anime & Manga<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <a href="#" data-activates="slide-out" class="button-collapse2"><i class="material-icons">arrow_left</i></a>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{ path('shiawa_anime_homepage') }}">Accueil</a></li>
-                    <li><a href="{{ path('shiawa_episode_list') }}">Nouveautés</a></li>
-                    <li class='active'><a href="{{ path('shiawa_article_list', {'category': 'anime'})
-                        }}">Articles</a></li>
-                    <li><a href="{{ path('shiawa_anime_review_list') }}">Critiques</a></li>
-                    <li><a href="{{ path('shiawa_anime_list') }}">Les séries</a></li>
-                    <li class='pink darken-1'><a class="dropdown-button white-text" href="#" data-activates="dropdown2">Anime &
-                            Manga<i
-                                    class="material-icons right">arrow_drop_down</i></a></li>
+{% extends "AppBundle:Core:nav.html.twig" %}
 
-                </ul>
+{% block navbar_title %}
+<a href="{{ path('shiawa_anime_homepage') }}" class="brand-logo">Anime &amp; Manga</a>
+{% endblock %}
 
-                <div id="slide-out" class="side-nav">
-                    <div class="center-align">
-                        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                            <img src='
-                            {% if app.user.avatar is null %}
-                           https://www.mautic.org/media/images/default_avatar.png
-                            {% else %}
-                            {{ app.user.avatar }}
-                            {% endif %}
-                        ' class='responsive-img'>
-                        {% endif %}
-                    </div>
-                    <ul>
-                        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                           <li class="blue-grey-text" style="padding-left: 20px;">Bonjour {{ app.user.username }} !</li>
-                        {% if is_granted('ROLE_AUTHOR') %}
-                            <li><a href="{{ path('shiawa_admin_homepage') }}">Dashboard Admin</a></li>
-                            <li><a href='{{ path('shiawa_article_create') }}'>Ajouter un Article</a></li>
-                            <li class="no-padding blue-grey">
-                                <ul class="collapsible collapsible-accordion">
-                                    <li>
-                                        <a class="collapsible-header">Gestion Japanimation<i class="material-icons right
-                                        ">arrow_drop_down</i></a>
-                                        <div class="collapsible-body">
-                                            <ul>
-                                                <li><a href='{{ path('shiawa_anime_create') }}'>Ajouter un Anime</a></li>
-                                                <li><a href='{{ path('shiawa_episode_create') }}'>Ajouter un Episode</a></li>
-                                                <li><a href='{{ path('shiawa_character_create') }}'>Ajouter un
-                                                        Personnage</a></li>
-                                                <li><a href='{{ path('shiawa_studio_create') }}'>Ajouter un Studio</a></li>
-                                                <li><a href='{{ path('shiawa_editor_create') }}'>Ajouter un Editeur</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href='{{ path('shiawa_anime_review_create') }}'>Ajouter une Critique</a></li>
-                            <li><a href='{{ path('shiawa_event_create') }}'>Ajouter un Evenement</a></li>
-                            <li><a href=''>Ajouter un Utilisateur [SOON]</a></li>
-                        {% endif %}
-                            <li class='red'><a href='{{ path('fos_user_security_logout') }}'>Deconnexion</a></li>
-                        {% else %}
-                            <li class='green'><a href='{{ path('fos_user_security_login') }}'>Connexion</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+{% block nav_content%}
+    <li>
+        <a href="{{ path('shiawa_anime_homepage') }}">Accueil</a>
+    </li>
+    <li>
+        <a href="{{ path('shiawa_episode_list') }}">Nouveautés</a>
+    </li>
+    <li class=''>
+        <a  href="{{ path('shiawa_article_list', {'category': 'anime'})
+        }}">Articles</a>
+    </li>
+    <li>
+        <a href="{{ path('shiawa_anime_review_list') }}">Critiques</a>
+    </li>
+    <li>
+        <a href="{{ path('shiawa_anime_list') }}">Les séries</a>
+    </li>
+{% endblock %}
+
+{% block dropdown_title %}
+    Anime & Manga
+{% endblock %}
+
+{% block nav_mobile_content %}
+    <li>
+        <a href="{{ path('shiawa_anime_homepage') }}">Accueil</a>
+    </li>
+    <li>
+        <a href="{{ path('shiawa_episode_list') }}">Nouveautés</a>
+    </li>
+    <li class=''>
+        <a  href="{{ path('shiawa_article_list', {'category': 'anime'})
+        }}">Articles</a>
+    </li>
+    <li>
+        <a href="{{ path('shiawa_anime_review_list') }}">Critiques</a>
+    </li>
+    <li>
+        <a href="{{ path('shiawa_anime_list') }}">Les séries</a>
+    </li>
+{% endblock %}
+
+{% block mobile_dropdown_title %}
+    Anime & Manga
+{% endblock %}
+
+{% block desktop_dropdown_content %}
+    <li><a href="{{ path('shiawa_anime_homepage') }}">Shiawa Anime</a></li>
+{% endblock %}
+
+{% block mobile_dropdown_content %}
+    <li><a href="{{ path('shiawa_anime_homepage') }}">Shiawa Anime</a></li>
 {% endblock %}

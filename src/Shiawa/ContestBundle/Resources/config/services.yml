@@ -1,0 +1,4 @@
+services:
+#    shiawa_contest.example:
+#        class: Shiawa\ContestBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

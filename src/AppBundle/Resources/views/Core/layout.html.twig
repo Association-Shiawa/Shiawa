@@ -18,19 +18,29 @@ SHIAWA
     <!-- Schema.dc -->
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
     <meta name="DC.coverage" content="France" />
-    <meta name="DC.description" content="La description de la page ici :D" /> <!-- A MODIFIER -->
+    <meta name="DC.description" content="{% block DC_description %}Shiawa.fr, le site d'actualité sur la
+    Japanimation, le Cosplay et l'actualité japonaise ! Rejoignez la communauté des pandas.{% endblock
+    %}" />
+    <!-- A
+    MODIFIER -->
     <meta name="DC.format" content="text/html" />
     <meta name="DC.identifier" content="http://shiawa.fr" />
     <meta name="DC.publisher" content="Association Shiawa - Shiawa.fr" />
-    <meta name="DC.title" content="Le titre de la page" /> <!-- A MODIFIER -->
+    <meta name="DC.title" content="{% block DC_title %}Shiawa.fr - Site d'actualité Anime, Cosplay, Culture Pop.
+    Japonaise{% endblock %}" />
+    <!-- A MODIFIER
+     -->
     <meta name="DC.type" content="Text" />
-    <meta name="description" content="La description de la page ici :D version DC"> <!-- A MODIFIER -->
+    <meta name="description" content="{% block desc %}Shiawa.fr, le site d'actualité sur la
+    Japanimation, le Cosplay et l'actualité japonaise ! Rejoignez la communauté des pandas.{% endblock %}"> <!-- A MODIFIER -->
     <meta name="keywords" content="Shiawa , Shiawa.fr, anime, animes, fansub, japanimation, japan, mangas, manga, streaming, scantrads, scan, stream, drama, OST, AMV, Association, Japon, Cosplay">
     <!-- RSN : FB -->
-    <meta property="og:url" content="L'url Actuel" /> <!-- A MODIFIER -->
-    <meta property="og:image" content="Une image ici " /> <!-- A MODIFIER -->
-    <meta property="og:title" content="Le titre ici ..." /> <!-- A MODIFIER -->
-    <meta property="og:description" content="La description de maxi 300 caracs ici" /> <!-- A MODIFIER -->
+    <meta property="og:url" content="{{ app.request.uri|url_encode }}" /> <!-- A MODIFIER -->
+    <meta property="og:image" content="{%  block OG_image %}http://puu.sh/o7wOs/14be55f37a.png{% endblock %}" /> <!-- A MODIFIER -->
+    <meta property="og:title" content="{%  block OG_title %}Shiawa.fr - Site d'actualité Anime, Cosplay, Culture Pop.
+    Japonaise{% endblock %}" /> <!-- A MODIFIER -->
+    <meta property="og:description" content="{%  block OG_desc %}Shiawa.fr, le site d'actualité sur la
+    Japanimation, le Cosplay et l'actualité japonaise ! Rejoignez la communauté des pandas.{% endblock %}" /> <!-- A MODIFIER -->
     <!-- Google Verification -->
     <meta name="google-site-verification" content="kEB2-IqD2qVsqdPFPrEd-yYeIc1epBeaDePVshpBmBg" />
 
@@ -112,6 +122,12 @@ SHIAWA
                 format: 'yyyy-mm-dd'
             });
 
+            $('.birthdate').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 200, // Creates a dropdown of 15 years to control year
+                format: 'yyyy-mm-dd'
+            });
+
             $('.button-collapse2').sideNav({
                 menuWidth: 300, // Default is 240
                 edge: 'right', // Choose the horizontal origin
@@ -119,7 +135,7 @@ SHIAWA
             });
 
             tinymce.init({
-                selector: '#text',
+                selector: 'textarea',
                 height: 300,
                 plugins: [
                     'advlist autolink lists link image charmap print preview anchor',

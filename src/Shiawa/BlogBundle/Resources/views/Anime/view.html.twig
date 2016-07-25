@@ -1,4 +1,23 @@
-{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+{% extends "ShiawaBlogBundle:Anime:layout.html.twig" %}
+
+{% block DC_description %}
+    {% for letter in anime.synopsis|split('')|slice(0,300) %}{{ letter }}...{% endfor %}
+{% endblock %}
+
+{% block desc %}
+    {% for letter in anime.synopsis|split('')|slice(0,155) %}{{ letter }}...{% endfor %}
+{% endblock %}
+
+{%  block OG_desc %}
+    {% for letter in anime.synopsis|split('')|slice(0,300) %}{{ letter }}...{% endfor %}
+{% endblock %}
+
+{% block DC_title %}{{ anime.title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_title %}{{ anime.title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_image %}{{ anime.image }}{% endblock %}
+
 
 {% block stylesheets %}
     <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
@@ -27,7 +46,7 @@
                 <div class='row'>
                     <div class='col m4 s12 valign-wrapper'>
                         <div class='center-block'>
-                            <img class='responsive-img valign' src='http://cdn.myanimelist.net/images/anime/11/79410.jpg'>
+                            <img class='responsive-img valign' src='{{ anime.image }}'>
                         </div>
                     </div>
                     <div class='col m8 s12'>
@@ -123,6 +142,7 @@
 
                         </ul>
                         {% endif %}
+                        {% include "AppBundle:Rsn:fb.html.twig" %}
                     </div>
                 </div>
 

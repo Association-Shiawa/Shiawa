@@ -1,0 +1,3 @@
+shiawa_contest_homepage:
+    path:     /
+    defaults: { _controller: ShiawaContestBundle:Default:index }

@@ -1,5 +1,18 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
+{% block title %}Editer mon profil - {{ parent() }}{% endblock %}
+
+
 {% block fos_user_content %}
-{% include "FOSUserBundle:Profile:edit_content.html.twig" %}
+    <div class="container">
+        <h1 class="center-align">Editer mon profil</h1>
+        <div class="row">
+            <div class="col m8 offset-m2">
+                <div class="card-panel">
+                    {% include "FOSUserBundle:Profile:edit_content.html.twig" %}
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock fos_user_content %}

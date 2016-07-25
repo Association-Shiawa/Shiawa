@@ -1,5 +1,31 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
+
+{% block title %}Se connecter - {{ parent() }}{% endblock %}
+
 {% block fos_user_content %}
-{% include "ShiawaUserBundle:Registration:register_content.html.twig" %}
-{% endblock fos_user_content %}
+<div class="container" style="margin-top: 150px;margin-bottom: 150px;">
+    <main class="row">
+        <h1 class="center-align">Bienvenue sur Shiawa !</h1>
+        <main class="col m6 offset-m3">
+            <div class="section">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        Déjà inscrit ? <a href="{{ path('fos_user_security_login') }}" class="btn-flat green
+                                lighten-2 white-text">Se
+                            connecter</a>
+                    </div>
+                </div>
+                <div class="card-panel">
+                    {# On définit ce block, dans lequel vont venir s'insérer les autres vues du bundle #}
+                    {% block fos_user_form %}
+                        {% include "ShiawaUserBundle:Registration:register_content.html.twig" %}
+                    {% endblock fos_user_form %}
+                </div>
+            </div>
+        </main>
+    </main>
+
+</div>
+{% endblock %}
+
