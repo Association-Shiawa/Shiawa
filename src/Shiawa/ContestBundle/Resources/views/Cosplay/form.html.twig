@@ -1,0 +1,16 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+<div class="input-field">
+    {{ form_errors(form.serieType) }}
+    {{ form_widget(form.serieType, {'attr': {'class': ''}}) }}
+    {{ form_label(form.serieType, "Genre de l'anime", {'label_attr': {'class': ''}}) }}
+</div>
+
+<div class="center-align">
+    {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+</div>
+
+{{ form_rest(form) }}
+{{ form_end(form) }}

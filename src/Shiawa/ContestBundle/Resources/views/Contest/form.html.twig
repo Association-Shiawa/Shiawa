@@ -1,0 +1,27 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+    <div class="input-field">
+        {{ form_errors(form.type) }}
+        {{ form_widget(form.type, {'attr': {'class': ''}}) }}
+        {{ form_label(form.type, "Genre de l'anime", {'label_attr': {'class': ''}}) }}
+    </div>
+
+    {{ form_label(form.published, "Fait-il parti de la saison en cours ?", {'label_attr': {'class': ''}}) }}
+    <div class="switch">
+        <label>
+            Non
+            {{ form_widget(form.published, {'attr': {'class': ''}}) }}
+            <span class="lever"></span>
+            Oui
+        </label>
+        {{ form_errors(form.published) }}
+    </div>
+
+    <div class="center-align">
+        {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+    </div>
+
+    {{ form_rest(form) }}
+{{ form_end(form) }}

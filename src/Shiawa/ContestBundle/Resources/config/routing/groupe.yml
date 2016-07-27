@@ -1,0 +1,24 @@
+shiawa_contest_groupe_list:
+    path:     /admin/concours/jap-in-tarn-2016/groupe/list
+    defaults:
+        _controller: ShiawaContestBundle:Groupe:index
+        page: 1
+    requirements:
+      page: \d*
+
+shiawa_contest_groupe_view:
+    path:     /cosplay/concours/jap-in-tarn-2016/groupe/{slug}
+    defaults: { _controller: ShiawaContestBundle:Groupe:view }
+
+shiawa_contest_groupe_create:
+    path:     /cosplay/concours/jap-in-tarn-2016/groupe/nouveau
+    defaults: { _controller: "ShiawaContestBundle:Groupe:add" }
+    methods:  [GET, POST]
+
+shiawa_contest_groupe_edit:
+    path:     /cosplay/concours/jap-in-tarn-2016/groupe/{slug}/edit
+    defaults: { _controller: "ShiawaContestBundle:Groupe:edit" }
+
+shiawa_contest_groupe_delete:
+    path:     /cosplay/concours/jap-in-tarn-2016/cosplay/{slug}/delete
+    defaults: { _controller: "ShiawaContestBundle:Groupe:delete" }

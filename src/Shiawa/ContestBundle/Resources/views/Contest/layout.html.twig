@@ -1,0 +1,38 @@
+{% extends "AppBundle:Core:layout.html.twig" %}
+
+{% block title %}Concours Cosplay - {{ parent() }}{% endblock %}
+
+{% block menu %}
+    {{ include("ShiawaContestBundle:Contest:nav.html.twig") }}
+{% endblock %}
+
+
+{% block body %}
+
+    <div class='container'>
+        <div class='row'>
+            {% block content %}{% endblock %}
+
+            <div class="col m4">
+
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li><h3 class="collapsible-header">Règlement</h3></li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

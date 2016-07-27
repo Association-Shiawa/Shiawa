@@ -1,0 +1,92 @@
+{% extends "ShiawaContestBundle:Contest:layout.html.twig" %}
+
+{% block DC_description %}
+    Les inscriptions au concours Jap'In Tarn 2016 sont lancés. Choisissez de venir en groupe ou solo pour un défilé ou un concours avec prix à la clef ! Bonne chance à tous
+{% endblock %}
+
+{% block desc %}
+    Les inscriptions au concours Jap'In Tarn 2016 sont lancés. Choisissez de venir en groupe ou solo pour un défilé ou un concours avec prix à la clef ! Bonne chance à tous
+{% endblock %}
+
+{%  block OG_desc %}
+    Les inscriptions au concours Jap'In Tarn 2016 sont lancés. Choisissez de venir en groupe ou solo pour un défilé ou un concours avec prix à la clef ! Bonne chance à tous
+{% endblock %}
+
+{% block DC_title %}Concours Jap In Tarn 2016 - Shiawa.fr{% endblock %}
+
+{%  block OG_title %}Concours Jap In Tarn 2016 - Shiawa.fr{% endblock %}
+
+{%  block OG_image %}http://ekladata.com/KWdJ6Ss-3hE6pG2Hn-L2XSxuQVk@530x353.jpg{% endblock %}
+
+
+{% block stylesheets %}
+    <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/style-anim.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/horizontal_sly.css') }}"  media="screen,projection"/>
+{% endblock %}
+
+{% block title %}
+   Concours Jap In Tarn 2016 - Shiawa.fr
+{% endblock %}
+
+{% block content %}
+    <!-- CONTENT -->
+
+    <div class="center-align">
+        <h1>Jap'in Tarn 2016 </h1>
+        <h2>Inscrivez vous au concours ou défilé</h2>
+    </div>
+
+    <div class="col m6 offset-m2">
+        <div class="card-panel">
+            <h3>Inscription en 2 étapes</h3>
+            <p>Suivez les instructions qui suivent</p>
+        </div>
+
+        <div class="card-panel">
+            <h4>Créer un Cosplay</h4>
+            <p>
+                Vous devez remplir les informations liés à votre cosplay.
+            </p>
+            <p>
+                Chaque membre d'un groupe doit s'inscrire sur Shiawa.fr pour remplir ces informations personnelles et de son Cosplay.
+            </p>
+            <a href="{{ path('shiawa_cosplay_create') }}" class="btn-flat pink lighten-3 white-text">Créer mon cosplay</a>
+        </div>
+
+        <div class="card-panel">
+            <h4>Inscrivez vous pour la scène</h4>
+            <p>
+                Vous avez vos informations Cosplay remplient ? Vous pouvez passer au prochain formulaire
+            </p>
+            <p>
+                Que ce soit en groupe ou en solo, au défilé ou au coucours, vous remplissez le même formulaire.
+            </p>
+            <p>
+                Le chef de groupe ne pourra ajouter ses collègues qu'une fois ceux-ci inscrit et disposant d'au moins un Cosplay enregistré.
+            </p>
+            <p>
+                Vous pouvez seulement le pré-remplir et le valider plus tard !
+            </p>
+            <a href="{{ path('shiawa_contest_groupe_create') }}" class="btn pink lighten-3">M'inscrire</a>
+        </div>
+    </div>
+
+
+{{ parent() }}
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function () {
+            $('.car2').carousel({
+                dist: - 100,
+                padding: 0,
+                fullWidth: true
+            });
+        });
+    </script>
+{% endblock %}

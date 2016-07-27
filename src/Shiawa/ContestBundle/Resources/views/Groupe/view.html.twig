@@ -1,0 +1,207 @@
+{% extends "ShiawaBlogBundle:Anime:layout.html.twig" %}
+
+{% block DC_description %}
+    {% for letter in anime.synopsis|split('')|slice(0,300) %}{{ letter }}...{% endfor %}
+{% endblock %}
+
+{% block desc %}
+    {% for letter in anime.synopsis|split('')|slice(0,155) %}{{ letter }}...{% endfor %}
+{% endblock %}
+
+{%  block OG_desc %}
+    {% for letter in anime.synopsis|split('')|slice(0,300) %}{{ letter }}...{% endfor %}
+{% endblock %}
+
+{% block DC_title %}{{ anime.title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_title %}{{ anime.title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_image %}{{ anime.image }}{% endblock %}
+
+
+{% block stylesheets %}
+    <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/style-anim.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/horizontal_sly.css') }}"  media="screen,projection"/>
+{% endblock %}
+
+{% block title %}
+   {{ anime.title }} - Shiawa.fr
+{% endblock %}
+
+{% block content %}
+    <!-- CONTENT -->
+    <div class='col s12 m6 offset-m1'>
+        <div class='card z-depth-1'>
+
+            <div class='card-content'>
+
+                <div class='center'>
+                    <h1 class='title-section toupper'>
+                        {{ anime.title }}
+                    </h1>
+                </div>
+
+                <div class='row'>
+                    <div class='col m4 s12 valign-wrapper'>
+                        <div class='center-block'>
+                            <img class='responsive-img valign' src='{{ anime.image }}'>
+                        </div>
+                    </div>
+                    <div class='col m8 s12'>
+                        <ul class="collection">
+                            <li class="collection-item"><b>Date de parution :</b> {{ anime.createdAt|date('d/m/Y')}}</li>
+                            <li class="collection-item"><b>Nombre d'épisodes :</b> {{ anime.nbrEpisode }} épisodes</li>
+                            <li class="collection-item"><b>Studio d'animation :</b> {% if anime.studio.name is defined
+%}{{ anime.studio.name }}{% else %}Non renseigné{% endif %}</li>
+                            <li class="collection-item"><b>Type :</b> {{ anime.type }}</li>
+                            <li class="collection-item"><b>Editeur Français : </b> {% if anime.editor.name is defined
+                                %}{{ anime.editor.name }}{% else %}Non renseigné{% endif %}</li>
+                            <li class="collection-item"><b>La critique de SHIAWA : </b>{% if anime.review.title is
+                                defined
+                                %}<a href="{{ path('shiawa_anime_review_view', {'slug': anime.review.slug}) }}">{{ anime
+                                .review.title
+                                }}</a>{%
+                            else
+                            %}Prochainement{%
+                                endif
+                                %}</li>
+                        </ul>
+                        <p class="center-align">Certaines informations peuvent provenir de My Anime List.</p>
+                    </div>
+                </div>
+
+                <div class='divider'></div>
+
+                <div class='row'>
+                    <div class='col s12'>
+                        <div class="card z-depth-0 pink lighten-5">
+                            <div class="card-content">
+                                <p><b>Synopsis :</b> {{ anime.synopsis }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='divider'></div>
+
+                <div class='row'>
+                    <div class='col s12'>
+                        {% if anime.characters is empty %}
+                            <p class="center-align card-panel">Pas encore de personnage ? :( Merci de nous en conseiller
+                                en commentaire :D</p>
+                        {% else %}
+                        <p class="center-align"><b>Faites défiler avec votre souris les différents personnages de la
+                                série</b></p>
+                        <div class="car2">
+                            {% for character in anime.characters %}
+                            <a class="carousel-item" href="#one!">
+                                <div class='card waves-effect'>
+                                    <div class='card-image'>
+                                        <img src="{{ character.avatar }}">
+                                        <div class='card-title'>{{ character.name }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                            {% endfor %}
+
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class='col s12'>
+                        {% if anime.episodes is empty %}
+                            <p class="center-align card-panel">Nous allons ajouter les épisodes de l'Anime bientôt :3</p>
+                        {% else %}
+                        <ul class="collection">
+
+                            {% for episode in anime.episodes %}
+                            <li class="collection-item avatar">
+                                <img src="{{ anime.image }}" alt="" class="circle">
+                                <span class="title">
+                                    <a href='{{ path('shiawa_episode_view', {'slug': episode.slug})
+                                    }}'>
+                                        <b>{{ anime.title }}</b>
+                                    </a>
+                                    <span class="badge pink lighten-2 white-text">
+                                        <a href="{{ path('shiawa_episode_view', {'slug': episode.slug})
+                                        }}" class="white-text">
+                                            Episode n°{{ episode.numEpisode }}
+                                        </a>
+                                    </span>
+                                </span>
+                                {% if anime.editor.name is defined %}
+                                <p>Plateforme : {{ anime.editor.name }}</p>
+                                {% endif %}
+                                <p>Date : {{ episode.createdAt|date('d/m/Y') }}</p>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                        {% endif %}
+                        {% include "AppBundle:Rsn:fb.html.twig" %}
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class='card z-depth-1'>
+            <div class='card-content'>
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    /*
+                     var disqus_config = function () {
+                     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                     };
+                     */
+                    (function () {  // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '//shiawa.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', + new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();</script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    </div>
+
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+        {% if is_granted('ROLE_AUTHOR') %}
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large pink lighten-2" href="{{ path("shiawa_anime_edit", {'slug': anime
+                    .slug}) }}">
+                    <i class="large material-icons">mode_edit</i>
+                </a>
+            </div>
+        {% endif %}
+    {% endif %}
+
+{{ parent() }}
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function () {
+            $('.car2').carousel({
+                dist: - 100,
+                padding: 0,
+                fullWidth: true
+            });
+        });
+    </script>
+{% endblock %}

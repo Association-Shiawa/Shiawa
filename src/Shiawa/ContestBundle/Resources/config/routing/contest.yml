@@ -1,0 +1,24 @@
+shiawa_contest_list:
+    path:     /cosplay/concours/list
+    defaults:
+        _controller: ShiawaContestBundle:Contest:index
+        page: 1
+    requirements:
+      page: \d*
+
+shiawa_contest_view:
+    path:     /cosplay/concours/jap-in-tarn-2016
+    defaults: { _controller: ShiawaContestBundle:Contest:view }
+
+shiawa_contest_create:
+    path:     /admin/concours-cosplay/create
+    defaults: { _controller: "ShiawaContestBundle:Contest:add" }
+    methods:  [GET, POST]
+
+shiawa_contest_edit:
+    path:     /admin/concours-cosplay/{slug}/edit
+    defaults: { _controller: "ShiawaContestBundle:Contest:edit" }
+
+shiawa_contest_delete:
+    path:     /admin/concours-cosplay/{slug}/delete
+    defaults: { _controller: "ShiawaContestBundle:Contest:delete" }
