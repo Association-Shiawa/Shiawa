@@ -6,6 +6,7 @@ use Shiawa\ContestBundle\Entity\Cosplay;
 use Shiawa\ContestBundle\Form\CosplayType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class CosplayController extends Controller
 {
