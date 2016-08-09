@@ -7,7 +7,6 @@ and open the template in the editor.
     Created on : 23 avr. 2016, 23:28:19
     Author     : Fabien
 */
-@import "materialize.scss";
 
 html, body{
     width: 100%;
@@ -167,6 +166,20 @@ html, body{
         font-size: 1.2em;
         line-height: 2em;
     }
+  .carousel {
+    height: 600px;
+    .carousel-item {
+      margin-top: -100px;
+      width: 300px;
+      .card {
+        .card-image {
+          height: 300px;
+          width: 300px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
 }
 .clear{
     clear: both;

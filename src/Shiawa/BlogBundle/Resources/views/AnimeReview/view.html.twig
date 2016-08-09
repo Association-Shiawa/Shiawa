@@ -1,4 +1,4 @@
-{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+{% extends "ShiawaBlogBundle:AnimeReview:layout.html.twig" %}
 
 {% block DC_description %}
     {% for letter in review.anime.synopsis|split('')|slice(0,300) %}{{ letter }}{% endfor %}...
@@ -17,13 +17,6 @@
 {%  block OG_title %}{{ review.title }} - Shiawa.fr{% endblock %}
 
 {%  block OG_image %}{{ review.image }}{% endblock %}
-
-{% block stylesheets %}
-    <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/style-anim.css') }}"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/horizontal_sly.css') }}"  media="screen,projection"/>
-{% endblock %}
 
 {% block title %}
     {{ review.title }} - Shiawa.fr
