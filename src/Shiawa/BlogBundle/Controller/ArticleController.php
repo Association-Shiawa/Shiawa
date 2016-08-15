@@ -140,17 +140,20 @@ class ArticleController extends Controller
                 ->getManager()
                 ->getRepository('ShiawaBlogBundle:Tag');
 
+            //var_dump($article->getTags());die();
 
-            for($i=0; $i < count($article->getTags()); $i++) {
-                $tag = $article->getTags()[$i];
+            $tags = $article->getTags();
+            for($i=0; $i < count($tags); $i++) {
+                $tag = $tags[$i];
 
-                $article->getTags()[$i]->setName(strtolower($tag->getName()));
+                var_dump($tags[$i]);
+                $tags[$i]->setName(strtolower($tag->getName()));
                 $tagDb = $tagRep->findOneByName($tag->getName());
 
                 if($tagDb == null){
 
                 }else{
-                    $article->getTags()[$i] = $tagDb;
+                    $tags[$i] = $tagDb;
                 }
             }
 
