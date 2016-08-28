@@ -63,22 +63,33 @@
 
             <!-- USER SIDE NAV -->
             <div id="slide-out" class="side-nav">
-                <div class="center-align">
-                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                        <img src='
-                        {% if app.user.avatar is null %}
-                       https://www.mautic.org/media/images/default_avatar.png
-                        {% else %}
-                        {{ app.user.avatar }}
+                <li style="list-style: none;">
+                    <div class="userView">
+                        <img class="background" src="{{ asset('imgs/poster.jpg') }}">
+                        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                            <a href="{{ path('fos_user_profile_show') }}">
+                                <img class="circle" src="
+                                {% if app.user.avatar is null %}
+                                https://www.mautic.org/media/images/default_avatar.png
+                                {% else %}
+                                    {{ app.user.avatar }}
+                                {% endif %}
+                                ">
+                            </a>
+                            <a href="{{ path('fos_user_profile_show') }}">
+                                <span class="white-text name">{{ app.user.username|title }}</span>
+                            </a>
+                            <a href="{{ path('fos_user_profile_show') }}">
+                                <span class="white-text email">{{ app.user.email }}</span>
+                            </a>
                         {% endif %}
-                    ' class='responsive-img'>
-                    {% endif %}
-                </div>
+                    </div>
+                </li>
                 <ul>
                     {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                        <li class="blue-grey-text" style="padding-left: 20px;">Bonjour {{ app.user.username }} !</li>
                         <li><a href="{{ path('fos_user_profile_show') }}">Mon profil</a></li>
                         {% if is_granted('ROLE_AUTHOR') %}
+                            <li><div class="divider"></div></li>
                             <li><a href="{{ path('shiawa_admin_homepage') }}">Dashboard Admin</a></li>
 
                             <li class="no-padding blue-grey">

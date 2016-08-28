@@ -1,0 +1,9 @@
+.container-fluid {
+  margin: 0 auto;
+  width: 90%;
+}
+@media #{$large-and-up} {
+  .container {
+    width: 90%;
+  }
+}

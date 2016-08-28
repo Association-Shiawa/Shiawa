@@ -1,0 +1,93 @@
+
+<div class="card-panel">
+    {{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+    <div class="section">
+        <h3>Vos informations personnelles</h3>
+
+        <div class="input-field">
+            {{ form_label(form.cosplayer.name, "Votre prénom", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.cosplayer.name) }}
+            {{ form_widget(form.cosplayer.name, {'attr': {'class': ''}}) }}
+        </div>
+
+        <div class="input-field">
+            {{ form_label(form.cosplayer.surname, "Votre nom de famille", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.cosplayer.surname) }}
+            {{ form_widget(form.cosplayer.surname, {'attr': {'class': ''}}) }}
+        </div>
+
+        <div class="input-field">
+            {{ form_label(form.cosplayer.birthdate, "Votre date de naissance", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.cosplayer.birthdate) }}
+            {{ form_widget(form.cosplayer.birthdate, {'attr': {'class': 'birthdate'}}) }}
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <h3>Votre cosplay</h3>
+
+        <div class="input-field">
+            {{ form_errors(form.serieType) }}
+            {{ form_widget(form.serieType, {'attr': {'class': ''}}) }}
+            {{ form_label(form.serieType, "Univers Cosplayé", {'label_attr': {'class': ''}}) }}
+        </div>
+
+        <div class="input-field">
+            {{ form_label(form.characterName, "Nom du personnage cosplayé", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.characterName) }}
+            {{ form_widget(form.characterName, {'attr': {'class': ''}}) }}
+        </div>
+
+        <div class="input-field">
+            {{ form_label(form.serieName, "Nom de l'oeuvre dont le cosplay est issu", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.serieName) }}
+            {{ form_widget(form.serieName, {'attr': {'class': ''}}) }}
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Informations complémentaires</h3>
+        <h4>Si passage en concours</h4>
+
+        <p>Si vous souhaitez participer au concours, remplissez les champs suivants. Sinon, vous pouvez valider le
+            formulaire plus bas. Merci ! :)</p>
+
+        <div class="input-field">
+            {{ form_label(form.image, "Joindre une image de référence du costume", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.image) }}
+            {{ form_widget(form.image, {'attr': {'class': ''}}) }}
+        </div>
+
+        <div class="input-field">
+            {{ form_label(form.createdParts, "Parties du costumes créées", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.createdParts) }}
+            {{ form_widget(form.createdParts, {'attr': {'class': 'materialize-textarea'}}) }}
+        </div>
+
+        <div class="input-field">
+            {{ form_label(form.costumisedParts, "Parties du costume customisées", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.costumisedParts) }}
+            {{ form_widget(form.costumisedParts, {'attr': {'class': 'materialize-textarea'}}) }}
+        </div>
+
+        <div class="input-field">
+            {{ form_label(form.boughtParts, "Parties du costume achetées", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.boughtParts) }}
+            {{ form_widget(form.boughtParts, {'attr': {'class': 'materialize-textarea'}}) }}
+        </div>
+    </div>
+
+
+
+    <div class="center-align">
+        {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+    </div>
+
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+</div>

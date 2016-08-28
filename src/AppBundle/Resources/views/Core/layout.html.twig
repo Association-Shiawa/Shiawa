@@ -47,7 +47,7 @@ SHIAWA
     {% block stylesheets %}
         <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="{{ asset('css/style-accueil.css') }}"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/style.css') }}"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="{{ asset('css/horizontal_sly.css') }}"  media="screen,projection"/>
     {% endblock %}
         <script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
@@ -78,10 +78,11 @@ SHIAWA
                     <div class='row'>
                         <!-- RSN -->
                         <div class='col s12'>
-                            <a class="grey-text text-lighten-3" href="#!">Facebook</a>
-                            <a class="grey-text text-lighten-3" href="#!">Youtube</a>
-                            <a class="grey-text text-lighten-3" href="#!">Twitter</a>
-                            <a class="grey-text text-lighten-3" href="#!">Instagram</a>
+                            <a class="grey-text text-lighten-3 btn-flat" href="https://www.facebook
+                            .com/shiawaproject">Facebook</a>
+                            <a class="grey-text text-lighten-3 btn-flat" href="https://www.youtube.com/channel/UCgPqRGhrra-liY7N7OQSD0A">Youtube</a>
+                            <a class="grey-text text-lighten-3 btn-flat" href="https://twitter.com/SHIAWA81">Twitter</a>
+                            <a class="grey-text text-lighten-3 btn-flat" href="https://www.instagram.com/shiawaofficiel/">Instagram</a>
                         </div>
                     </div>
 
@@ -100,8 +101,9 @@ SHIAWA
             <div class="container">
                 © 2016 Tous droits réservés. Site soumis à la licence Creative Common V4.0.
                 <div class='right'>
-                    <a class="grey-text text-lighten-4" href="#!">Site développé par l'association</a>
-                    &nbsp;&nbsp;&nbsp;<a class="grey-text text-lighten-4" href="#!">Contactez-nous</a>
+                    <a class="grey-text text-lighten-4" href="{{ path('shiawa_homepage') }}">Site développé par
+                        l'association</a>
+                    &nbsp;&nbsp;&nbsp;<a class="grey-text text-lighten-4" href="">Contactez-nous</a>
                 </div>
             </div>
         </div>
@@ -135,7 +137,7 @@ SHIAWA
             });
 
             tinymce.init({
-                selector: 'textarea',
+                selector: '.wysiwyg',
                 height: 300,
                 plugins: [
                     'advlist autolink lists link image charmap print preview anchor',

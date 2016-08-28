@@ -1,0 +1,12 @@
+/* 1. Colors
+   ========================================================================== */
+$primary-color: #ec407a;
+
+/* 11. Global
+   ========================================================================== */
+
+// Media Query Ranges
+
+$medium-screen-up: 993px !default;
+
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;

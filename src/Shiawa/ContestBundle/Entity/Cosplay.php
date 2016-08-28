@@ -25,21 +25,21 @@ class Cosplay
     /**
      * @var string
      *
-     * @ORM\Column(name="characterName", type="string", length=255)
+     * @ORM\Column(name="character_name", type="string", length=255)
      */
     private $characterName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="serieName", type="string", length=255)
+     * @ORM\Column(name="serie_name", type="string", length=255)
      */
     private $serieName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="serieType", type="string", length=255)
+     * @ORM\Column(name="serie_type", type="string", length=255)
      */
     private $serieType;
 
@@ -61,23 +61,30 @@ class Cosplay
     /**
      * @var string
      *
-     * @ORM\Column(name="createdParts", type="text", nullable=true)
+     * @ORM\Column(name="created_parts", type="text", nullable=true)
      */
     private $createdParts;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="costumisedParts", type="text", nullable=true)
+     * @ORM\Column(name="costumised_parts", type="text", nullable=true)
      */
     private $costumisedParts;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="boughtParts", type="text", nullable=true)
+     * @ORM\Column(name="bought_parts", type="text", nullable=true)
      */
     private $boughtParts;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="more_infos", type="text", nullable=true)
+     */
+    private $moreInfo;
 
     /**
      * @var User $cosplayer
@@ -266,5 +273,76 @@ class Cosplay
     {
         return $this->boughtParts;
     }
-}
 
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Cosplay
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set moreInfo
+     *
+     * @param string $moreInfo
+     *
+     * @return Cosplay
+     */
+    public function setMoreInfo($moreInfo)
+    {
+        $this->moreInfo = $moreInfo;
+
+        return $this;
+    }
+
+    /**
+     * Get moreInfo
+     *
+     * @return string
+     */
+    public function getMoreInfo()
+    {
+        return $this->moreInfo;
+    }
+
+    /**
+     * Set cosplayer
+     *
+     * @param \Shiawa\UserBundle\Entity\User $cosplayer
+     *
+     * @return Cosplay
+     */
+    public function setCosplayer(\Shiawa\UserBundle\Entity\User $cosplayer)
+    {
+        $this->cosplayer = $cosplayer;
+
+        return $this;
+    }
+
+    /**
+     * Get cosplayer
+     *
+     * @return \Shiawa\UserBundle\Entity\User
+     */
+    public function getCosplayer()
+    {
+        return $this->cosplayer;
+    }
+}

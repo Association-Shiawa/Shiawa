@@ -1,3 +1,11 @@
-shiawa_contest_homepage:
-    path:     /
-    defaults: { _controller: ShiawaContestBundle:Default:index }
+shiawa_contest_cosplay:
+    resource: "@ShiawaContestBundle/Resources/config/routing/cosplay.yml"
+    prefix:   /
+
+shiawa_contest_groupe:
+    resource: "@ShiawaContestBundle/Resources/config/routing/groupe.yml"
+    prefix:   /
+
+shiawa_contest_contest:
+    resource: "@ShiawaContestBundle/Resources/config/routing/contest.yml"
+    prefix:   /

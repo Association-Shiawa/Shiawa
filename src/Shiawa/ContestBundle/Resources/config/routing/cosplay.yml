@@ -1,0 +1,24 @@
+shiawa_cosplay_list:
+    path:     /admin/concours/jap-in-tarn-2016/cosplay/list
+    defaults:
+        _controller: ShiawaContestBundle:Cosplay:index
+        page: 1
+    requirements:
+      page: \d*
+
+shiawa_cosplay_view:
+    path:     /cosplay/concours/jap-in-tarn-2016/cosplay/fiche/{slug}
+    defaults: { _controller: ShiawaContestBundle:Cosplay:view }
+
+shiawa_cosplay_create:
+    path:     /cosplay/concours/jap-in-tarn-2016/cosplay/nouveau
+    defaults: { _controller: "ShiawaContestBundle:Cosplay:add" }
+    methods:  [GET, POST]
+
+shiawa_cosplay_edit:
+    path:     /cosplay/concours/jap-in-tarn-2016/cosplay/{slug}/edit
+    defaults: { _controller: "ShiawaContestBundle:Cosplay:edit" }
+
+shiawa_cosplay_delete:
+    path:     /cosplay/concours/jap-in-tarn-2016/cosplay/{slug}/delete
+    defaults: { _controller: "ShiawaContestBundle:Cosplay:delete" }

@@ -24,27 +24,36 @@
             var $container = $('div#article_tags');
 
             var index = $container.find(':input').length;
-
-            // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
-            $('#add_tag').click(function(e) {
-                addTag($container);
-
-                e.preventDefault();
-                return false;
-            });
-
-            // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un
+            //
             if (index == 0) {
-                addTag($container);
+                $('.tags').material_chip();
             } else {
-                // S'il existe déjà des tags, on ajoute un lien de suppression pour chacune d'entre elles
+                data = [];
+                // S'il existe déjà des tags, on les ajoute à la div.tags
                 $container.children('div').each(function() {
-                    addDeleteLink($(this));
+                    chip = {
+                        tag: $(this).find(':input')[0].value,
+                        id: $(this).children('label')[0].innerHTML
+                    }
+                    data.push(chip)
+                });
+
+                $('.tags').material_chip({
+                    data: data
                 });
             }
 
+            $('.chips').on('chip.add', function(e, chip){
+                chip.id = index;
+                addTag($container, chip)
+            });
+
+            $('.chips').on('chip.delete', function(e, chip){
+                deleteTag($container, chip);
+            });
+
             // La fonction qui ajoute un formulaire TagType
-            function addTag($container) {
+            function addTag($container, tag) {
                 // Dans le contenu de l'attribut « data-prototype », on remplace :
                 // - le texte "__name__label__" qu'il contient par le label du champ
                 // - le texte "__name__" qu'il contient par le numéro du champ
@@ -56,29 +65,23 @@
                 // On crée un objet jquery qui contient ce template
                 var $prototype = $(template);
 
-                // On ajoute au prototype un lien pour pouvoir supprimer le tag
-                addDeleteLink($prototype);
-
                 // On ajoute le prototype modifié à la fin de la balise <div>
                 $container.append($prototype);
+
+                $prototype.attr('id', "tag_"+tag.id);
+                elem = $prototype.find(':input')[0];
+                elem.value = tag.tag;
 
                 // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
                 index++;
             }
 
-            // La fonction qui ajoute un lien de suppression d'un tag
-            function addDeleteLink($prototype) {
-                var $deleteLink = $('<a href="#" class="btn-flat red white-text">Supprimer</a>');
-
-                $prototype.append($deleteLink);
-
-                // Ajout du listener sur le clic du lien pour effectivement supprimer le tag
-                $deleteLink.click(function(e) {
-                    $prototype.remove();
-
-                    e.preventDefault();
-                    return false;
-                });
+            // La fonction qui supprime un tag
+            function deleteTag($container, chip) {
+                console.log(chip.tag+' - '+chip.id);
+                $("#tag_"+chip.id).remove();
+                index--;
+                return false;
             }
         });
     </script>

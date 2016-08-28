@@ -1,0 +1,45 @@
+{% extends "AppBundle:Core:nav.html.twig" %}
+
+{% block navbar_title %}
+    <a href="{{ path('shiawa_anime_homepage') }}" class="brand-logo">Concours Jap'In Tarn 2016</a>
+{% endblock %}
+
+{% block nav_content%}
+    <li>
+        <a href="{{ path('shiawa_contest_view') }}">Accueil</a>
+    </li>
+    <li>
+        <a href="{{ path('shiawa_contest_view') }}">Nouveau Cosplay</a>
+    </li>
+    <li>
+        <a href="{{ path('shiawa_contest_view') }}">Créer un groupe</a>
+    </li>
+{% endblock %}
+
+{% block dropdown_title %}
+    Anime & Manga
+{% endblock %}
+
+{% block nav_mobile_content %}
+    <li>
+        <a href="{{ path('shiawa_contest_view') }}">Accueil</a>
+    </li>
+    <li>
+        <a href="{{ path('shiawa_contest_view') }}">Nouveau Cosplay</a>
+    </li>
+    <li>
+        <a href="{{ path('shiawa_contest_view') }}">Créer un groupe</a>
+    </li>
+{% endblock %}
+
+{% block mobile_dropdown_title %}
+    Concours Cosplay
+{% endblock %}
+
+{% block desktop_dropdown_content %}
+    <li><a href="{{ path('shiawa_anime_homepage') }}">Shiawa Anime</a></li>
+{% endblock %}
+
+{% block mobile_dropdown_content %}
+    <li><a href="{{ path('shiawa_anime_homepage') }}">Shiawa Anime</a></li>
+{% endblock %}

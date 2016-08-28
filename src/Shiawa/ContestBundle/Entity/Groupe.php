@@ -3,11 +3,12 @@
 namespace Shiawa\ContestBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Groupe
  *
- * @ORM\Table(name="groupe")
+ * @ORM\Table(name="shiawa_contest_groupe")
  * @ORM\Entity(repositoryClass="Shiawa\ContestBundle\Repository\GroupeRepository")
  */
 class Groupe
@@ -38,7 +39,7 @@ class Groupe
     /**
      * @var string
      *
-     * @ORM\Column(name="participateTo", type="string", length=255)
+     * @ORM\Column(name="participate_to", type="string", length=255)
      */
     private $participateTo;
 
@@ -57,6 +58,13 @@ class Groupe
     private $accessories;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="published", type="boolean", nullable=true)
+     */
+    private $published;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="validated", type="string", length=255, nullable=true)
@@ -69,6 +77,15 @@ class Groupe
      * @ORM\Column(name="reasons", type="text", nullable=true)
      */
     private $reasons;
+
+    /**
+     * @var string
+     *
+     * @Gedmo\Blameable(on="create")
+     * @ORM\ManyToOne(targetEntity="Shiawa\UserBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $chief;
 
 
     /**
@@ -248,5 +265,52 @@ class Groupe
     {
         return $this->reasons;
     }
-}
 
+    /**
+     * Set published
+     *
+     * @param boolean $published
+     *
+     * @return Groupe
+     */
+    public function setPublished($published)
+    {
+        $this->published = $published;
+
+        return $this;
+    }
+
+    /**
+     * Get published
+     *
+     * @return boolean
+     */
+    public function getPublished()
+    {
+        return $this->published;
+    }
+
+    /**
+     * Set chief
+     *
+     * @param \Shiawa\UserBundle\Entity\User $chief
+     *
+     * @return Groupe
+     */
+    public function setChief(\Shiawa\UserBundle\Entity\User $chief)
+    {
+        $this->chief = $chief;
+
+        return $this;
+    }
+
+    /**
+     * Get chief
+     *
+     * @return \Shiawa\UserBundle\Entity\User
+     */
+    public function getChief()
+    {
+        return $this->chief;
+    }
+}
