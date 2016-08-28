@@ -1,4 +1,4 @@
-{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+{% extends "ShiawaEventBundle:Event:layout.html.twig" %}
 
 {% block DC_description %}
     {% for letter in event.description|split('')|slice(0,300) %}{{ letter }}{% else %}{{ event.name|title }} -

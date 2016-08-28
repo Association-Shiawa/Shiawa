@@ -143,17 +143,19 @@ class ArticleController extends Controller
             //var_dump($article->getTags());die();
 
             $tags = $article->getTags();
+            $nbTags = count($tags);
             for($i=0; $i < count($tags); $i++) {
                 $tag = $tags[$i];
 
-                var_dump($tags[$i]);
-                $tags[$i]->setName(strtolower($tag->getName()));
-                $tagDb = $tagRep->findOneByName($tag->getName());
-
-                if($tagDb == null){
-
+                if($tag === null) {
+                    $nbTags++;
                 }else{
-                    $tags[$i] = $tagDb;
+                    $tag->setName(strtolower($tag->getName()));
+                    $tagDb = $tagRep->findOneByName($tag->getName());
+
+                    if(!$tagDb == null){
+                        $tags[$i] = $tagDb;
+                    }
                 }
             }
 
