@@ -1,0 +1,49 @@
+.articles, .row {
+  width: 100%;
+  position: relative;
+  height: 330px;
+  transition: 0.4s ease; }
+  .articles .art, .row .art {
+    position: relative;
+    height: 100%;
+    display: block;
+    box-sizing: content-box;
+    width: 33.33333%;
+    float: left;
+    background: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px; }
+    .articles .art img, .row .art img {
+      height: 100%;
+      position: relative;
+      width: 100%;
+      bottom: 0;
+      transition: 0.4s ease; }
+    .articles .art:hover img, .row .art:hover img {
+      transform-origin: top 0 left 0;
+      transform: scale(1.15) skewY(5deg); }
+    .articles .art:hover .overlay-art, .row .art:hover .overlay-art {
+      background: rgba(0, 0, 0, 0.75); }
+    .articles .art .overlay-art, .row .art .overlay-art {
+      background: rgba(0, 0, 0, 0.35);
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0; }
+    .articles .art .zoning-art, .row .art .zoning-art {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      color: white;
+      padding: 30px;
+      text-shadow: 1px 1px 2px black; }
+      .articles .art .zoning-art .title-art, .row .art .zoning-art .title-art {
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        font-size: 40px;
+        text-align: justify; }
+      .articles .art .zoning-art a, .row .art .zoning-art a {
+        margin-top: 25px; }
+
+/*# sourceMappingURL=save.css.map */
