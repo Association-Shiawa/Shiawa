@@ -62,23 +62,9 @@ class AnimeReviewController extends Controller
         $form = $this->createForm(AnimeReviewType::class, $review);
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-            $tagRep = $this->getDoctrine()
-                ->getManager()
-                ->getRepository('ShiawaBlogBundle:Tag');
 
-
-            for($i=0; $i < count($review->getTags()); $i++) {
-                $tag = $review->getTags()[$i];
-
-                $review->getTags()[$i]->setName(strtolower($tag->getName()));
-                $tagDb = $tagRep->findOneByName($tag->getName());
-
-                if($tagDb == null){
-
-                }else{
-                    $review->getTags()[$i] = $tagDb;
-                }
-            }
+            $tagsManagement = $this->get('shiawa_blog.tags');
+            $tagsManagement->setArticleTags($review);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($review);

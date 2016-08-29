@@ -84,23 +84,9 @@ class ArticleController extends Controller
         $form = $this->createForm(ArticleType::class, $article);
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-            $tagRep = $this->getDoctrine()
-                ->getManager()
-                ->getRepository('ShiawaBlogBundle:Tag');
 
-
-            for($i=0; $i < count($article->getTags()); $i++) {
-                $tag = $article->getTags()[$i];
-
-                $article->getTags()[$i]->setName(strtolower($tag->getName()));
-                $tagDb = $tagRep->findOneByName($tag->getName());
-
-                if($tagDb == null){
-
-                }else{
-                    $article->getTags()[$i] = $tagDb;
-                }
-            }
+            $tagsManagement = $this->get('shiawa_blog.tags');
+            $tagsManagement->setArticeTags($article);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
@@ -136,28 +122,9 @@ class ArticleController extends Controller
         $form = $this->createForm(ArticleEditType::class, $article);
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-            $tagRep = $this->getDoctrine()
-                ->getManager()
-                ->getRepository('ShiawaBlogBundle:Tag');
 
-            //var_dump($article->getTags());die();
-
-            $tags = $article->getTags();
-            $nbTags = count($tags);
-            for($i=0; $i < count($tags); $i++) {
-                $tag = $tags[$i];
-
-                if($tag === null) {
-                    $nbTags++;
-                }else{
-                    $tag->setName(strtolower($tag->getName()));
-                    $tagDb = $tagRep->findOneByName($tag->getName());
-
-                    if(!$tagDb == null){
-                        $tags[$i] = $tagDb;
-                    }
-                }
-            }
+            $tagsManagement = $this->get('shiawa_blog.tags');
+            $tagsManagement->setArticleTags($article);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
