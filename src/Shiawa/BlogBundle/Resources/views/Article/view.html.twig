@@ -1,15 +1,15 @@
 {% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
 
 {% block DC_description %}
-    {% for letter in article.content|split('')|slice(0,300) %}{{ letter }}{% endfor %}
+    {% for letter in article.summary|split('')|slice(0,300) %}{{ letter }}{% endfor %}
 {% endblock %}
 
 {% block desc %}
-    {% for letter in article.content|split('')|slice(0,155) %}{{ letter }}{% endfor %}
+    {% for letter in article.summary|split('')|slice(0,155) %}{{ letter }}{% endfor %}
 {% endblock %}
 
 {%  block OG_desc %}
-    {% for letter in article.content|split('')|slice(0,300) %}{{ letter }}{% endfor %}
+    {% for letter in article.summary|split('')|slice(0,300) %}{{ letter }}{% endfor %}
 {% endblock %}
 
 {% block DC_title %}{{ article.title }} - Shiawa.fr{% endblock %}
