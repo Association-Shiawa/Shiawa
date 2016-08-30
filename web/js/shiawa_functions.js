@@ -256,4 +256,10 @@ var shiawa_module = (function () {
         });
     }();
 
+    self.initMaterialSelect = function () {
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    }();
+
 })();
