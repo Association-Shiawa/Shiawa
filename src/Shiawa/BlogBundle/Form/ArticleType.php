@@ -29,7 +29,9 @@ class ArticleType extends AbstractType
                 'required'     => false
             ))
             ->add('summary')
-            ->add('content')
+            ->add('content', null, array(
+                'required' => false
+            ))
             ->add('createdAt', DateType::class, array(
                 'widget' => 'single_text',
                 'html5' => false
