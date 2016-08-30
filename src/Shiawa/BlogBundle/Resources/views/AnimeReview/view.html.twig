@@ -32,7 +32,7 @@
             </div>
             <div class='card-content'>
                 <p>
-                    {{ review.introduction }}
+                    {{ review.introduction|raw }}
                 </p>
                 <br />
                 <div class='divider'></div>
@@ -51,7 +51,7 @@
 
                 <div class='card grey lighten-4'>
                     <div class='card-content'>
-                        <p>{{ review.anime.synopsis }}</p>
+                        <p>{{ review.anime.synopsis|raw }}</p>
 
                         <ul class="collection with-header">
                             <li class="collection-header"><p><b class='pink-text'>Quelques informations</b></p></li>
@@ -81,7 +81,7 @@
                 </nav>
 
                 <div class='content-article'>
-                    {{ review.criticScenario }}
+                    {{ review.criticScenario|raw }}
                  </div>
 
 
@@ -97,7 +97,7 @@
                 </nav>
 
                 <div class='content-article'>
-                    {{ review.criticGraphisms }}
+                    {{ review.criticGraphisms|raw }}
                 </div>
 
                 <!-- La musique -->
@@ -112,7 +112,7 @@
                 </nav>
 
                 <div class='content-article'>
-                    {{ review.criticSoundtrack }}
+                    {{ review.criticSoundtrack|raw }}
                 </div>
 
                 <!-- La cohérence -->
@@ -127,7 +127,7 @@
                 </nav>
 
                 <div class='content-article'>
-                    {{ review.criticConsistency }}
+                    {{ review.criticConsistency|raw }}
                 </div>
 
                 <!-- Les personnages -->
@@ -185,7 +185,7 @@
                             <small>La note attribuée est sur 20</small>
                         </div>
                         <div class='col m8'>
-                            {{ review.conclusion }}
+                            {{ review.conclusion|raw }}
                         </div>
                     </div>
                 </div>

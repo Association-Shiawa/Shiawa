@@ -6,6 +6,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\RangeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -31,15 +32,48 @@ class AnimeReviewType extends AbstractType
             ))
             ->add('image')
             ->add('introduction')
-            ->add('criticScenario')
-            ->add('criticGraphisms')
-            ->add('criticSoundtrack')
-            ->add('criticConsistency')
-            ->add('noteScenario')
-            ->add('noteGraphism')
-            ->add('noteSoundtrack')
-            ->add('noteCharacters')
-            ->add('noteConsistency')
+            ->add('criticScenario', null, array(
+                'required' => false
+            ))
+            ->add('criticGraphisms', null, array(
+                'required' => false
+            ))
+            ->add('criticSoundtrack', null, array(
+                'required' => false
+            ))
+            ->add('criticConsistency', null, array(
+                'required' => false
+            ))
+            ->add('noteScenario', RangeType::class, array(
+                'attr' => array(
+                    'min' => 0,
+                    'max' => 5
+                )
+            ))
+            ->add('noteGraphism', RangeType::class, array(
+                'attr' => array(
+                    'min' => 0,
+                    'max' => 5
+                )
+            ))
+            ->add('noteSoundtrack', RangeType::class, array(
+                'attr' => array(
+                    'min' => 0,
+                    'max' => 5
+                )
+            ))
+            ->add('noteCharacters', RangeType::class, array(
+                'attr' => array(
+                    'min' => 0,
+                    'max' => 5
+                )
+            ))
+            ->add('noteConsistency', RangeType::class, array(
+                'attr' => array(
+                    'min' => 0,
+                    'max' => 5
+                )
+            ))
             ->add('conclusion')
             ->add('published')
             ->add('tags', CollectionType::class, array(

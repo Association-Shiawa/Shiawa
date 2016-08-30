@@ -2,7 +2,7 @@
 
 {% block body %}
     <section class="row">
-    {% for article in listArticles %}
+    {% for article in listArticles if article.published == true %}
 
         <div class='col l3 m4 s12'>
             <div class="card">
