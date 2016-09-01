@@ -136,8 +136,8 @@
                                 ('d/m/Y')
                                 }}</li>
                             <li class="collection-item"><b>Nombre d'épisodes :</b> {{ episode.anime.nbrEpisode }}</li>
-                            <li class="collection-item"><b>Studio d'animation :</b> {{ episode.anime.nbrEpisode }}</li>
-                            <li class="collection-item"><b>Editeur Français : </b> {{ episode.anime.nbrEpisode }}</li>
+                            <li class="collection-item"><b>Studio d'animation :</b> {{ episode.anime.studio.name|default('Inconnu') }}</li>
+                            <li class="collection-item"><b>Editeur Français : </b> {{ episode.anime.editor.name|default('Inconnu') }}</li>
                         </ul>
                         <p class="center-align">Certaines informations peuvent provenir de My Anime List.</p>
                         <a href='{{ path('shiawa_anime_view', {'slug': episode.anime.slug})
