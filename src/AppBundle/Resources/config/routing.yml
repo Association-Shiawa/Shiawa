@@ -11,3 +11,8 @@ shiawa_admin_homepage:
     path: /admin
     defaults:
         _controller: AppBundle:Admin:index
+
+shiawa_anime_news:
+    path: /anime/news
+    defaults:
+        _controller: AppBundle:Anime:news
