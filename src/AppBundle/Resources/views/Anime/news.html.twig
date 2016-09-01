@@ -6,7 +6,7 @@
 
     {# Include of AnimeSlider #}
 
-    <section class="col s8">
+    <section class="col s12 m8">
 
         <div class='row'>
 
@@ -18,7 +18,7 @@
                         <ul class="collection">
                             {% for episode in episodes %}
                                 <li class="collection-item avatar">
-                                    <img src="{{ episode.anime.image }}" alt="{{ episode.anime.title }}" class="circle materialboxed">
+                                    <img src="{{ episode.anime.image }}" alt="{{ episode.anime.title }}" class="circle ">
                                     <span class="title">
                                         <a href="{{ path('shiawa_episode_view', {'slug': episode.slug}) }}">
                                             <b>{{ episode.anime.title }}</b>
@@ -62,7 +62,7 @@
                         <ul class="collection">
                             {% for anime in animes %}
                                 <li class="collection-item avatar">
-                                    <img src="{{ anime.image }}" alt="{{ anime.title }}" class="circle materialboxed">
+                                    <img src="{{ anime.image }}" alt="{{ anime.title }}" class="circle ">
                                     <span class="title">
                                         <a href="{{ path('shiawa_anime_view', {'slug': anime.slug}) }}">
                                             <b>{{ anime.title }}</b>
