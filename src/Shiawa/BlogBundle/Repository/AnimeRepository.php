@@ -42,4 +42,15 @@ class AnimeRepository extends \Doctrine\ORM\EntityRepository
 
         return $query->getResult();
     }
+
+    public function getAnimesminimumInfo($anime, $limit)
+    {
+        $query = $this->createQueryBuilder('a')
+            ->where('a.title LIKE :anime')
+            ->setParameter('anime', '%'.$anime.'%')
+            ->setMaxResults($limit)
+            ->getQuery();
+
+        return $query->getArrayResult();
+    }
 }

@@ -45,11 +45,9 @@
                         <ul class="collection">
                             <li class="collection-item"><b>Date de parution :</b> {{ anime.createdAt|date('d/m/Y')}}</li>
                             <li class="collection-item"><b>Nombre d'épisodes :</b> {{ anime.nbrEpisode }} épisodes</li>
-                            <li class="collection-item"><b>Studio d'animation :</b> {% if anime.studio.name is defined
-%}{{ anime.studio.name }}{% else %}Non renseigné{% endif %}</li>
+                            <li class="collection-item"><b>Studio d'animation :</b> {{ anime.studio.name|default('Non renseigné') }}
                             <li class="collection-item"><b>Type :</b> {{ anime.type }}</li>
-                            <li class="collection-item"><b>Editeur Français : </b> {% if anime.editor.name is defined
-                                %}{{ anime.editor.name }}{% else %}Non renseigné{% endif %}</li>
+                            <li class="collection-item"><b>Editeur Français : </b> {{ anime.editor.name|default('Non renseigné') }}</li>
                             <li class="collection-item"><b>La critique de SHIAWA : </b>{% if anime.review.title is
                                 defined
                                 %}<a href="{{ path('shiawa_anime_review_view', {'slug': anime.review.slug}) }}">{{ anime
