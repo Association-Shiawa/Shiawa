@@ -5,10 +5,17 @@ namespace Shiawa\BlogBundle\Controller;
 use Shiawa\BlogBundle\Entity\Anime;
 use Shiawa\BlogBundle\Form\AnimeType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+
 
 class AnimeController extends Controller
 {
@@ -155,5 +162,27 @@ class AnimeController extends Controller
         return $this->render('ShiawaBlogBundle:Anime:new_anime.html.twig', array(
             'lastAnimes' => $lastAnimes
         ));
+    }
+
+    public function ajaxListAction(Request $request)
+    {
+        if($request->isXmlHttpRequest()) {
+            $anime = $request->request->get('anime');
+
+            $em = $this->getDoctrine()->getManager();
+            $animeRep = $em->getRepository('ShiawaBlogBundle:Anime');
+            $animeList = $animeRep->getAnimesminimumInfo($anime, 5);
+
+
+            //$data = $serializer->serialize($animeList, 'json');
+            $data = json_encode($animeList);
+
+            //var_dump($data);
+
+            return new JsonResponse($data, 200);
+        }else{
+            return new Response('et BIM ça plante');
+        }
+
     }
 }
