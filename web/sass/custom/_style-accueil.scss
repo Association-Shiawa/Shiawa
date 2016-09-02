@@ -36,12 +36,14 @@ html, body{
         width: 100%;
         //background: green;
         top: 10%;
-        text-align:center;
         h1{
             font-family: 'Raleway', sans-serif;
             color: white;
             font-size: 120px;
-            margin-bottom: 0px
+            margin-bottom: 0px;
+            @media screen and (max-width: 600px) {
+                font-size: 5rem;
+            }
         }
         svg{
             fill: white;

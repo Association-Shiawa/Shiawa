@@ -6381,13 +6381,15 @@ html, body {
   #header-full-width .zoning-title {
     position: absolute;
     width: 100%;
-    top: 10%;
-    text-align: center; }
+    top: 10%; }
     #header-full-width .zoning-title h1 {
       font-family: 'Raleway', sans-serif;
       color: white;
       font-size: 120px;
       margin-bottom: 0px; }
+      @media screen and (max-width: 600px) {
+        #header-full-width .zoning-title h1 {
+          font-size: 5rem; } }
     #header-full-width .zoning-title svg {
       fill: white; }
     #header-full-width .zoning-title span {
