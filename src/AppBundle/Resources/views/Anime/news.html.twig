@@ -1,0 +1,174 @@
+{% extends "AppBundle:Anime:layout.html.twig" %}
+
+
+
+{% block content %}
+
+    {# Include of AnimeSlider #}
+
+    <section class="col s12 m8">
+
+        <div class='row'>
+
+            <!-- NOUVEAUX EPS -->
+            <div class='col s12 m6'>
+                <div class='card'>
+                    <div class='card-content'>
+                        <div class='card-title pink-text text-lighten-2'><b>Les nouveaux épisodes</b></div>
+                        <ul class="collection">
+                            {% for episode in episodes %}
+                                <li class="collection-item avatar">
+                                    <img src="{{ episode.anime.image }}" alt="{{ episode.anime.title }}" class="circle ">
+                                    <span class="title">
+                                        <a href="{{ path('shiawa_episode_view', {'slug': episode.slug}) }}">
+                                            <b>{{ episode.anime.title }}</b>
+                                        </a>
+                                        <span class="badge pink lighten-2 white-text">
+                                            <a href="{{ path('shiawa_episode_view', {'slug': episode.slug}) }}" class="white-text">
+                                                Episode n°{{ episode.numEpisode }}
+                                            </a>
+                                        </span>
+                                    </span>
+                                    <p>Plateforme : {{ episode.anime.editor.name|default('Inconnu') }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class='card-action center'>
+
+                        <nav>
+                            <div class="nav-wrapper grey">
+                                <form>
+                                    <div class="input-field">
+                                        <input id="search" type="search" required placeholder="Recherchez un épisode">
+                                        <label for="search"><i class="material-icons">search</i></label>
+                                        <i class="material-icons">close</i>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /NOUVEAUX EPS -->
+
+
+            <!-- NOUVEAUX ANIME -->
+            <div class='col s12 m6'>
+                <div class='card'>
+                    <div class='card-content'>
+                        <div class='card-title pink-text text-lighten-2'><b>Les nouveaux anime</b></div>
+                        <ul class="collection">
+                            {% for anime in animes %}
+                                <li class="collection-item avatar">
+                                    <img src="{{ anime.image }}" alt="{{ anime.title }}" class="circle ">
+                                    <span class="title">
+                                        <a href="{{ path('shiawa_anime_view', {'slug': anime.slug}) }}">
+                                            <b>{{ anime.title }}</b>
+                                        </a>
+                                        <span class="badge grey darken-2 white-text">
+                                            <a href="{{ path('shiawa_anime_view', {'slug': anime.slug}) }}" class="white-text">
+                                                {{ anime.createdAt|date ('d/m/Y') }}
+                                            </a>
+                                        </span>
+                                    </span>
+                                    <p>Plateforme : {{ anime.editor.name|default('Inconnu') }}</p>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                    <div class='card-action center'>
+                        <nav>
+                            <div class="nav-wrapper grey">
+                                <form>
+                                    <div class="input-field">
+                                        <input id="search" type="search" required placeholder="Recherchez une série">
+                                        <label for="search"><i class="material-icons">search</i></label>
+                                        <i class="material-icons">close</i>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- /NOUVEAUX ANIME -->
+        </div>
+
+        <!-- LIGNE - CRITIQUES -->
+        <div class='row'>
+            <div class='col s12'>
+
+                <div class='card'>
+                    <div class='card-content'>
+                        <div class='card-title pink-text text-lighten-2'><b>Les nouvelles critiques</b> <span class=" badge" data-badge-caption="Réalisées par SHIAWA"></span> </div>
+                        <div class='divider'></div>
+                        <span class='subtitles'>Découvrez les dernières critiques réalisées par les adhérents de l'association SHIAWA, en partenariat avec Crunchyroll et Anime Digital Network.</span>
+
+                        <!-- CONTENT -->
+
+                        <ul class="collection">
+                            {% for review in reviews %}
+                                <li class="collection-item avatar">
+                                    <img src="{{ review.anime.image }}" alt="" class="circle">
+                                    <span class="title"><a href='{{ path('shiawa_animeReview_view', {'slug': review.slug}) }}'>{{ review.title }}</a></span>
+                                    <p><strong>Anime: {{ review.anime.title }}</strong><br>
+                                        Cette critique a été écrite par : {{ review.author.username }}
+                                    </p>
+                                    <a href="{{ path('shiawa_animeReview_view', {'slug': review.slug}) }}" class="secondary-content"><i class="badge material-icons tooltipped" data-badge-caption="Voir cette critique" data-position="bottom" data-delay="50" data-tooltip="Voir cette critique">play_arrow</i></a>
+                                </li>
+                                {% else %}
+                                </ul><div class='card orange'><div class='card-content'><p>Il n'y à pas encore de critiques ... rejoignez nous pour en rédiger !</p></div></div>
+                            {% endfor %}
+                        </ul>
+
+                        <!-- /CONTENT -->
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /LIGNE - CRITIQUES -->
+
+        <div class="row">
+
+            <!-- ACTU FACEBOOK -->
+            <div class='col s12 m6'>
+                <div class='card'>
+                    <div class='card-content'>
+                        <div class='card-title pink-text text-lighten-2'><b>Notre facebook</b></div>
+                        <div id="fb-root"></div>
+                        <script>(function (d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id))
+                                    return;
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7&appId=528299164019997";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-page" style='width: 100%' data-href="https://www.facebook.com/shiawaproject/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/shiawaproject/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/shiawaproject/">Shiawa</a></blockquote></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /ACTU FACEBOOK -->
+
+            <!-- ACTU TWITTER -->
+            <div class='col s12 m6'>
+                <div class='card'>
+                    <div class='card-content'>
+                        <div class='card-title pink-text text-lighten-2'><b>Notre twitter</b></div>
+                        <a class="twitter-timeline" data-lang="fr" data-height="600" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/SHIAWA81">Tweets by SHIAWA81</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>    
+                    </div>
+                </div>
+            </div>
+            <!-- /ACTU TWITTER -->
+
+        </div>
+
+    </section>
+{% endblock %}
