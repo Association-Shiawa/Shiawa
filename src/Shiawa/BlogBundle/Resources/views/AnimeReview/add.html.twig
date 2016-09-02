@@ -83,6 +83,46 @@
                 index--;
                 return false;
             }
+
+            /*var animes = {};
+            $datalist = $('#animes');
+            var $anime = $('input#anime_review_anime');
+
+            function autocompletion(){
+                if($anime.val().length >= 3){
+                    var $form = $(this).closest('form');
+                    var data = {};
+                    data['anime'] = $anime.val();
+                    console.log(data);
+
+                    $.ajax({
+                        url : "{{ path('shiawa_anime_ajax_list') }}",
+                        type: $form.attr('method'),
+                        data : data,
+                        success: function(json) {
+                            animes = {};
+                            json = JSON.parse(json);
+
+                            json.forEach(function(value){
+                                animes[value.id] = value.title;
+                            });
+
+                            $datalist.find('option').remove();
+
+                            $.each(animes, function(key, value){
+                                $datalist.append('<option id="'+key+'" value="'+value+'"></option>');
+                            });
+
+                            console.log(animes);
+                        }
+                    });
+                }
+            }
+
+            $anime.on('keyup', function(e){
+                e.preventDefault();
+                autocompletion();
+            });*/
         });
     </script>
 {% endblock %}
