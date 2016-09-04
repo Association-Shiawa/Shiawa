@@ -28,7 +28,7 @@ var shiawa_module = (function () {
             countScrolling++;
         }, 1000);
         $(".button-collapse").sideNav();
-        $(".dropdown-button").dropdown();
+        $(".dropdown-button").dropdown({constrain_width: false, hover: true});
     });
 
     self.clickScroll = function () {
@@ -260,6 +260,10 @@ var shiawa_module = (function () {
         $(document).ready(function() {
             $('select').material_select();
         });
+    }();
+
+    self.initCarousel = function () {
+        $('.carousel.carousel-slider').carousel({full_width: true});
     }();
 
 })();

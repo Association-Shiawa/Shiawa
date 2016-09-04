@@ -86,7 +86,7 @@ class ArticleController extends Controller
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
 
             $tagsManagement = $this->get('shiawa_blog.tags');
-            $tagsManagement->setArticeTags($article);
+            $tagsManagement->setArticleTags($article);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
