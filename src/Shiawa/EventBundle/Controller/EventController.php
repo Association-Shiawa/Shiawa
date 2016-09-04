@@ -15,7 +15,7 @@ class EventController extends Controller
     public function indexAction($page)
     {
         if($page < 1) {
-            return new NotFoundHttpException('Page "'.$page.'" inexistante');
+            throw new NotFoundHttpException('Page "'.$page.'" inexistante');
         }
 
         $em = $this->getDoctrine()->getManager();
@@ -28,7 +28,7 @@ class EventController extends Controller
         if($nbPage == 0) {$nbPage = 1;}
 
         if($page >  $nbPage && count($listEvents) > 0) {
-            return new NotFoundHttpException('Page "'.$page.'" inexistante');
+            throw new NotFoundHttpException('Page "'.$page.'" inexistante');
         }
 
         return $this->render('ShiawaEventBundle:Event:index.html.twig', array(
@@ -45,6 +45,10 @@ class EventController extends Controller
             ->getRepository('ShiawaEventBundle:Event')
             ->findOneBySlug($slug);
 
+        if($event == null)
+        {
+            throw new NotFoundHttpException("Il n'existe pas d'évènement de ce nom");
+        }
 
         return $this->render('ShiawaEventBundle:Event:view.html.twig', array(
             'event' => $event

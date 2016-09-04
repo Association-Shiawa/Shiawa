@@ -57,23 +57,16 @@
 
                 <div class="section">
                     <div class='row'>
-                        <div class="col m2 offset-m3 s12">
-                            <p>
-                                <a data-position="left" data-delay="50" data-tooltip="En construction !"
+                        <nav class="transparent z-depth-0">
+                            <div class="nav-wrapper">
+                                <a data-position="bottom" data-delay="50" data-tooltip="En construction !"
                                    class="waves-effect waves-light btn-large pink lighten-1 disabled tooltipped">COSPLAY</a>
-                            </p>
-                        </div>
-                        <div class="col m2 s12">
-                            <p>
-                                <a href="{{ path('shiawa_anime_homepage') }}" class="waves-effect waves-light btn-large pink lighten-1">ANIMES & MANGA</a>
-                            </p>
-                        </div>
-                        <div class="col m2 s12">
-                            <p>
-                                <a data-position="right" data-delay="50" data-tooltip="En construction !" class="waves-effect
+                                <a href="{{ path('shiawa_anime_homepage') }}" class="waves-effect waves-light
+                                btn-large pink lighten-1 truncate">ANIME</a>
+                                <a data-position="bottom" data-delay="50" data-tooltip="En construction !" class="waves-effect
                     waves-light btn-large pink lighten-1 disabled tooltipped">JAPON</a>
-                            </p>
-                        </div>
+                            </div>
+                        </nav>
                     </div>
                 </div>
 
@@ -91,20 +84,23 @@
 
             <div class='article'>
                 {% for article in lastArticles %}
-                <article class='col l4 m6 s12'>
+
+                     <article class='col l4 m6 s12'>
                     <div class="art">
                         <img src='{{ article.image }}' />
                         <div class='overlay-art'></div>
                         <div class='zoning-art'>
-                            <h3 class='title-art truncate'>{{ article.title }}</h3>
+                            <h3 class='title-art '>{{ article.title }}</h3>
                                     <span class='content'>{{ article.summary }}</span>
                             <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
-                                .category.name|lower}) }}'
-                               class='btn
-                            pink lighten-1 btn-large btn-large right'>En savoir plus</a>
+                                .category.name|lower}) }}' class='btn pink lighten-1 btn-large btn-large waves-effect
+                                 waves-ripple'>
+                                En savoir plus
+                            </a>
                         </div>
                     </div>
                 </article>
+
                 {% endfor %}
             </div>
 
@@ -231,31 +227,34 @@
                 <div class="slider">
                     <ul class="slides">
                         <li>
-                            <img src="http://lorempixel.com/1920/350"> <!-- random image -->
+                            <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/10464371_1665338953707634_5146108095042687115_n.jpg?oh=8535e906f5f471e0f5d76d677f467007&oe=5844F189"> <!-- random image -->
                             <div class="caption center-align">
-                                <h3>This is our big Tagline!</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                <h3>Des animations scéniques!</h3>
+                                <h5 class="light grey-text text-lighten-3">Quizz, show, JoJo Poses et pleins de
+                                    nouveautés à chaque convention</h5>
                             </div>
                         </li>
                         <li>
-                            <img src="http://lorempixel.com/1920/350"> <!-- random image -->
+                            <img src="https://scontent.xx.fbcdn.net/t31.0-8/12778996_1665618980346298_6605750242197511841_o.jpg"> <!-- random image -->
                             <div class="caption left-align">
-                                <h3>Left Aligned Caption</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                <h3 class="">Des Cosplay Music Video</h3>
+                                <h5 class="light grey-text text-lighten-3">Incarnez vos personnages préférés devant
+                                    nos caméras
+                                </h5>
                             </div>
                         </li>
                         <li>
-                            <img src="http://lorempixel.com/1920/350"> <!-- random image -->
+                            <img src="https://scontent.xx.fbcdn.net/t31.0-8/14102960_1737140116527517_1030143932169111597_o.jpg"> <!-- random image -->
                             <div class="caption right-align">
-                                <h3>Right Aligned Caption</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                <h3>Des shootings photos de Cosplay !</h3>
+                                <!--<h5 class="light grey-text text-lighten-3"></h5>-->
                             </div>
                         </li>
                         <li>
-                            <img src="http://lorempixel.com/1920/350"> <!-- random image -->
-                            <div class="caption center-align">
-                                <h3>This is our big Tagline!</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            <img src="https://scontent.xx.fbcdn.net/t31.0-8/13062956_1687739931467536_6662302071907783316_o.jpg"> <!-- random image -->
+                            <div class="caption right-align">
+                                <h3>Immortaliser les Cosplay en convention</h3>
+                                <h5 class="light grey-text text-lighten-3"></h5>
                             </div>
                         </li>
                     </ul>
