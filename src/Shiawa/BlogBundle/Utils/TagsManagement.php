@@ -35,4 +35,17 @@ class TagsManagement
 
         return $article;
     }
+
+    public function getLinkedContent($article)
+    {
+        $tagList = array();
+
+        for($j = 0; $j < count($article->getTags()); $j++) {
+            array_push($tagList, $article->getTags()[$j]->getId());
+        }
+
+        $linkedContent = $this->em->getRepository('ShiawaBlogBundle:Article')->findByTags($tagList, 2, $article->getId());
+
+        return $linkedContent;
+    }
 }
