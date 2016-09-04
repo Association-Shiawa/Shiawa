@@ -15,7 +15,7 @@
                 <div class='card'>
                     <div class='card-content'>
                         <div class='card-title pink-text text-lighten-2'><b>Les nouveaux épisodes</b></div>
-                        <ul class="collection">
+                        <ul class="collection" id="episodeList">
                             {% for episode in episodes %}
                                 <li class="collection-item avatar">
                                     <img src="{{ episode.anime.image }}" alt="{{ episode.anime.title }}" class="circle ">
@@ -40,8 +40,8 @@
                             <div class="nav-wrapper grey">
                                 <form>
                                     <div class="input-field">
-                                        <input id="search" type="search" required placeholder="Recherchez un épisode">
-                                        <label for="search"><i class="material-icons">search</i></label>
+                                        <input id="search_episode" type="search" required placeholder="Recherchez un épisode">
+                                        <label for="search_episode"><i class="material-icons">search</i></label>
                                         <i class="material-icons">close</i>
                                     </div>
                                 </form>
@@ -59,7 +59,7 @@
                 <div class='card'>
                     <div class='card-content'>
                         <div class='card-title pink-text text-lighten-2'><b>Les nouveaux anime</b></div>
-                        <ul class="collection">
+                        <ul class="collection" id="animeList">
                             {% for anime in animes %}
                                 <li class="collection-item avatar">
                                     <img src="{{ anime.image }}" alt="{{ anime.title }}" class="circle ">
@@ -84,8 +84,8 @@
                             <div class="nav-wrapper grey">
                                 <form>
                                     <div class="input-field">
-                                        <input id="search" type="search" required placeholder="Recherchez une série">
-                                        <label for="search"><i class="material-icons">search</i></label>
+                                        <input id="search_anime" type="search" required placeholder="Recherchez une série">
+                                        <label for="search_anime"><i class="material-icons">search</i></label>
                                         <i class="material-icons">close</i>
                                     </div>
                                 </form>
@@ -113,11 +113,12 @@
                             {% for review in reviews %}
                                 <li class="collection-item avatar">
                                     <img src="{{ review.anime.image }}" alt="" class="circle">
-                                    <span class="title"><a href='{{ path('shiawa_animeReview_view', {'slug': review.slug}) }}'>{{ review.title }}</a></span>
+                                    <span class="title"><a href='{{ path('shiawa_anime_review_view', {'slug': review
+                                            .slug}) }}'>{{ review.title }}</a></span>
                                     <p><strong>Anime: {{ review.anime.title }}</strong><br>
                                         Cette critique a été écrite par : {{ review.author.username }}
                                     </p>
-                                    <a href="{{ path('shiawa_animeReview_view', {'slug': review.slug}) }}" class="secondary-content"><i class="badge material-icons tooltipped" data-badge-caption="Voir cette critique" data-position="bottom" data-delay="50" data-tooltip="Voir cette critique">play_arrow</i></a>
+                                    <a href="{{ path('shiawa_anime_review_view', {'slug': review.slug}) }}" class="secondary-content"><i class="badge material-icons tooltipped" data-badge-caption="Voir cette critique" data-position="bottom" data-delay="50" data-tooltip="Voir cette critique">play_arrow</i></a>
                                 </li>
                                 {% else %}
                                 </ul><div class='card orange'><div class='card-content'><p>Il n'y à pas encore de critiques ... rejoignez nous pour en rédiger !</p></div></div>
@@ -171,4 +172,80 @@
         </div>
 
     </section>
+{% endblock %}
+
+{% block javascript %}
+
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function(){
+
+            $animeSearch = $('#search_anime');
+            $episodeSearch = $('#search_episode');
+            $animeList = $('#animeList');
+            $episodeList = $('#episodeList');
+
+            var timer;
+
+            $animeSearch.on('keyup', function(e){
+                e.preventDefault();
+
+                if (timer) clearTimeout(timer);
+
+                timer = setTimeout(function(){
+
+                    //console.log(s + '---' + $animeSearch.val());
+                    if(true){
+
+                        var data = {};
+                        data['anime'] = $animeSearch.val();
+
+                        $.ajax({
+                            url : "{{ path('shiawa_anime_ajax_list') }}",
+                            type: 'POST',
+                            data : data,
+                            success: function(json) {
+                                $animeList.html('');
+                                json = JSON.parse(json);
+
+                                $.each(json, function(key, anime){
+                                    // Split timestamp into [ Y, M, D, h, m, s ]
+                                    var t = anime.createdAt.date.split(/[- :]/);
+                                    var animeDate = t[2] + '/' + t[1] + '/' + t[0] ;
+
+                                    $animeList.append('' +
+                                            '<li class="collection-item avatar">' +
+                                            '<img src="'+anime.image+'" alt="'+anime.title+'" class="circle ">' +
+                                            '<span class="title">' +
+                                            '<a href="'+anime.title+'">' +
+                                            '<b>'+anime.title+'</b>' +
+                                            '</a>' +
+                                            '<span class="badge grey darken-2 white-text">' +
+                                            '<a href="'+anime.title+'" class="white-text">'+ animeDate +'</a>' +
+                                            '</span>' +
+                                            '</span>' +
+                                            '<p>Plateforme : </p>'+
+                                            '</li>');
+                                });
+
+                                //console.log(json);
+                            }
+                        });
+
+                        //clearTimeout(timer);
+                    }
+                }, 500);
+
+
+            });
+
+            $episodeSearch.on('keyup', function(e){
+                e.preventDefault();
+                console.log('Recherche lancée');
+            });
+
+        });
+    </script>
+
 {% endblock %}

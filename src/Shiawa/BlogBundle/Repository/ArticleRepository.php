@@ -51,13 +51,16 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
             ->leftJoin('a.tags', 't')
         ;
 
-        for($i=0; $i < count($tags); $i++) {
+        /*for($i=0; $i < count($tags); $i++) {
             $query->orWhere('t.id = :tag'.$i);
         }
 
         for($i=0; $i < count($tags); $i++) {
             $query->setParameter('tag'.$i, $tags[$i]);
-        }
+        }*/
+
+        $query->where("t.id IN (:tags)")
+            ->setParameter('tags', $tags);
 
         if($id != null){
             $query->andWhere('a.id != :id')
