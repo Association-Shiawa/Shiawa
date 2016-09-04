@@ -75,4 +75,12 @@ class CoreController extends Controller
             'nextEvent' => $nextEvent
         ));
     }
+
+    public function contactAction() {
+
+
+        return $this->render('AppBundle:Core:contact.html.twig', array(
+
+        ));
+    }
 }

@@ -1,0 +1,80 @@
+{% extends "AppBundle:Core:layout.html.twig" %}
+
+{% block title %}Contact - {{ parent() }}{% endblock %}
+
+
+{% block  menu %}
+    {{ include("AppBundle:Core:nav.html.twig") }}
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <div class="row card-panel">
+            <h1>Contactez Shiawa</h1>
+            <h2><small>L'association Shiawa est ravie que vous souhaitez la contacter</small></h2>
+        </div>
+
+        <div class="row card-panel">
+
+            <form action="">
+
+                <div class="col m8">
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input placeholder="John Doe" id="first_name" type="text" class="validate">
+                            <label for="first_name">Qui êtes vous ?</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">mail</i>
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Votre message</label>
+                        </div>
+                    </div>
+
+                    <blockquote class="grey-text">
+                        Pour valider votre message, cliquez sur le bouton "Contactez nous" à droite :)
+                    </blockquote>
+                </div>
+                <div class="col m4">
+                    <div class="carousel carousel-slider center" data-indicators="true">
+                        <div class="carousel-fixed-item center">
+                            <button class="btn waves-effect waves-light pink lighten-2" type="submit" name="action">
+                                Contactez nous
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                        <div class="carousel-item red white-text" href="#one!">
+                            <h2>Un problème, un bug, une erreur sur le site ?</h2>
+                            <p class="white-text center-align">Nous réglerons le problème sous 24H</p>
+                        </div>
+                        <div class="carousel-item amber white-text" href="#two!">
+                            <h2>Pour tout contact professionnel</h2>
+                            <p class="white-text center-align">Collaboration, partenariat, communication. Nous
+                                sommes ouvert à toute proposition</p>
+                        </div>
+                        <div class="carousel-item green white-text" href="#three!">
+                            <h2>Rejoignez l'association</h2>
+                            <p class="white-text center-align">Vous souhaitez faire parti de Shiawa ?</p>
+                        </div>
+                        <div class="carousel-item blue white-text" href="#four!">
+                            <h2>Autre chose ?</h2>
+                            <p class="white-text center-align">Profitez de votre passage sur Shiawa.fr pour nous contacter. Nous
+                                sommes des pandas pacifistes ! </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
