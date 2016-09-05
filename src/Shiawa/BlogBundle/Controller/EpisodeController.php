@@ -9,6 +9,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
 class EpisodeController extends Controller
 {
@@ -142,5 +148,33 @@ class EpisodeController extends Controller
             'episode' => $episode,
             'form'   => $form->createView(),
         ));
+    }
+
+    public function ajaxListAction(Request $request)
+    {
+        if($request->isXmlHttpRequest()) {
+            $episode = $request->request->get('anime');
+
+            $em = $this->getDoctrine()->getManager();
+            $episodeRep = $em->getRepository('ShiawaBlogBundle:Episode');
+            $episodeList = $episodeRep->getArrayEpisode($episode);
+
+
+            $encoder = new JsonEncoder();
+            $normalizer = new ObjectNormalizer();
+
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getTitle();
+        });
+
+        $serializer = new Serializer(array($normalizer), array($encoder));
+
+            $data = $serializer->serialize($episodeList, 'json');
+            //$data = json_encode($episodeList);
+            return new JsonResponse($data, 200);
+        }else{
+            return new Response('et BIM ça plante');
+        }
+
     }
 }

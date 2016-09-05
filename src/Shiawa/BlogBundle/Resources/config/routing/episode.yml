@@ -22,3 +22,7 @@ shiawa_episode_edit:
 shiawa_episode_delete:
     path:     /admin/episode/{slug}/delete
     defaults: { _controller: "ShiawaBlogBundle:Episode:delete" }
+
+shiawa_episode_ajax_list:
+    path:     /ajax/episode/all
+    defaults: { _controller: ShiawaBlogBundle:Episode:ajaxList }
