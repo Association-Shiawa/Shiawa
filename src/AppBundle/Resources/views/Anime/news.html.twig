@@ -40,7 +40,7 @@
                             <div class="nav-wrapper grey">
                                 <form>
                                     <div class="input-field">
-                                        <input id="search_episode" type="search" required placeholder="Recherchez un épisode">
+                                        <input id="search_episode" type="search" required placeholder="Recherchez un épisode par anime">
                                         <label for="search_episode"><i class="material-icons">search</i></label>
                                         <i class="material-icons">close</i>
                                     </div>
@@ -185,6 +185,8 @@
             $episodeSearch = $('#search_episode');
             $animeList = $('#animeList');
             $episodeList = $('#episodeList');
+            animeLink = "{{ path('shiawa_anime_view', {'slug': 'replace'}) }}";
+            episodeLink = "{{ path('shiawa_episode_view', {'slug': 'replace'}) }}";
 
             var timer;
 
@@ -194,10 +196,6 @@
                 if (timer) clearTimeout(timer);
 
                 timer = setTimeout(function(){
-
-                    //console.log(s + '---' + $animeSearch.val());
-                    if(true){
-
                         var data = {};
                         data['anime'] = $animeSearch.val();
 
@@ -209,40 +207,78 @@
                                 $animeList.html('');
                                 json = JSON.parse(json);
 
-                                $.each(json, function(key, anime){
-                                    // Split timestamp into [ Y, M, D, h, m, s ]
-                                    var t = anime.createdAt.date.split(/[- :]/);
-                                    var animeDate = t[2] + '/' + t[1] + '/' + t[0] ;
+                                if(json.length == 0) {
+                                    $animeList.append('<li><span class="title"><b>Aucun Résultat</b></span></li>')
+                                }else{
+                                    $.each(json, function(key, anime){
+                                        // Split timestamp into [ Y, M, D, h, m, s ]
+                                        var t = anime.createdAt.date.split(/[- :]/);
+                                        var animeDate = t[2] + '/' + t[1] + '/' + t[0] ;
 
-                                    $animeList.append('' +
-                                            '<li class="collection-item avatar">' +
-                                            '<img src="'+anime.image+'" alt="'+anime.title+'" class="circle ">' +
-                                            '<span class="title">' +
-                                            '<a href="'+anime.title+'">' +
-                                            '<b>'+anime.title+'</b>' +
-                                            '</a>' +
-                                            '<span class="badge grey darken-2 white-text">' +
-                                            '<a href="'+anime.title+'" class="white-text">'+ animeDate +'</a>' +
-                                            '</span>' +
-                                            '</span>' +
-                                            '<p>Plateforme : </p>'+
-                                            '</li>');
-                                });
+                                        console.log(json);
 
-                                //console.log(json);
+                                        $animeList.append('' +
+                                                '<li class="collection-item avatar">' +
+                                                '<img src="'+anime.image+'" alt="'+anime.title+'" class="circle ">' +
+                                                '<span class="title">' +
+                                                '<a href="'+animeLink.replace("replace", anime.slug)+'">' +
+                                                '<b>'+anime.title+'</b>' +
+                                                '</a>' +
+                                                '<span class="badge grey darken-2 white-text">' +
+                                                '<a href="'+animeLink.replace("replace", anime.slug)+'" class="white-text">'+ animeDate +'</a>' +
+                                                '</span>' +
+                                                '</span>' +
+                                                '<p>Plateforme : --</p>'+
+                                                '</li>');
+                                    });
+                                }
                             }
                         });
-
-                        //clearTimeout(timer);
-                    }
-                }, 500);
-
-
+                }, 200);
             });
 
             $episodeSearch.on('keyup', function(e){
                 e.preventDefault();
-                console.log('Recherche lancée');
+
+                if (timer) clearTimeout(timer);
+
+                timer = setTimeout(function(){
+                    var data = {};
+                    data['anime'] = $episodeSearch.val();
+
+                    $.ajax({
+                        url : "{{ path('shiawa_episode_ajax_list') }}",
+                        type: 'POST',
+                        data : data,
+                        success: function(json) {
+                            $episodeList.html('');
+                            json = JSON.parse(json);
+
+                            if(json.length == 0) {
+                                $episodeList.append('<li><span class="title"><b>Aucun Résultat</b></span></li>')
+                            }else{
+                                $.each(json, function(key, episode){
+
+                                    var editor = episode.anime.editor ? episode.anime.editor : "Inconnu";
+
+                                    $episodeList.append('' +
+                                            '<li class="collection-item avatar">' +
+                                            '<img src="'+episode.anime.image+'" alt="'+episode.anime.title+'" class="circle ">' +
+                                            '<span class="title">' +
+                                            '<a href="'+episodeLink.replace("replace", episode.slug)+'">' +
+                                            '<b>'+ episode.anime.title +'</b>' +
+                                            '</a>' +
+                                            '<span class="badge pink lighten-2 white-text">' +
+                                            '<a href="'+episodeLink.replace("replace", episode.slug)+'" class="white-text"> Episode n°'+ episode.numEpisode.toString() +'</a>' +
+                                            '</span>' +
+                                            '</span>' +
+                                            '<p>Plateforme : '+ editor +'</p>'+
+                                            '</li>');
+                                });
+                            }
+                        }
+                    });
+                }, 500);
             });
 
         });

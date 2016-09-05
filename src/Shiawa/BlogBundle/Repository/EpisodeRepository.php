@@ -34,4 +34,16 @@ class EpisodeRepository extends \Doctrine\ORM\EntityRepository
 
         return $query->getResult();
     }
+
+    public function getArrayEpisode($anime, $limit = null)
+    {
+        $query = $this->createQueryBuilder('e')
+            ->innerJoin('e.anime', 'a')
+            ->where('a.title LIKE :anime')
+            ->setParameter('anime', '%'.$anime.'%')
+            //->setMaxResults($limit)
+            ->getQuery();
+
+        return $query->getResult();
+    }
 }
