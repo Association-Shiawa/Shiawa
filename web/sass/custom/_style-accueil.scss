@@ -139,11 +139,16 @@ html, body{
             right: 20px;
             bottom: 20px;
         }
-        @media(max-width:1280px){
+        @media #{$medium-and-down}{
             font-size: 13px;
         }
     }
 
+    &:last-child{
+        @media #{$medium-and-up} {
+            display: none;
+        }
+    }
 }
 
 

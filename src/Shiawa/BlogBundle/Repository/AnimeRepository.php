@@ -51,6 +51,6 @@ class AnimeRepository extends \Doctrine\ORM\EntityRepository
             ->setMaxResults($limit)
             ->getQuery();
 
-        return $query->getArrayResult();
+        return $query->getResult();
     }
 }
