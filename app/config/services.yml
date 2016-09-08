@@ -9,3 +9,9 @@ services:
         arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: shiawa_user_profile_edit }
+
+    get_set_method_normalizer:
+            class: Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer
+            public: false
+            tags:
+                - { name: serializer.normalizer }

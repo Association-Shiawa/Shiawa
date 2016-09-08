@@ -66,6 +66,13 @@ class AnimeReviewController extends Controller
             $tagsManagement = $this->get('shiawa_blog.tags');
             $tagsManagement->setArticleTags($review);
 
+            $animeTitle = $form->get("anime")->getData();
+            $anime = $this->getDoctrine()->getManager()->getRepository('ShiawaBlogBundle:Anime')->findOneBy(array
+            ('title' =>
+                $animeTitle));
+
+            $review->setAnime($anime);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($review);
             $em->flush();

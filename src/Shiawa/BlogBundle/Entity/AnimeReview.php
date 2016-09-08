@@ -562,30 +562,6 @@ class AnimeReview
     }
 
     /**
-     * Set firstEpisode
-     *
-     * @param string $firstEpisode
-     *
-     * @return AnimeReview
-     */
-    public function setFirstEpisode($firstEpisode)
-    {
-        $this->firstEpisode = $firstEpisode;
-
-        return $this;
-    }
-
-    /**
-     * Get firstEpisode
-     *
-     * @return string
-     */
-    public function getFirstEpisode()
-    {
-        return $this->firstEpisode;
-    }
-
-    /**
      * Set published
      *
      * @param boolean $published
@@ -607,40 +583,6 @@ class AnimeReview
     public function getPublished()
     {
         return $this->published;
-    }
-
-    /**
-     * Add character
-     *
-     * @param \Shiawa\BlogBundle\Entity\AnimeCharacter $character
-     *
-     * @return AnimeReview
-     */
-    public function addCharacter(\Shiawa\BlogBundle\Entity\AnimeCharacter $character)
-    {
-        $this->characters[] = $character;
-
-        return $this;
-    }
-
-    /**
-     * Remove character
-     *
-     * @param \Shiawa\BlogBundle\Entity\AnimeCharacter $character
-     */
-    public function removeCharacter(\Shiawa\BlogBundle\Entity\AnimeCharacter $character)
-    {
-        $this->characters->removeElement($character);
-    }
-
-    /**
-     * Get characters
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCharacters()
-    {
-        return $this->characters;
     }
 
     /**

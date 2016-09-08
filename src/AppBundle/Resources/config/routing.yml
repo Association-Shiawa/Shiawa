@@ -16,3 +16,8 @@ shiawa_anime_news:
     path: /anime/news
     defaults:
         _controller: AppBundle:Anime:news
+
+shiawa_contact:
+    path: /contact
+    defaults:
+        _controller: AppBundle:Core:contact

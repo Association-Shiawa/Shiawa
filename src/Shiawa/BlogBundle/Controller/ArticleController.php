@@ -55,17 +55,9 @@ class ArticleController extends Controller
             ->getRepository('ShiawaBlogBundle:Article')
             ->findOneBySlug($slug);
 
-        $tagList = array();
 
-        for($j = 0; $j < count($article->getTags()); $j++) {
-            array_push($tagList, $article->getTags()[$j]->getId());
-        }
-
-        $linkedContent = $this->getDoctrine()
-            ->getManager()
-            ->getRepository('ShiawaBlogBundle:Article')
-            ->findByTags($tagList, 2, $article->getId());
-
+        $tagsManagement = $this->get('shiawa_blog.tags');
+        $linkedContent = $tagsManagement->getLinkedContent($article);
 
         return $this->render('ShiawaBlogBundle:Article:view.html.twig', array(
             'article' => $article,
@@ -74,7 +66,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * //@Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_AUTHOR')")
      */
     public function addAction(Request $request)
     {
@@ -86,7 +78,7 @@ class ArticleController extends Controller
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
 
             $tagsManagement = $this->get('shiawa_blog.tags');
-            $tagsManagement->setArticeTags($article);
+            $tagsManagement->setArticleTags($article);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
@@ -106,7 +98,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * //@Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_AUTHOR')")
      */
     public function editAction($slug, Request $request)
     {

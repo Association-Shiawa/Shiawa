@@ -6359,7 +6359,7 @@ html, body {
   width: 100%; }
 
 #header-full-width {
-  height: 100vh; }
+  min-height: 100vh; }
   #header-full-width video#bgvid {
     position: absolute;
     right: 0;
@@ -6379,17 +6379,19 @@ html, body {
     position: absolute;
     background: url("../imgs/watermark.png") rgba(0, 0, 0, 0.65); }
   #header-full-width .zoning-title {
-    position: absolute;
     width: 100%;
-    top: 10%;
-    text-align: center; }
+    z-index: 1; }
     #header-full-width .zoning-title h1 {
       font-family: 'Raleway', sans-serif;
       color: white;
       font-size: 120px;
       margin-bottom: 0px; }
+      @media screen and (max-width: 600px) {
+        #header-full-width .zoning-title h1 {
+          font-size: 5rem; } }
     #header-full-width .zoning-title svg {
-      fill: white; }
+      fill: white;
+      width: 25%; }
     #header-full-width .zoning-title span {
       color: white;
       font-weight: 600; }
@@ -6398,11 +6400,15 @@ html, body {
       #header-full-width .zoning-title .zoning-button a {
         display: inline-block;
         margin: 2px 12px; }
+    @media screen and (max-width: 600px) {
+      #header-full-width .zoning-title {
+        top: -4%; } }
   #header-full-width .scrolling {
     position: absolute;
     width: 100%;
     top: 87%;
-    text-align: center; }
+    text-align: center;
+    z-index: 1; }
     #header-full-width .scrolling i {
       color: white;
       transform: rotate(180deg); }
@@ -6435,26 +6441,30 @@ html, body {
     width: 100%;
     position: absolute;
     top: 0;
-    bottom: 0; }
+    bottom: 0;
+    left: 0;
+    right: 0; }
   .art .zoning-art {
     position: absolute;
     top: 0;
     bottom: 0;
+    left: 0px;
+    right: 0px;
     color: white;
     padding: 30px;
     text-shadow: 1px 1px 2px black; }
     .art .zoning-art .title-art {
       font-family: 'Raleway', sans-serif;
       color: white;
-      font-size: 40px;
-      text-align: justify; }
+      font-size: 1.5rem; }
     .art .zoning-art a {
-      margin-top: 25px; }
+      margin-top: 25px;
+      position: absolute;
+      right: 20px;
+      bottom: 20px; }
     @media (max-width: 1280px) {
       .art .zoning-art {
-        font-size: 13px; }
-        .art .zoning-art .title-art {
-          font-size: 20px; } }
+        font-size: 13px; } }
 
 .banner-sites {
   clear: both;
@@ -6581,5 +6591,13 @@ html, body {
   transition: 0.5s; }
   .article-pw img:hover {
     transform: rotate(-2deg); }
+
+.no-margin {
+  margin: 0 !important; }
+
+.no-radius {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important; }
 
 /*# sourceMappingURL=style.css.map */
