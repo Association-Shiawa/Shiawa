@@ -173,9 +173,17 @@ class AnimeController extends Controller
             $animeRep = $em->getRepository('ShiawaBlogBundle:Anime');
             $animeList = $animeRep->getAnimesminimumInfo($anime, 5);
 
+            $encoder = new JsonEncoder();
+            $normalizer = new ObjectNormalizer();
 
-            //$data = $serializer->serialize($animeList, 'json');
-            $data = json_encode($animeList);
+            $normalizer->setCircularReferenceHandler(function ($object) {
+                return $object->getTitle();
+            });
+
+            $serializer = new Serializer(array($normalizer), array($encoder));
+
+            $data = $serializer->serialize($animeList, 'json');
+            //$data = json_encode($animeList);
 
             //var_dump($data);
 

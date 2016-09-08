@@ -210,12 +210,15 @@
                                 if(json.length == 0) {
                                     $animeList.append('<li><span class="title"><b>Aucun Résultat</b></span></li>')
                                 }else{
+
+                                    //console.log(json);
                                     $.each(json, function(key, anime){
                                         // Split timestamp into [ Y, M, D, h, m, s ]
-                                        var t = anime.createdAt.date.split(/[- :]/);
-                                        var animeDate = t[2] + '/' + t[1] + '/' + t[0] ;
 
-                                        console.log(json);
+                                        var d = new Date(anime.createdAt.timestamp * 1000);
+                                        dMonth = (d.getMonth()+1 < 10) ? '0'+(d.getMonth()+1) : d.getMonth()+1;
+                                        var animeDate = d.getDate() + '/' + dMonth + '/' + d.getFullYear();
+                                        var editor = anime.editor ? anime.editor.name : "Inconnu";
 
                                         $animeList.append('' +
                                                 '<li class="collection-item avatar">' +
@@ -228,7 +231,7 @@
                                                 '<a href="'+animeLink.replace("replace", anime.slug)+'" class="white-text">'+ animeDate +'</a>' +
                                                 '</span>' +
                                                 '</span>' +
-                                                '<p>Plateforme : --</p>'+
+                                                '<p>Plateforme : '+ editor +'</p>'+
                                                 '</li>');
                                     });
                                 }
@@ -259,7 +262,7 @@
                             }else{
                                 $.each(json, function(key, episode){
 
-                                    var editor = episode.anime.editor ? episode.anime.editor : "Inconnu";
+                                    var editor = episode.anime.editor ? episode.anime.editor.name : "Inconnu";
 
                                     $episodeList.append('' +
                                             '<li class="collection-item avatar">' +

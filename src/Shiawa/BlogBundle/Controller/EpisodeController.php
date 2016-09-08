@@ -163,11 +163,11 @@ class EpisodeController extends Controller
             $encoder = new JsonEncoder();
             $normalizer = new ObjectNormalizer();
 
-        $normalizer->setCircularReferenceHandler(function ($object) {
-            return $object->getTitle();
-        });
+            $normalizer->setCircularReferenceHandler(function ($object) {
+                return $object->getTitle();
+            });
 
-        $serializer = new Serializer(array($normalizer), array($encoder));
+            $serializer = new Serializer(array($normalizer), array($encoder));
 
             $data = $serializer->serialize($episodeList, 'json');
             //$data = json_encode($episodeList);
