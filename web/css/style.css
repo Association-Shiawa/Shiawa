@@ -6395,11 +6395,9 @@ html, body {
     #header-full-width .zoning-title span {
       color: white;
       font-weight: 600; }
-    #header-full-width .zoning-title .zoning-button {
-      margin-top: 15px; }
-      #header-full-width .zoning-title .zoning-button a {
-        display: inline-block;
-        margin: 2px 12px; }
+    @media only screen and (min-width: 601px) {
+      #header-full-width .zoning-title #categories-btn a.btn-large {
+        margin: 0 30px; } }
     @media screen and (max-width: 600px) {
       #header-full-width .zoning-title {
         top: -4%; } }
@@ -6417,6 +6415,9 @@ html, body {
   margin: 0; }
   .article .col {
     padding: 0; }
+  @media only screen and (min-width: 993px) {
+    .article article:last-child {
+      display: none; } }
 
 .art {
   position: relative;
@@ -6465,9 +6466,6 @@ html, body {
     @media only screen and (max-width: 992px) {
       .art .zoning-art {
         font-size: 13px; } }
-  @media only screen and (min-width: 601px) {
-    .art:last-child {
-      display: none; } }
 
 .banner-sites {
   clear: both;
