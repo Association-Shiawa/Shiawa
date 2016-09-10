@@ -1,21 +1,11 @@
-{% extends "AppBundle:Anime:layout.html.twig" %}
+{% extends "AppBundle:Admin:layout.html.twig" %}
 
 {% block title %}Ajout d'un utilisateur - {{ parent() }}{% endblock %}
 
-{% block body %}
+{% block content %}
     <main class="container">
         <h3>Formulaire d'ajout d'un utilisateur</h3>
 
         {{ include("ShiawaUserBundle:Admin:form.html.twig") }}
     </main>
-{% endblock %}
-
-{% block javascript %}
-    {{ parent() }}
-
-    <script>
-        $(document).ready(function() {
-            $('select').material_select();
-        });
-    </script>
 {% endblock %}
