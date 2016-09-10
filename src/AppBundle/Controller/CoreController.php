@@ -33,32 +33,6 @@ class CoreController extends Controller
         ));
     }
 
-    public function animeIndexAction(Request $request)
-    {
-        $category = $this->getDoctrine()
-            ->getManager()
-            ->getRepository('ShiawaBlogBundle:Category')
-            ->findByName('Anime')
-        ;
-
-        $lastAnimeArticles = $this->getDoctrine()
-            ->getManager()
-            ->getRepository('ShiawaBlogBundle:Article')
-            ->getLastArticles(4, $category)
-            ;
-
-        $lastEpisodes = $this->getDoctrine()
-            ->getManager()
-            ->getRepository('ShiawaBlogBundle:Episode')
-            ->getLast(3)
-        ;
-
-        return $this->render('AppBundle:Anime:index.html.twig', array(
-            'lastAnimeArticles' => $lastAnimeArticles,
-            'lastEpisodes' =>$lastEpisodes
-        ));
-    }
-
     public function asideAction() {
         $lastReview = $this->getDoctrine()
             ->getManager()

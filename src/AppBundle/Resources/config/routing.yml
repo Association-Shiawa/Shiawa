@@ -5,7 +5,17 @@ shiawa_homepage:
 shiawa_anime_homepage:
     path: /anime
     defaults:
-        _controller: AppBundle:Core:animeIndex
+        _controller: AppBundle:Anime:index
+
+shiawa_cosplay_homepage:
+    path: /cosplay
+    defaults:
+        _controller: AppBundle:Cosplay:index
+
+shiawa_japan_homepage:
+    path: /japon
+    defaults:
+        _controller: AppBundle:Japon:index
 
 shiawa_admin_homepage:
     path: /admin
