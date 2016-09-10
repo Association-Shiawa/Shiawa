@@ -1,0 +1,76 @@
+{% extends "AppBundle:Admin:layout.html.twig" %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="card-panel">
+                <table id="userList" class="highlight centered">
+                    <thead>
+                    <tr>
+                        <th>Avatar</th>
+                        <th>Pseudo</th>
+                        <th>Email</th>
+                        <th>Prénom</th>
+                        <th>Nom de Famille</th>
+                        <th>Activation</th>
+                        <th>Date de naissance</th>
+                        <th>Rôles</th>
+                        <th>Dernière connexion</th>
+                        <th colspan="1">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>
+                                {% if user.avatar %}
+                                    <img src="{{ user.avatar }}" alt="" width="40px">
+                                {% endif %}
+                            </td>
+                            <td>
+                                {{ user.username }}
+                            </td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.surname }}</td>
+                            <td>
+                                {{ user.enabled ? "Activé" : "Désactivé"}}
+                            </td>
+                            <td>
+                                {{ user.birthdate ? user.birthdate|date('d/m/Y') : "Non renseignée" }}
+                            </td>
+                            <td>
+                                {% for role in user.roles %}
+                                    {{ role|lower|title }} {% if not loop.last %} - {% endif %} 
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {{ user.lastLogin ? user.lastLogin|date("d/m/Y") : "Aucune" }}
+                            </td>
+                            <td>
+                                <a href="{{ path('shiawa_user_admin_edit', {'user': user}) }}" class="btn-flat blue-text"><i class="large material-icons">mode_edit</i></a>
+                                <a href="" class="btn-flat red-text"><i class="large material-icons">delete</i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('#userList').DataTable({
+                "order": [[ 1, "asc" ]]
+            });
+        } );
+    </script>
+{% endblock %}

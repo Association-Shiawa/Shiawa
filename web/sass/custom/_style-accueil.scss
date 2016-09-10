@@ -53,11 +53,11 @@ html, body{
             color: white;
             font-weight: 600;
         }
-        .zoning-button{
-            margin-top: 15px;
-            a{
-                display: inline-block;
-                margin: 2px 12px;
+        #categories-btn{
+            a.btn-large{
+                @media #{$medium-and-up} {
+                    margin: 0 30px;
+                }
             }
         }
         @media screen and (max-width: 600px) {
@@ -83,7 +83,15 @@ html, body{
     .col{
         padding: 0;
     }
+    article{
+        &:last-child{
+            @media #{$large-and-up} {
+                display: none;
+            }
+        }
+    }
 }
+
 .art{
     position: relative;
     height: 340px;
@@ -141,12 +149,6 @@ html, body{
         }
         @media #{$medium-and-down}{
             font-size: 13px;
-        }
-    }
-
-    &:last-child{
-        @media #{$medium-and-up} {
-            display: none;
         }
     }
 }
