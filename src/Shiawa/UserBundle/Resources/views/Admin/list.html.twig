@@ -38,7 +38,7 @@
                                 {{ user.enabled ? "Activé" : "Désactivé"}}
                             </td>
                             <td>
-                                {{ user.birthdate ? user.birthdate|date('d/m/Y') : "Non renseignée" }}
+                                {{ user.birthdate ? user.birthdate|date('d/m/Y') : "" }}
                             </td>
                             <td>
                                 {% for role in user.roles %}
@@ -46,7 +46,7 @@
                                 {% endfor %}
                             </td>
                             <td>
-                                {{ user.lastLogin ? user.lastLogin|date("d/m/Y") : "Aucune" }}
+                                {{ user.lastLogin ? user.lastLogin|date("d/m/Y") : "" }}
                             </td>
                             <td>
                                 <a href="{{ path('shiawa_user_admin_edit', {'user': user}) }}" class="btn-flat blue-text"><i class="large material-icons">mode_edit</i></a>

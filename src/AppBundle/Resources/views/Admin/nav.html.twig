@@ -8,6 +8,21 @@
     <li>
         <a href="{{ path('shiawa_admin_homepage') }}">Dashboard</a>
     </li>
+    <li><a href="{{ path('shiawa_user_admin_list') }}">Utilisateurs</a></li>
+    <li><a href="{{ path('shiawa_admin_article_list') }}">Articles</a></li>
+    <li><a href="" class="dropdown-button" data-activates="dropdown-japanimation" data-hover="true">Japanimation <i class="material-icons right">arrow_drop_down</i></a></li>
+    <li><a href="">Evenements</a></li>
+    <li><a href="">Critiques</a></li>
+
+    {% block dropdown_japanimation %}
+    <!-- DROPDOWN JAPANIMATION -->
+    <ul id="dropdown-japanimation" class="dropdown-content">
+        <li><a href="{{ path('shiawa_admin_anime_list') }}">Anime</a></li>
+        <li><a href="">Episodes</a></li>
+        <li><a href="">Studios</a></li>
+        <li><a href="">Editeurs</a></li>
+    </ul>
+    {% endblock %}
 {% endblock %}
 
 {% block dropdown_title %}
@@ -18,16 +33,24 @@
     <li>
         <a href="{{ path('shiawa_admin_homepage') }}">Dashboard</a>
     </li>
+    <li><a href="{{ path('shiawa_user_admin_list') }}">Utilisateurs</a></li>
+    <li><a href="{{ path('shiawa_admin_article_list') }}">Articles</a></li>
+    <li>
+        <a href="#" class="collapsible-header waves-effect">Japanimation <i class="material-icons right">arrow_drop_down</i></a>
+        <div class="collapsible-body">
+            <ul>
+                <li><a href="{{ path('shiawa_admin_anime_list') }}">Anime</a></li>
+                <li><a href="">Episodes</a></li>
+                <li><a href="">Studios</a></li>
+                <li><a href="">Editeurs</a></li>
+            </ul>
+        </div>
+    </li>
+    <li><a href="">Evenements</a></li>
+    <li><a href="">Critiques</a></li>
+    <li><a href="">Personnages</a></li>
 {% endblock %}
 
 {% block mobile_dropdown_title %}
     Admin
-{% endblock %}
-
-{% block desktop_dropdown_content %}
-    <li><a href="{{ path('shiawa_anime_homepage') }}">Shiawa Anime</a></li>
-{% endblock %}
-
-{% block mobile_dropdown_content %}
-    <li><a href="{{ path('shiawa_anime_homepage') }}">Shiawa Anime</a></li>
 {% endblock %}

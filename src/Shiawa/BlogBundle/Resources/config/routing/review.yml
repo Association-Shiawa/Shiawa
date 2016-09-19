@@ -11,8 +11,10 @@ shiawa_anime_review_view:
     defaults: { _controller: ShiawaBlogBundle:AnimeReview:view }
 
 shiawa_anime_review_create:
-    path:     /admin/review/create
-    defaults: { _controller: "ShiawaBlogBundle:AnimeReview:add" }
+    path:     /admin/review/create/{anime}
+    defaults:
+        _controller: "ShiawaBlogBundle:AnimeReview:add" 
+        anime: null
     methods:  [GET, POST]
 
 shiawa_anime_review_edit:

@@ -1,6 +1,6 @@
-shiawa_user_homepage:
-    path:     /user
-    defaults: { _controller: ShiawaUserBundle:User:index }
+shiawa_user_view:
+    path:     /user/{username}
+    defaults: { _controller: ShiawaUserBundle:User:view }
 
 shiawa_user_admin_create:
     path:     /admin/user/create

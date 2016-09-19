@@ -9,8 +9,29 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AnimeController extends Controller {
 
-    public function indexAction() {
-        return $this->render('AppBundle:Admin:index.html.twig', array(
+    public function indexAction(Request $request)
+    {
+        $category = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('ShiawaBlogBundle:Category')
+            ->findByName('Anime')
+        ;
+
+        $lastAnimeArticles = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('ShiawaBlogBundle:Article')
+            ->getLastArticles(4, $category)
+            ;
+
+        $lastEpisodes = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('ShiawaBlogBundle:Episode')
+            ->getLast(3)
+        ;
+
+        return $this->render('AppBundle:Anime:index.html.twig', array(
+            'lastAnimeArticles' => $lastAnimeArticles,
+            'lastEpisodes' =>$lastEpisodes
         ));
     }
 

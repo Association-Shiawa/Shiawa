@@ -1,0 +1,42 @@
+{% extends "AppBundle:Core:layout.html.twig" %}
+
+{% block DC_description %}
+    Shiawa.fr, site d'actualité sur le Cosplay. Retrouvez toutes les informations sur les concours, les conventions, nos photos et vidéos lors d'événements en France !
+{% endblock %}
+
+{% block DC_title %}Cosplay - Shiawa.fr - Site d'actualité de Cosplay{% endblock %}
+
+{% block desc %}
+    Shiawa.fr, site d'actualité sur le Cosplay. Retrouvez toutes les informations sur les concours, les conventions, nos photos et vidéos lors d'événements en France !
+{% endblock %}
+
+{%  block OG_image %}{{ parent() }}{% endblock %}
+
+{%  block OG_title %}Cosplay - Shiawa.fr - Site d'actualité Cosplay{% endblock %}
+
+{%  block OG_desc %}
+    Shiawa.fr, site d'actualité sur le Cosplay. Retrouvez toutes les informations sur les concours, les conventions, nos photos et vidéos lors d'événements en France !
+{% endblock %}
+
+{% block stylesheets %}
+    <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/style.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/horizontal_sly.css') }}"  media="screen,projection"/>
+{% endblock %}
+
+{% block title %} Cosplay - {{ parent() }} {% endblock %}
+
+{% block menu %}
+{{ include("AppBundle:Anime:nav.html.twig") }}
+{% endblock %}
+
+{% block body %}
+
+    <div class='container'>
+        <div class='row'>
+            {% block content %}{% endblock %}
+            {{ render(controller("AppBundle:Core:aside")) }}
+        </div>
+    </div>
+{% endblock %}

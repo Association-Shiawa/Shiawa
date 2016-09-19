@@ -16,4 +16,14 @@ class UserController extends Controller
     {
         return $this->render('ShiawaUserBundle:User:index.html.twig');
     }
+
+    public function viewAction($username)
+    {
+        $userManager = $this->get('fos_user.user_manager');
+        $user = $userManager->findUserByUsername($username);
+
+        return $this->render('ShiawaUserBundle:User:view.html.twig', array(
+            'user' => $user
+        ));
+    }
 }
