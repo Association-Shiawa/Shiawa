@@ -22,3 +22,7 @@ shiawa_article_edit:
 shiawa_article_delete:
     path:     /admin/article/{slug}/delete
     defaults: { _controller: "ShiawaBlogBundle:Article:delete" }
+
+shiawa_admin_article_list:
+    path:     /admin/article/list
+    defaults: { _controller: ShiawaBlogBundle:Article:adminList }

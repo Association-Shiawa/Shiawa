@@ -145,7 +145,7 @@ class ArticleController extends Controller
         $article = $em->getRepository('ShiawaBlogBundle:Article')->find($slug);
 
         if (null === $article) {
-            throw new NotFoundHttpException("L'annonce ".$slug." n'existe pas.");
+            throw new NotFoundHttpException("L'article ".$slug." n'existe pas.");
         }
 
         // On crée un formulaire vide, qui ne contiendra que le champ CSRF
@@ -161,9 +161,21 @@ class ArticleController extends Controller
             return $this->redirectToRoute('shiawa_homepage');
         }
 
-        return $this->render('OCPlatformBundle:Advert:delete.html.twig', array(
+        return $this->render('ShiawaBlogBundle:Article:delete.html.twig', array(
             'article' => $article,
             'form'   => $form->createView(),
+        ));
+    }
+
+    /**
+     * @Security("has_role('ROLE_AUTHOR')")
+     */
+    public function adminListAction()
+    {
+        $articles = $this->getDoctrine()->getManager()->getRepository('ShiawaBlogBundle:Article')->findAll();
+
+        return $this->render('ShiawaBlogBundle:Article:adminList.html.twig', array(
+            'articles' => $articles
         ));
     }
 }

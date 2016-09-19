@@ -1,0 +1,72 @@
+{% extends "AppBundle:Admin:layout.html.twig" %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="card-panel">
+                <table id="animeList" class="highlight centered">
+                    <thead>
+                    <tr>
+                        <th>Affiche</th>
+                        <th>Titre</th>
+                        <th>Sortie</th>
+                        <th>Nombre d'épisodes</th>
+                        <th>Studio</th>
+                        <th>Editeur</th>
+                        <th>Critique</th>
+                        <th colspan="1">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for anime in animes %}
+                        <tr>
+                            <td>
+                                {% if anime.image %}
+                                    <img src="{{ anime.image }}" alt="" width="40px" class="materialboxed">
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{{ path('shiawa_anime_edit', { 'slug': anime.slug }) }}">{{ anime.title|title }}</a>
+                            </td>
+                            <td>
+                                {{ anime.createdAt|date("d/m/Y") }}
+                            </td>
+                            <td>
+                                {{ anime.nbrEpisode }}
+                            </td>
+                            <td>{{ anime.studio ? anime.studio.name : "" }}</td>
+                            <td>{{ anime.editor ? anime.editor.name : "" }}</td>
+                            <td>
+                                {% if anime.review %}
+                                    <a href="{{ path('shiawa_anime_review_edit', {'slug': anime.review.slug}) }}">{{ anime.review.title|title }}</a>
+                                {% else %}
+                                    <a href="{{ path('shiawa_anime_review_create', {'anime': anime.slug}) }}" class="btn-flat green-text" title="Ecrire une critique"><i class="large material-icons">create</i></a>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{{ path('shiawa_anime_edit', {'slug': anime.slug}) }}" class="btn-flat blue-text" title="Editer l'Anime"><i class="large material-icons">mode_edit</i></a>
+                                <a href="" class="btn-flat red-text" ><i class="large material-icons">delete</i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('#animeList').DataTable({
+                "order": [[ 1, "asc" ]]
+            });
+        } );
+    </script>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block title %}Profil de {{ user.username|title }} - {{ parent() }}{% endblock %}
+
+{% block navbar_title %}
+    <a href="{{ path('shiawa_homepage') }}" class="brand-logo">Profil de {{ user.username|title }}</a>
+{% endblock %}
+
+{% block fos_user_content %}
+<div class="container">
+
+    <div id="profile-page-header" class="card">
+        <div class="card-image waves-effect waves-block waves-light" style="max-height: 200px;">
+            <img src="{{ asset('imgs/poster.jpg') }}" alt="user background">
+        </div>
+        <figure class="card-profile-image circle z-depth-2 " style="position: absolute; top: 150px; left: 40px; z-index: 1;
+        overflow: hidden; width: 100px; height: 100px;">
+            <img
+            {% if user.avatar is null %}
+                src="https://www.mautic.org/media/images/default_avatar.png"
+            {% else %}
+            src="{{ user.avatar }}"
+            {% endif %}
+            alt="{{ user.username }}'s profile image" class="responsive-img">
+        </figure>
+        <div class="card-content">
+            <div class="row">
+                <div class="col s3 offset-m4 offset-s8">
+                    <h4 class="card-title grey-text text-darken-4">{{ user.username|title }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="row">
+        <aside class="col m4 s12">
+            <div class="card-panel">
+                <h4>A propos de moi</h4>
+                <p>
+                    {% if user.description is null %}Aucune description{% else %}{{ user.description }}{% endif %}
+                </p>
+            </div>
+        </aside>
+
+        <section class="col m8">
+            <div class="card-panel">
+                {# On définit ce block, dans lequel vont venir s'insérer les autres vues du bundle #}
+                <div class="fos_user_user_show">
+                    <div class="row">
+
+                        <div class="center-align col m4">
+                            <img class="responsive-img" src="
+                        {% if user.avatar is null %}
+                        https://www.mautic.org/media/images/default_avatar.png
+                        {% else %}
+                        {{ user.avatar }}
+                        {% endif %}
+                        " alt=""/>
+                        </div>
+
+                        <div class="col m8">
+                            {#
+                             <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+                             <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+                            #}
+                            <p>Votre préférence: {% if user.preference is null %}Aucune{% else %}{{ user.preference }}{% endif %}</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>
+{% endblock fos_user_content %}

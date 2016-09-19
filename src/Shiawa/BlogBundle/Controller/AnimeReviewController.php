@@ -52,12 +52,18 @@ class AnimeReviewController extends Controller
     }
 
     /**
-     * //@Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_AUTHOR')")
      */
-    public function addAction(Request $request)
+    public function addAction(Request $request, $anime = null)
     {
+        if($anime != null)
+        {
+            $anime = $this->getDoctrine()->getManager()->getRepository('ShiawaBlogBundle:Anime')->findOneBySlug($anime);
+        }
+
         $review = new AnimeReview();
         $review->setCreatedAt(new \Datetime());
+        $anime == null ?  : $review->setAnime($anime);
 
         $form = $this->createForm(AnimeReviewType::class, $review);
 
@@ -66,18 +72,11 @@ class AnimeReviewController extends Controller
             $tagsManagement = $this->get('shiawa_blog.tags');
             $tagsManagement->setArticleTags($review);
 
-            $animeTitle = $form->get("anime")->getData();
-            $anime = $this->getDoctrine()->getManager()->getRepository('ShiawaBlogBundle:Anime')->findOneBy(array
-            ('title' =>
-                $animeTitle));
-
-            $review->setAnime($anime);
-
             $em = $this->getDoctrine()->getManager();
             $em->persist($review);
             $em->flush();
 
-            $request->getSession()->getFlashBag()->add('notice', 'Article bien enregistré');
+            $request->getSession()->getFlashBag()->add('notice', 'Critique bien enregistrée');
 
             return $this->redirectToRoute('shiawa_anime_review_view', array(
                 'slug' => $review->getSlug()
@@ -90,7 +89,7 @@ class AnimeReviewController extends Controller
     }
 
     /**
-     * //@Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_AUTHOR')")
      */
     public function editAction($slug, Request $request)
     {
@@ -110,19 +109,8 @@ class AnimeReviewController extends Controller
                 ->getManager()
                 ->getRepository('ShiawaBlogBundle:Tag');
 
-
-            for($i=0; $i < count($review->getTags()); $i++) {
-                $tag = $review->getTags()[$i];
-
-                $review->getTags()[$i]->setName(strtolower($tag->getName()));
-                $tagDb = $tagRep->findOneByName($tag->getName());
-
-                if($tagDb == null){
-
-                }else{
-                    $review->getTags()[$i] = $tagDb;
-                }
-            }
+            $tagsManagement = $this->get('shiawa_blog.tags');
+            $tagsManagement->setArticleTags($review);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($review);
