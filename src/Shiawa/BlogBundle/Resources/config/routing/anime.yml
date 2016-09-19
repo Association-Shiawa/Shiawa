@@ -26,3 +26,7 @@ shiawa_anime_delete:
 shiawa_anime_ajax_list:
     path:     /ajax/anime/all
     defaults: { _controller: ShiawaBlogBundle:Anime:ajaxList }
+
+shiawa_admin_anime_list:
+    path:     /admin/anime/list
+    defaults: { _controller: ShiawaBlogBundle:Anime:adminList }

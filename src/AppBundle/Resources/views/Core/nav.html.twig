@@ -28,7 +28,7 @@
             <a href="#" data-activates="slide-out" class="button-collapse2 right hide-on-large-only"><i
                         class="material-icons">arrow_left</i></a>
 
-            <ul class="side-nav" id="mobile-demo">
+            <ul class="side-nav collapsible collapsible-accordion" id="mobile-demo">
                 <!-- NAVBAR MOBILE -->
                 {% block nav_mobile_content %}
 
@@ -49,6 +49,8 @@
             <ul id="dropdown1" class="dropdown-content">
                 {% block desktop_dropdown_content %}
                     <li><a href="{{ path('shiawa_anime_homepage') }}">Shiawa Anime</a></li>
+                    <li><a href="{{ path('shiawa_cosplay_homepage') }}">Shiawa Cosplay</a></li>
+                    <li><a href="{{ path('shiawa_japan_homepage') }}">Shiawa Japon</a></li>
                 {% endblock %}
                 <li class="divider"></li>
                 <li><a href="{{ path('shiawa_homepage') }}">Accueil Shiawa</a></li>
@@ -56,6 +58,8 @@
             <ul id="dropdown2" class="dropdown-content">
                 {% block mobile_dropdown_content %}
                     <li><a href="{{ path('shiawa_anime_homepage') }}">Shiawa Anime</a></li>
+                    <li><a href="{{ path('shiawa_cosplay_homepage') }}">Shiawa Cosplay</a></li>
+                    <li><a href="{{ path('shiawa_japan_homepage') }}">Shiawa Japon</a></li>
                 {% endblock %}
                 <li class="divider"></li>
                 <li><a href="{{ path('shiawa_homepage') }}">Accueil Shiawa</a></li>

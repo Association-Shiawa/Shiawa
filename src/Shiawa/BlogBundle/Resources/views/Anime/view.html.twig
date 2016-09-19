@@ -175,6 +175,11 @@
                     .slug}) }}">
                     <i class="large material-icons">mode_edit</i>
                 </a>
+                {% if anime.review is null %}
+                    <ul>
+                        <li><a href="{{ path('shiawa_anime_review_create', {'anime': anime.slug}) }}" class="btn-floating pink lighten-3 tooltipped"  data-position="left" data-delay="50" data-tooltip="Ecrire une critique"><i class="material-icons">create</i></a></li>
+                    </ul>
+                {% endif %}
             </div>
         {% endif %}
     {% endif %}

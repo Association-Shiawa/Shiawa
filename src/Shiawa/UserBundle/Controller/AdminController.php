@@ -62,7 +62,8 @@ class AdminController extends Controller
 
     public function AdminListAction()
     {
-       $users = $this->getDoctrine()->getRepository("ShiawaUserBundle:User")->findAll();
+        $userManager = $this->get('fos_user.user_manager');
+        $users = $userManager->findUsers();
 
         return $this->render('ShiawaUserBundle:Admin:list.html.twig', array(
             'users' => $users

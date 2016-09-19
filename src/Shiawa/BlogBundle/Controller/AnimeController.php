@@ -59,7 +59,7 @@ class AnimeController extends Controller
     }
 
     /**
-     * //@Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_AUTHOR')")
      */
     public function addAction(Request $request)
     {
@@ -87,7 +87,7 @@ class AnimeController extends Controller
     }
 
     /**
-     * //@Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_AUTHOR')")
      */
     public function editAction($slug, Request $request)
     {
@@ -192,5 +192,18 @@ class AnimeController extends Controller
             return new Response('et BIM ça plante');
         }
 
+    }
+
+    public function adminListAction()
+    {
+        $animes = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('ShiawaBlogBundle:Anime')
+            ->findAll();
+            ;
+
+         return $this->render('ShiawaBlogBundle:Anime:adminList.html.twig', array(
+            'animes' => $animes
+        ));
     }
 }

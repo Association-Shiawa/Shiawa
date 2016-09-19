@@ -1,0 +1,74 @@
+{% extends "AppBundle:Admin:layout.html.twig" %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="card-panel">
+                <table id="animeList" class="highlight centered">
+                    <thead>
+                    <tr>
+                        <th>Affiche</th>
+                        <th>Titre</th>
+                        <th>Dernière modification</th>
+                        <th>Publié</th>
+                        <th>Catégorie</th>
+                        <th>Tags</th>
+                        <th>Auteur</th>
+                        <th>Evenement</th>
+                        <th colspan="1">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for article in articles %}
+                        <tr>
+                            <td>
+                                {% if article.image %}
+                                    <img src="{{ article.image }}" alt="" width="40px" class="materialboxed">
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{{ path('shiawa_article_edit', { 'slug': article.slug }) }}">{{ article.title|title }}</a>
+                            </td>
+                            <td>
+                                {{ article.updatedAt ? article.updatedAt|date("d/m/Y") : article.createdAt|date("d/m/Y") }}
+                            </td>
+                            <td>
+                                {{ article.published ? "Oui": "Non" }}
+                            </td>
+                            <td>
+                                {{ article.category.name }}
+                            </td>
+                            <td>
+                                {% for tag in article.tags %}
+                                    {{ tag.name }}{{ loop.last ? '' : ','}}
+                                {% endfor %}
+                            </td>
+                            <td>{{ article.author.username }}</td>
+                            <td>{{ article.event ? article.event.name : "" }}</td>
+                            <td>
+                                <a href="{{ path('shiawa_article_edit', {'slug': article.slug}) }}" class="btn-flat blue-text" title="Editer l'Article"><i class="large material-icons">mode_edit</i></a>
+                                <a href="" class="btn-flat red-text" ><i class="large material-icons">delete</i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('#animeList').DataTable({
+                "order": [[ 1, "asc" ]]
+            });
+        } );
+    </script>
+{% endblock %}
