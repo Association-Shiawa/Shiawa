@@ -1,0 +1,32 @@
+{% extends "AppBundle:Core:nav.html.twig" %}
+
+{% block navbar_title %}
+    <a href="{{ path('shiawa_cosplay_homepage') }}" class="brand-logo">Cosplay</a>
+{% endblock %}
+
+{% block nav_content%}
+    <li>
+        <a href="{{ path('shiawa_cosplay_homepage') }}">Accueil</a>
+    </li>
+    <li class=''>
+        <a  href="{{ path('shiawa_article_list', {'category': 'cosplay'})
+        }}">Articles</a>
+    </li>
+{% endblock %}
+
+{% block dropdown_title %}
+    Cosplay
+{% endblock %}
+
+{% block nav_mobile_content %}
+<li>
+    <a href="{{ path('shiawa_cosplay_homepage') }}">Accueil</a>
+</li>
+<li class=''>
+    <a  href="{{ path('shiawa_article_list', {'category': 'cosplay'})
+    }}">Articles</a>
+{% endblock %}
+
+{% block mobile_dropdown_title %}
+    Cosplay
+{% endblock %}

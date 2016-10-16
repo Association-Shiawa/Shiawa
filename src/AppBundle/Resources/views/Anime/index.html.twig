@@ -54,21 +54,27 @@
                         <aside class='row'>
 
                             {% for article in lastAnimeArticles %}
-                            <div class='col m6 s12'>
-                                <div class='article-pw'>
-                                    <h5 class='title-article'><a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
-                                .category.name|lower}) }}'>{{ article.title }}</a></h5>
-                                    <hr />
-                                    <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
-                                        .category.name|lower}) }}'><img src='{{ article.image }}' style='width:100%;
+                                {% if loop.index is odd %}
+                                    <div class='row'>
+                                {% endif %}
+                                <div class='col m6 s12'>
+                                    <div class='article-pw'>
+                                        <h5 class='title-article'><a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
+                                                .category.name|lower}) }}'>{{ article.title }}</a></h5>
+                                        <hr />
+                                        <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
+                                            .category.name|lower}) }}'><img src='{{ article.image }}' style='width:100%;
                                     background-size: cover' /></a>
+                                    </div>
                                 </div>
-                            </div>
+                                {% if loop.index is even %}
+                                    </div>
+                                {% endif %}
                             {% endfor %}
 
                         </aside>
                         <div class='center'>
-                            <a href='{{ path('shiawa_article_list', {'category': 'anime'}) }}'>Voir plus d'articles</a>
+                            <a href='{{ path('shiawa_article_list', {'category': 'anime'}) }}' class="btn-flat">Voir plus d'articles</a>
                         </div>
                     </div>
                 </div>

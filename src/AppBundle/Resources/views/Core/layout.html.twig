@@ -2,10 +2,12 @@
 <!--
 SHIAWA
 -->
-<html>
+<html lang="fr">
 <head>
     <title>{% block title %}Shiawa.fr{% endblock %} - Site actualité otaku</title>
     <meta charset="UTF-8">
+
+    <meta name="google-site-verification" content="RqPJLTSk9eZncldWQJclR9yhMX4BUJJrQ-jDiItMhiY" />
 
     <meta name="theme-color" content="#ec407a">
     <meta name="msapplication-TileColor" content="#ec407a"/>
@@ -13,8 +15,6 @@ SHIAWA
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-language" content="fr-FR" />
-    <meta name="Language" content="fr">
     <!-- Schema.dc -->
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
     <meta name="DC.coverage" content="France" />
@@ -78,8 +78,7 @@ SHIAWA
                     <div class='row'>
                         <!-- RSN -->
                         <div class='col s12'>
-                            <a class="grey-text text-lighten-3 btn-flat" href="https://www.facebook
-                            .com/shiawaproject">Facebook</a>
+                            <a class="grey-text text-lighten-3 btn-flat" href="https://www.facebook.com/shiawaproject">Facebook</a>
                             <a class="grey-text text-lighten-3 btn-flat" href="https://www.youtube.com/channel/UCgPqRGhrra-liY7N7OQSD0A">Youtube</a>
                             <a class="grey-text text-lighten-3 btn-flat" href="https://twitter.com/SHIAWA81">Twitter</a>
                             <a class="grey-text text-lighten-3 btn-flat" href="https://www.instagram.com/shiawaofficiel/">Instagram</a>
@@ -111,6 +110,16 @@ SHIAWA
 {% endblock %}
 
 {% block javascript %}
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-85511209-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="{{ asset('js/bin/materialize.min.js') }}"></script>
     <script src="{{ asset('js/sly.min.js') }}"></script>
