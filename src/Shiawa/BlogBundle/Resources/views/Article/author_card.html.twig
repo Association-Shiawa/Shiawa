@@ -13,10 +13,13 @@
                 {% endif %}
             </div>
             <div class='col m9'>
-                <h3 class='author-article'><a class='pink-text lighten-2' href='#'>{{ article
-                        .author.username }}</a></h3>
+                <h3 class='author-article'>
+                    <a class='pink-text lighten-2' href='{{ path('shiawa_user_view', {'username' : article.author.username }) }}'>
+                        {{ article.author.username }}
+                    </a>
+                </h3>
                 {% if article.author.description is not empty %}
-                    <p>{{ article.author.description }}</p>
+                    <p>{{ article.author.description|raw }}</p>
                 {% else %}
                     <p>Pas de description de l'auteur</p>
                 {% endif %}

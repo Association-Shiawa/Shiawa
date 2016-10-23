@@ -4,18 +4,27 @@
     <section class="row">
     {% for episode in listEpisodes %}
 
-        <div class='col l3 m4 s12'>
-            <div class="card">
+        <div class='col l4 m6 s12'>
+            <div class="card horizontal">
                 <div class="card-image">
                     <img src="{{ episode.anime.image }}">
-                    <a href="{{ path('shiawa_episode_view', {'slug': episode.slug})}}" class="card-title">
-                        {{ episode.title }} - {{ episode.anime.title }}
-                    </a>
                 </div>
-                <div class="card-action">
-                    <a href="{{ path('shiawa_episode_view', {'slug': episode.slug})}}" class="pink-text text-accent-1">
-                        Voir : L'épisode "{{ episode.title }}" de {{ episode.anime.title }}
-                    </a>
+                <div class="card-stacked">
+                    <div class="card-content">
+                       <p>
+                           <a href="{{ path('shiawa_episode_view', {'slug': episode.slug})}}">
+                               {{ episode.title }} - {{ episode.anime.title }}
+                           </a>
+                       </p>
+                        <p>
+                            {% for letter in episode.anime.synopsis|split('')|slice(0,100) %}{{ letter }}{% endfor %} ...
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{{ path('shiawa_episode_view', {'slug': episode.slug})}}" class="pink-text text-accent-1">
+                            Voir : L'épisode "{{ episode.title }}" de {{ episode.anime.title }}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -20,6 +20,7 @@ class CoreController extends Controller
             ->getManager()
             ->getRepository('ShiawaUserBundle:User')
             ->findByRoles(['ROLE_ADHERENT', 'ROLE_ADMIN', 'ROLE_SUPER_ADMIN']);
+        shuffle($adherents);
 
         $events = $this->getDoctrine()
             ->getManager()
