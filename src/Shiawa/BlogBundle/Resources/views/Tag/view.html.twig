@@ -1,0 +1,50 @@
+{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <section class="row">
+
+            <div class="card-panel">
+                <h2>
+                    Résultats pour le tag "{{ tag }}"
+                </h2>
+            </div>
+
+            <div class="col s6">
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h3>Articles</h3>
+                    </li>
+                    {% for article in listArticles %}
+
+                        <li class="collection-item">
+                            {{ article.title }}
+                            <a href="{{ path('shiawa_article_view', {'slug': article.slug, 'category': article.category.name}) }}" class="secondary-content"><i class="material-icons">send</i></a>
+                        </li>
+
+                    {% else %}
+                        Pas (encore !) d'article pour ce tag
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col s6">
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h3>Critique d'Anime</h3>
+                    </li>
+                    {% for review in listAnimeReview %}
+
+                        <li class="collection-item">
+                            {{ review.title }}
+                            <a href="{{ path('shiawa_anime_review_view', {'slug': review.slug}) }}" class="secondary-content"><i class="material-icons">send</i></a>
+                        </li>
+
+                    {% else %}
+                        Pas (encore !) de critique pour ce tag
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </section>
+    </div>
+{% endblock %}

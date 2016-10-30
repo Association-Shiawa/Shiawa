@@ -2,6 +2,7 @@
 
 namespace Shiawa\BlogBundle\Repository;
 
+use Doctrine\ORM\Tools\Pagination\Paginator;
 /**
  * TagRepository
  *
@@ -10,4 +11,31 @@ namespace Shiawa\BlogBundle\Repository;
  */
 class TagRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findArticles($tag)
+    {
+        $query = $this->_em->createQueryBuilder()
+            ->select('a')
+            ->from('Shiawa\BlogBundle\Entity\Article', 'a')
+            ->join('a.tags', 't')
+            ->where('t.name = :tag')
+            ->setParameter('tag', $tag)
+            ->orderBy('a.createdAt', 'DESC')
+            ;
+
+        return $query->getQuery()->getResult();
+    }
+
+    public function findAnimeReview($tag)
+    {
+        $query = $this->_em->createQueryBuilder()
+            ->select('ar')
+            ->from('Shiawa\BlogBundle\Entity\AnimeReview', 'ar')
+            ->join('ar.tags', 't')
+            ->where('t.name = :tag')
+            ->setParameter('tag', $tag)
+            ->orderBy('ar.createdAt', 'DESC')
+        ;
+
+        return $query->getQuery()->getResult();
+    }
 }
