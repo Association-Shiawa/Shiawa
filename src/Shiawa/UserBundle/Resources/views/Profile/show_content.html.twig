@@ -39,7 +39,7 @@
             <div class="card-panel">
                 <h4>A propos de moi</h4>
                 <p>
-                    {% if user.description is null %}Aucune description{% else %}{{ user.description }}{% endif %}
+                    {{ user.description ?: "Aucune description" }}
                 </p>
             </div>
         </aside>

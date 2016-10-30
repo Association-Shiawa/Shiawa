@@ -1,3 +1,4 @@
 shiawa_tag_view:
     path:     /tag/{tag}
-    defaults: { _controller: ShiawaBlogBundle:Tag:view }
+    defaults:
+        _controller: ShiawaBlogBundle:Tag:view

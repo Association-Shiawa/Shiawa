@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="624cce8b-0758-4379-96a2-613374fd369a" name="contribute" url="http://contribute.mybus-app.com">
+        <fileTransfer host="monkeyfactory.fr" port="22" rootFolder="/var/www/contribute.mybus-app.com/" accessType="SFTP" password="dfcedfdedfcfdfc7dfc8dfc5dfdfdfc9dfdedfc3dfeadf9edf99" username="dtemboucti">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

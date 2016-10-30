@@ -12,38 +12,19 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class TagController extends Controller
 {
-    public function viewAction($page, $tag)
+    public function viewAction($tag)
     {
-        if($page < 1) {
-            return new NotFoundHttpException('Page "'.$page.'" inexistante');
-        }
-
-        $categoryName = $category;
-
-        $category = $this->getDoctrine()
-            ->getManager()
-            ->getRepository('ShiawaBlogBundle:Category')
-            ->findOneByName($categoryName)
-        ;
 
         $em = $this->getDoctrine()->getManager();
-        $artRep = $em->getRepository('ShiawaBlogBundle:Article');
+        $tagRep = $em->getRepository('ShiawaBlogBundle:Tag');
 
-        $nbPerPage = 9;
+        $listArticles = $tagRep->findArticles($tag);
+        $listAnimeReview = $tagRep->findAnimeReview($tag);
 
-        $listArticles = $artRep->getArticles($page, $nbPerPage, $category);
-        $nbPage = ceil(count($listArticles)/$nbPerPage);
-        if($nbPage == 0) {$nbPage = 1;}
-
-        if($page >  $nbPage && count($listArticles) > 0) {
-            return new NotFoundHttpException('Page "'.$page.'" inexistante');
-        }
-
-        return $this->render('ShiawaBlogBundle:Article:index.html.twig', array(
+        return $this->render('ShiawaBlogBundle:Tag:view.html.twig', array(
             'listArticles' => $listArticles,
-            'page' => $page,
-            'nbPages' => $nbPage,
-            'category' => $category
+            'listAnimeReview' => $listAnimeReview,
+            'tag' => $tag
         ));
     }
 }
