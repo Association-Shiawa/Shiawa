@@ -45,7 +45,7 @@
                         <div class='divider'></div>
                         <br />
                         {% for tag in article.tags %}
-                          <a class="chip" id="tag-{{ tag.id }}" href="{{ path('shiawa_tag_view', {'tag': tag.name }) }}">{{ tag.name }}</a>
+                          <a class="chip" id="tag-{{ tag.id }}" href="{{ path('shiawa_tag_view', {'tag': tag.slug }) }}">{{ tag.name }}</a>
                         {% endfor %}
                     </div>
                 </div>
