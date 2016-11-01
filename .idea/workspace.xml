@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig" />
     </list>
     <ignored path="Shiawa.iws" />
@@ -56,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="714">
-              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+              <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -844,12 +843,12 @@
       <workItem from="1477662861557" duration="2661000" />
       <workItem from="1477833251633" duration="18668000" />
       <workItem from="1477949100569" duration="3900000" />
-      <workItem from="1478004958541" duration="71000" />
+      <workItem from="1478004958541" duration="356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183466000" />
+    <option name="totallyTimeSpent" value="183751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1244,7 +1243,7 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
           <folding />
         </state>
       </provider>
