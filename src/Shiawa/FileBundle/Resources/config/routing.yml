@@ -1,0 +1,3 @@
+shiawa_file_homepage:
+    path:     /upluoad
+    defaults: { _controller: ShiawaFileBundle:Default:index }

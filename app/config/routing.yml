@@ -1,3 +1,7 @@
+shiawa_file:
+    resource: "@ShiawaFileBundle/Resources/config/routing.yml"
+    prefix:   /
+
 shiawa_contest:
     resource: "@ShiawaContestBundle/Resources/config/routing.yml"
     prefix:   /
