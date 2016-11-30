@@ -10,6 +10,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="a06729f1-c60f-4841-8ce7-aafebdfde35b" name="wp_eval" url="http://wpdylan.mmi-lepuy.fr">
+        <fileTransfer host="wpdylan.mmi-lepuy.fr" port="22" rootFolder="/var/www/clients/client208/web2062" accessType="SFTP" password="dfcedfdedfcfdfc7dfc8dfc5dfdfdfc9dfdedfc3" username="web2062_ssh">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

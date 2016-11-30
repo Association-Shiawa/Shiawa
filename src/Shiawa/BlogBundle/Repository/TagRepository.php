@@ -17,7 +17,7 @@ class TagRepository extends \Doctrine\ORM\EntityRepository
             ->select('a')
             ->from('Shiawa\BlogBundle\Entity\Article', 'a')
             ->join('a.tags', 't')
-            ->where('t.name = :tag')
+            ->where('t.slug = :tag')
             ->setParameter('tag', $tag)
             ->orderBy('a.createdAt', 'DESC')
             ;
@@ -31,7 +31,7 @@ class TagRepository extends \Doctrine\ORM\EntityRepository
             ->select('ar')
             ->from('Shiawa\BlogBundle\Entity\AnimeReview', 'ar')
             ->join('ar.tags', 't')
-            ->where('t.name = :tag')
+            ->where('t.slug = :tag')
             ->setParameter('tag', $tag)
             ->orderBy('ar.createdAt', 'DESC')
         ;
