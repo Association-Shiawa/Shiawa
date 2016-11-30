@@ -31,3 +31,8 @@ shiawa_contact:
     path: /contact
     defaults:
         _controller: AppBundle:Core:contact
+
+shiawa_cache_clear:
+    path: /cache-clear
+    defaults:
+        _controller: AppBundle:Admin:cacheClear
