@@ -50,7 +50,7 @@ class AnimeCharacter
      * @ORM\ManyToOne(targetEntity="Shiawa\FileBundle\Entity\File")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $image;
+    //private $image;
 
     /**
      * @ORM\ManyToOne(targetEntity="Shiawa\BlogBundle\Entity\Anime", inversedBy="characters")
