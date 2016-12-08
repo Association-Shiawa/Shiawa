@@ -27,7 +27,7 @@ class AppKernel extends Kernel
             new Shiawa\BlogBundle\ShiawaBlogBundle(),
             new Shiawa\EventBundle\ShiawaEventBundle(),
             new Shiawa\UserBundle\ShiawaUserBundle(),
-            new Shiawa\ContestBundle\ShiawaContestBundle(),
+            //new Shiawa\ContestBundle\ShiawaContestBundle(),
             new Shiawa\FileBundle\ShiawaFileBundle(),
         ];
 

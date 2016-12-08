@@ -48,7 +48,7 @@ class File
 
     /**
      * @var
-     * @ORM\Column(name="summary", type="text", nullable=true)
+     * @ORM\Column(name="summary", type="text")
      */
     private $description;
 
@@ -89,7 +89,7 @@ class File
             return;
         }
         // Le nom du fichier est son nom original + l'extension
-        $this->filename = $this->file->getClientOriginalName();
+        $this->filename = $this->file->getClientOriginalName().'.'.$this->file->guessExtension();
         // Et on génère l'attribut alt de la balise <img>, à la valeur du nom du fichier sur le PC de l'internaute
         $this->alt = $this->file->getClientOriginalName();
     }
@@ -106,7 +106,7 @@ class File
         }
         // Si on avait un ancien fichier (attribut tempFilename non null), on le supprime
         if (null !== $this->tempFilename) {
-            $oldFile = $this->getUploadRootDir().'/'.$this->id.'-'.$this->tempFilename;
+            $oldFile = $this->getUploadRootDir().'/'.$this->id.'.'.$this->tempFilename;
             if (file_exists($oldFile)) {
                 unlink($oldFile);
             }
@@ -114,7 +114,7 @@ class File
         // On déplace le fichier envoyé dans le répertoire de notre choix
         $this->file->move(
             $this->getUploadRootDir(), // Le répertoire de destination
-            $this->id.'-'.$this->filename   // Le nom du fichier à créer, ici « id.extension »
+            $this->id.'.'.$this->filename   // Le nom du fichier à créer, ici « id.extension »
         );
     }
 
@@ -124,7 +124,7 @@ class File
     public function preRemoveUpload()
     {
         // On sauvegarde temporairement le nom du fichier, car il dépend de l'id
-        $this->tempFilename = $this->getUploadRootDir().'/'.$this->id.'-'.$this->filename;
+        $this->tempFilename = $this->getUploadRootDir().'/'.$this->id.'.'.$this->filename;
     }
 
     /**
@@ -149,7 +149,7 @@ class File
     public function getUploadDir()
     {
         // On retourne le chemin relatif vers l'image pour un navigateur (relatif au répertoire /web donc)
-        return $this->uploadDir;
+        return $this->uploadDir.$this->id;
     }
 
     protected function getUploadRootDir()
@@ -160,7 +160,7 @@ class File
 
     public function getWebPath()
     {
-        return $this->getUploadDir().'/'.$this->getId().'-'.$this->getFilename();
+        return $this->getUploadDir().'/'.$this->getId().'.'.$this->getExtension();
     }
 
     /**
@@ -174,11 +174,35 @@ class File
     }
 
     /**
+     * Set extension
+     *
+     * @param string $extension
+     *
+     * @return Image
+     */
+    public function setExtension($extension)
+    {
+        $this->extension = $extension;
+
+        return $this;
+    }
+
+    /**
+     * Get extension
+     *
+     * @return string
+     */
+    public function getExtension()
+    {
+        return $this->extension;
+    }
+
+    /**
      * Set alt
      *
      * @param string $alt
      *
-     * @return File
+     * @return Image
      */
     public function setAlt($alt)
     {
@@ -213,108 +237,13 @@ class File
     {
         $this->file = $file;
         // On vérifie si on avait déjà un fichier pour cette entité
-        if (null !== $this->filename) {
+        if (null !== $this->extension) {
             // On sauvegarde l'extension du fichier pour le supprimer plus tard
-            $this->tempFilename = $this->filename;
+            $this->tempFilename = $this->extension;
             // On réinitialise les valeurs des attributs extension et alt
-            $this->filename = null;
+            $this->extension = null;
             $this->alt = null;
         }
     }
-
-    /**
-     * Set filename
-     *
-     * @param string $filename
-     *
-     * @return File
-     */
-    public function setFilename($filename)
-    {
-        $this->filename = $filename;
-
-        return $this;
-    }
-
-    /**
-     * Get filename
-     *
-     * @return string
-     */
-    public function getFilename()
-    {
-        return $this->filename;
-    }
-
-    /**
-     * Set createdAt
-     *
-     * @param \DateTime $createdAt
-     *
-     * @return File
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
-
-    /**
-     * Get createdAt
-     *
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
-    /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return File
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set author
-     *
-     * @param \Shiawa\UserBundle\Entity\User $author
-     *
-     * @return File
-     */
-    public function setAuthor(\Shiawa\UserBundle\Entity\User $author)
-    {
-        $this->author = $author;
-
-        return $this;
-    }
-
-    /**
-     * Get author
-     *
-     * @return \Shiawa\UserBundle\Entity\User
-     */
-    public function getAuthor()
-    {
-        return $this->author;
-    }
 }
+

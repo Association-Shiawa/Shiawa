@@ -18,12 +18,15 @@
         {{ form_widget(form.email, {'attr': {'class': ''}}) }}
     </div>
 
-    <div class="input-field">
-        {{ form_label(form.avatar, "Ton avatar", {'label_attr': {'class': ''}}) }}
-        <div class="red-text">
-            {{ form_errors(form.avatar) }}
+    <div class="file-field input-field">
+        <div class="btn pink lighten-2">
+            <span>Ton avatar</span>
+            {{ form_widget(form.image.file, {'attr': {'class': ''}}) }}
         </div>
-        {{ form_widget(form.avatar, {'attr': {'class': ''}}) }}
+        <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+            {{ form_errors(form.image) }}
+        </div>
     </div>
 
     <div class="input-field">
