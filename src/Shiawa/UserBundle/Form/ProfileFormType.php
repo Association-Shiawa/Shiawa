@@ -11,6 +11,7 @@
 
 namespace Shiawa\UserBundle\Form;
 
+use Shiawa\FileBundle\Form\FileUploadType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -22,7 +23,7 @@ class ProfileFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('avatar', TextType::class, array(
+        $builder->add('image', FileUploadType::class, array(
             'required'     => false
             ))
             ->add('name', TextType::class, array(

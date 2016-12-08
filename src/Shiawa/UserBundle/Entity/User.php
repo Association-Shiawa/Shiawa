@@ -60,6 +60,14 @@ class User extends BaseUser
     private $avatar;
 
     /**
+     * @var File
+     *
+     * @ORM\ManyToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"remove", "persist"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $image;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="description", type="text", nullable=true)
@@ -79,6 +87,15 @@ class User extends BaseUser
      * @ORM\Column(name="notification", type="boolean")
      */
     private $notification = false;
+
+    /**
+     * User constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->setImageDir();
+    }
 
 
     /**
@@ -281,5 +298,41 @@ class User extends BaseUser
     public function getBirthdate()
     {
         return $this->birthdate;
+    }
+
+    /**
+     * Set image
+     *
+     * @param \Shiawa\FileBundle\Entity\File $image
+     *
+     * @return User
+     */
+    public function setImage(\Shiawa\FileBundle\Entity\File $image)
+    {
+        $this->image = $image;
+        $this->setImageDir();
+
+        return $this;
+    }
+
+    public function setImageDir()
+    {
+        $dir = "uploads/files/users/".$this->usernameCanonical."/avatar/";
+        $this->image->setUploadDir($dir);
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return \Shiawa\FileBundle\Entity\File
+     */
+    public function getImage()
+    {
+        if ($this->image != null) {
+            $this->setImageDir();
+        }
+        return $this->image;
     }
 }
