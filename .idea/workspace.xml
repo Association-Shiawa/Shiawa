@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/author_card.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/author_card.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/author_card.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/author_card.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/Shiawa/UserBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/UserBundle/Form/ProfileFormType.php" afterPath="$PROJECT_DIR$/src/Shiawa/UserBundle/Form/ProfileFormType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Admin/list.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Admin/list.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Profile/edit_content.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Profile/edit_content.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Profile/show_content.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Profile/show_content.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig" />
     </list>
     <ignored path="Shiawa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,8 +56,8 @@
       <file leaf-file-name="File.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/File.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="160" column="30" selection-start-line="160" selection-start-column="20" selection-end-line="160" selection-end-column="30" />
+            <state relative-caret-position="330">
+              <caret line="162" column="40" selection-start-line="162" selection-start-column="40" selection-end-line="162" selection-end-column="40" />
               <folding>
                 <element signature="e#44#76#0#PHP" expanded="true" />
               </folding>
@@ -75,64 +65,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="293" column="31" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
+            <state relative-caret-position="287">
+              <caret line="272" column="27" selection-start-line="272" selection-start-column="27" selection-end-line="272" selection-end-column="27" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="55" column="59" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Admin/list.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_content.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Profile/edit_content.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="140" column="25" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileFormType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Form/ProfileFormType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-              <folding>
-                <element signature="e#296#338#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -193,7 +131,6 @@
         <option value="$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/File.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Form/ProfileFormType.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Profile/edit_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Profile/show_content.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" />
@@ -201,6 +138,7 @@
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/author_card.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Admin/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Entity/User.php" />
       </list>
     </option>
   </component>
@@ -936,12 +874,12 @@
       <workItem from="1480941722968" duration="752000" />
       <workItem from="1481056507842" duration="8530000" />
       <workItem from="1481117502424" duration="8604000" />
-      <workItem from="1481199965050" duration="2466000" />
+      <workItem from="1481199965050" duration="3273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243152000" />
+    <option name="totallyTimeSpent" value="243959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
@@ -1230,16 +1168,6 @@
     <entry file="file://$PROJECT_DIR$/web/uploads/files/users/kayneth1/1.Photo de moi 43.png.png" />
     <entry file="file://$PROJECT_DIR$/web/uploads/files/1/1.TPhoto_00001 (2).jpg" />
     <entry file="file://$PROJECT_DIR$/web/uploads/files/1.IMAG0076.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/File.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="160" column="30" selection-start-line="160" selection-start-column="20" selection-end-line="160" selection-end-column="30" />
-          <folding>
-            <element signature="e#44#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Form/ProfileFormType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -1314,10 +1242,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Entity/User.php">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Admin/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="293" column="31" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
+        <state relative-caret-position="192">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1330,10 +1258,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Admin/list.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/File.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        <state relative-caret-position="330">
+          <caret line="162" column="40" selection-start-line="162" selection-start-column="40" selection-end-line="162" selection-end-column="40" />
+          <folding>
+            <element signature="e#44#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="272" column="27" selection-start-line="272" selection-start-column="27" selection-end-line="272" selection-end-column="27" />
           <folding />
         </state>
       </provider>
