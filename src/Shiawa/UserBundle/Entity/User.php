@@ -270,7 +270,7 @@ class User extends BaseUser
     public function setAvatar(\Shiawa\FileBundle\Entity\File $image)
     {
         $this->avatar = $image;
-        $this->setImageDir();
+        $this->setAvatarDir();
 
         return $this;
     }
