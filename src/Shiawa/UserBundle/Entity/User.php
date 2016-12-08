@@ -53,19 +53,12 @@ class User extends BaseUser
     private $preference;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="avatar", type="string", length=255, nullable=true)
-     */
-    private $avatar;
-
-    /**
      * @var File
      *
      * @ORM\ManyToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"remove", "persist"})
      * @ORM\JoinColumn(nullable=true)
      */
-    private $image;
+    private $avatar;
 
     /**
      * @var string
@@ -87,15 +80,6 @@ class User extends BaseUser
      * @ORM\Column(name="notification", type="boolean")
      */
     private $notification = false;
-
-    /**
-     * User constructor.
-     */
-    public function __construct()
-    {
-        parent::__construct();
-        $this->setImageDir();
-    }
 
 
     /**
@@ -130,30 +114,6 @@ class User extends BaseUser
     public function getPreference()
     {
         return $this->preference;
-    }
-
-    /**
-     * Set avatar
-     *
-     * @param string $avatar
-     *
-     * @return User
-     */
-    public function setAvatar($avatar)
-    {
-        $this->avatar = $avatar;
-
-        return $this;
-    }
-
-    /**
-     * Get avatar
-     *
-     * @return string
-     */
-    public function getAvatar()
-    {
-        return $this->avatar;
     }
 
     /**
@@ -307,18 +267,18 @@ class User extends BaseUser
      *
      * @return User
      */
-    public function setImage(\Shiawa\FileBundle\Entity\File $image)
+    public function setAvatar(\Shiawa\FileBundle\Entity\File $image)
     {
-        $this->image = $image;
+        $this->avatar = $image;
         $this->setImageDir();
 
         return $this;
     }
 
-    public function setImageDir()
+    public function setAvatarDir()
     {
         $dir = "uploads/files/users/".$this->usernameCanonical."/avatar/";
-        $this->image->setUploadDir($dir);
+        $this->avatar->setUploadDir($dir);
 
         return $this;
     }
@@ -328,11 +288,11 @@ class User extends BaseUser
      *
      * @return \Shiawa\FileBundle\Entity\File
      */
-    public function getImage()
+    public function getAvatar()
     {
-        if ($this->image != null) {
-            $this->setImageDir();
+        if ($this->avatar != null) {
+            $this->setAvatarDir();
         }
-        return $this->image;
+        return $this->avatar;
     }
 }

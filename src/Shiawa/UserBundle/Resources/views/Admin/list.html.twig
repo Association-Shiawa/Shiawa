@@ -25,7 +25,7 @@
                         <tr>
                             <td>
                                 {% if user.avatar %}
-                                    <img src="{{ user.avatar }}" alt="" width="40px">
+                                    <img src="{{ asset(user.avatar.getWebPath) }}" alt="" width="40px">
                                 {% endif %}
                             </td>
                             <td>
