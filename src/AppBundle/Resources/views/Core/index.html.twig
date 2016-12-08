@@ -187,9 +187,7 @@
                     <div class='carousel-item'>
                         <div class="card">
                             <div class="card-image">
-                                <img src="{% if user.avatar is null %}https://www.mautic.org/media/images/default_avatar.png{% else %}{{
-                                user
-                                .avatar }}{% endif %}" />
+                                <img src="{% if user.avatar is null %}https://www.mautic.org/media/images/default_avatar.png{% else %}{{ asset(user.avatar.getWebPath) }}{% endif %}" />
                                 <span class="card-title">{{ user.username|title }}</span>
                             </div>
                             <div class="card-content">

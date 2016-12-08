@@ -19,7 +19,7 @@
             {% if user.avatar is null %}
                 src="https://www.mautic.org/media/images/default_avatar.png"
             {% else %}
-            src="{{ user.avatar }}"
+            src="{{ asset(user.avatar.getWebPath) }}"
             {% endif %}
             alt="{{ user.username }}'s profile image" class="responsive-img">
         </figure>
@@ -53,7 +53,7 @@
                         {% if user.avatar is null %}
                         https://www.mautic.org/media/images/default_avatar.png
                         {% else %}
-                        {{ user.avatar }}
+                        {{ asset(user.avatar.getWebPath) }}
                         {% endif %}
                         " alt=""/>
                         </div>

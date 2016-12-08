@@ -76,7 +76,7 @@
                                 {% if app.user.avatar is null %}
                                 https://www.mautic.org/media/images/default_avatar.png
                                 {% else %}
-                                    {{ app.user.avatar }}
+                                    {{ asset(app.user.avatar.getWebPath) }}
                                 {% endif %}
                                 ">
                             </a>
