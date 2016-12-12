@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use AppBundle\Form\ContactType;
 
 class CoreController extends Controller
 {
@@ -51,11 +52,39 @@ class CoreController extends Controller
         ));
     }
 
-    public function contactAction() {
+    public function contactAction(Request $request) {
+        $user = $this->getUser();
 
+        $form = $this->createForm(ContactType::class, $user);
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+            //envoi d'e-mail
+            
+            $message = \Swift_Message::newInstance()
+                ->setSubject($form->get('subject')->getData())
+                ->setFrom($form->get('email')->getData())
+                //->setTo('shiawa.project@gmail.com')
+                ->setTo($this->getParameter('mail'))
+                ->setBody(
+                    $this->renderView(
+                        'AppBundle:Emails:contact.html.twig',
+                        array(
+                            'name' => $form->get('username')->getData(),
+                            'content' => $form->get('message')->getData()
+                        )
+                    ),
+                    'text/html'
+                )
+            ;
+            $this->get('mailer')->send($message);
+
+            $request->getSession()->getFlashBag()->add('success', 'Votre e-mail a bien été envoyé.');
+
+            return $this->redirectToRoute('shiawa_contact');
+        }
 
         return $this->render('AppBundle:Core:contact.html.twig', array(
-
+            'form' => $form->createView(),
         ));
     }
 }

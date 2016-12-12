@@ -18,26 +18,29 @@
 
         <div class="row card-panel">
 
-            <form action="">
+            {{ form_start(form, {'attr': {'class': ''}}) }}
+
+            {{ form_errors(form) }}
 
                 <div class="col m8 s12">
                     <div class="row">
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input placeholder="John Doe" id="first_name" type="text" class="validate">
+                            {{ form_widget(form.username) }}
                             <label for="first_name">Qui êtes vous ?</label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">mail</i>
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
+                            {{ form_widget(form.email) }}
+                        </div>
+                        <div class="input-field col s12 m12">
+                            {{ form_row(form.subject) }}
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">mode_edit</i>
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1">Votre message</label>
+                            {{ form_widget(form.message, {'attr' : { 'class' : 'materialize-textarea' }}) }}
                         </div>
                     </div>
 
@@ -48,10 +51,7 @@
                 <div class="col m4 s12">
                     <div class="carousel carousel-slider center" data-indicators="true">
                         <div class="carousel-fixed-item center">
-                            <button class="btn waves-effect waves-light pink lighten-2" type="submit" name="action">
-                                Contactez nous
-                                <i class="material-icons right">send</i>
-                            </button>
+                            {{ form_widget(form.Envoyer, {'attr': {'class': 'btn waves-effect waves-light pink lighten-2'}}) }}
                         </div>
                         <div class="carousel-item red white-text" href="#one!">
                             <h2>Un problème, un bug, une erreur sur le site ?</h2>
@@ -73,7 +73,8 @@
                         </div>
                     </div>
                 </div>
-            </form>
+            {{ form_rest(form) }}
+            {{ form_end(form) }}
         </div>
     </div>
 
