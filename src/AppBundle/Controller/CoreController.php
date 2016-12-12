@@ -52,7 +52,7 @@ class CoreController extends Controller
     }
 
     public function contactAction() {
-        $user = $this->getUser();
+        /*$user = $this->getUser();
 
         $form = $this->createForm(ContactType::class, $user);
 
@@ -84,6 +84,9 @@ class CoreController extends Controller
 
         return $this->render('AppBundle:Core:contact.html.twig', array(
             'form' => $form->createView(),
+        ));*/
+        
+         return $this->render('AppBundle:Core:contact.html.twig', array(
         ));
     }
 }
