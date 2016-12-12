@@ -52,7 +52,7 @@ class CoreController extends Controller
         ));
     }
 
-    public function contactAction() {
+    public function contactAction(Request $request) {
         $user = $this->getUser();
 
         $form = $this->createForm(ContactType::class, $user);
