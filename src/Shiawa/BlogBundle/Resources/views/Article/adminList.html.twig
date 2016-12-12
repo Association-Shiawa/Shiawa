@@ -24,11 +24,11 @@
                         <tr>
                             <td>
                                 {% if article.image %}
-                                    <img src="{{ article.image }}" alt="" width="40px" class="materialboxed">
+                                    <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) : article.image }}" alt="" width="40px" class="materialboxed">
                                 {% endif %}
                             </td>
                             <td>
-                                <a href="{{ path('shiawa_article_edit', { 'slug': article.slug }) }}">{{ article.title|title }}</a>
+                                <a href="{{ path('shiawa_article_view', { 'slug': article.slug, 'category' : article.category.slug }) }}">{{ article.title|title }}</a>
                             </td>
                             <td>
                                 {{ article.updatedAt ? article.updatedAt|date("d/m/Y") : article.createdAt|date("d/m/Y") }}

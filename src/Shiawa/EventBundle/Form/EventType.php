@@ -2,6 +2,7 @@
 
 namespace Shiawa\EventBundle\Form;
 
+use Shiawa\FileBundle\Form\FileUploadType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -26,7 +27,10 @@ class EventType extends AbstractType
                 'widget' => 'single_text',
                 'html5' => false
             ))
-            ->add('image')
+            ->add('thumbnail', FileUploadType::class)
+            ->add('image', null, array(
+                'required' => false
+            ))
             ->add('isPublic')
             ->add('adress')
             ->add('place')

@@ -285,8 +285,6 @@ class User extends BaseUser
 
     /**
      * Get image
-     *
-     * @return \Shiawa\FileBundle\Entity\File
      */
     public function getAvatar()
     {

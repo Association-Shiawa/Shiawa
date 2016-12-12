@@ -16,7 +16,7 @@
 
 {%  block OG_title %}{{ anime.title }} - Shiawa.fr{% endblock %}
 
-{%  block OG_image %}{{ anime.image }}{% endblock %}
+{%  block OG_image %}{{ anime.thumbnail ? asset(anime.thumbnail.getWebPath) : anime.image }}{% endblock %}
 
 {% block title %}
    {{ anime.title }} - Shiawa.fr
@@ -38,7 +38,7 @@
                 <div class='row'>
                     <div class='col m4 s12 valign-wrapper'>
                         <div class='center-block'>
-                            <img class='responsive-img valign' src='{{ anime.image }}'>
+                            <img class='responsive-img valign' src='{{ anime.thumbnail ? asset(anime.thumbnail.getWebPath) : anime.image }}'>
                         </div>
                     </div>
                     <div class='col m8 s12'>
@@ -110,7 +110,7 @@
 
                             {% for episode in anime.episodes %}
                             <li class="collection-item avatar">
-                                <img src="{{ anime.image }}" alt="" class="circle">
+                                <img src="{{ anime.thumbnail ? asset(anime.thumbnail.getWebPath) : anime.image }}" alt="" class="circle">
                                 <span class="title">
                                     <a href='{{ path('shiawa_episode_view', {'slug': episode.slug})
                                     }}'>

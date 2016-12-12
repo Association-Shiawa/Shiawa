@@ -7,7 +7,7 @@
         <div class='col l3 m4 s12'>
             <div class="card">
                 <div class="card-image">
-                    <img src="{{ article.image }}">
+                    <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) : article.image }}">
                     <a href="{{ path('shiawa_article_view', {'slug': article.slug, 'category': article.category
                         .slug})}}" class="card-title">
                         {{ article.title }} - {{ article.createdAt|date('d/m/Y') }}

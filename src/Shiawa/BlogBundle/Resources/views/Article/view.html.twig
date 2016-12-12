@@ -16,7 +16,7 @@
 
 {%  block OG_title %}{{ article.title }} - Shiawa.fr{% endblock %}
 
-{%  block OG_image %}{{ article.image }}{% endblock %}
+{%  block OG_image %}{{ article.thumbnail ? asset(article.thumbnail.getWebPath) : article.image }}{% endblock %}
 
 {% block title %}
    {{ article.title }} - Shiawa.fr
@@ -97,7 +97,7 @@
                                     {{ path('shiawa_anime_review_view', {'slug': content.slug}) }}
                                 {% endif %}
                             '>
-                                <img src='{{ content.image }}' style='width:100%;background-size: cover' />
+                                <img src='{{ content.thumbnail ? asset(content.thumbnail.getWebPath) : content.image }}' style='width:100%;background-size: cover' />
                             </a>
                         </div>
                     </div>

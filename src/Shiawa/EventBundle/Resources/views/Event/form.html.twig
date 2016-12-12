@@ -14,6 +14,17 @@
         {{ form_widget(form.image, {'attr': {'class': ''}}) }}
     </div>
 
+    <div class="file-field input-field">
+        <div class="btn pink lighten-2">
+            <span>Image à la Une</span>
+            {{ form_widget(form.thumbnail.file, {'attr': {'class': ''}}) }}
+        </div>
+        <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+            {{ form_errors(form.thumbnail) }}
+        </div>
+    </div>
+
     <div class="input-field">
         {{ form_label(form.beginAt, "Date de début", {'label_attr': {'class': ''}}) }}
         {{ form_errors(form.beginAt) }}
@@ -47,7 +58,7 @@
     <div class="input-field">
         {{ form_label(form.description, "Description de l'événément (facultatif)", {'label_attr': {'class': ''}}) }}
         {{ form_errors(form.description) }}
-        {{ form_widget(form.description, {'attr': {'class': ''}}) }}
+        {{ form_widget(form.description, {'attr': {'class': 'materialize-textarea wysiwyg'}}) }}
     </div>
 
     {{ form_label(form.isPublic, "Evenement public ? ", {'label_attr': {'class': ''}}) }}

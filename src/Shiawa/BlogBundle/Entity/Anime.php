@@ -46,6 +46,11 @@ class Anime
     private $image;
 
     /**
+     * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"persist", "remove"})
+     */
+    private $thumbnail;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="created_at", type="datetime")
@@ -457,5 +462,41 @@ class Anime
     public function getIsNew()
     {
         return $this->isNew;
+    }
+
+    /**
+     * Set thumbnail
+     *
+     * @param \Shiawa\FileBundle\Entity\File $thumbnail
+     *
+     * @return Anime
+     */
+    public function setThumbnail(\Shiawa\FileBundle\Entity\File $thumbnail = null)
+    {
+        $this->thumbnail = $thumbnail;
+        $this->setThumbnailDir();
+
+        return $this;
+    }
+
+    /**
+     * Get thumbnail
+     *
+     * @return \Shiawa\FileBundle\Entity\File
+     */
+    public function getThumbnail()
+    {
+        if ($this->thumbnail != null) {
+            $this->setThumbnailDir();
+        }
+        return $this->thumbnail;
+    }
+
+    public function setThumbnailDir()
+    {
+        $dir = "uploads/files/anime/".$this->id."/thumbnail/";
+        $this->thumbnail->setUploadDir($dir);
+
+        return $this;
     }
 }

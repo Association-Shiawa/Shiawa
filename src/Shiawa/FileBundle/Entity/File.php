@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Shiawa\UserBundle as User;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * File
@@ -63,6 +64,9 @@ class File
 
     /**
      * @var UploadedFile
+     * @Assert\File (
+     *   mimeTypes = {"image/png", "image/jpg"}
+     *  )
      */
     private $file;
 

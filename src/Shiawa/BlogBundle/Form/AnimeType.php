@@ -2,6 +2,7 @@
 
 namespace Shiawa\BlogBundle\Form;
 
+use Shiawa\FileBundle\Form\FileUploadType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
@@ -21,7 +22,10 @@ class AnimeType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('image')
+            ->add('thumbnail', FileUploadType::class)
+            ->add('image', null, array(
+                'required' => false
+            ))
             ->add('synopsis')
             ->add('nbrEpisode')
             ->add('type', ChoiceType::class, array(

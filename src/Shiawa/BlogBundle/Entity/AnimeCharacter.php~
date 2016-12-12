@@ -45,6 +45,14 @@ class AnimeCharacter
     private $avatar;
 
     /**
+     * @var file
+     *
+     * @ORM\ManyToOne(targetEntity="Shiawa\FileBundle\Entity\File")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    //private $image;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Shiawa\BlogBundle\Entity\Anime", inversedBy="characters")
      * @ORM\JoinColumn(nullable=false)
      */

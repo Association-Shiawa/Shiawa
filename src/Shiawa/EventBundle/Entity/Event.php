@@ -66,6 +66,11 @@ class Event
     private $image;
 
     /**
+     * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"persist", "remove"})
+     */
+    private $thumbnail;
+
+    /**
      * @var bool
      *
      * @ORM\Column(name="is_public", type="boolean")
@@ -387,5 +392,41 @@ class Event
     public function getArticles()
     {
         return $this->articles;
+    }
+
+    /**
+     * Set thumbnail
+     *
+     * @param \Shiawa\FileBundle\Entity\File $thumbnail
+     *
+     * @return Event
+     */
+    public function setThumbnail(\Shiawa\FileBundle\Entity\File $thumbnail = null)
+    {
+        $this->thumbnail = $thumbnail;
+        $this->setThumbnailDir();
+
+        return $this;
+    }
+
+    /**
+     * Get thumbnail
+     *
+     * @return \Shiawa\FileBundle\Entity\File
+     */
+    public function getThumbnail()
+    {
+        if ($this->thumbnail != null) {
+            $this->setThumbnailDir();
+        }
+        return $this->thumbnail;
+    }
+
+    public function setThumbnailDir()
+    {
+        $dir = "uploads/files/event/".$this->id."/thumbnail/";
+        $this->thumbnail->setUploadDir($dir);
+
+        return $this;
     }
 }

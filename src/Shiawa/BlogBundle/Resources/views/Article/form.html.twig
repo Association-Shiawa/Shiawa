@@ -63,6 +63,17 @@
                 {{ form_widget(form.image, {'attr': {'class': ''}}) }}
             </div>
 
+            <div class="file-field input-field">
+                <div class="btn pink lighten-2">
+                    <span>Image à la Une</span>
+                    {{ form_widget(form.thumbnail.file, {'attr': {'class': ''}}) }}
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                    {{ form_errors(form.thumbnail) }}
+                </div>
+            </div>
+
             <p>
                 Si cet article est lié à un événement, veuillez le sélectionner dans la liste
                 déroulante suivante :

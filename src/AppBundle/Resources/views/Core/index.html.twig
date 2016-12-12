@@ -87,7 +87,7 @@
 
                 <article class='col l4 m6 s12'>
                     <div class="art">
-                        <img src='{{ article.image }}' />
+                        <img src='{{ article.thumbnail ? asset(article.thumbnail.getWebPath) : article.image }}' />
                         <div class='overlay-art'></div>
                         <div class='zoning-art'>
                             <h3 class='title-art '>{{ article.title }}</h3>
@@ -225,7 +225,7 @@
                 <div class="slider">
                     <ul class="slides">
                         <li>
-                            <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/10464371_1665338953707634_5146108095042687115_n.jpg?oh=8535e906f5f471e0f5d76d677f467007&oe=5844F189"> <!-- random image -->
+                            <img src="{{ asset("imgs/slider_scene.jpg") }}"> <!-- random image -->
                             <div class="caption center-align">
                                 <h3>Des animations scéniques!</h3>
                                 <h5 class="light grey-text text-lighten-3">Quizz, show, JoJo Poses et pleins de
@@ -233,7 +233,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="https://scontent.xx.fbcdn.net/t31.0-8/12778996_1665618980346298_6605750242197511841_o.jpg"> <!-- random image -->
+                            <img src="{{ asset("imgs/slider_cmv.jpg") }}"> <!-- random image -->
                             <div class="caption left-align">
                                 <h3 class="">Des Cosplay Music Video</h3>
                                 <h5 class="light grey-text text-lighten-3">Incarnez vos personnages préférés devant
@@ -242,14 +242,14 @@
                             </div>
                         </li>
                         <li>
-                            <img src="https://scontent.xx.fbcdn.net/t31.0-8/14102960_1737140116527517_1030143932169111597_o.jpg"> <!-- random image -->
+                            <img src="{{ asset("imgs/slider_shootings.jpg") }}"> <!-- random image -->
                             <div class="caption right-align">
                                 <h3>Des shootings photos de Cosplay !</h3>
                                 <!--<h5 class="light grey-text text-lighten-3"></h5>-->
                             </div>
                         </li>
                         <li>
-                            <img src="https://scontent.xx.fbcdn.net/t31.0-8/13062956_1687739931467536_6662302071907783316_o.jpg"> <!-- random image -->
+                            <img src="{{ asset("imgs/slider_cosplay.jpg") }}"> <!-- random image -->
                             <div class="caption right-align">
                                 <h3>Immortaliser les Cosplay en convention</h3>
                                 <h5 class="light grey-text text-lighten-3"></h5>
@@ -291,7 +291,7 @@
                 <div class='col l6 m6 s12'>
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light" style="max-height: 500px; overflow: hidden;">
-                            <img class="activator" src="{{ event.image }}">
+                            <img class="activator" src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) : event.image }}">
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">{{ event.name }}<i
