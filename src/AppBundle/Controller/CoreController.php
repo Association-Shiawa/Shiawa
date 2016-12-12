@@ -52,10 +52,38 @@ class CoreController extends Controller
     }
 
     public function contactAction() {
+        $user = $this->getUser();
 
+        $form = $this->createForm(ContactType::class, $user);
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+            //envoi d'e-mail
+            
+            $message = \Swift_Message::newInstance()
+                ->setSubject($form->get('subject')->getData())
+                ->setFrom($form->get('email')->getData())
+                //->setTo('shiawa.project@gmail.com')
+                ->setTo($this->getParameter('email'))
+                ->setBody(
+                    $this->renderView(
+                        'contact.html.twig',
+                        array(
+                            'name' => $form->get('name')->getData(),
+                            'content' => $form->get('message')->getData()
+                        )
+                    ),
+                    'text/html'
+                )
+            ;
+            $this->get('mailer')->send($message);
+
+            $request->getSession()->getFlashBag()->add('success', 'Votre e-mail a bien été envoyé.');
+
+            return $this->redirectToRoute('contact');
+        }
 
         return $this->render('AppBundle:Core:contact.html.twig', array(
-
+            'form' => $form->createView(),
         ));
     }
 }
