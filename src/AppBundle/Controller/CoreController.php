@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use AppBundle\Form\ContactType;
 
 class CoreController extends Controller
 {
@@ -52,7 +53,7 @@ class CoreController extends Controller
     }
 
     public function contactAction() {
-        /*$user = $this->getUser();
+        $user = $this->getUser();
 
         $form = $this->createForm(ContactType::class, $user);
 
@@ -66,9 +67,9 @@ class CoreController extends Controller
                 ->setTo($this->getParameter('email'))
                 ->setBody(
                     $this->renderView(
-                        'contact.html.twig',
+                        'AppBundle:Emails:contact.html.twig',
                         array(
-                            'name' => $form->get('name')->getData(),
+                            'name' => $form->get('username')->getData(),
                             'content' => $form->get('message')->getData()
                         )
                     ),
@@ -84,9 +85,6 @@ class CoreController extends Controller
 
         return $this->render('AppBundle:Core:contact.html.twig', array(
             'form' => $form->createView(),
-        ));*/
-        
-         return $this->render('AppBundle:Core:contact.html.twig', array(
         ));
     }
 }
