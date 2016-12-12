@@ -80,7 +80,7 @@ class CoreController extends Controller
 
             $request->getSession()->getFlashBag()->add('success', 'Votre e-mail a bien été envoyé.');
 
-            return $this->redirectToRoute('contact');
+            return $this->redirectToRoute('shiawa_contact');
         }
 
         return $this->render('AppBundle:Core:contact.html.twig', array(
