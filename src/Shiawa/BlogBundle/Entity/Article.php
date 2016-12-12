@@ -42,14 +42,14 @@ class Article
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=255)
+     * @ORM\Column(name="image", type="string", length=255, nullable=true)
      */
     private $image;
 
     /**
      * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"persist", "remove"})
      */
-    //private $thumbnail;
+    private $thumbnail;
 
     /**
      * @var string
@@ -454,5 +454,41 @@ class Article
     public function getEvent()
     {
         return $this->event;
+    }
+
+    /**
+     * Set thumbnail
+     *
+     * @param \Shiawa\FileBundle\Entity\File $thumbnail
+     *
+     * @return Article
+     */
+    public function setThumbnail(\Shiawa\FileBundle\Entity\File $thumbnail = null)
+    {
+        $this->thumbnail = $thumbnail;
+        $this->setThumbnailDir();
+
+        return $this;
+    }
+
+    /**
+     * Get thumbnail
+     *
+     * @return \Shiawa\FileBundle\Entity\File
+     */
+    public function getThumbnail()
+    {
+        if ($this->thumbnail != null) {
+            $this->setThumbnailDir();
+        }
+        return $this->thumbnail;
+    }
+
+    public function setThumbnailDir()
+    {
+        $dir = "uploads/files/articles/".$this->id."/thumbnail/";
+        $this->thumbnail->setUploadDir($dir);
+
+        return $this;
     }
 }

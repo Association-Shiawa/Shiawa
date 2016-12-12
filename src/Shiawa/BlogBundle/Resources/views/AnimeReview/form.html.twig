@@ -25,6 +25,17 @@
                     {{ form_widget(form.image, {'attr': {'class': ''}}) }}
                 </div>
 
+                <div class="file-field input-field">
+                    <div class="btn pink lighten-2">
+                        <span>Image à la Une</span>
+                        {{ form_widget(form.thumbnail.file, {'attr': {'class': ''}}) }}
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                        {{ form_errors(form.thumbnail) }}
+                    </div>
+                </div>
+
                 <div class="input-field">
                     {{ form_label(form.introduction, "Introduction de la review", {'label_attr': {'class': ''}}) }}
                     {{ form_errors(form.introduction) }}

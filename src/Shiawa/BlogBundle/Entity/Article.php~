@@ -47,6 +47,11 @@ class Article
     private $image;
 
     /**
+     * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"persist", "remove"})
+     */
+    private $thumbnail;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="summary", type="text")

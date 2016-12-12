@@ -3,6 +3,7 @@
 namespace Shiawa\BlogBundle\Form;
 
 use Shiawa\BlogBundle\Form\Type\DataListType;
+use Shiawa\FileBundle\Form\FileUploadType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
@@ -40,7 +41,10 @@ class AnimeReviewType extends AbstractType
                 ),
                 'mapped' => false
             ))*/
-            ->add('image')
+            ->add('thumbnail', FileUploadType::class)
+            ->add('image', null, array(
+                'required' => false
+            ))
             ->add('introduction')
             ->add('criticScenario', null, array(
                 'required' => false

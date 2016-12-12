@@ -66,6 +66,11 @@ class Event
     private $image;
 
     /**
+     * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"persist", "remove"})
+     */
+    private $thumbnail;
+
+    /**
      * @var bool
      *
      * @ORM\Column(name="is_public", type="boolean")
@@ -346,5 +351,46 @@ class Event
     public function getSlug()
     {
         return $this->slug;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add article
+     *
+     * @param \Shiawa\BlogBundle\Entity\Article $article
+     *
+     * @return Event
+     */
+    public function addArticle(\Shiawa\BlogBundle\Entity\Article $article)
+    {
+        $this->articles[] = $article;
+
+        return $this;
+    }
+
+    /**
+     * Remove article
+     *
+     * @param \Shiawa\BlogBundle\Entity\Article $article
+     */
+    public function removeArticle(\Shiawa\BlogBundle\Entity\Article $article)
+    {
+        $this->articles->removeElement($article);
+    }
+
+    /**
+     * Get articles
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getArticles()
+    {
+        return $this->articles;
     }
 }

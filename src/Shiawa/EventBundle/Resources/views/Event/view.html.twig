@@ -20,7 +20,7 @@
 
 {%  block OG_title %}{{ event.name|title }} - Shiawa.fr{% endblock %}
 
-{%  block OG_image %}{{ event.image }}{% endblock %}
+{%  block OG_image %}{{ event.thumbnail ? asset(event.thumbnail.getWebPath) : event.image }}{% endblock %}
 
 {% block title %}
    {{ event.name }} - Shiawa.fr
@@ -31,7 +31,7 @@
 <div class='col s12 m6 offset-m1'>
     <div class='card z-depth-1'>
         <div class="card-image" style="max-height: 500px; overflow: hidden;">
-            <img src="{{ event.image }}">
+            <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) : event.image }}">
         </div>
         <div class='card-content'>
 
@@ -109,7 +109,7 @@
                 {% endif %}
             {% endif %}
 
-            {% set title = "Title of Your iFrame Tab"|url_encode %}
+            {% set title = event.title|url_encode %}
             {% set url = app.request.uri|url_encode %}
 
             <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[url]={{ url }}', 'sharer',
@@ -132,14 +132,10 @@
                     <div class='article-pw'>
                         <h5 class='title-article'><a href='#'>{{ article.title }}</a></h5>
                         <hr />
-                        <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category' : article.category
-                            .name})
-                        }}'><img src='{{
-                            article
-                            .image }}'
-                                                                                style='width:100%;
-                        background-size: cover'
-                                    /></a>
+                        <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category' : article.category.name}) }}'>
+                            <img src='{{ article.thumbnail ? asset(article.thumbnail.getWebPath) : article.image }}' style='width:100%;
+                        background-size: cover' />
+                        </a>
                     </div>
                 </div>
                 {% endfor %}
