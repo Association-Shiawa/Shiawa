@@ -64,7 +64,7 @@ class CoreController extends Controller
                 ->setSubject($form->get('subject')->getData())
                 ->setFrom($form->get('email')->getData())
                 //->setTo('shiawa.project@gmail.com')
-                ->setTo($this->getParameter('email'))
+                ->setTo($this->getParameter('mail'))
                 ->setBody(
                     $this->renderView(
                         'AppBundle:Emails:contact.html.twig',
