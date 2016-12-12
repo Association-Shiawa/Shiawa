@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">account_circle</i>
-                            {{ form_widget(form.username) }}
+                            {{ form_row(form.username) }}
                             <label for="first_name">Qui êtes vous ?</label>
                         </div>
                         <div class="input-field col s12 m6">
@@ -53,7 +53,7 @@
                 <div class="col m4 s12">
                     <div class="carousel carousel-slider center" data-indicators="true">
                         <div class="carousel-fixed-item center">
-                            {{ form_widget('Envoyer', {'attr': {'class': 'btn waves-effect waves-light pink lighten-2'}}) }}
+                            {#{{ form_widget('Envoyer', {'attr': {'class': 'btn waves-effect waves-light pink lighten-2'}}) }}#}
                         </div>
                         <div class="carousel-item red white-text" href="#one!">
                             <h2>Un problème, un bug, une erreur sur le site ?</h2>
