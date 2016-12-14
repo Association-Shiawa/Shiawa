@@ -42,9 +42,6 @@ class AnimeReviewType extends AbstractType
                 'mapped' => false
             ))*/
             ->add('thumbnail', FileUploadType::class)
-            ->add('image', null, array(
-                'required' => false
-            ))
             ->add('introduction')
             ->add('criticScenario', null, array(
                 'required' => false

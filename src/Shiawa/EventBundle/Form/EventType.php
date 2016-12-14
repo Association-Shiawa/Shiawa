@@ -28,9 +28,6 @@ class EventType extends AbstractType
                 'html5' => false
             ))
             ->add('thumbnail', FileUploadType::class)
-            ->add('image', null, array(
-                'required' => false
-            ))
             ->add('isPublic')
             ->add('adress')
             ->add('place')
