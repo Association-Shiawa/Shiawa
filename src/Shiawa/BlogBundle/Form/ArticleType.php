@@ -23,9 +23,6 @@ class ArticleType extends AbstractType
         $builder
             ->add('title')
             ->add('thumbnail', FileUploadType::class)
-            ->add('image', null, array(
-                'required' => false
-            ))
             ->add('event', EntityType::class, array(
                 'class'        => 'ShiawaEventBundle:Event',
                 'choice_label' => 'name',
