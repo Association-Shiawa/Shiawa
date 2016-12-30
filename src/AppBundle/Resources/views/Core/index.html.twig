@@ -4,6 +4,27 @@
 
 
     {% block body %}
+        <div class='navbar-fixed' style="height: 0">
+            <nav class="transparent z-depth-0">
+                <div class="nav-wrapper">
+                    <ul class="right">
+                        <li>
+                            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                                <a href="{{ path('fos_user_profile_show') }}" class="pink">
+                                    {{ app.user.username|title }}
+                                    <i class="material-icons right">person</i>
+                                </a>
+                            {% else %}
+                                <a href="{{ path('fos_user_security_login') }}" class="pink">
+                                    Se connecter
+                                    <i class="material-icons right">person</i>
+                                </a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <!-- DEBUT BLOC -->
         <div id="header-full-width" class="valign-wrapper">
             <video autoplay loop poster="{{ asset('imgs/poster.jpg') }}" id="bgvid">
@@ -51,7 +72,6 @@
                         </svg>
 
                 <h1>SHIAWA</h1>
-                <span>Naviguez sur nos nouvelles plateformes !</span>
 
                 <!-- Pour les 3 bouttons de nos sites -->
 
@@ -59,12 +79,11 @@
                     <div class='row'>
                         <nav class="transparent z-depth-0">
                             <div class="nav-wrapper">
-                                <a class="waves-effect waves-light btn-large pink lighten-1" href="{{ path('shiawa_cosplay_homepage') }}">COSPLAY</a>
 
-                                <a href="{{ path('shiawa_anime_homepage') }}" class="waves-effect waves-light
-                                btn-large pink lighten-1 truncate">ANIME</a>
-
-                                <a class="waves-effect waves-light btn-large pink lighten-1" href="{{ path('shiawa_japan_homepage') }}">JAPON</a>
+                                <a href="{{ path('shiawa_blog_homepage') }}" class="waves-effect waves-light
+                                btn-large pink lighten-1 truncate">
+                                    Le Blog
+                                </a>
 
                             </div>
                         </nav>
@@ -87,7 +106,7 @@
 
                 <article class='col l4 m6 s12'>
                     <div class="art">
-                        <img src='{{ article.thumbnail ? asset(article.thumbnail.getWebPath) : article.image }}' />
+                        <img src='{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}' />
                         <div class='overlay-art'></div>
                         <div class='zoning-art'>
                             <h3 class='title-art '>{{ article.title }}</h3>
@@ -107,57 +126,57 @@
         </section>
 
         <div class='clear'></div>
-        <section class='banner-sites'>
-            <h2>Nos plateformes</h2>
-            <span>L'association SHIAWA vous propose trois espaces dédiée au partage de la culture nippone moderne sur tout ce qui traîte des anime, des manga, du cosplay et du japon plus en détails. </span>
+        {#<section class='banner-sites'>#}
+            {#<h2>Nos plateformes</h2>#}
+            {#<span>L'association SHIAWA vous propose trois espaces dédiée au partage de la culture nippone moderne sur tout ce qui traîte des anime, des manga, du cosplay et du japon plus en détails. </span>#}
 
-            <div class='row'>
-                <div class='col l4 s12 m6'>
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="https://puu.sh/q8DwU/b4a83150a8.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Anime & Manga</span>
-                            <p><a href="{{ path('shiawa_anime_homepage')}}">Rejoignez notre communauté et notre site entièrement dédié aux actualités et critiques d'anime et mangas.</a></p>
-                        </div>
-                        <div class="card-action right-align">
-                            <a href="{{ path('shiawa_anime_homepage')}}" class="btn-flat pink lighten-1
-                            white-text">Visiter l'espace Anime & Manga</a>
-                        </div>
-                    </div>
-                </div>
-                <div class='col l4 s12 m6'>
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="https://puu.sh/q8Dz4/1c93b8536b.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Cosplay & co.</span>
-                            <p><a href="#">Passionné de coutûre ou juste curieux, entre sur notre site dédié au cosplay avec des photos, des vidéos et pleins d'astuces !</a></p>
-                        </div>
-                        <div class="card-action right-align">
-                            <a href="#" class="btn disabled">Visiter l'espace Cosplay</a>
-                        </div>
-                    </div>
-                </div>
-                <div class='col l4 s12 m6'>
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator"  src="https://puu.sh/q8DBt/a28994eca8.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Le Japon</span>
-                            <p><a href="#">Un pays si coloré qu'on ne sait plus où regarder, entrez sur notre espace Japon pour connaître les grandes lignes de cette riche culture et du patrimoine local.</a></p>
-                        </div>
-                        <div class="card-action right-align">
-                            <a href="#" class="btn disabled">Visiter l'espace Japon</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {#<div class='row'>#}
+                {#<div class='col l4 s12 m6'>#}
+                    {#<div class="card">#}
+                        {#<div class="card-image waves-effect waves-block waves-light">#}
+                            {#<img class="activator" src="https://puu.sh/q8DwU/b4a83150a8.jpg">#}
+                        {#</div>#}
+                        {#<div class="card-content">#}
+                            {#<span class="card-title activator grey-text text-darken-4">Anime & Manga</span>#}
+                            {#<p><a href="{{ path('shiawa_anime_homepage')}}">Rejoignez notre communauté et notre site entièrement dédié aux actualités et critiques d'anime et mangas.</a></p>#}
+                        {#</div>#}
+                        {#<div class="card-action right-align">#}
+                            {#<a href="{{ path('shiawa_anime_homepage')}}" class="btn-flat pink lighten-1#}
+                            {#white-text">Visiter l'espace Anime & Manga</a>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class='col l4 s12 m6'>#}
+                    {#<div class="card">#}
+                        {#<div class="card-image waves-effect waves-block waves-light">#}
+                            {#<img class="activator" src="https://puu.sh/q8Dz4/1c93b8536b.jpg">#}
+                        {#</div>#}
+                        {#<div class="card-content">#}
+                            {#<span class="card-title activator grey-text text-darken-4">Cosplay & co.</span>#}
+                            {#<p><a href="#">Passionné de coutûre ou juste curieux, entre sur notre site dédié au cosplay avec des photos, des vidéos et pleins d'astuces !</a></p>#}
+                        {#</div>#}
+                        {#<div class="card-action right-align">#}
+                            {#<a href="#" class="btn disabled">Visiter l'espace Cosplay</a>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class='col l4 s12 m6'>#}
+                    {#<div class="card">#}
+                        {#<div class="card-image waves-effect waves-block waves-light">#}
+                            {#<img class="activator"  src="https://puu.sh/q8DBt/a28994eca8.jpg">#}
+                        {#</div>#}
+                        {#<div class="card-content">#}
+                            {#<span class="card-title activator grey-text text-darken-4">Le Japon</span>#}
+                            {#<p><a href="#">Un pays si coloré qu'on ne sait plus où regarder, entrez sur notre espace Japon pour connaître les grandes lignes de cette riche culture et du patrimoine local.</a></p>#}
+                        {#</div>#}
+                        {#<div class="card-action right-align">#}
+                            {#<a href="#" class="btn disabled">Visiter l'espace Japon</a>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
 
-        </section>
+        {#</section>#}
 
         <section class='association'>
             <div style='position: relative'>
@@ -291,7 +310,7 @@
                 <div class='col l6 m6 s12'>
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light" style="max-height: 500px; overflow: hidden;">
-                            <img class="activator" src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) : event.image }}">
+                            <img class="activator" src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) }}">
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">{{ event.name }}<i

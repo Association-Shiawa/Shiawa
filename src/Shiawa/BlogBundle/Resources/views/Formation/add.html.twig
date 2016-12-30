@@ -1,0 +1,88 @@
+{% extends "ShiawaBlogBundle:Formation:layout.html.twig" %}
+
+{% block title %}Ajout de tutoriel - {{ parent() }}{% endblock %}
+
+{% block body %}
+    <main class="container">
+        <h3>Formulaire d'ajout de tutoriel</h3>
+
+        {{ include("ShiawaBlogBundle:Formation:form.html.twig") }}
+    </main>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $container = $('div#formation_tags');
+
+            var index = $container.find(':input').length;
+            //
+            if (index == 0) {
+                $('.tags').material_chip();
+            } else {
+                data = [];
+                // S'il existe déjà des tags, on les ajoute à la div.tags
+                $container.children('div').each(function() {
+                    chip = {
+                        tag: $(this).find(':input')[0].value,
+                        id: $(this).children('label')[0].innerHTML
+                    }
+                    data.push(chip)
+                });
+
+                $('.tags').material_chip({
+                    data: data
+                });
+            }
+
+            $('.chips').on('chip.add', function(e, chip){
+                chip.id = index;
+                addTag($container, chip)
+            });
+
+            $('.chips').on('chip.delete', function(e, chip){
+                deleteTag($container, chip);
+            });
+
+            // La fonction qui ajoute un formulaire TagType
+            function addTag($container, tag) {
+                // Dans le contenu de l'attribut « data-prototype », on remplace :
+                // - le texte "__name__label__" qu'il contient par le label du champ
+                // - le texte "__name__" qu'il contient par le numéro du champ
+                var template = $container.attr('data-prototype')
+                                .replace(/__name__label__/g, 'Tag n°' + (index+1))
+                                .replace(/__name__/g,        index)
+                        ;
+
+                // On crée un objet jquery qui contient ce template
+                var $prototype = $(template);
+
+                // On ajoute le prototype modifié à la fin de la balise <div>
+                $container.append($prototype);
+
+                $prototype.attr('id', "tag_"+tag.id);
+                elem = $prototype.find(':input')[0];
+                elem.value = tag.tag;
+
+                // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+                index++;
+            }
+
+            // La fonction qui supprime un tag
+            function deleteTag($container, chip) {
+                console.log(chip.tag+' - '+chip.id);
+                $("#tag_"+chip.id).remove();
+                index--;
+                return false;
+            }
+        });
+    </script>
+{% endblock %}

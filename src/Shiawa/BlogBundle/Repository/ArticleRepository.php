@@ -45,6 +45,21 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
         return $query->getQuery()->getResult();
     }
 
+    public function  getLastTutorials($nb, $category = null) {
+        $query = $this->createQueryBuilder('a');
+
+        if($category != null) {
+            $query->where('a.category = :category')
+                ->setParameter('category', $category);
+        }
+
+        $query->andWhere('a.chapter IS NOT NULL')
+            ->orderBy('a.createdAt', 'DESC')
+            ->setMaxResults($nb);
+
+        return $query->getQuery()->getResult();
+    }
+
     public function findByTags($tags, $limit, $id = null) {
 
         $query = $this->createQueryBuilder('a')

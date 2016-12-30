@@ -18,7 +18,7 @@
                         <ul class="collection" id="episodeList">
                             {% for episode in episodes %}
                                 <li class="collection-item avatar">
-                                    <img src="{{ episode.anime.thumbnail ? asset(episode.anime.thumbnail.getWebPath) : episode.anime.image }}" alt="{{ episode.anime.title }}" class="circle ">
+                                    <img src="{{ episode.anime.thumbnail ? asset(episode.anime.thumbnail.getWebPath) }}" alt="{{ episode.anime.title }}" class="circle ">
                                     <span class="title">
                                         <a href="{{ path('shiawa_episode_view', {'slug': episode.slug}) }}">
                                             <b>{{ episode.anime.title }}</b>
@@ -62,7 +62,7 @@
                         <ul class="collection" id="animeList">
                             {% for anime in animes %}
                                 <li class="collection-item avatar">
-                                    <img src="{{ anime.thumbnail ? asset(anime.thumbnail.getWebPath) : anime.image }}" alt="{{ anime.title }}" class="circle ">
+                                    <img src="{{ anime.thumbnail ? asset(anime.thumbnail.getWebPath) }}" alt="{{ anime.title }}" class="circle ">
                                     <span class="title">
                                         <a href="{{ path('shiawa_anime_view', {'slug': anime.slug}) }}">
                                             <b>{{ anime.title }}</b>
@@ -112,7 +112,7 @@
                         <ul class="collection">
                             {% for review in reviews %}
                                 <li class="collection-item avatar">
-                                    <img src="{{ review.thumbnail ? asset(review.thumbnail.getWebPath) : review.image }}" alt="" class="circle">
+                                    <img src="{{ review.thumbnail ? asset(review.thumbnail.getWebPath) }}" alt="" class="circle">
                                     <span class="title"><a href='{{ path('shiawa_anime_review_view', {'slug': review
                                             .slug}) }}'>{{ review.title }}</a></span>
                                     <p><strong>Anime: {{ review.anime.title }}</strong><br>

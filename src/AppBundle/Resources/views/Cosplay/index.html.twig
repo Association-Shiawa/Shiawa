@@ -21,7 +21,7 @@
                                             .category.name|lower}) }}'>{{ article.title }}</a></h5>
                                     <hr />
                                     <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
-                                        .category.name|lower}) }}'><img src='{{ article.image }}' style='width:100%;
+                                        .category.name|lower}) }}'><img src='{{ article.thumbnail ? asset(article.thumbnail.getPath )}}' style='width:100%;
                                     background-size: cover' /></a>
                                 </div>
                             </div>

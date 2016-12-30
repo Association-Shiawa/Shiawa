@@ -1,0 +1,90 @@
+{% form_theme form 'Form/jquery.collection.html.twig' %}
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+<ul class="collapsible popout" data-collapsible="accordion">
+
+    <li>
+        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Général</div>
+        <div class="collapsible-body">
+            <div class="container">
+                <div class="row">
+                    <div class="input-field">
+                        {{ form_errors(form.category) }}
+                        {{ form_widget(form.category, {'attr': {'class': ''}}) }}
+                        {{ form_label(form.category, "Choisissez la categorie de la formation", {'label_attr': {'class': ''}}) }}
+                    </div>
+
+                    <div class="input-field">
+                        {{ form_label(form.title, "Titre de la formation", {'label_attr': {'class': ''}}) }}
+                        {{ form_errors(form.title) }}
+                        {{ form_widget(form.title, {'attr': {'class': ''}}) }}
+                    </div>
+
+                    <div class="input-field">
+                        {{ form_label(form.description, "Résumé de la formation", {'label_attr': {'class': ''}}) }}
+                        {{ form_errors(form.description) }}
+                        {{ form_widget(form.description, {'attr': {'class': 'materialize-textarea'}}) }}
+                    </div>
+
+                    <div class="file-field input-field">
+                        <div class="btn pink lighten-2">
+                            <span>Image à la Une</span>
+                            {{ form_widget(form.thumbnail.file, {'attr': {'class': ''}}) }}
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                            {{ form_errors(form.thumbnail) }}
+                        </div>
+                    </div>
+
+                    <p>
+                        Les tags
+                    </p>
+                    <div class="tags">
+
+                    </div>
+
+                    <div style="width: 1px; height: 1px; overflow: hidden;">{{ form_row(form.tags) }}</div>
+                </div>
+                </div>
+            </div>
+    </li>
+
+    <li>
+        <div class="collapsible-header active"><i class="material-icons">filter_drama</i>Chapitres</div>
+        <div class="collapsible-body">
+
+            <div class="container">
+                <div class="row ">
+                    {{ form_row(form.chapters, {'attr': {'class': 'sf-collection'}}) }}
+                </div>
+            </div>
+
+        </div>
+    </li>
+
+</ul>
+
+
+
+<div class="col m3">
+    <div class="card-panel">
+        {% if form.createdAt is defined %}
+            <div class="input-field">
+                {{ form_label(form.createdAt, "Date", {'label_attr': {'class': ''}}) }}
+                {{ form_errors(form.title) }}
+                {{ form_widget(form.createdAt, {'attr': {'class': 'datepicker'}}) }}
+            </div>
+        {% endif %}
+
+        <div class="center-align">
+            {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+        </div>
+    </div>
+</div>
+
+
+{{ form_rest(form) }}
+{{ form_end(form) }}

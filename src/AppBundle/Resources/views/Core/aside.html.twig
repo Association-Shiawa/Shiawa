@@ -1,4 +1,4 @@
-<div class='col s12 m4'>
+<div class='col m5 l4 hide-on-small-only'>
     <div class='card z-depth-1'>
 
         <div class='card-content'>
@@ -21,7 +21,7 @@
 
             <h2 class='title-section'>La dernière critique<small>L'anime comme vous ne l'avez jamais vu !</small></h2>
             <div class="card-image">
-                <a href='{{ path('shiawa_anime_review_view', {'slug': review.slug}) }}'> <img src="{{ review.thumbnail ? asset(review.thumbnail.getWebPath) : review.image }}">
+                <a href='{{ path('shiawa_anime_review_view', {'slug': review.slug}) }}'> <img src="{{ review.thumbnail ? asset(review.thumbnail.getWebPath)}}">
                     <span class="card-title">{{ review.title }}</span></a>
             </div>
         </div>
@@ -58,7 +58,7 @@
                 </small>
             </h2>
             <div class="card-image" style="max-height: 300px; overflow: hidden;">
-                <a href='{{ path('shiawa_event_view', {'slug': event.slug}) }}'> <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) : event.image }}">
+                <a href='{{ path('shiawa_event_view', {'slug': event.slug}) }}'> <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) }}">
                     <span class="card-title">{{ event.name|title }}</span></a>
             </div>
         </div>

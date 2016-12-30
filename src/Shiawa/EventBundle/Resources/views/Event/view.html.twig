@@ -20,7 +20,7 @@
 
 {%  block OG_title %}{{ event.name|title }} - Shiawa.fr{% endblock %}
 
-{%  block OG_image %}{{ event.thumbnail ? asset(event.thumbnail.getWebPath) : event.image }}{% endblock %}
+{%  block OG_image %}{{ event.thumbnail ? asset(event.thumbnail.getWebPath) }}{% endblock %}
 
 {% block title %}
    {{ event.name }} - Shiawa.fr
@@ -31,7 +31,7 @@
 <div class='col s12 m6 offset-m1'>
     <div class='card z-depth-1'>
         <div class="card-image" style="max-height: 500px; overflow: hidden;">
-            <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) : event.image }}">
+            <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) }}">
         </div>
         <div class='card-content'>
 
@@ -80,7 +80,7 @@
                     {% if event.description is empty %}
                         Plus d'informations à venir.
                     {% else %}
-                        {{ event.description }}
+                        {{ event.description|raw }}
                     {% endif %}
                 </p>
 
@@ -109,7 +109,7 @@
                 {% endif %}
             {% endif %}
 
-            {% set title = event.title|url_encode %}
+            {% set title = event.name|url_encode %}
             {% set url = app.request.uri|url_encode %}
 
             <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[url]={{ url }}', 'sharer',

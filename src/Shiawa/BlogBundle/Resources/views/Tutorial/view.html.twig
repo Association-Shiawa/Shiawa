@@ -1,0 +1,192 @@
+{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+
+{% block DC_description %}
+    {% for letter in article.summary|split('')|slice(0,300) %}{{ letter }}{% endfor %}
+{% endblock %}
+
+{% block desc %}
+    {% for letter in article.summary|split('')|slice(0,155) %}{{ letter }}{% endfor %}
+{% endblock %}
+
+{%  block OG_desc %}
+    {% for letter in article.summary|split('')|slice(0,300) %}{{ letter }}{% endfor %}
+{% endblock %}
+
+{% block DC_title %}{{ article.title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_title %}{{ article.title }} - Shiawa.fr{% endblock %}
+
+{%  block OG_image %}{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}{% endblock %}
+
+{% block title %}
+    {{ article.title }} - Shiawa.fr
+{% endblock %}
+
+{% block content %}
+    <!-- CONTENT -->
+    <div class='col s12 m6 offset-m1'>
+        <div class='card z-depth-1'>
+
+            <div class='card-content'>
+
+                <h1 class='title-section toupper'>
+                    {{ article.title|title }}
+                </h1>
+
+                <div class='divider'></div>
+
+                <div class='content-article'>
+
+                    {{ article.content|raw }}
+
+                    <div class='card grey lighten-4'>
+                        <div class='card-content'>
+                            <p>Les mots clés de l'article</p>
+                            <div class='divider'></div>
+                            <br />
+                            {% for tag in article.tags %}
+                                <a class="chip" id="tag-{{ tag.id }}" href="{{ path('shiawa_tag_view', {'tag': tag.slug }) }}">{{ tag.name }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% set prev, next = "" , ""  %}
+            {% set hasCurrentShown = false %}
+
+            {% for chapter in formation.chapters %}
+                {% for tuto in chapter.tutorials %}
+                    {% if tuto == article %}
+                        {% set hasCurrentShown = true %}
+                    {% elseif hasCurrentShown == false %}
+                        {% set prev = tuto %}
+                    {% elseif hasCurrentShown == true %}
+                        {% set hasCurrentShown = null %}
+                        {% set next = tuto %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+
+            <div class="container">
+                <div class="row">
+                    {% if prev.title is defined %}
+                        <a href="{{ path('shiawa_tutorial_view', {'slug': prev.slug, 'formation': formation.slug, 'category': prev.category.slug }) }}"
+                           class="btn-flat waves-effect col m6 s12">
+                            {{ prev.title }} <i class="material-icons left">chevron_left</i>
+                        </a>
+                    {% endif %}
+                    {% if next.title is defined %}
+                        <a href="{{ path('shiawa_tutorial_view', {'slug': next.slug, 'formation': formation.slug, 'category': next.category.slug }) }}"
+                           class="btn-flat waves-effect col m6 s12">
+                            {{ next.title }} <i class="material-icons right">chevron_right</i>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card-action">
+                <a href="#">Publié le {{ article.createdAt|date('d/m/Y') }}</a>
+
+
+                {% include "AppBundle:Rsn:fb.html.twig" %}
+                <div class='clear'></div>
+                {% include "ShiawaBlogBundle:Article:author_card.html.twig" %}
+
+            </div>
+
+        </div>
+
+        {% if linkedContent is not empty %}
+            <div class='card z-depth-1' >
+                <div class='card-content' >
+                    <h2 class='title-section'>Nous vous conseillons aussi...</h2>
+
+                    <div class='row'>
+
+                        {% for content in linkedContent %}
+                            <div class='col m6 s12'>
+                                <div class='article-pw'>
+                                    <h5 class='title-article'>
+                                        <a href='
+                                {% if content.content is defined  %}
+                                    {{ path('shiawa_article_view', {'slug': content.slug, 'category': content
+                                            .category.slug}) }}
+                                {% else %}
+                                    {{ path('shiawa_anime_review_view', {'slug': content.slug}) }}
+                                {% endif %}
+                                '>
+                                            {{ content.title }}
+                                        </a>
+                                    </h5>
+                                    <hr />
+                                    <a href='
+                                {% if content.content is defined  %}
+                                    {{ path('shiawa_article_view', {'slug': content.slug, 'category': content
+                                        .category.slug}) }}
+                                {% else %}
+                                    {{ path('shiawa_anime_review_view', {'slug': content.slug}) }}
+                                {% endif %}
+                            '>
+                                        <img src='{{ content.thumbnail ? asset(content.thumbnail.getWebPath) }}' style='width:100%;background-size: cover' />
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% include "AppBundle:Core:comments.html.twig" %}
+    </div>
+
+    <div class="col m5 l4 hide-on-small-only">
+
+        <h4>
+            Sommaire
+        </h4>
+        <ul class="collection with-header">
+            <li class="collection-header">
+                <a href="{{ path('shiawa_formation_view', {'slug': formation.slug, 'category': formation.category.slug}) }}">
+                    Tutoriel : {{ formation.title }}
+                </a>
+            </li>
+
+            {% for chapter in formation.chapters %}
+                <li class="collection-item">
+                    Chapitre {{ loop.index }} : {{ chapter.title }}
+                </li>
+                {% for tuto in chapter.tutorials %}
+
+                    <li class="collection-item {{ tuto == article ? 'active' }}">
+                        {% if tuto == article %}
+                            {{ tuto.title }}
+                        {% else %}
+                            <a href="{{ path('shiawa_tutorial_view', {'slug': tuto.slug, 'formation': formation.slug, 'category': tuto.category.slug }) }}">
+                                {{ tuto.title }}
+                            </a>
+                        {% endif %}
+                    </li>
+
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+        {% if is_granted('ROLE_AUTHOR') %}
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large pink lighten-2" href="{{ path("shiawa_article_edit", {'slug': article
+                    .slug}) }}">
+                    <i class="large material-icons">mode_edit</i>
+                </a>
+            </div>
+        {% endif %}
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}

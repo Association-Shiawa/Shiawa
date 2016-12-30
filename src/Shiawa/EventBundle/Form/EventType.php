@@ -27,7 +27,9 @@ class EventType extends AbstractType
                 'widget' => 'single_text',
                 'html5' => false
             ))
-            ->add('thumbnail', FileUploadType::class)
+            ->add('thumbnail', FileUploadType::class, array(
+                'required' => false
+            ))
             ->add('isPublic')
             ->add('adress')
             ->add('place')

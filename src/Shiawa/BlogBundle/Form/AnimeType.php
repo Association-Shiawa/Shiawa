@@ -22,7 +22,9 @@ class AnimeType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('thumbnail', FileUploadType::class)
+            ->add('thumbnail', FileUploadType::class, array(
+                'required' => false
+            ))
             ->add('synopsis')
             ->add('nbrEpisode')
             ->add('type', ChoiceType::class, array(

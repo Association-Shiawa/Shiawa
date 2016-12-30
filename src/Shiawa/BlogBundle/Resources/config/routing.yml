@@ -33,3 +33,11 @@ shiawa_blog_studio:
 shiawa_blog_tag:
     resource: "@ShiawaBlogBundle/Resources/config/routing/tag.yml"
     prefix:   /
+
+shiawa_blog_formation:
+    resource: "@ShiawaBlogBundle/Resources/config/routing/formation.yml"
+    prefix:   /
+
+shiawa_blog_tutorial:
+    resource: "@ShiawaBlogBundle/Resources/config/routing/tutorial.yml"
+    prefix:   /

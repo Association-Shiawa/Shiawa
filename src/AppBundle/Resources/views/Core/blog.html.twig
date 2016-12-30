@@ -1,0 +1,106 @@
+{% extends "AppBundle:Core:layout.html.twig" %}
+
+{% block menu %}
+    {{ include("AppBundle:Core:nav.html.twig") }}
+{% endblock %}
+
+{% block body %}
+
+    <div class='container'>
+        <div class='row'>
+            {% block content %}
+                <!-- CONTENT -->
+                <div class='col s12 m7'>
+
+                    <!-- LAST ARTICLES -->
+                    <div class='row'>
+                        <div class='col s12'>
+                            <div class='card z-depth-1' >
+                                <div class='card-content' >
+                                    <h2 class='title-section'>Nos derniers articles<small>Un peu de lecture !</small></h2>
+
+                                    <aside class='row'>
+
+                                        {% for article in lastArticles %}
+                                            {% if loop.index is odd %}
+                                                <div class='row'>
+                                            {% endif %}
+                                            <div class="card horizontal">
+                                                <div class="card-image">
+                                                    <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}">
+                                                </div>
+                                                <div class="card-stacked">
+                                                    <div class="card-content">
+                                                        <h3 style="font-size: 1rem; margin: 5px;">
+                                                            <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
+                                                                .category.name|lower}) }}'>
+                                                                {{ article.title }}
+                                                            </a>
+                                                        </h3>
+                                                        <p>
+                                                            {% for letter in article.summary|split('')|slice(0,300) %}{{ letter }}{% endfor %}
+                                                            <span class="badge">
+                                                                {{ article.category.name|title }}
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="card-action">
+                                                        <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
+                                                            .category.name|lower}) }}'>
+                                                            Lire l'article
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% if loop.index is even %}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+
+                                    </aside>
+                                    <div class='center'>
+                                        <a href='{{ path('shiawa_article_list', {'category': 'anime'}) }}' class="btn-flat">Voir plus d'articles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LAST TUTOS -->
+                    <div class='row'>
+                        <div class='col s12 m6'>
+                            <div class='card z-depth-1' >
+                                <div class='card-content' >
+                                    <h2 class='title-section'>Nos derniers tutoriels</h2>
+
+                                    <ul class='collection'>
+                                        {% for formation in lastFormations %}
+                                            <li class="collection-item">
+                                                <span class="title">
+                                                    <a href='{{ path('shiawa_formation_view', {'slug': formation.slug, 'category': formation
+                                                        .category.slug}) }}'>
+                                                        {{ formation.title }}
+                                                    </a>
+                                                </span>
+                                                <p>
+                                                    Catégorie : {{ formation.category.name|title }}
+                                                </p>
+                                            </li>
+                                        {% else %}
+                                            <li class="collection-item">
+                                                Des tutoriels à venir !
+                                            </li>
+                                        {% endfor %}
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            {% endblock %}
+            {{ render(controller("AppBundle:Core:aside")) }}
+        </div>
+    </div>
+{% endblock %}

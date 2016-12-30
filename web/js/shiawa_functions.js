@@ -28,7 +28,7 @@ var shiawa_module = (function () {
             countScrolling++;
         }, 1000);
         $(".button-collapse").sideNav();
-        $(".dropdown-button").dropdown({constrain_width: false, hover: true});
+        $(".dropdown-button").dropdown({constrain_width: false, hover: false, beloworigin: true});
     });
 
     self.clickScroll = function () {

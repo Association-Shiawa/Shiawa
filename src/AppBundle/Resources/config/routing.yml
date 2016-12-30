@@ -2,6 +2,10 @@ shiawa_homepage:
     path:     /
     defaults: { _controller: AppBundle:Core:index }
 
+shiawa_blog_homepage:
+    path:     /blog
+    defaults: { _controller: AppBundle:Core:blog }
+
 shiawa_anime_homepage:
     path: /anime
     defaults:

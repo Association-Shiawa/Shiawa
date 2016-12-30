@@ -1,0 +1,96 @@
+{% extends "ShiawaBlogBundle:Formation:layout.html.twig" %}
+
+{% block title %}Modification du tutoriel - {{ parent() }}{% endblock %}
+
+{% block body %}
+    <main class="container">
+        <h3>Editez le tutoriel</h3>
+
+        {{ include("ShiawaBlogBundle:Formation:form_manage.html.twig") }}
+    </main>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+
+    <script src="{{ asset('js/jquery.collection.js') }}"></script>
+
+    <script type="text/javascript">
+        $('.sf-collection').collection({
+            prototype_name: '{{ form.chapters.vars.prototype.vars.name }}',
+            allow_add: true,
+            allow_remove: true,
+            name_prefix:  '{{ form.chapters.vars.full_name }}',
+            up: '<a href="#" class="btn-flat"><i class="material-icons">keyboard_arrow_up</i></a>',
+            down: '<a href="#" class="btn-flat"><i class="material-icons">keyboard_arrow_down</i></a>',
+            add: '<a href="#" class="btn-flat"><i class="material-icons">add</i></a>',
+            remove: '<a href="#" class="btn-flat"><i class="material-icons">remove</i></a>',
+            init_with_n_elements: 1
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $container = $('div#formation_tags');
+
+            var index = $container.find(':input').length;
+            //
+            if (index == 0) {
+                $('.tags').material_chip();
+            } else {
+                data = [];
+                // S'il existe déjà des tags, on les ajoute à la div.tags
+                $container.children('div').each(function() {
+                    chip = {
+                        tag: $(this).find(':input')[0].value,
+                        id: $(this).children('label')[0].innerHTML
+                    }
+                    data.push(chip)
+                });
+
+                $('.tags').material_chip({
+                    data: data
+                });
+            }
+
+            $('.chips').on('chip.add', function(e, chip){
+                chip.id = index;
+                addTag($container, chip)
+            });
+
+            $('.chips').on('chip.delete', function(e, chip){
+                deleteTag($container, chip);
+            });
+
+            // La fonction qui ajoute un formulaire TagType
+            function addTag($container, tag) {
+                // Dans le contenu de l'attribut « data-prototype », on remplace :
+                // - le texte "__name__label__" qu'il contient par le label du champ
+                // - le texte "__name__" qu'il contient par le numéro du champ
+                var template = $container.attr('data-prototype')
+                                .replace(/__name__label__/g, 'Tag n°' + (index+1))
+                                .replace(/__name__/g,        index)
+                        ;
+
+                // On crée un objet jquery qui contient ce template
+                var $prototype = $(template);
+
+                // On ajoute le prototype modifié à la fin de la balise <div>
+                $container.append($prototype);
+                $prototype.find(':input')[0].value = tag.tag;
+                console.log($prototype.find(':input')[0]);
+
+                // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+                index++;
+            }
+
+            // La fonction qui supprime un tag
+            function deleteTag($container, chip) {
+                console.log(chip.tag+' - '+chip.id);
+                $container.children('div')[chip.id].remove();
+                index--;
+                return false;
+            }
+        });
+    </script>
+{% endblock %}

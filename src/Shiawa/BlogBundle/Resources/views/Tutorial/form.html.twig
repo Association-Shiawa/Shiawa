@@ -1,0 +1,81 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+    {{ form_errors(form) }}
+
+<div class="col m9">
+    <div class="card-panel">
+
+        <div class="input-field">
+            {{ form_label(form.title, "Titre de l'article", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.title) }}
+            {{ form_widget(form.title, {'attr': {'class': ''}}) }}
+        </div>
+
+        <div class="input-field">
+            {{ form_label(form.summary, "Résumé de l'annonce", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.summary) }}
+            {{ form_widget(form.summary, {'attr': {'class': 'materialize-textarea'}}) }}
+        </div>
+
+        <div class="input-field">
+            {{ form_label(form.content, "Contenu de l'annonce", {'label_attr': {'class': ''}}) }}
+            {{ form_errors(form.content) }}
+            {{ form_widget(form.content, {'attr': {'class': 'materialize-textarea wysiwyg'}}) }}
+        </div>
+    </div>
+</div>
+
+<div class="col m3">
+    <div class="card-panel">
+        {% if form.createdAt is defined %}
+            <div class="input-field">
+                {{ form_label(form.createdAt, "Date", {'label_attr': {'class': ''}}) }}
+                {{ form_errors(form.title) }}
+                {{ form_widget(form.createdAt, {'attr': {'class': 'datepicker'}}) }}
+            </div>
+        {% endif %}
+
+        {{ form_label(form.published, "Publier", {'label_attr': {'class': ''}}) }}
+        <div class="switch">
+            <label>
+                Non
+                {{ form_widget(form.published, {'attr': {'class': ''}}) }}
+                <span class="lever"></span>
+                Oui
+            </label>
+            {{ form_errors(form.published) }}
+        </div>
+
+        <div class="center-align">
+            {{ form_widget(form.save, {'attr': {'class': 'btn-flat pink lighten-2 white-text'}}) }}
+        </div>
+    </div>
+
+    <div class="card-panel">
+
+        <div class="file-field input-field">
+            <div class="btn pink lighten-2">
+                <span>Image à la Une</span>
+                {{ form_widget(form.thumbnail.file, {'attr': {'class': ''}}) }}
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+                {{ form_errors(form.thumbnail) }}
+            </div>
+        </div>
+
+        <p>
+            Les tags
+        </p>
+        <div class="tags">
+
+        </div>
+
+        <div style="width: 1px; height: 1px; overflow: hidden;">{{ form_row(form.tags) }}</div>
+
+    </div>
+</div>
+
+
+{{ form_rest(form) }}
+{{ form_end(form) }}

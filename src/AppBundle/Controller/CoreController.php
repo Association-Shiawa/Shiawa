@@ -35,6 +35,27 @@ class CoreController extends Controller
         ));
     }
 
+    public function blogAction()
+    {
+        $em = $this->getDoctrine()
+            ->getManager();
+
+        $lastArticles = $em
+            ->getRepository('ShiawaBlogBundle:Article')
+            ->getLastArticles(4)
+        ;
+
+        $lastFormations = $em
+            ->getRepository('ShiawaBlogBundle:Formation')
+            ->getLast(5)
+        ;
+
+        return $this->render('AppBundle:Core:blog.html.twig', array(
+            'lastArticles' => $lastArticles,
+            'lastFormations' => $lastFormations
+        ));
+    }
+
     public function asideAction() {
         $lastReview = $this->getDoctrine()
             ->getManager()
@@ -46,7 +67,7 @@ class CoreController extends Controller
             ->getRepository('ShiawaEventBundle:Event')
             ->getNext(1);
 
-        return $this->render('AppBundle:Anime:aside.html.twig', array(
+        return $this->render('AppBundle:Core:aside.html.twig', array(
             'lastReview' => $lastReview,
             'nextEvent' => $nextEvent
         ));

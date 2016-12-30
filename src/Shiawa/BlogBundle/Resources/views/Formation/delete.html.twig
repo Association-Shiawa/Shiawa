@@ -1,0 +1,28 @@
+{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+
+{% block title %}
+    Supprimer un tutoriel - {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="col s12 m6 offset-m1">
+        <h2>Supprimer un tutoriel</h2>
+
+        <p>
+            Etes-vous certain de vouloir supprimer le tutoriel "{{ formation.title }}" ?
+        </p>
+
+        {# On met l'id de l'annonce dans la route de l'action du formulaire #}
+        <form action="{{ path('shiawa_formation_delete', {'slug': formation.slug}) }}" method="post">
+            <a href="{{ path('shiawa_formation_view', {'slug': formation.slug, 'category': formation.category.slug}) }}" class="btn-flat">
+                Retour au tutoriel
+            </a>
+            {# Ici j'ai écrit le bouton de soumission à la main #}
+            <input type="submit" value="Supprimer" class="btn-flat red white-text" />
+            {# Ceci va générer le champ CSRF #}
+            {{ form_rest(form) }}
+        </form>
+    </div>
+
+{% endblock %}

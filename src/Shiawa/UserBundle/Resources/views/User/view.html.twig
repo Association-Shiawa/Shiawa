@@ -37,7 +37,7 @@
             <div class="card-panel">
                 <h4>A propos de moi</h4>
                 <p>
-                    {{ user.description ?: "Aucune description" }}
+                    {{ user.description|raw ?: "Aucune description" }}
                 </p>
             </div>
         </aside>

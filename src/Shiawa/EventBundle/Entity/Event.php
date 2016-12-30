@@ -59,14 +59,8 @@ class Event
     private $endAt;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="image", type="string", length=255)
-     */
-    private $image;
-
-    /**
      * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
      */
     private $thumbnail;
 
@@ -183,30 +177,6 @@ class Event
     public function getEndAt()
     {
         return $this->endAt;
-    }
-
-    /**
-     * Set image
-     *
-     * @param string $image
-     *
-     * @return Event
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    /**
-     * Get image
-     *
-     * @return string
-     */
-    public function getImage()
-    {
-        return $this->image;
     }
 
     /**

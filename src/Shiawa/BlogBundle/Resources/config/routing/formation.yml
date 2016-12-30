@@ -1,0 +1,28 @@
+shiawa_formation_list:
+    path:     /tutoriels/{page}
+    defaults:
+        _controller: ShiawaBlogBundle:Formation:index
+        page: 1
+    requirements:
+      page: \d*
+
+shiawa_formation_view:
+    path:     /tutoriel/{category}/{slug}
+    defaults: { _controller: ShiawaBlogBundle:Formation:view }
+
+shiawa_formation_create:
+    path:     /admin/tutoriel/create
+    defaults: { _controller: "ShiawaBlogBundle:Formation:add" }
+    methods:  [GET, POST]
+
+shiawa_formation_edit:
+    path:     /admin/tutoriel/{slug}/edit
+    defaults: { _controller: "ShiawaBlogBundle:Formation:edit" }
+
+shiawa_formation_delete:
+    path:     /admin/tutoriel/{slug}/delete
+    defaults: { _controller: "ShiawaBlogBundle:Formation:delete" }
+
+shiawa_admin_formation_list:
+    path:     /admin/tutoriels/list
+    defaults: { _controller: ShiawaBlogBundle:Formation:adminList }
