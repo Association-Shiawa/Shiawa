@@ -1,8 +1,4 @@
-{% extends "AppBundle:Core:layout.html.twig" %}
-
-{% block menu %}
-    {{ include("AppBundle:Core:nav.html.twig") }}
-{% endblock %}
+{% extends "AppBundle:Core:blog_layout.html.twig" %}
 
 {% block body %}
 
@@ -37,7 +33,7 @@
                                                                 {{ article.title }}
                                                             </a>
                                                         </h3>
-                                                        <p>
+                                                        <p style="font-size: .8rem;">
                                                             {% for letter in article.summary|split('')|slice(0,300) %}{{ letter }}{% endfor %}
                                                             <span class="badge">
                                                                 {{ article.category.name|title }}

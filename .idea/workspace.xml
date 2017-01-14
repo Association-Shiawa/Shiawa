@@ -2,137 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Form/jquery.collection.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/FormationController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/TutorialController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/FormationEditType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/TutorialType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing/formation.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing/tutorial.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/add.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/adminList.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/delete.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/form.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/form_manage.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/layout.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/view.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/add.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/form.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/layout.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/view.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery.collection.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/aside.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog_layout.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/sass/custom/_cards.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prepros.cfg" afterPath="$PROJECT_DIR$/prepros.cfg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/nav.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/nav.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/news.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/news.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Cosplay/aside.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Cosplay/aside.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Cosplay/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Cosplay/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Japon/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Japon/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/ArticleController.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/ArticleController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Anime.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Anime.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/AnimeReview.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/AnimeReview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Article.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/AnimeReviewType.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/AnimeReviewType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/AnimeType.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/AnimeType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ArticleType.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ArticleType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/ArticleRepository.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/ArticleRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing/article.yml" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing/article.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Anime/adminList.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Anime/adminList.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Anime/index.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Anime/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Anime/new_anime.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Anime/new_anime.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Anime/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Anime/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Formation.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Formation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/index.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/view.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/adminList.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/adminList.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/layout.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/layout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/view.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/EventBundle/Entity/Event.php" afterPath="$PROJECT_DIR$/src/Shiawa/EventBundle/Entity/Event.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/EventBundle/Form/EventType.php" afterPath="$PROJECT_DIR$/src/Shiawa/EventBundle/Form/EventType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/layout.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Episode/layout.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Episode/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/layout.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tag/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tag/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/layout.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/view.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/layout.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/layout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/materialize.css" afterPath="$PROJECT_DIR$/web/css/materialize.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css.map" afterPath="$PROJECT_DIR$/web/css/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/animation.js" afterPath="$PROJECT_DIR$/web/js/animation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/buttons.js" afterPath="$PROJECT_DIR$/web/js/buttons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/cards.js" afterPath="$PROJECT_DIR$/web/js/cards.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/carousel.js" afterPath="$PROJECT_DIR$/web/js/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/character_counter.js" afterPath="$PROJECT_DIR$/web/js/character_counter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/chips.js" afterPath="$PROJECT_DIR$/web/js/chips.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/collapsible.js" afterPath="$PROJECT_DIR$/web/js/collapsible.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/date_picker/picker.date.js" afterPath="$PROJECT_DIR$/web/js/date_picker/picker.date.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/date_picker/picker.js" afterPath="$PROJECT_DIR$/web/js/date_picker/picker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/dropdown.js" afterPath="$PROJECT_DIR$/web/js/dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/forms.js" afterPath="$PROJECT_DIR$/web/js/forms.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/global.js" afterPath="$PROJECT_DIR$/web/js/global.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/initial.js" afterPath="$PROJECT_DIR$/web/js/initial.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/web/js/jquery.easing.1.3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/jquery.hammer.js" afterPath="$PROJECT_DIR$/web/js/jquery.hammer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/materialbox.js" afterPath="$PROJECT_DIR$/web/js/materialbox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/parallax.js" afterPath="$PROJECT_DIR$/web/js/parallax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/pushpin.js" afterPath="$PROJECT_DIR$/web/js/pushpin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/scrollFire.js" afterPath="$PROJECT_DIR$/web/js/scrollFire.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/scrollspy.js" afterPath="$PROJECT_DIR$/web/js/scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/shiawa_functions.js" afterPath="$PROJECT_DIR$/web/js/shiawa_functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/sideNav.js" afterPath="$PROJECT_DIR$/web/js/sideNav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/slider.js" afterPath="$PROJECT_DIR$/web/js/slider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/tabs.js" afterPath="$PROJECT_DIR$/web/js/tabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/toasts.js" afterPath="$PROJECT_DIR$/web/js/toasts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/tooltip.js" afterPath="$PROJECT_DIR$/web/js/tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/transitions.js" afterPath="$PROJECT_DIR$/web/js/transitions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/velocity.min.js" afterPath="$PROJECT_DIR$/web/js/velocity.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/waves.js" afterPath="$PROJECT_DIR$/web/js/waves.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_buttons.scss" afterPath="$PROJECT_DIR$/web/sass/components/_buttons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_cards.scss" afterPath="$PROJECT_DIR$/web/sass/components/_cards.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_carousel.scss" afterPath="$PROJECT_DIR$/web/sass/components/_carousel.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_chips.scss" afterPath="$PROJECT_DIR$/web/sass/components/_chips.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_collapsible.scss" afterPath="$PROJECT_DIR$/web/sass/components/_collapsible.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_color.scss" afterPath="$PROJECT_DIR$/web/sass/components/_color.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_dropdown.scss" afterPath="$PROJECT_DIR$/web/sass/components/_dropdown.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_global.scss" afterPath="$PROJECT_DIR$/web/sass/components/_global.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_grid.scss" afterPath="$PROJECT_DIR$/web/sass/components/_grid.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_icons-material-design.scss" afterPath="$PROJECT_DIR$/web/sass/components/_icons-material-design.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_materialbox.scss" afterPath="$PROJECT_DIR$/web/sass/components/_materialbox.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_mixins.scss" afterPath="$PROJECT_DIR$/web/sass/components/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_modal.scss" afterPath="$PROJECT_DIR$/web/sass/components/_modal.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_navbar.scss" afterPath="$PROJECT_DIR$/web/sass/components/_navbar.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_normalize.scss" afterPath="$PROJECT_DIR$/web/sass/components/_normalize.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_prefixer.scss" afterPath="$PROJECT_DIR$/web/sass/components/_prefixer.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_preloader.scss" afterPath="$PROJECT_DIR$/web/sass/components/_preloader.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_roboto.scss" afterPath="$PROJECT_DIR$/web/sass/components/_roboto.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_sideNav.scss" afterPath="$PROJECT_DIR$/web/sass/components/_sideNav.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_slider.scss" afterPath="$PROJECT_DIR$/web/sass/components/_slider.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_table_of_contents.scss" afterPath="$PROJECT_DIR$/web/sass/components/_table_of_contents.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_tabs.scss" afterPath="$PROJECT_DIR$/web/sass/components/_tabs.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_toast.scss" afterPath="$PROJECT_DIR$/web/sass/components/_toast.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_tooltip.scss" afterPath="$PROJECT_DIR$/web/sass/components/_tooltip.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_typography.scss" afterPath="$PROJECT_DIR$/web/sass/components/_typography.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_variables.scss" afterPath="$PROJECT_DIR$/web/sass/components/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/_waves.scss" afterPath="$PROJECT_DIR$/web/sass/components/_waves.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/date_picker/_default.date.scss" afterPath="$PROJECT_DIR$/web/sass/components/date_picker/_default.date.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/date_picker/_default.scss" afterPath="$PROJECT_DIR$/web/sass/components/date_picker/_default.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/date_picker/_default.time.scss" afterPath="$PROJECT_DIR$/web/sass/components/date_picker/_default.time.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/forms/_checkboxes.scss" afterPath="$PROJECT_DIR$/web/sass/components/forms/_checkboxes.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/forms/_file-input.scss" afterPath="$PROJECT_DIR$/web/sass/components/forms/_file-input.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/forms/_forms.scss" afterPath="$PROJECT_DIR$/web/sass/components/forms/_forms.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/forms/_input-fields.scss" afterPath="$PROJECT_DIR$/web/sass/components/forms/_input-fields.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/forms/_radio-buttons.scss" afterPath="$PROJECT_DIR$/web/sass/components/forms/_radio-buttons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/forms/_range.scss" afterPath="$PROJECT_DIR$/web/sass/components/forms/_range.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/forms/_select.scss" afterPath="$PROJECT_DIR$/web/sass/components/forms/_select.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/components/forms/_switches.scss" afterPath="$PROJECT_DIR$/web/sass/components/forms/_switches.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/custom/_variables.scss" afterPath="$PROJECT_DIR$/web/sass/custom/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/materialize.scss" afterPath="$PROJECT_DIR$/web/sass/materialize.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/style.scss" afterPath="$PROJECT_DIR$/web/sass/style.scss" />
     </list>
     <ignored path="Shiawa.iws" />
@@ -165,58 +59,48 @@
       <file leaf-file-name="CoreController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
+            <state relative-caret-position="17">
               <caret line="54" column="27" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormationRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/FormationRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+            <state relative-caret-position="255">
+              <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig">
+      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="44" column="60" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
+            <state relative-caret-position="391">
+              <caret line="134" column="98" selection-start-line="134" selection-start-column="98" selection-end-line="134" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/nav.html.twig">
+      <file leaf-file-name="Article.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3349">
-              <caret line="197" column="5" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
+            <state relative-caret-position="140">
+              <caret line="45" column="22" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/layout.html.twig">
+      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Entity/Event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="27" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="27" />
+            <state relative-caret-position="-357">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -235,45 +119,28 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ArticleType.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/AnimeType.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/AnimeReviewType.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/FormationType.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Form/EventType.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/form.html.twig" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/FormationEdit.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ChapterType.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/FormationEditType.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Formation.php" />
-        <option value="$PROJECT_DIR$/web/js/jquery.collection.js" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing/formation.yml" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/add.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Form/jquery.collection.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/form_manage.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/delete.html.twig" />
-        <option value="$PROJECT_DIR$/web/sass/style.scss" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/FormationController.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/TutorialType.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Chapter.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/form.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/add.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/aside.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/view.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing/tutorial.yml" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/view.html.twig" />
         <option value="$PROJECT_DIR$/web/.htaccess" />
         <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/TutorialController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/web/js/shiawa_functions.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig" />
-        <option value="$PROJECT_DIR$/web/sass/custom/_variables.scss" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/TutorialRepository.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/ArticleRepository.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/FormationRepository.php" />
@@ -281,11 +148,28 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing/article.yml" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/ArticleController.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/nav.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Formation.php" />
+        <option value="$PROJECT_DIR$/web/sass/custom/_variables.scss" />
+        <option value="$PROJECT_DIR$/web/sass/style.scss" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/sass/custom/_cards.scss" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tag/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog_layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Episode/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig" />
       </list>
     </option>
   </component>
@@ -349,6 +233,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -413,26 +298,8 @@
               <option name="myItemId" value="Shiawa" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Shiawa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shiawa" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shiawa" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -454,7 +321,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -484,7 +351,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -496,7 +363,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Article" />
+              <option name="myItemId" value="User" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -518,17 +385,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -545,74 +408,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Shiawa" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlogBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routing" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shiawa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shiawa" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shiawa" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlogBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shiawa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shiawa" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shiawa" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlogBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -830,9 +625,26 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shiawa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shiawa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -853,16 +665,16 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Shiawa\src\AppBundle\Resources\views\Core" />
+      <recent name="C:\wamp\www\Shiawa\src\Shiawa\BlogBundle\Form" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp\www\repositories\Shiawa\src\Shiawa\ContestBundle\Resources\config\routing" />
       <recent name="C:\wamp\www\repositories\Shiawa\src\Shiawa\ContestBundle\Resources\views" />
       <recent name="C:\wamp\www\Shiawa\src\Shiawa\UserBundle\Form" />
       <recent name="C:\wamp\www\Shiawa\src\Shiawa\BlogBundle\Resources\views" />
       <recent name="C:\wamp\www\Shiawa\src\Shiawa\BlogBundle\Controller" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\Shiawa\src\AppBundle\Resources\views\Core" />
-      <recent name="C:\wamp\www\Shiawa\src\Shiawa\BlogBundle\Form" />
     </key>
   </component>
   <component name="RunManager">
@@ -1005,36 +817,40 @@
       <workItem from="1482262083273" duration="11010000" />
       <workItem from="1482343537950" duration="667000" />
       <workItem from="1482787754728" duration="47000" />
+      <workItem from="1483898672056" duration="3094000" />
+      <workItem from="1484244291500" duration="114000" />
+      <workItem from="1484259513355" duration="1440000" />
+      <workItem from="1484408353571" duration="9267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325926000" />
+    <option name="totallyTimeSpent" value="339841000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23720682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22814499" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20131291" sideWeight="0.45" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30277187" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11809318" sideWeight="0.55" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16950959" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.118161924" sideWeight="0.55" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1053,132 +869,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/FormationEditType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/form_manage.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/delete.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sass/save.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/AnimeReview.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2040">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Anime.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="102" column="95" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ArticleType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="32" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/FormationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2554">
-          <caret line="165" column="5" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="87" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="87" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="96" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/TutorialType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Formation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/routing/tutorial.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/view.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1186,38 +876,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/sass/custom/_global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sass/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1256,45 +918,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="10" selection-start-line="36" selection-start-column="4" selection-end-line="41" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Entity/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sass/components/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="95" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sass/custom/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1303,22 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="60" column="5" selection-start-line="47" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/FormationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="54" column="27" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1343,58 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="59" selection-start-line="0" selection-start-column="0" selection-end-line="197" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/nav.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3349">
-          <caret line="197" column="5" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="61" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1662">
-          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/view.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1402,10 +961,298 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/nav.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="44" column="60" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
+          <caret line="78" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="197" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Tag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Formation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="85" column="6" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
+          <folding>
+            <element signature="e#44#92#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="89" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/FormationRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/custom/_global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/custom/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/AnimeReview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="76" column="25" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/save.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/materialize.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/components/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/components/_cards.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/custom/_cards.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Anime/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="14" selection-start-line="29" selection-start-column="0" selection-end-line="42" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Episode/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tag/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Entity/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="134" column="98" selection-start-line="134" selection-start-column="98" selection-end-line="134" selection-end-column="98" />
           <folding />
         </state>
       </provider>

@@ -44,15 +44,15 @@
                 <!-- END NAVBAR MODULABLE -->
                 <li>
                     {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    <a href="#" data-activates="slide-out" class="button-collapse2 right pink">
-                        {{ app.user.username|title }}
-                        <i class="material-icons right">person</i>
-                    </a>
+                        <a href="#" data-activates="slide-out" class="button-collapse2 right pink">
+                            {{ app.user.username|title }}
+                            <i class="material-icons right">person</i>
+                        </a>
                     {% else %}
-                    <a href="{{ path('fos_user_security_login') }}" class="pink">
-                        Se connecter
-                        <i class="material-icons right">person</i>
-                    </a>
+                        <a href="{{ path('fos_user_security_login') }}" class="pink">
+                            Se connecter
+                            <i class="material-icons right">person</i>
+                        </a>
                     {% endif %}
                 </li>
             </ul>
@@ -77,12 +77,12 @@
 
 <ul id="cosplayDropdown" class="dropdown-content">
     <li><a href="">Galleries photos</a></li>
-    <li><a href="">Shiawa CMVs</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLITDrG6K2FHdyPJYL9K97090uP5TX7ObI" target="_blank">Shiawa CMVs</a></li>
 </ul>
 
 <ul id="animeDropdown" class="dropdown-content">
     <li><a href="{{ path('shiawa_anime_review_list') }}">Critiques</a></li>
-    <li><a href="">Shiawa AMVs</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLITDrG6K2FHf8HoECBnJmOyrlPSnMA_FN">Shiawa AMVs</a></li>
 </ul>
 
 <ul id="eventDropdown" class="dropdown-content">
@@ -91,8 +91,8 @@
 </ul>
 
 <ul id="entertainmentDropdown" class="dropdown-content">
-    <li><a href="">Toutes nos Videos</a></li>
-    <li><a href="">Interviews Shiawa</a></li>
+    <li><a href="https://www.youtube.com/channel/UCgPqRGhrra-liY7N7OQSD0A/videos" target="_blank">Toutes nos Videos</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLITDrG6K2FHeI4hT8FKEcJWcs2ezaA001" target="_blank">Interviews Shiawa</a></li>
 </ul>
 
 <!-- NAVBAR MOBILE -->
@@ -155,7 +155,7 @@
             <li class="no-padding blue-grey">
                 <ul class="collapsible collapsible-accordion">
                     <li>
-                        <a class="collapsible-header">Gestion Articles<i class="material-icons right
+                        <a class="collapsible-header white-text">Gestion Articles<i class="material-icons right
                                 ">arrow_drop_down</i></a>
                         <div class="collapsible-body">
                             <ul>
@@ -171,7 +171,7 @@
             <li class="no-padding blue-grey">
                 <ul class="collapsible collapsible-accordion">
                     <li>
-                        <a class="collapsible-header">Gestion Japanimation<i class="material-icons right
+                        <a class="collapsible-header white-text">Gestion Japanimation<i class="material-icons right
                                 ">arrow_drop_down</i></a>
                         <div class="collapsible-body">
                             <ul>
@@ -191,7 +191,7 @@
             <li><a href='{{ path('shiawa_user_admin_create') }}'>Ajouter un Utilisateur</a></li>
             <li><a href='{{ path('shiawa_cache_clear') }}'>Nettoyer le cache</a></li>
         {% endif %}
-        <li class='red'><a href='{{ path('fos_user_security_logout') }}'>Deconnexion</a></li>
+        <li class='red'><a href='{{ path('fos_user_security_logout') }}' class="white-text">Deconnexion</a></li>
     {% else %}
         <li class='green'><a href='{{ path('fos_user_security_login') }}'>Connexion</a></li>
     {% endif %}

@@ -1,4 +1,4 @@
-{% extends "ShiawaBlogBundle:Article:layout.html.twig" %}
+{% extends "ShiawaBlogBundle:Tutorial:layout.html.twig" %}
 
 {% block DC_description %}
     {% for letter in article.summary|split('')|slice(0,300) %}{{ letter }}{% endfor %}

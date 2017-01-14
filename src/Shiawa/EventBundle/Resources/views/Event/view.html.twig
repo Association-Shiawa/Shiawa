@@ -133,7 +133,7 @@
                         <h5 class='title-article'><a href='#'>{{ article.title }}</a></h5>
                         <hr />
                         <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category' : article.category.name}) }}'>
-                            <img src='{{ article.thumbnail ? asset(article.thumbnail.getWebPath) : article.image }}' style='width:100%;
+                            <img src='{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}' style='width:100%;
                         background-size: cover' />
                         </a>
                     </div>

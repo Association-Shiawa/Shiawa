@@ -10,7 +10,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * Formation
  *
- * @ORM\Table(name="shiawa_formation")
+ * @ORM\Table(name="shiawa_courses")
  * @ORM\Entity(repositoryClass="Shiawa\BlogBundle\Repository\FormationRepository")
  */
 class Formation
@@ -78,7 +78,7 @@ class Formation
     /**
      *
      * @ORM\ManyToMany(targetEntity="Shiawa\BlogBundle\Entity\Tag", cascade={"persist"})
-     * @ORM\JoinTable(name="shiawa_formation_tag")
+     * @ORM\JoinTable(name="shiawa_courses_tag")
      */
     private $tags;
 

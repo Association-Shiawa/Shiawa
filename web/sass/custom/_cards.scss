@@ -1,0 +1,18 @@
+.card-custom{
+  @extend .card;
+
+  .card-image{
+    overflow: hidden;
+    height: 200px;
+
+    image{
+      position: absolute;
+    }
+
+    .card-title{
+      right: 0px;
+      padding: 6px;
+      background: rgba(236, 32, 122, .7);
+    }
+  }
+}

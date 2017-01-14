@@ -1990,7 +1990,7 @@ a {
 .z-depth-0 {
   box-shadow: none !important; }
 
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+.z-depth-1, nav, .card-panel, .card, .card-custom, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover {
@@ -2024,7 +2024,7 @@ a {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #ee6e73; }
+  border-left: 5px solid #ec407a; }
 
 i {
   line-height: inherit; }
@@ -2063,7 +2063,7 @@ video.responsive-video {
   .pagination li.active a {
     color: #fff; }
   .pagination li.active {
-    background-color: #ee6e73; }
+    background-color: #ec407a; }
   .pagination li.disabled a {
     cursor: default;
     color: #999; }
@@ -2196,7 +2196,7 @@ ul.staggered-list li {
 
 footer.page-footer {
   padding-top: 20px;
-  background-color: #ee6e73; }
+  background-color: #ec407a; }
   footer.page-footer .footer-copyright {
     overflow: hidden;
     height: 50px;
@@ -2958,7 +2958,7 @@ nav ul a span.badge {
 
 nav {
   color: #fff;
-  background-color: #ee6e73;
+  background-color: #ec407a;
   width: 100%;
   height: 56px;
   line-height: 56px; }
@@ -3264,67 +3264,67 @@ small {
   border-radius: 2px;
   background-color: #fff; }
 
-.card {
+.card, .card-custom {
   position: relative;
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
   transition: box-shadow .25s;
   border-radius: 2px; }
-  .card .card-title {
+  .card .card-title, .card-custom .card-title {
     font-size: 24px;
     font-weight: 300; }
-    .card .card-title.activator {
+    .card .card-title.activator, .card-custom .card-title.activator {
       cursor: pointer; }
-  .card.small, .card.medium, .card.large {
+  .card.small, .small.card-custom, .card.medium, .medium.card-custom, .card.large, .large.card-custom {
     position: relative; }
-    .card.small .card-image, .card.medium .card-image, .card.large .card-image {
+    .card.small .card-image, .small.card-custom .card-image, .card.medium .card-image, .medium.card-custom .card-image, .card.large .card-image, .large.card-custom .card-image {
       max-height: 60%;
       overflow: hidden; }
-    .card.small .card-image + .card-content, .card.medium .card-image + .card-content, .card.large .card-image + .card-content {
+    .card.small .card-image + .card-content, .small.card-custom .card-image + .card-content, .card.medium .card-image + .card-content, .medium.card-custom .card-image + .card-content, .card.large .card-image + .card-content, .large.card-custom .card-image + .card-content {
       max-height: 40%; }
-    .card.small .card-content, .card.medium .card-content, .card.large .card-content {
+    .card.small .card-content, .small.card-custom .card-content, .card.medium .card-content, .medium.card-custom .card-content, .card.large .card-content, .large.card-custom .card-content {
       max-height: 100%;
       overflow: hidden; }
-    .card.small .card-action, .card.medium .card-action, .card.large .card-action {
+    .card.small .card-action, .small.card-custom .card-action, .card.medium .card-action, .medium.card-custom .card-action, .card.large .card-action, .large.card-custom .card-action {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0; }
-  .card.small {
+  .card.small, .small.card-custom {
     height: 300px; }
-  .card.medium {
+  .card.medium, .medium.card-custom {
     height: 400px; }
-  .card.large {
+  .card.large, .large.card-custom {
     height: 500px; }
-  .card.horizontal {
+  .card.horizontal, .horizontal.card-custom {
     display: flex; }
-    .card.horizontal.small .card-image, .card.horizontal.medium .card-image, .card.horizontal.large .card-image {
+    .card.horizontal.small .card-image, .horizontal.small.card-custom .card-image, .card.horizontal.medium .card-image, .horizontal.medium.card-custom .card-image, .card.horizontal.large .card-image, .horizontal.large.card-custom .card-image {
       height: 100%;
       max-height: none;
       overflow: visible; }
-      .card.horizontal.small .card-image img, .card.horizontal.medium .card-image img, .card.horizontal.large .card-image img {
+      .card.horizontal.small .card-image img, .horizontal.small.card-custom .card-image img, .card.horizontal.medium .card-image img, .horizontal.medium.card-custom .card-image img, .card.horizontal.large .card-image img, .horizontal.large.card-custom .card-image img {
         height: 100%; }
-    .card.horizontal .card-image {
+    .card.horizontal .card-image, .horizontal.card-custom .card-image {
       max-width: 50%; }
-      .card.horizontal .card-image img {
+      .card.horizontal .card-image img, .horizontal.card-custom .card-image img {
         border-radius: 2px 0 0 2px;
         max-width: 100%;
         width: auto; }
-    .card.horizontal .card-stacked {
+    .card.horizontal .card-stacked, .horizontal.card-custom .card-stacked {
       display: flex;
       flex-direction: column;
       flex: 1;
       position: relative; }
-      .card.horizontal .card-stacked .card-content {
+      .card.horizontal .card-stacked .card-content, .horizontal.card-custom .card-stacked .card-content {
         flex-grow: 1; }
-  .card.sticky-action .card-action {
+  .card.sticky-action .card-action, .sticky-action.card-custom .card-action {
     z-index: 2; }
-  .card.sticky-action .card-reveal {
+  .card.sticky-action .card-reveal, .sticky-action.card-custom .card-reveal {
     z-index: 1;
     padding-bottom: 64px; }
-  .card .card-image {
+  .card .card-image, .card-custom .card-image {
     position: relative; }
-    .card .card-image img {
+    .card .card-image img, .card-custom .card-image img {
       display: block;
       border-radius: 2px 2px 0 0;
       position: relative;
@@ -3333,37 +3333,37 @@ small {
       top: 0;
       bottom: 0;
       width: 100%; }
-    .card .card-image .card-title {
+    .card .card-image .card-title, .card-custom .card-image .card-title {
       color: #fff;
       position: absolute;
       bottom: 0;
       left: 0;
       padding: 24px; }
-  .card .card-content {
+  .card .card-content, .card-custom .card-content {
     padding: 24px;
     border-radius: 0 0 2px 2px; }
-    .card .card-content p {
+    .card .card-content p, .card-custom .card-content p {
       margin: 0;
       color: inherit; }
-    .card .card-content .card-title {
+    .card .card-content .card-title, .card-custom .card-content .card-title {
       display: block;
       line-height: 32px;
       margin-bottom: 8px; }
-      .card .card-content .card-title i {
+      .card .card-content .card-title i, .card-custom .card-content .card-title i {
         line-height: 32px; }
-  .card .card-action {
+  .card .card-action, .card-custom .card-action {
     position: relative;
     background-color: inherit;
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     padding: 16px 24px; }
-    .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating), .card-custom .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
       color: #e2175b;
       margin-right: 24px;
       transition: color .3s ease;
       text-transform: uppercase; }
-      .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
+      .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover, .card-custom .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
         color: #f16e9a; }
-  .card .card-reveal {
+  .card .card-reveal, .card-custom .card-reveal {
     padding: 24px;
     position: absolute;
     background-color: #fff;
@@ -3374,7 +3374,7 @@ small {
     height: 100%;
     z-index: 3;
     display: none; }
-    .card .card-reveal .card-title {
+    .card .card-reveal .card-title, .card-custom .card-reveal .card-title {
       cursor: pointer;
       display: block; }
 
@@ -3469,7 +3469,7 @@ small {
     margin: 0;
     text-transform: uppercase; }
     .tabs .tab a {
-      color: rgba(238, 110, 115, 0.7);
+      color: rgba(236, 64, 122, 0.7);
       display: block;
       width: 100%;
       height: 100%;
@@ -3480,15 +3480,15 @@ small {
       transition: color .28s ease; }
       .tabs .tab a:hover, .tabs .tab a.active {
         background-color: transparent;
-        color: #ee6e73; }
+        color: #ec407a; }
     .tabs .tab.disabled a, .tabs .tab.disabled a:hover {
-      color: rgba(238, 110, 115, 0.7);
+      color: rgba(236, 64, 122, 0.7);
       cursor: default; }
   .tabs .indicator {
     position: absolute;
     bottom: 0;
     height: 2px;
-    background-color: #f6b2b5;
+    background-color: #f386aa;
     will-change: left, right; }
 
 @media only screen and (max-width: 992px) {
@@ -5239,7 +5239,7 @@ input[type=range]:focus::-ms-fill-upper {
     padding: 16px 16px 0; } }
 .side-nav .collapsible-body > ul:not(.collapsible) > li.active,
 .side-nav.fixed .collapsible-body > ul:not(.collapsible) > li.active {
-  background-color: #ee6e73; }
+  background-color: #ec407a; }
   .side-nav .collapsible-body > ul:not(.collapsible) > li.active a,
   .side-nav.fixed .collapsible-body > ul:not(.collapsible) > li.active a {
     color: #fff; }
@@ -6384,6 +6384,17 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media only screen and (min-width: 993px) {
   .container {
     width: 90%; } }
+/* cards */
+.card-custom .card-image {
+  overflow: hidden;
+  height: 200px; }
+  .card-custom .card-image image {
+    position: absolute; }
+  .card-custom .card-image .card-title {
+    right: 0px;
+    padding: 6px;
+    background: rgba(236, 32, 122, 0.7); }
+
 /* Styles */
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -6535,7 +6546,7 @@ html, body {
     .association .carousel .carousel-item {
       margin-top: -100px;
       width: 300px; }
-      .association .carousel .carousel-item .card .card-image {
+      .association .carousel .carousel-item .card .card-image, .association .carousel .carousel-item .card-custom .card-image {
         height: 300px;
         width: 300px;
         overflow: hidden; }
@@ -6632,9 +6643,9 @@ html, body {
   .article-pw img:hover {
     transform: rotate(-2deg); }
 
-.card .content-article {
+.card .content-article, .card-custom .content-article {
   margin: 10px 0; }
-  .card .content-article p {
+  .card .content-article p, .card-custom .content-article p {
     margin: 20px 0; }
 
 .no-margin {
