@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig" />
     </list>
     <ignored path="Shiawa.iws" />
@@ -75,8 +74,8 @@
       <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+            <state relative-caret-position="459">
+              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -712,12 +711,12 @@
       <workItem from="1483898672056" duration="3094000" />
       <workItem from="1484244291500" duration="114000" />
       <workItem from="1484259513355" duration="1440000" />
-      <workItem from="1484408353571" duration="10185000" />
+      <workItem from="1484408353571" duration="10557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340759000" />
+    <option name="totallyTimeSpent" value="341131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1143,8 +1142,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/User/view.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        <state relative-caret-position="459">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
           <folding />
         </state>
       </provider>
