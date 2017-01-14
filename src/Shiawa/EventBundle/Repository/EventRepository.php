@@ -14,7 +14,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
     public function getEvents($page, $nbPerPage)
     {
         $query = $this->createQueryBuilder('e')
-            ->orderBy('e.beginAt', 'ASC')
+            ->orderBy('e.beginAt', 'DESC')
             ->getQuery();
 
         $query
