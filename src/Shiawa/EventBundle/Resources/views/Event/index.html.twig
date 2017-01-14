@@ -4,13 +4,16 @@
     <section class="row">
     {% for event in listEvents %}
 
-        <div class='col l3 m4 s12'>
-            <div class="card">
+        <div class='col l4 m6 s12'>
+            <div class="card-custom">
                 <div class="card-image">
-                    <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) : event.image }}">
+                    <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) }}">
                     <a href="{{ path('shiawa_event_view', {'slug': event.slug})}}" class="card-title">
                         {{ event.name }} - {{ event.beginAt|date('d/m/Y') }}
                     </a>
+                </div>
+                <div class="card-content">
+                    <p class="truncate">{{ event.description|raw }}</p>
                 </div>
                 <div class="card-action">
                     <a href="{{ path('shiawa_event_view', {'slug': event.slug})}}" class="pink-text text-accent-1">

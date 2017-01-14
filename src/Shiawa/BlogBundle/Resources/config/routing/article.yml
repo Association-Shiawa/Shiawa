@@ -1,5 +1,5 @@
 shiawa_article_list:
-    path:     /{category}/articles/{page}
+    path:     /articles/{page}
     defaults:
         _controller: ShiawaBlogBundle:Article:index
         page: 1

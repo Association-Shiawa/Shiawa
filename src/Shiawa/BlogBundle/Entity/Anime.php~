@@ -157,30 +157,6 @@ class Anime
     }
 
     /**
-     * Set image
-     *
-     * @param string $image
-     *
-     * @return Anime
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    /**
-     * Get image
-     *
-     * @return string
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    /**
      * Set createdAt
      *
      * @param \DateTime $createdAt
@@ -462,5 +438,65 @@ class Anime
     public function getIsNew()
     {
         return $this->isNew;
+    }
+
+    /**
+     * Set thumbnail
+     *
+     * @param \Shiawa\FileBundle\Entity\File $thumbnail
+     *
+     * @return Anime
+     */
+    public function setThumbnail(\Shiawa\FileBundle\Entity\File $thumbnail = null)
+    {
+        $this->thumbnail = $thumbnail;
+        $this->setThumbnailDir();
+
+        return $this;
+    }
+
+    /**
+     * Get thumbnail
+     *
+     * @return \Shiawa\FileBundle\Entity\File
+     */
+    public function getThumbnail()
+    {
+        if ($this->thumbnail != null) {
+            $this->setThumbnailDir();
+        }
+        return $this->thumbnail;
+    }
+
+    public function setThumbnailDir()
+    {
+        $dir = "uploads/files/anime/".$this->id."/thumbnail/";
+        $this->thumbnail->setUploadDir($dir);
+
+        return $this;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Anime
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

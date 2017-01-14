@@ -157,30 +157,6 @@ class Anime
     }
 
     /**
-     * Set image
-     *
-     * @param string $image
-     *
-     * @return Anime
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    /**
-     * Get image
-     *
-     * @return string
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    /**
      * Set createdAt
      *
      * @param \DateTime $createdAt
@@ -498,5 +474,29 @@ class Anime
         $this->thumbnail->setUploadDir($dir);
 
         return $this;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Anime
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

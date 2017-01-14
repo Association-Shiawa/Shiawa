@@ -13,19 +13,22 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class ArticleController extends Controller
 {
-    public function indexAction($page, $category)
+    public function indexAction($page, $category = null)
     {
         if($page < 1) {
             return new NotFoundHttpException('Page "'.$page.'" inexistante');
         }
 
-        $categoryName = $category;
+       if(null != $category)
+       {
+           $categoryName = $category;
 
-        $category = $this->getDoctrine()
-            ->getManager()
-            ->getRepository('ShiawaBlogBundle:Category')
-            ->findOneByName($categoryName)
-        ;
+           $category = $this->getDoctrine()
+               ->getManager()
+               ->getRepository('ShiawaBlogBundle:Category')
+               ->findOneByName($categoryName)
+           ;
+       }
 
         $em = $this->getDoctrine()->getManager();
         $artRep = $em->getRepository('ShiawaBlogBundle:Article');
@@ -50,10 +53,22 @@ class ArticleController extends Controller
 
     public function viewAction($category, $slug)
     {
+        /**
+         * @var Article $article
+         */
         $article = $this->getDoctrine()
             ->getManager()
             ->getRepository('ShiawaBlogBundle:Article')
             ->findOneBySlug($slug);
+
+        if ($article->getChapter() != null)
+        {
+            return $this->redirectToRoute('shiawa_tutorial_view', array(
+                'slug' => $article->getSlug(),
+                'category' => $article->getCategory()->getSlug(),
+                'formation' => $article->getChapter()->getFormation()->getSlug()
+            ));
+        }
 
 
         $tagsManagement = $this->get('shiawa_blog.tags');
@@ -88,7 +103,7 @@ class ArticleController extends Controller
 
             return $this->redirectToRoute('shiawa_article_view', array(
                 'slug' => $article->getSlug(),
-                'category' => strtolower($article->getCategory()->getName())
+                'category' => $article->getCategory()->getSlug()
             ));
         }
 

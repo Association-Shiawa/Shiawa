@@ -1,0 +1,20 @@
+{% extends "AppBundle:Core:layout.html.twig" %}
+
+{% block menu %}
+    {{ include("AppBundle:Core:nav.html.twig") }}
+{% endblock %}
+
+{% block body %}
+    {#{{ include("AppBundle:Anime:slider.html.twig") }}#}
+
+    {% block  anime_news%}
+
+    {% endblock %}
+
+    <div class='container'>
+        <div class='row'>
+            {% block content %}{% endblock %}
+            {{ render(controller("AppBundle:Core:aside")) }}
+        </div>
+    </div>
+{% endblock %}

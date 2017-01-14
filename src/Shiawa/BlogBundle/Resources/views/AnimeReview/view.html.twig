@@ -16,7 +16,7 @@
 
 {%  block OG_title %}{{ review.title }} - Shiawa.fr{% endblock %}
 
-{%  block OG_image %}{{ review.thumbnail ? asset(review.thumbnail.getWebPath) : review.image }}{% endblock %}
+{%  block OG_image %}{{ review.thumbnail ? asset(review.thumbnail.getWebPath) }}{% endblock %}
 
 {% block title %}
     {{ review.title }} - Shiawa.fr
@@ -27,7 +27,7 @@
     <div class='col s12 m6 offset-m1'>
         <div class='card z-depth-1'>
             <div class="card-image">
-                <img src="{{ review.thumbnail ? asset(review.thumbnail.getWebPath) : review.image }}">
+                <img src="{{ review.thumbnail ? asset(review.thumbnail.getWebPath) }}">
                 <span class="card-title"><b>{{ review.title }}</b></span>
             </div>
             <div class='card-content'>

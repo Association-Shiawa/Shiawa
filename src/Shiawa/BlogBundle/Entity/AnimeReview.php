@@ -64,14 +64,8 @@ class AnimeReview
     private $updatedAt;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="image", type="string", length=255, nullable=true)
-     */
-    private $image;
-
-    /**
      * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
      */
     private $thumbnail;
 
@@ -276,30 +270,6 @@ class AnimeReview
     public function getUpdatedAt()
     {
         return $this->updatedAt;
-    }
-
-    /**
-     * Set image
-     *
-     * @param string $image
-     *
-     * @return AnimeReview
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    /**
-     * Get image
-     *
-     * @return string
-     */
-    public function getImage()
-    {
-        return $this->image;
     }
 
     /**

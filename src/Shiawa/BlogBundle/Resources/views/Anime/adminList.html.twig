@@ -22,8 +22,8 @@
                     {% for anime in animes %}
                         <tr>
                             <td>
-                                {% if anime.image %}
-                                    <img src="{{ anime.thumbnail ? asset(anime.thumbnail.getWebPath) : anime.image }}" alt="" width="40px" class="materialboxed">
+                                {% if anime.thumbnail %}
+                                    <img src="{{ asset(anime.thumbnail.getWebPath) }}" alt="" width="40px" class="materialboxed">
                                 {% endif %}
                             </td>
                             <td>
