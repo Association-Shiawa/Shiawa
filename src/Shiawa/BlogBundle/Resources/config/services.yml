@@ -11,5 +11,5 @@ services:
          class: Shiawa\BlogBundle\Utils\YoutubeService
          arguments:
              - "%youtube.api.key%"
-             - "UCgPqRGhrra-liY7N7OQSD0A"
+             - "%youtube.channel.id%"
              - "UUgPqRGhrra-liY7N7OQSD0A"
