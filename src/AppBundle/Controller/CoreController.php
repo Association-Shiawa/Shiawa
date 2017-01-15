@@ -50,6 +50,9 @@ class CoreController extends Controller
             ->getLast(5)
         ;
 
+//        $youtubeService = $this->get('shiawa_blog.youtube');
+//        $youtubeService->getLastVideos();
+
         return $this->render('AppBundle:Core:blog.html.twig', array(
             'lastArticles' => $lastArticles,
             'lastFormations' => $lastFormations

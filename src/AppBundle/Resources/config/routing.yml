@@ -40,3 +40,8 @@ shiawa_cache_clear:
     path: /cache-clear
     defaults:
         _controller: AppBundle:Admin:cacheClear
+
+shiawa_test:
+     path: /admin/test
+     defaults:
+         _controller: AppBundle:Admin:test
