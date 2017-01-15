@@ -11,7 +11,7 @@ class YoutubeService {
     //PlaylistID for uploaded videos
     private $uploadsID;
 
-    public function __construct($apiKey, $channelID, $uploadsID)
+    public function __construct($apiKey, $channelID, $uploadsID = "UUgPqRGhrra-liY7N7OQSD0A")
     {
         $this->apiKey = $apiKey;
         $this->client = new \Google_Client();
