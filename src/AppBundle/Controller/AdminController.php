@@ -26,7 +26,8 @@ class AdminController extends Controller
         return $this->redirectToRoute('shiawa_admin_homepage');
     }
 
-    public function testAction(){
+    public function testAction()
+    {
         $youtubeService = $this->get('shiawa_blog.youtube');
         $youtubeService->getLastVideos();
         return new Response();
