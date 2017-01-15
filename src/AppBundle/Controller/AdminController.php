@@ -29,5 +29,6 @@ class AdminController extends Controller
     public function testAction(){
         $youtubeService = $this->get('shiawa_blog.youtube');
         $youtubeService->getLastVideos();
+        return new Response();
     }
 }
