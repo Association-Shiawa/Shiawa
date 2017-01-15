@@ -9,7 +9,7 @@ parameters:
     locale: fr
     domain: shiawa.fr
     mail: shiawa.project@gmail.com
-    youtube.api.key: AIzaSyCoi1XYGaWGRul5-t0lpJlaJT9Lp25-ivc
+    youtube_api_key: AIzaSyCoi1XYGaWGRul5-t0lpJlaJT9Lp25-ivc
 
 framework:
     #esi:             ~

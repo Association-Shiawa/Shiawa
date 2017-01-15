@@ -25,9 +25,4 @@ class AdminController extends Controller
         $application->run(new \Symfony\Component\Console\Input\ArrayInput($options));
         return $this->redirectToRoute('shiawa_admin_homepage');
     }
-
-    public function testAction(){
-        $youtubeService = $this->get('shiawa_blog.youtube');
-        $youtubeService->getLastVideos();
-    }
 }
