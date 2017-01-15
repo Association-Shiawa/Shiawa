@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml" />
     </list>
     <ignored path="Shiawa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +35,7 @@
       <file leaf-file-name="CoreController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="714">
               <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
@@ -51,21 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="services.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="272">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -141,10 +142,10 @@
         <option value="$PROJECT_DIR$/../../bin/php/php5.5.12/php.ini" />
         <option value="$PROJECT_DIR$/../../bin/php/cacert.pem" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Utils/YoutubeService.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml" />
       </list>
     </option>
   </component>
@@ -208,7 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -283,7 +284,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -462,18 +463,19 @@
       <workItem from="1484408353571" duration="11567000" />
       <workItem from="1484487381632" duration="5467000" />
       <workItem from="1484510418248" duration="773000" />
+      <workItem from="1484512024758" duration="728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348381000" />
+    <option name="totallyTimeSpent" value="349109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23720682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23347548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23614073" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20131291" sideWeight="0.45" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30277187" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -782,14 +784,6 @@
     <entry file="file://$PROJECT_DIR$/../../bin/apache/apache2.4.9/bin/php.ini" />
     <entry file="file://$PROJECT_DIR$/../../bin/php/php5.5.12/php.ini" />
     <entry file="file://$PROJECT_DIR$/../../bin/php/cacert.pem" />
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AnimeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -822,8 +816,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="714">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -836,10 +838,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="153">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding />
         </state>
       </provider>

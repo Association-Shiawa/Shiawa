@@ -3,6 +3,12 @@ services:
 #        class: Shiawa\BlogBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
      shiawa_blog.tags:
-              class: Shiawa\BlogBundle\Utils\TagsManagement
-              arguments:
-                  - "@doctrine.orm.entity_manager"
+         class: Shiawa\BlogBundle\Utils\TagsManagement
+         arguments:
+             - "@doctrine.orm.entity_manager"
+
+     shiawa_blog.youtube:
+         class: Shiawa\BlogBundle\Utils\YoutubeService
+         arguments:
+             - "%youtube.api.key%"
+             - "UCgPqRGhrra-liY7N7OQSD0A"
