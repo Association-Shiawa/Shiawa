@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Utils/YoutubeService.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Utils/YoutubeService.php" />
     </list>
     <ignored path="Shiawa.iws" />
@@ -45,8 +44,8 @@
       <file leaf-file-name="YoutubeService.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Utils/YoutubeService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="459">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -585,12 +584,12 @@
       <workItem from="1484408353571" duration="11567000" />
       <workItem from="1484487381632" duration="5467000" />
       <workItem from="1484510418248" duration="773000" />
-      <workItem from="1484512024758" duration="4939000" />
+      <workItem from="1484512024758" duration="4988000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353320000" />
+    <option name="totallyTimeSpent" value="353369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -966,8 +965,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Utils/YoutubeService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="459">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
           <folding />
         </state>
       </provider>

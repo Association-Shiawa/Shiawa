@@ -25,7 +25,7 @@ class YoutubeService {
     {
         $videos = $this->youtube->playlistItems->listPlaylistItems('contentDetails', array('playlistId' => $this->uploadsID));
         //channels->listChannels("snippet, contentDetails", array('id' => $this->channelID));
-        var_dump($videos['items'][0]['videoId']);die();
+        var_dump($videos);die();
         return $videos;
     }
 
