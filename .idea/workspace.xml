@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="">
 <<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/EventBundle/Repository/EventRepository.php" afterPath="$PROJECT_DIR$/src/Shiawa/EventBundle/Repository/EventRepository.php" />
@@ -8,6 +9,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php" />
 >>>>>>> 0f8c93872babd4443a3094649999b262a48d9b1d
     </list>
+=======
+    <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="" />
+>>>>>>> c509ee0d3e5f04e47fc74f952bfb9eab715b051e
     <ignored path="Shiawa.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -752,17 +756,25 @@
 =======
       <workItem from="1484408353571" duration="11567000" />
       <workItem from="1484487381632" duration="5467000" />
+<<<<<<< HEAD
       <workItem from="1484510418248" duration="9000" />
 >>>>>>> 0f8c93872babd4443a3094649999b262a48d9b1d
+=======
+      <workItem from="1484510418248" duration="152000" />
+>>>>>>> c509ee0d3e5f04e47fc74f952bfb9eab715b051e
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="341877000" />
 =======
     <option name="totallyTimeSpent" value="347617000" />
 >>>>>>> 0f8c93872babd4443a3094649999b262a48d9b1d
+=======
+    <option name="totallyTimeSpent" value="347760000" />
+>>>>>>> c509ee0d3e5f04e47fc74f952bfb9eab715b051e
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -770,10 +782,14 @@
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23720682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22814499" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 =======
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23347548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 >>>>>>> 0f8c93872babd4443a3094649999b262a48d9b1d
+=======
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23347548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> c509ee0d3e5f04e47fc74f952bfb9eab715b051e
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20131291" sideWeight="0.45" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30277187" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
