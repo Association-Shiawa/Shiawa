@@ -12,3 +12,4 @@ services:
          arguments:
              - "%youtube.api.key%"
              - "UCgPqRGhrra-liY7N7OQSD0A"
+             - "UUgPqRGhrra-liY7N7OQSD0A"
