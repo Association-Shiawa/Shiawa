@@ -4,7 +4,7 @@ namespace Shiawa\BlogBundle\Utils;
 
 class YoutubeService {
 
-    private $apiKey = null;
+    private $apiKey;
     private $client;
     private $youtube;
     private $channelID;
@@ -21,7 +21,7 @@ class YoutubeService {
     public function getLastVideos()
     {
         $channelInfos = $this->youtube->channels->listChannels("snippet, contentDetails", array('id' => $this->channelID));
-        die($channelInfos);
+        var_dump($channelInfos);die();
 //        $videos =
         return $videos;
     }
