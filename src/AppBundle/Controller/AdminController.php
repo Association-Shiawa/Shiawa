@@ -29,7 +29,9 @@ class AdminController extends Controller
     public function testAction()
     {
         $youtubeService = $this->get('shiawa_blog.youtube');
-        $youtubeService->getLastVideos();
-        return new Response();
+        $videos = $youtubeService->getLastVideos();
+        return $this->render('AppBundle:Admin:test.html.twig', array(
+            "videos" => $videos
+        ));
     }
 }

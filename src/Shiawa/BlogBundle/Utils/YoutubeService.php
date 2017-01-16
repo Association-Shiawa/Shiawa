@@ -11,7 +11,7 @@ class YoutubeService {
     //PlaylistID for uploaded videos
     private $uploadsID;
 
-    public function __construct($apiKey, $channelID, $uploadsID = "UUgPqRGhrra-liY7N7OQSD0A")
+    public function __construct($apiKey, $channelID, $uploadsID)
     {
         $this->apiKey = $apiKey;
         $this->client = new \Google_Client();
@@ -24,8 +24,6 @@ class YoutubeService {
     public function getLastVideos()
     {
         $videos = $this->youtube->playlistItems->listPlaylistItems('contentDetails', array('playlistId' => $this->uploadsID));
-        //channels->listChannels("snippet, contentDetails", array('id' => $this->channelID));
-        var_dump($videos);die();
         return $videos;
     }
 
@@ -39,5 +37,10 @@ class YoutubeService {
 
     public function getInterviews(){
 
+    }
+
+    public function getChannelInfos()
+    {
+       return $channelInfos = $this->youtube->channels->listChannels("snippet, contentDetails", array('id' => $this->channelID));
     }
 }
