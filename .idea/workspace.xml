@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/ArticleSearch.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ArticleSearchType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/searchform.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/sass/custom/_list-videos.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AnimeController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AnimeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CosplayController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CosplayController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/JaponController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/JaponController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/ArticleController.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/ArticleController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/ArticleRepository.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/ArticleRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Utils/YoutubeService.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Utils/YoutubeService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/EventBundle/Controller/EventController.php" afterPath="$PROJECT_DIR$/src/Shiawa/EventBundle/Controller/EventController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/UserBundle/Repository/UserRepository.php" afterPath="$PROJECT_DIR$/src/Shiawa/UserBundle/Repository/UserRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css.map" afterPath="$PROJECT_DIR$/web/css/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/style.scss" afterPath="$PROJECT_DIR$/web/sass/style.scss" />
     </list>
     <ignored path="Shiawa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ArticleController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArticleController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/ArticleController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -81,6 +61,16 @@
               <folding>
                 <element signature="e#44#92#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blog.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="573">
+              <caret line="57" column="82" selection-start-line="57" selection-start-column="82" selection-end-line="57" selection-end-column="82" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,7 +139,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/AnimeController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/CosplayController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/JaponController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Repository/UserRepository.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Controller/EventController.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig" />
@@ -159,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/searchform.html.twig" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/ArticleRepository.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/ArticleController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" />
       </list>
     </option>
   </component>
@@ -982,12 +972,12 @@
       <workItem from="1484658850866" duration="1231000" />
       <workItem from="1484777154227" duration="2007000" />
       <workItem from="1484942954011" duration="740000" />
-      <workItem from="1485087545274" duration="20030000" />
+      <workItem from="1485087545274" duration="20639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="379580000" />
+    <option name="totallyTimeSpent" value="380189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1257,14 +1247,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="42" column="77" selection-start-line="42" selection-start-column="77" selection-end-line="42" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1397,6 +1379,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="57" column="82" selection-start-line="57" selection-start-column="82" selection-end-line="57" selection-end-column="82" />
           <folding />
         </state>
       </provider>

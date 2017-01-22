@@ -41,7 +41,8 @@
                                                         </p>
                                                     </div>
                                                     <div class="card-action">
-                                                        <a href='{{ path('shiawa_article_view', {'slug': article.slug}) }}'>
+                                                        <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
+                                                            .category.name|lower}) }}'>
                                                             Lire l'article
                                                         </a>
                                                     </div>
@@ -54,7 +55,7 @@
 
                                     </aside>
                                     <div class='center'>
-                                        <a href='{{ path('shiawa_article_list', {'category': 'anime'}) }}' class="btn-flat">Voir plus d'articles</a>
+                                        <a href='{{ path('shiawa_article_list') }}' class="btn-flat">Voir plus d'articles</a>
                                     </div>
                                 </div>
                             </div>
