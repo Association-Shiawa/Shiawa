@@ -21,7 +21,7 @@ class EventController extends Controller
         $em = $this->getDoctrine()->getManager();
         $eventRep = $em->getRepository('ShiawaEventBundle:Event');
 
-        $nbPerPage = 5;
+        $nbPerPage = 9;
 
         $listEvents = $eventRep->getEvents($page, $nbPerPage);
         $nbPage = ceil(count($listEvents)/$nbPerPage);

@@ -21,6 +21,12 @@ class UserRepository extends \Doctrine\ORM\EntityRepository
 
     public function findByRoles(Array $roles)
     {
+        $qb = $this->findByRolesQueryBuilder($roles);
+        return $qb->distinct()->getQuery()->getResult();
+    }
+
+    public function findByRolesQueryBuilder(Array $roles)
+    {
         $qb = $this->createQueryBuilder('u');
 
         for($i = 0; $i < count($roles); $i++)
@@ -33,6 +39,6 @@ class UserRepository extends \Doctrine\ORM\EntityRepository
             $qb->setParameter('role'.$i, '%"'.$roles[$i].'"%');
         }
 
-        return $qb->distinct()->getQuery()->getResult();
+        return $qb;
     }
 }

@@ -11,6 +11,7 @@ class JaponController extends Controller {
 
     public function indexAction(Request $request)
     {
+        return $this->redirectToRoute('shiawa_blog_homepage', array(), 301);
         $category = $this->getDoctrine()
             ->getManager()
             ->getRepository('ShiawaBlogBundle:Category')

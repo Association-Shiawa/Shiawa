@@ -21,22 +21,28 @@ class YoutubeService {
         $this->uploadsID = $uploadsID;
     }
 
-    public function getLastVideos()
+    public function getLastVideos($maxResults = 1)
     {
-        $videos = $this->youtube->playlistItems->listPlaylistItems('contentDetails', array('playlistId' => $this->uploadsID));
+        $videos = $this->youtube->playlistItems->listPlaylistItems('contentDetails', array('playlistId' => $this->uploadsID, 'maxResults' => $maxResults));
         return $videos;
     }
 
     public function getAMVs(){
-
+        $playlistId = "PLITDrG6K2FHf8HoECBnJmOyrlPSnMA_FN";
+        $videos = $this->youtube->playlistItems->listPlaylistItems('contentDetails', array('playlistId' => $playlistId));
+        return $videos;
     }
 
     public function getCMVs(){
-
+        $playlistId = "PLITDrG6K2FHdyPJYL9K97090uP5TX7ObI";
+        $videos = $this->youtube->playlistItems->listPlaylistItems('contentDetails', array('playlistId' => $playlistId));
+        return $videos;
     }
 
     public function getInterviews(){
-
+        $playlistId = "PLITDrG6K2FHeI4hT8FKEcJWcs2ezaA001";
+        $videos = $this->youtube->playlistItems->listPlaylistItems('contentDetails', array('playlistId' => $playlistId));
+        return $videos;
     }
 
     public function getChannelInfos()

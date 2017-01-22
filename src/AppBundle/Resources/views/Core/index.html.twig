@@ -125,6 +125,28 @@
 
         </section>
 
+        <section class="container">
+            <h2>
+                Les vidéos de Shiawa
+            </h2>
+            <div class="list-last-videos">
+                {% for video in lastVideos %}
+
+                    <div class="list-item">
+                        <div class="video-container">
+                            <iframe width="853" height="480" src="https://www.youtube.com/embed/{{ video.contentDetails.videoId }}" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    {% if loop.index == 1 %}
+                        <div class="card-panel">
+                            Nous publions régulièrement des vidéos sur <a href="https://www.youtube.com/channel/UCgPqRGhrra-liY7N7OQSD0A" class="">notre chaîne Youtube</a>. Vous pouvez retrouver nos vidéos de Cosplays (CMV), nos interviews, nos Anime Music Video (AMV) et plus encore. Notre contenu évolue selon les envies de nos adhérents. L'association grandit et améliore également ses outils pour filmer, faire de la prise de son et tout ce qu'on peut avoir besoin pour réaliser des vidéos qui nous satisfassent, dans un premier temps, et qui vous plaisent également.
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+
         <div class='clear'></div>
         {#<section class='banner-sites'>#}
             {#<h2>Nos plateformes</h2>#}

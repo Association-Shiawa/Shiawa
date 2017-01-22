@@ -28,10 +28,13 @@ class CoreController extends Controller
             ->getRepository('ShiawaEventBundle:Event')
             ->getNext(2);
 
+        $lastVideos = $this->get('shiawa_blog.youtube')->getLastVideos(7);
+
         return $this->render('AppBundle:Core:index.html.twig', array(
             'lastArticles' => $lastArticles,
             'adherents' => $adherents,
-            'events' => $events
+            'events' => $events,
+            'lastVideos' => $lastVideos['items']
         ));
     }
 
@@ -49,7 +52,6 @@ class CoreController extends Controller
             ->getRepository('ShiawaBlogBundle:Formation')
             ->getLast(5)
         ;
-
 
 
         return $this->render('AppBundle:Core:blog.html.twig', array(

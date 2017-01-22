@@ -3,7 +3,9 @@
 namespace Shiawa\BlogBundle\Controller;
 
 use Shiawa\BlogBundle\Entity\Article;
+use Shiawa\BlogBundle\Entity\ArticleSearch;
 use Shiawa\BlogBundle\Form\ArticleEditType;
+use Shiawa\BlogBundle\Form\ArticleSearchType;
 use Shiawa\BlogBundle\Form\ArticleType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,21 +15,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class ArticleController extends Controller
 {
-    public function indexAction($page, $category = null)
+    public function indexAction($page, Request $request)
     {
-        if($page < 1) {
+       if($page < 1) {
             return new NotFoundHttpException('Page "'.$page.'" inexistante');
-        }
-
-       if(null != $category)
-       {
-           $categoryName = $category;
-
-           $category = $this->getDoctrine()
-               ->getManager()
-               ->getRepository('ShiawaBlogBundle:Category')
-               ->findOneByName($categoryName)
-           ;
        }
 
         $em = $this->getDoctrine()->getManager();
@@ -35,7 +26,14 @@ class ArticleController extends Controller
 
         $nbPerPage = 9;
 
-        $listArticles = $artRep->getArticles($page, $nbPerPage, $category);
+        $articleSearch = new ArticleSearch();
+        $searchForm = $this->createForm(ArticleSearchType::class, $articleSearch);
+
+        $searchForm->handleRequest($request);
+
+        $result = $request->query->all();
+
+        $listArticles = $artRep->getArticles($page, $nbPerPage, $result);
         $nbPage = ceil(count($listArticles)/$nbPerPage);
         if($nbPage == 0) {$nbPage = 1;}
 
@@ -47,7 +45,7 @@ class ArticleController extends Controller
             'listArticles' => $listArticles,
             'page' => $page,
             'nbPages' => $nbPage,
-            'category' => $category
+            'searchform' => $searchForm->createView()
         ));
     }
 

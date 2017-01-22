@@ -12,17 +12,26 @@ use Shiawa\BlogBundle\Entity\AnimeReview;
  */
 class ArticleRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function getArticles($page, $nbPerPage, $category = null)
+    public function getArticles($page, $nbPerPage, $search)
     {
         $query = $this->createQueryBuilder('a');
 
-        if($category != null) {
-            $query->where('a.category = :category')
-                ->setParameter('category', $category);
+        if(isset($search["category"])) {
+            $query->andWhere('a.category IN (:categories)')
+                ->setParameter('categories', $search["category"]);
+        }
+        if(isset($search["tags"])) {
+            $query->leftJoin('a.tags', 't')
+                ->andWhere("t.name IN (:tags)")
+                ->setParameter('tags', $search["tags"]);
+        }
+        if(isset($search["title"])) {
+            $query->andWhere('a.title LIKE :title')
+                ->setParameter('title', '%'.$search["title"].'%');
         }
 
-            $query->orderBy('a.createdAt', 'DESC')
-            ->getQuery();
+        $query->orderBy('a.createdAt', 'DESC')
+        ->getQuery();
 
         $query
             ->setFirstResult(($page-1)* $nbPerPage)

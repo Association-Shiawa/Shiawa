@@ -1,0 +1,15 @@
+.list-last-videos{
+  @extend .row;
+  .list-item{
+
+    &:first-child{
+      @extend .center-align;
+    }
+    &:not(:first-child) {
+      @extend .col;
+      @extend .m4;
+      @extend .s6;
+      margin-bottom: 20px;
+    }
+  }
+}

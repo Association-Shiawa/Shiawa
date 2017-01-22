@@ -11,6 +11,8 @@ class AnimeController extends Controller {
 
     public function indexAction(Request $request)
     {
+        return $this->redirectToRoute('shiawa_blog_homepage', array(), 301);
+
         $category = $this->getDoctrine()
             ->getManager()
             ->getRepository('ShiawaBlogBundle:Category')
@@ -37,6 +39,7 @@ class AnimeController extends Controller {
 
     public function newsAction() {
 
+        return $this->redirectToRoute('shiawa_blog_homepage', array(), 301);
         //Récupération du repo de anime
         $repositoryAnime = $this
                 ->getDoctrine()

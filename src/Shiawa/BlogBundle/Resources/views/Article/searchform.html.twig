@@ -1,0 +1,38 @@
+{{ form_start(form, {'attr': {'class': 'col s12'}}) }}
+
+    {{ form_errors(form) }}
+
+<div class="row">
+    <div class="input-field col s6">
+        {{ form_label(form.title, "Titre de l'article", {'label_attr': {'class': ''}}) }}
+        {{ form_errors(form.title) }}
+        {{ form_widget(form.title, {'attr': {'class': ''}}) }}
+    </div>
+    <div class="input-field col s6">
+        {{ form_errors(form.category) }}
+        {{ form_widget(form.category, {'attr': {'class': ''}}) }}
+        {{ form_label(form.category, "Choisissez la categorie de l'article", {'label_attr': {'class': ''}}) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col s12">
+        <p>
+            Les tags
+        </p>
+        <div class="tags">
+
+        </div>
+
+        <div style="width: 1px; height: 1px; overflow: hidden;">{{ form_row(form.tags) }}</div>
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col s12">
+        <button class="btn-large waves-effect waves-light right" type="submit">Rechercher
+            <i class="material-icons right">search</i>
+        </button>
+    </div>
+</div>
+
+{{ form_rest(form) }}
+{{ form_end(form) }}
