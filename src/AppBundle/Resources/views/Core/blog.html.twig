@@ -17,7 +17,7 @@
 
                                     <aside class='row'>
 
-                                        {% for article in lastArticles %}
+                                        {% for article in lastArticles if article.published == true %}
                                             {% if loop.index is odd %}
                                                 <div class='row'>
                                             {% endif %}
