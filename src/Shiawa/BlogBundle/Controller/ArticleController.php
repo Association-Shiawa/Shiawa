@@ -151,7 +151,7 @@ class ArticleController extends Controller
     /**
      * @Security("has_role('ROLE_ADMIN')")
      */
-    public function deleteAction($slug)
+    public function deleteAction(Request $request, $slug)
     {
         $em = $this->getDoctrine()->getManager();
 
