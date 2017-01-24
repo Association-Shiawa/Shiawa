@@ -161,7 +161,11 @@ SHIAWA
                 content_css: [
                     '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
                     '//www.tinymce.com/css/codepen.min.css'
-                ]
+                ],
+                invalid_elements: "span",
+                extended_valid_elements : "span[!class]",
+                block_formats: 'Paragraph=p;Header 1=h1;Header 2=h2;Header 3=h3',
+                keep_styles: false
             });
         });
     </script>
