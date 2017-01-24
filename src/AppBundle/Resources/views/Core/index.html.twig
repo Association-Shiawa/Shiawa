@@ -112,7 +112,7 @@
                             <h3 class='title-art '>{{ article.title }}</h3>
                                     <span class='content'>{{ article.summary }}</span>
                             <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
-                                .category.name|lower}) }}' class='btn pink lighten-1 btn-large btn-large waves-effect
+                                .category.slug}) }}' class='btn pink lighten-1 btn-large btn-large waves-effect
                                  waves-ripple'>
                                 En savoir plus
                             </a>
