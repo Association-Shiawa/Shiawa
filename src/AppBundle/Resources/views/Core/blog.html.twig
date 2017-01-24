@@ -29,20 +29,20 @@
                                                     <div class="card-content">
                                                         <h3 style="font-size: 1rem; margin: 5px;">
                                                             <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
-                                                                .category.name|lower}) }}'>
+                                                                .category.slug}) }}'>
                                                                 {{ article.title }}
                                                             </a>
                                                         </h3>
                                                         <p style="font-size: .8rem;">
                                                             {% for letter in article.summary|split('')|slice(0,300) %}{{ letter }}{% endfor %}
                                                             <span class="badge">
-                                                                {{ article.category.name|title }}
+                                                                {{ article.category..slug }}
                                                             </span>
                                                         </p>
                                                     </div>
                                                     <div class="card-action">
                                                         <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
-                                                            .category.name|lower}) }}'>
+                                                            .category.slug}) }}'>
                                                             Lire l'article
                                                         </a>
                                                     </div>
