@@ -155,7 +155,7 @@ class ArticleController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $article = $em->getRepository('ShiawaBlogBundle:Article')->findBySlug($slug);
+        $article = $em->getRepository('ShiawaBlogBundle:Article')->findOneBySlug($slug);
 
         if (null === $article) {
             throw new NotFoundHttpException("L'article ".$slug." n'existe pas.");
@@ -173,8 +173,6 @@ class ArticleController extends Controller
 
             return $this->redirectToRoute('shiawa_homepage');
         }
-        
-        var_dump($article->getTitle());
 
         return $this->render('ShiawaBlogBundle:Article:delete.html.twig', array(
             'article' => $article,
