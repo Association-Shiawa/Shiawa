@@ -14,7 +14,7 @@
 
     {# On met l'id de l'annonce dans la route de l'action du formulaire #}
     <form action="{{ path('shiawa_article_delete', {'slug': article.slug}) }}" method="post">
-        <a href="{{ path('shiawa_article_view', {'slug': article.slug}) }}" class="btn-flat">
+        <a href="{{ path('shiawa_article_view', {'slug': article.slug, 'category': article.category.slug }) }}" class="btn-flat">
             Retour à l'article
         </a>
         {# Ici j'ai écrit le bouton de soumission à la main #}
