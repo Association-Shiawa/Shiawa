@@ -4,12 +4,14 @@ namespace Shiawa\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Category
  *
  * @ORM\Table(name="shiawa_category")
  * @ORM\Entity(repositoryClass="Shiawa\BlogBundle\Repository\CategoryRepository")
+ * @UniqueEntity("name", message="Cette catégorie existe déjà")
  */
 class Category
 {

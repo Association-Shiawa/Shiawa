@@ -17,16 +17,16 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
         $query = $this->createQueryBuilder('a');
 
         if(isset($search["category"])) {
-            $query->andWhere('a.category IN (:categories)')
+            $query->orWhere('a.category IN (:categories)')
                 ->setParameter('categories', $search["category"]);
         }
         if(isset($search["tags"])) {
             $query->leftJoin('a.tags', 't')
-                ->andWhere("t.name IN (:tags)")
+                ->orWhere("t.name IN (:tags)")
                 ->setParameter('tags', $search["tags"]);
         }
         if(isset($search["title"])) {
-            $query->andWhere('a.title LIKE :title')
+            $query->orWhere('a.title LIKE :title')
                 ->setParameter('title', '%'.$search["title"].'%');
         }
 

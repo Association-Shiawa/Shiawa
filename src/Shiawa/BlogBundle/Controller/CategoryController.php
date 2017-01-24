@@ -58,7 +58,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * //@Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_AUTHOR')")
      */
     public function addAction(Request $request)
     {
