@@ -155,7 +155,7 @@ class ArticleController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $article = $em->getRepository('ShiawaBlogBundle:Article')->find($slug);
+        $article = $em->getRepository('ShiawaBlogBundle:Article')->findBySlug($slug);
 
         if (null === $article) {
             throw new NotFoundHttpException("L'article ".$slug." n'existe pas.");
