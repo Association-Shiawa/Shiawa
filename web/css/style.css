@@ -6660,4 +6660,9 @@ html, body {
 .list-last-videos .list-item:not(:first-child) {
   margin-bottom: 20px; }
 
+.content-article img{
+  max-width: 100%;
+  height: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
