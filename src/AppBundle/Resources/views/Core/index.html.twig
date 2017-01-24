@@ -102,7 +102,7 @@
         <section>
 
             <div class='article'>
-                {% for article in lastArticles %}
+                {% for article in lastArticles if article.published == true %}
 
                 <article class='col l4 m6 s12'>
                     <div class="art">
