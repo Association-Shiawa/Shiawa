@@ -151,7 +151,7 @@ class ArticleController extends Controller
     /**
      * @Security("has_role('ROLE_ADMIN')")
      */
-    public function deleteAction(Request $request, $slug)
+    public function deleteAction($slug, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -173,6 +173,8 @@ class ArticleController extends Controller
 
             return $this->redirectToRoute('shiawa_homepage');
         }
+        
+        var_dump($article->getTitle());
 
         return $this->render('ShiawaBlogBundle:Article:delete.html.twig', array(
             'article' => $article,
