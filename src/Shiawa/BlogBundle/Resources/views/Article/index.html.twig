@@ -24,13 +24,15 @@
 
                     <div class="card horizontal">
                         <div class="card-image">
-                            <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}">
+                             <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article.category.slug}) }}'>
+                                <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}">
+                            </a>
                         </div>
                         <div class="card-stacked">
                             <div class="card-content">
                                 <h3 style="font-size: 2rem; margin: 5px;">
                                     <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
-                                        .category.name|lower}) }}'>
+                                        .category.slug}) }}'>
                                         {{ article.title }}
                                     </a>
                                 </h3>
@@ -43,7 +45,7 @@
                             </div>
                             <div class="card-action">
                                 <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
-                                    .category.name|lower}) }}'>
+                                    .category.slug}) }}'>
                                     Lire l'article
                                 </a>
                             </div>
