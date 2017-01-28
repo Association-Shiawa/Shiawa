@@ -23,9 +23,7 @@ class ProfileFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('avatar', FileUploadType::class, array(
-            'required'     => false
-            ))
+        $builder
             ->add('name', TextType::class, array(
                 'required'     => false
             ))

@@ -14,7 +14,11 @@
             {% else %}
             src="{{ asset(user.avatar.getWebPath) }}"
             {% endif %}
-            alt="{{ user.username }}'s profile image" class="responsive-img">
+            alt="{{ user.username }}'s profile image" class="responsive-img avatar">
+            <div id="upload-file-container">
+                <label for="upload-file">Modifier la photo de profil</label>
+                <input type="file" name="uploadFile" id="upload-file" accept="image/*" title="choisir une image à importer">
+            </div>
         </figure>
         <div class="card-content">
             <div class="row">
@@ -51,7 +55,7 @@
                     <div class="row">
 
                         <div class="center-align col m4">
-                            <img class="responsive-img" src="
+                            <img class="responsive-img avatar" src="
                         {% if user.avatar is null %}
                         https://www.mautic.org/media/images/default_avatar.png
                         {% else %}
@@ -74,5 +78,20 @@
             </div>
         </section>
     </main>
+
+    <!-- Modal Avatar -->
+    <div id="modal-avatar" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Modifier votre avatar</h4>
+            <p>Utiliser cet outil pour finaliser la modification de votre avatar</p>
+            <div class="avatar-cropping-container">
+                <img src="" alt="" id="avatar-cropping">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Annuler</a>
+            <a href="#!" id="crop" class=" modal-action modal-close waves-effect waves-green btn-flat pink lighten-2 white-text">Modifier</a>
+        </div>
+    </div>
 
 </div>

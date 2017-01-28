@@ -8,7 +8,7 @@
     &:not(:first-child) {
       @extend .col;
       @extend .m4;
-      @extend .s6;
+      @extend .s12;
       margin-bottom: 20px;
     }
   }

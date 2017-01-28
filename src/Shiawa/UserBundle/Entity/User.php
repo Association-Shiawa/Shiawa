@@ -55,6 +55,7 @@ class User extends BaseUser
     /**
      * @var File
      *
+     *
      * @ORM\ManyToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"remove", "persist"})
      * @ORM\JoinColumn(nullable=true)
      */
@@ -285,6 +286,7 @@ class User extends BaseUser
 
     /**
      * Get image
+     *
      */
     public function getAvatar()
     {
@@ -292,5 +294,16 @@ class User extends BaseUser
             $this->setAvatarDir();
         }
         return $this->avatar;
+    }
+
+    /**
+     * @Assert\Image(
+     *     maxWidth = 200,
+     *     maxHeight = 200
+     * )
+     * @return mixed
+     */
+    public function isAvataronGoodSize(){
+        return $this->avatar->getFile();
     }
 }

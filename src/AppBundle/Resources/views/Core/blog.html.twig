@@ -36,7 +36,7 @@
                                                         <p style="font-size: .8rem;">
                                                             {% for letter in article.summary|split('')|slice(0,300) %}{{ letter }}{% endfor %}
                                                             <span class="badge">
-                                                                {{ article.category..slug }}
+                                                                {{ article.category.slug }}
                                                             </span>
                                                         </p>
                                                     </div>

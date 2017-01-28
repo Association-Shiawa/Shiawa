@@ -128,7 +128,7 @@
             </div>
             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                 <a href="{{ path('fos_user_profile_show') }}">
-                    <img class="circle" src="
+                    <img class="circle avatar" src="
                                 {% if app.user.avatar is null %}
                                 https://www.mautic.org/media/images/default_avatar.png
                                 {% else %}

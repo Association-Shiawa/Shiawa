@@ -1,6 +1,12 @@
 shiawa_user_view:
     path:     /user/{username}
     defaults: { _controller: ShiawaUserBundle:User:view }
+    methods:  [GET]
+
+shiawa_user_avatar_upload:
+    path:     /user/avatar
+    defaults: { _controller: ShiawaUserBundle:User:avatarUpload }
+    methods:  [POST]
 
 shiawa_user_admin_create:
     path:     /admin/user/create

@@ -78,10 +78,10 @@ SHIAWA
                     <div class='row'>
                         <!-- RSN -->
                         <div class='col s12'>
-                            <a class="grey-text text-lighten-3 btn-flat" href="https://www.facebook.com/shiawaproject">Facebook</a>
-                            <a class="grey-text text-lighten-3 btn-flat" href="https://www.youtube.com/channel/UCgPqRGhrra-liY7N7OQSD0A">Youtube</a>
-                            <a class="grey-text text-lighten-3 btn-flat" href="https://twitter.com/SHIAWA81">Twitter</a>
-                            <a class="grey-text text-lighten-3 btn-flat" href="https://www.instagram.com/shiawaofficiel/">Instagram</a>
+                            <a class="grey-text text-lighten-3 btn-flat" target="_blank" href="https://www.facebook.com/assoshiawa">Facebook</a>
+                            <a class="grey-text text-lighten-3 btn-flat" target="_blank" href="https://www.youtube.com/channel/UCgPqRGhrra-liY7N7OQSD0A">Youtube</a>
+                            <a class="grey-text text-lighten-3 btn-flat" target="_blank" href="https://twitter.com/SHIAWA81">Twitter</a>
+                            <a class="grey-text text-lighten-3 btn-flat" target="_blank" href="https://www.instagram.com/shiawaofficiel/">Instagram</a>
                         </div>
                     </div>
 
@@ -89,9 +89,9 @@ SHIAWA
                 <div class="col l3 offset-l2 s12">
                     <h5 class="white-text">Ils nous font confiance</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3 btn waves-effect pink" href="http://www.crunchyroll.com/">Crunchyroll</a></li>
-                        <li><a class="grey-text text-lighten-3 btn waves-effect pink" href="http://animedigitalnetwork.fr/">Anime Digital Network</a></li>
-                        <li><a class="grey-text text-lighten-3 btn waves-effect pink" href="https://www.facebook.com/gaia.lib/">Gaïa Lib</a></li>
+                        <li><a class="grey-text text-lighten-3 btn waves-effect pink" target="_blank" href="http://www.crunchyroll.com/">Crunchyroll</a></li>
+                        <li><a class="grey-text text-lighten-3 btn waves-effect pink" target="_blank" href="http://animedigitalnetwork.fr/">Anime Digital Network</a></li>
+                        <li><a class="grey-text text-lighten-3 btn waves-effect pink" target="_blank" href="https://www.facebook.com/gaia.lib/">Gaïa Lib</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,7 +151,7 @@ SHIAWA
 
             tinymce.init({
                 selector: '.wysiwyg',
-                height: 200,
+                height: 400,
                 plugins: [
                     'advlist autolink lists link image charmap print preview anchor',
                     'searchreplace visualblocks code fullscreen',
@@ -159,13 +159,47 @@ SHIAWA
                 ],
                 toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
                 content_css: [
-                    '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
+                    '//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i',
                     '//www.tinymce.com/css/codepen.min.css'
                 ],
                 invalid_elements: "span",
                 extended_valid_elements : "span[!class]",
                 block_formats: 'Paragraph=p;Header 1=h1;Header 2=h2;Header 3=h3',
-                keep_styles: false
+                keep_styles: false,
+                //style_formats_merge: true,
+                //style_formats_autohide: true,
+                style_formats: [
+                    {
+                        title: 'Titres',
+                        items:
+                                [
+                                    {title: 'Niveau 2', block: 'h2'},
+                                    {title: 'Niveau 3', block: 'h3'},
+                                    {title: 'Niveau 4', block: 'h4'},
+                                    {title: 'Niveau 5', block: 'h5'},
+                                    {title: 'Niveau 6', block: 'h6'}
+                                ]
+                    },
+                    {
+                        title: 'Blocs',
+                        items:
+                                [
+                                    {title: 'Paragraphes', block: 'p'},
+                                    {title: 'Citation', block: 'blockquote', wrapper: true}
+                                ]
+                    }
+                ],
+                init_instance_callback: function (editor) {
+                    editor.on('BeforeSetContent', function (e) {
+                        e.content = e.content.replace(/(.+video-container.+)?<iframe.+<\/iframe>/g, function (x) {
+                            if(x.search("video-container") == -1){
+                                return correction = "<div class='video-container'>"+ x + "</div>";
+                            }else{
+                                return x;
+                            }
+                        });
+                    });
+                }
             });
         });
     </script>

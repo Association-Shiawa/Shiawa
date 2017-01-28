@@ -2212,15 +2212,15 @@ table {
   display: table; }
   table.bordered > thead > tr, table.bordered > tbody > tr {
     border-bottom: 1px solid #d0d0d0; }
-  table.striped > tbody > tr:nth-child(odd) {
+  table.striped > tbody > tr:nth-child(odd), article.article .content-article table > tbody > tr:nth-child(odd) {
     background-color: #f2f2f2; }
-  table.striped > tbody > tr > td {
+  table.striped > tbody > tr > td, article.article .content-article table > tbody > tr > td {
     border-radius: 0; }
   table.highlight > tbody > tr {
     transition: background-color .25s ease; }
     table.highlight > tbody > tr:hover {
       background-color: #f2f2f2; }
-  table.centered thead tr th, table.centered tbody tr td {
+  table.centered thead tr th, article.article .content-article table thead tr th, table.centered tbody tr td, article.article .content-article table tbody tr td {
     text-align: center; }
 
 thead {
@@ -2234,60 +2234,61 @@ td, th {
   border-radius: 2px; }
 
 @media only screen and (max-width: 992px) {
-  table.responsive-table {
+  table.responsive-table, article.article .content-article table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     display: block;
     position: relative;
     /* sort out borders */ }
-    table.responsive-table td:empty:before {
+    table.responsive-table td:empty:before, article.article .content-article table td:empty:before {
       content: '\00a0'; }
-    table.responsive-table th,
-    table.responsive-table td {
+    table.responsive-table th, article.article .content-article table th,
+    table.responsive-table td,
+    article.article .content-article table td {
       margin: 0;
       vertical-align: top; }
-    table.responsive-table th {
+    table.responsive-table th, article.article .content-article table th {
       text-align: left; }
-    table.responsive-table thead {
+    table.responsive-table thead, article.article .content-article table thead {
       display: block;
       float: left; }
-      table.responsive-table thead tr {
+      table.responsive-table thead tr, article.article .content-article table thead tr {
         display: block;
         padding: 0 10px 0 0; }
-        table.responsive-table thead tr th::before {
+        table.responsive-table thead tr th::before, article.article .content-article table thead tr th::before {
           content: "\00a0"; }
-    table.responsive-table tbody {
+    table.responsive-table tbody, article.article .content-article table tbody {
       display: block;
       width: auto;
       position: relative;
       overflow-x: auto;
       white-space: nowrap; }
-      table.responsive-table tbody tr {
+      table.responsive-table tbody tr, article.article .content-article table tbody tr {
         display: inline-block;
         vertical-align: top; }
-    table.responsive-table th {
+    table.responsive-table th, article.article .content-article table th {
       display: block;
       text-align: right; }
-    table.responsive-table td {
+    table.responsive-table td, article.article .content-article table td {
       display: block;
       min-height: 1.25em;
       text-align: left; }
-    table.responsive-table tr {
+    table.responsive-table tr, article.article .content-article table tr {
       padding: 0 10px; }
-    table.responsive-table thead {
+    table.responsive-table thead, article.article .content-article table thead {
       border: 0;
       border-right: 1px solid #d0d0d0; }
-    table.responsive-table.bordered th {
+    table.responsive-table.bordered th, article.article .content-article table.bordered th {
       border-bottom: 0;
       border-left: 0; }
-    table.responsive-table.bordered td {
+    table.responsive-table.bordered td, article.article .content-article table.bordered td {
       border-left: 0;
       border-right: 0;
       border-bottom: 0; }
-    table.responsive-table.bordered tr {
+    table.responsive-table.bordered tr, article.article .content-article table.bordered tr {
       border: 0; }
-    table.responsive-table.bordered tbody tr {
+    table.responsive-table.bordered tbody tr, article.article .content-article table.bordered tbody tr {
       border-right: 1px solid #d0d0d0; } }
 .collection {
   margin: 0.5rem 0 1rem 0;
@@ -2582,7 +2583,7 @@ nav ul a span.badge {
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s6, .article .col.s6, .list-last-videos .col.s6, .list-last-videos .list-item:not(:first-child) {
+    .row .col.s6, .article .col.s6, .list-last-videos .col.s6, .list-last-videos .s6.list-item:not(:first-child) {
       width: 50%;
       margin-left: auto;
       left: auto;
@@ -2612,7 +2613,7 @@ nav ul a span.badge {
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s12, .article .col.s12, .list-last-videos .col.s12, .list-last-videos .s12.list-item:not(:first-child) {
+    .row .col.s12, .article .col.s12, .list-last-videos .col.s12, .list-last-videos .list-item:not(:first-child) {
       width: 100%;
       margin-left: auto;
       left: auto;
@@ -6667,5 +6668,95 @@ article.article .content-article img {
   height: auto; }
 article.article .content-article ul li {
   list-style-type: initial; }
+
+@media only screen and (max-device-width: 549px) {
+  .mce-window {
+    width: auto !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: none !important; }
+
+  .mce-window-head {
+    background: #fff !important; }
+
+  .mce-window-body {
+    background: #fff !important; }
+
+  .mce-foot > .mce-container-body {
+    padding: 10px !important; }
+
+  .mce-panel {
+    max-width: 100% !important; }
+
+  .mce-container {
+    max-width: 100% !important;
+    height: auto !important; }
+
+  .mce-container-body {
+    max-width: 100% !important;
+    height: auto !important; }
+
+  .mce-form {
+    padding: 10px !important; }
+
+  .mce-tabs {
+    max-width: 100% !important; }
+
+  .mce-formitem {
+    margin: 10px 0 !important; }
+
+  .mce-abs-layout-item {
+    position: static !important;
+    width: auto !important; }
+
+  .mce-abs-layout-item.mce-label {
+    display: block !important; }
+
+  .mce-abs-layout-item.mce-textbox {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important; }
+
+  .mce-abs-layout-item.mce-combobox {
+    display: flex !important; }
+
+  .mce-abs-layout-item.mce-combobox > .mce-textbox {
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    height: 29px !important; } }
+.card-profile-image img {
+  max-height: 100%;
+  width: auto;
+  max-width: initial; }
+.card-profile-image #upload-file-container {
+  display: none; }
+.card-profile-image:hover #upload-file-container, .card-profile-image image:hover #upload-file-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(20, 20, 20, 0.6);
+  padding: 15px;
+  padding-top: 30px; }
+  .card-profile-image:hover #upload-file-container label, .card-profile-image image:hover #upload-file-container label {
+    position: absolute;
+    color: #ec407a;
+    cursor: pointer; }
+  .card-profile-image:hover #upload-file-container input, .card-profile-image image:hover #upload-file-container input {
+    display: none; }
+
+.avatar-cropping-container {
+  width: 100%;
+  height: auto; }
+  .avatar-cropping-container #avatar-cropping {
+    max-width: 100%;
+    height: auto; }
 
 /*# sourceMappingURL=style.css.map */
