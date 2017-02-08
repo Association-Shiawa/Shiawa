@@ -48,8 +48,10 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
                 ->setParameter('category', $category);
         }
 
-        $query->orderBy('a.createdAt', 'DESC')
-        ->setMaxResults($nb);
+        $query
+            ->andWhere('a.published = true')
+            ->orderBy('a.createdAt', 'DESC')
+            ->setMaxResults($nb);
 
         return $query->getQuery()->getResult();
     }
