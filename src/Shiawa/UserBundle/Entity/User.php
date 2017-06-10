@@ -303,7 +303,7 @@ class User extends BaseUser
      * )
      * @return mixed
      */
-    public function isAvataronGoodSize(){
-        return $this->avatar->getFile();
-    }
+//    public function isAvatarOnGoodSize(){
+//        return $this->avatar->getFile();
+//    }
 }
