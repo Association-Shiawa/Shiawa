@@ -100,7 +100,8 @@
                                 <p class="grey-text">{{ article.summary }}</p>
                             </div>
                             <div class="card-action">
-                                <a href="#">Lire l'article</a>
+                                <a href="{{ path('shiawa_article_view', {'slug': article.slug, 'category': article
+                                    .category.slug}) }}">Lire l'article</a>
                             </div>
                         </div>
                     </article>
