@@ -25,7 +25,7 @@
                     <div class="card horizontal">
                         <div class="card-image">
                              <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category': article.category.slug}) }}'>
-                                <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}">
+                                <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) | imagine_filter("big_thumb") }}">
                             </a>
                         </div>
                         <div class="card-stacked">

@@ -21,9 +21,9 @@
                                             {% if loop.index is odd %}
                                                 <div class='row'>
                                             {% endif %}
-                                            <div class="card horizontal">
+                                            <div class="card horizontal custom">
                                                 <div class="card-image">
-                                                    <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}">
+                                                    <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) | imagine_filter("middle_thumb") }}">
                                                 </div>
                                                 <div class="card-stacked">
                                                     <div class="card-content">
