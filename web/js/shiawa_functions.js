@@ -21,6 +21,7 @@ var shiawa_module = (function () {
         navWrapper.classList.add('transparent');
         nav.classList.add('z-depth-0');
         navWrapper.classList.remove('grey');
+        document.querySelector('.brand-logo').classList.add('hide');
     };
 
     self.coloredNavbar = function () {
@@ -33,7 +34,7 @@ var shiawa_module = (function () {
         navWrapper.classList.remove('transparent');
         nav.classList.remove('z-depth-0');
         navWrapper.classList.add('grey');
-
+        document.querySelector('.brand-logo').classList.remove('hide');
     };
 
     self.scrolledNavbar = function () {
