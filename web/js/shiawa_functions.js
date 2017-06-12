@@ -13,28 +13,34 @@ var shiawa_module = (function () {
 
     self.transparentNavbar = function () {
         var navbarContainer = document.querySelector(".transparent-navbar");
-        var navbar = navbarContainer.firstElementChild;
-        var nav = navbar.firstElementChild;
-        var navWrapper = nav.firstElementChild;
+        if(navbarContainer)
+        {
+            var navbar = navbarContainer.firstElementChild;
+            var nav = navbar.firstElementChild;
+            var navWrapper = nav.firstElementChild;
 
-        nav.classList.add('transparent');
-        navWrapper.classList.add('transparent');
-        nav.classList.add('z-depth-0');
-        navWrapper.classList.remove('grey');
-        document.querySelector('.brand-logo').classList.add('hide');
+            nav.classList.add('transparent');
+            navWrapper.classList.add('transparent');
+            nav.classList.add('z-depth-0');
+            navWrapper.classList.remove('grey');
+            document.querySelector('.brand-logo').classList.add('hide');
+        }
     };
 
     self.coloredNavbar = function () {
         var navbarContainer = document.querySelector(".transparent-navbar");
-        var navbar = navbarContainer.firstElementChild;
-        var nav = navbar.firstElementChild;
-        var navWrapper = nav.firstElementChild;
+        if(navbarContainer)
+        {
+            var navbar = navbarContainer.firstElementChild;
+            var nav = navbar.firstElementChild;
+            var navWrapper = nav.firstElementChild;
 
-        nav.classList.remove('transparent');
-        navWrapper.classList.remove('transparent');
-        nav.classList.remove('z-depth-0');
-        navWrapper.classList.add('grey');
-        document.querySelector('.brand-logo').classList.remove('hide');
+            nav.classList.remove('transparent');
+            navWrapper.classList.remove('transparent');
+            nav.classList.remove('z-depth-0');
+            navWrapper.classList.add('grey');
+            document.querySelector('.brand-logo').classList.remove('hide');
+        }
     };
 
     self.scrolledNavbar = function () {
