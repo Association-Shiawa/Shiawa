@@ -11,6 +11,50 @@ var shiawa_module = (function () {
         $(".dropdown-button").dropdown({constrain_width: false, hover: false, beloworigin: true});
     });
 
+    self.transparentNavbar = function () {
+        var navbarContainer = document.querySelector(".transparent-navbar");
+        var navbar = navbarContainer.firstElementChild;
+        var nav = navbar.firstElementChild;
+        var navWrapper = nav.firstElementChild;
+
+        nav.classList.add('transparent');
+        navWrapper.classList.add('transparent');
+        nav.classList.add('z-depth-0');
+        navWrapper.classList.remove('grey');
+    };
+
+    self.coloredNavbar = function () {
+        var navbarContainer = document.querySelector(".transparent-navbar");
+        var navbar = navbarContainer.firstElementChild;
+        var nav = navbar.firstElementChild;
+        var navWrapper = nav.firstElementChild;
+
+        nav.classList.remove('transparent');
+        navWrapper.classList.remove('transparent');
+        nav.classList.remove('z-depth-0');
+        navWrapper.classList.add('grey');
+
+    };
+
+    self.scrolledNavbar = function () {
+        var position = $(window).scrollTop(); // should start at 0
+
+        if(position < 100 )
+        {
+            self.transparentNavbar();
+        }
+
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (position > 100) {
+                self.coloredNavbar();
+            } else {
+                self.transparentNavbar();
+            }
+            position = scroll;
+        });
+    }();
+
     self.clickScroll = function () {
         $('.mouse').click(function () {
             $('html, body').animate({

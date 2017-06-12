@@ -68,12 +68,12 @@ html, body{
 }
 
 .mouse {
+    position: relative;
     border: 2px solid #FFF;
     border-radius: 26px;
     width: 26px;
     height: 42px;
     -webkit-backface-visibility: hidden;
-    transform: translate(-50%, -50%);
     cursor: pointer;
     &::after {
         background-color: #FFF;

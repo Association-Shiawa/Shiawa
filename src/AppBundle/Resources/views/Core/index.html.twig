@@ -3,7 +3,9 @@
     {% block title %}Accueil - {{ parent() }}{% endblock %}
 
 {% block menu %}
-    {{ include("AppBundle:Core:nav.html.twig") }}
+    <div class="transparent-navbar">
+        {{ include("AppBundle:Core:nav.html.twig") }}
+    </div>
 {% endblock %}
 
     {% block body %}

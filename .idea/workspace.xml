@@ -2,45 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/cache/big_thumb/uploads/files/articles/1/thumbnail/2-tumblr_inline_nmn4j2ZcSY1tq0pus_500.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/cache/big_thumb/uploads/files/articles/2/thumbnail/5-17269820_1478189402193350_1413631909_o.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/cache/big_thumb/uploads/files/articles/3/thumbnail/6-15941662_1408283632517261_1869386078_n.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/cache/big_thumb/uploads/files/articles/4/thumbnail/7-article_ques-ce-que-lee-cosplay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/cache/big_thumb/uploads/files/event/1/thumbnail/8-aH9B5fs8coHuNmwS0E7w6siiAK4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/cache/middle_thumb/uploads/files/articles/1/thumbnail/2-tumblr_inline_nmn4j2ZcSY1tq0pus_500.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/cache/middle_thumb/uploads/files/articles/2/thumbnail/5-17269820_1478189402193350_1413631909_o.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/cache/middle_thumb/uploads/files/articles/3/thumbnail/6-15941662_1408283632517261_1869386078_n.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/cache/middle_thumb/uploads/files/articles/4/thumbnail/7-article_ques-ce-que-lee-cosplay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/cache/my_thumb/uploads/files/articles/1/thumbnail/2-tumblr_inline_nmn4j2ZcSY1tq0pus_500.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/sass/custom/_navbar.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Shiawa.iml" afterPath="$PROJECT_DIR$/.idea/Shiawa.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Cosplay/aside.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Cosplay/aside.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Anime/adminList.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Anime/adminList.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/adminList.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/adminList.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/adminList.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/adminList.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css.map" afterPath="$PROJECT_DIR$/web/css/style.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/shiawa_functions.js" afterPath="$PROJECT_DIR$/web/js/shiawa_functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/custom/_cards.scss" afterPath="$PROJECT_DIR$/web/sass/custom/_cards.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/custom/_grid.scss" afterPath="$PROJECT_DIR$/web/sass/custom/_grid.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/custom/_style-accueil.scss" afterPath="$PROJECT_DIR$/web/sass/custom/_style-accueil.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/custom/_variables.scss" afterPath="$PROJECT_DIR$/web/sass/custom/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/style.scss" afterPath="$PROJECT_DIR$/web/sass/style.scss" />
     </list>
     <ignored path="Shiawa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,18 +53,8 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="258" column="65" lean-forward="true" selection-start-line="258" selection-start-column="65" selection-end-line="258" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+            <state relative-caret-position="102">
+              <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -106,18 +63,18 @@
       <file leaf-file-name="_style-accueil.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sass/custom/_style-accueil.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="76" column="19" lean-forward="false" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="19" />
+            <state relative-caret-position="482">
+              <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shiawa_functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shiawa_functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/shiawa_functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+            <state relative-caret-position="425">
+              <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -157,14 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.mouse</find>
-      <find>.mouse{</find>
-      <find>.mouse {</find>
-      <find>ev</find>
-      <find>events</find>
-      <find>events i</find>
-      <find>events</find>
-      <find>event</find>
       <find>event in</find>
       <find>event in e</find>
       <find>event in eve</find>
@@ -187,6 +136,14 @@
       <find>affic</find>
       <find>affich</find>
       <find>affiche</find>
+      <find>.ù</find>
+      <find>.</find>
+      <find>.m</find>
+      <find>.mo</find>
+      <find>.mous</find>
+      <find>.mouse</find>
+      <find>.mouse</find>
+      <find>.mouse {</find>
     </findStrings>
     <dirStrings>
       <dir>D:\dev\shiawa-website\src</dir>
@@ -251,10 +208,10 @@
         <option value="$PROJECT_DIR$/web/sass/style.scss" />
         <option value="$PROJECT_DIR$/web/sass/custom/_grid.scss" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig" />
-        <option value="$PROJECT_DIR$/web/sass/custom/_style-accueil.scss" />
-        <option value="$PROJECT_DIR$/web/js/shiawa_functions.js" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/web/sass/custom/_style-accueil.scss" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/shiawa_functions.js" />
       </list>
     </option>
   </component>
@@ -1236,12 +1193,12 @@
       <workItem from="1497119096639" duration="3923000" />
       <workItem from="1497177790036" duration="9748000" />
       <workItem from="1497267675758" duration="662000" />
-      <workItem from="1497268370195" duration="6156000" />
+      <workItem from="1497268370195" duration="7950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="447827000" />
+    <option name="totallyTimeSpent" value="449621000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1620,34 +1577,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/shiawa_functions.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+        <state relative-caret-position="528">
+          <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sass/custom/_style-accueil.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="76" column="19" lean-forward="false" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="19" />
+        <state relative-caret-position="482">
+          <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="258" column="65" lean-forward="true" selection-start-line="258" selection-start-column="65" selection-end-line="258" selection-end-column="65" />
+        <state relative-caret-position="102">
+          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/web/js/shiawa_functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+        <state relative-caret-position="425">
+          <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding />
         </state>
       </provider>
