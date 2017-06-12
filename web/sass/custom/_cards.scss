@@ -16,3 +16,14 @@
     }
   }
 }
+
+.card.horizontal.custom {
+  @media #{$medium-and-down} {
+    flex-direction: column;
+
+    .card-image{
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

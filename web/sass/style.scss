@@ -1,8 +1,7 @@
+@charset "UTF-8";
 /***
   SHIAWA STYLE
 ***/
-@charset "UTF-8";
-
 
 /* Variables */
 @import "custom/variables";
@@ -16,6 +15,8 @@
 ****/
 /* grid */
 @import "custom/grid";
+/* navbar */
+@import "custom/navbar";
 /* cards */
 @import "custom/cards";
 

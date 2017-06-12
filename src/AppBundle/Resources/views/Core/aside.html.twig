@@ -57,8 +57,10 @@
                 </small>
             </h2>
             <div class="card-image" style="max-height: 300px; overflow: hidden;">
-                <a href='{{ path('shiawa_event_view', {'slug': event.slug}) }}'> <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) }}">
-                    <span class="card-title">{{ event.name|title }}</span></a>
+                <a href='{{ path('shiawa_event_view', {'slug': event.slug}) }}'>
+                    <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) | imagine_filter('big_thumb') }}">
+                    <span class="card-title">{{ event.name|title }}</span>
+                </a>
             </div>
         </div>
         <div class='card-action center-align'>
@@ -73,7 +75,7 @@
 
                 <h2 class='title-section'>
                     Pas de prochain événement
-                    <small>Proposer nous un événement proche de chez vous !
+                    <small>Proposez nous un événement proche de chez vous !
                     </small>
                 </h2>
             </div>

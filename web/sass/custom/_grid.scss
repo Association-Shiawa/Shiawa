@@ -7,3 +7,10 @@
     width: 90%;
   }
 }
+
+.flex{
+  display: flex;
+  &.center{
+    justify-content: center;
+  }
+}

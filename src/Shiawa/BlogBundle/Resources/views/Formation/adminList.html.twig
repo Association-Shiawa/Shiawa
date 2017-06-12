@@ -24,7 +24,7 @@
                         <tr>
                             <td>
                                 {% if article.thumbnail %}
-                                    <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath)}}" alt="" width="40px" class="materialboxed">
+                                    <img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) | imagine_filter('big_thumb') }}" alt="" width="40px" class="materialboxed">
                                 {% endif %}
                             </td>
                             <td>

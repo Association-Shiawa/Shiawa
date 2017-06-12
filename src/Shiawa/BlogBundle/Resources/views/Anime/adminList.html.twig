@@ -23,7 +23,7 @@
                         <tr>
                             <td>
                                 {% if anime.thumbnail %}
-                                    <img src="{{ asset(anime.thumbnail.getWebPath) }}" alt="" width="40px" class="materialboxed">
+                                    <img src="{{ asset(anime.thumbnail.getWebPath) | imagine_filter('big_thumb') }}" alt="" width="40px" class="materialboxed">
                                 {% endif %}
                             </td>
                             <td>
