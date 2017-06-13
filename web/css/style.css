@@ -2151,7 +2151,7 @@ ul.staggered-list li {
   Media Query Classes
 **********************/
 @media only screen and (max-width: 600px) {
-  .hide-on-small-only, .hide-on-small-and-down {
+  .hide-on-small-only, .brand-logo, .hide-on-small-and-down {
     display: none !important; } }
 
 @media only screen and (max-width: 992px) {
@@ -6393,6 +6393,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 /* navbar */
 /* cards */
+.card .card-image .card-title.bar, .card-custom .card-image .card-title.bar {
+  background: white;
+  color: black;
+  height: 50px;
+  bottom: 20px;
+  text-align: center;
+  padding: 0 10px; }
+
 .card-custom .card-image {
   overflow: hidden;
   height: 200px; }
@@ -6424,8 +6432,8 @@ html, body {
   width: 100%; }
 
 #header-full-width {
-  min-height: 100vh;
-  min-height: calc(100vh - 64px); }
+  height: 100vh;
+  height: calc(100vh - 64px); }
   #header-full-width video#bgvid {
     position: absolute;
     right: 0;
@@ -6445,19 +6453,21 @@ html, body {
     position: absolute;
     background: url("../imgs/watermark.png") rgba(0, 0, 0, 0.65); }
   #header-full-width .zoning-title {
-    width: 100%;
-    z-index: 1; }
+    z-index: 1;
+    overflow: hidden;
+    margin: 0 auto; }
     #header-full-width .zoning-title h1, #header-full-width .zoning-title article.article .title-section, article.article #header-full-width .zoning-title .title-section {
       font-family: 'Raleway', sans-serif;
       color: white;
-      font-size: 120px;
-      margin-bottom: 0px; }
+      font-size: 5vh;
+      margin-bottom: 0; }
       @media screen and (max-width: 600px) {
         #header-full-width .zoning-title h1, #header-full-width .zoning-title article.article .title-section, article.article #header-full-width .zoning-title .title-section {
           font-size: 5rem; } }
     #header-full-width .zoning-title svg {
       fill: white;
-      width: 25%; }
+      width: auto;
+      height: 40vh; }
     #header-full-width .zoning-title span {
       color: white;
       font-weight: 600; }

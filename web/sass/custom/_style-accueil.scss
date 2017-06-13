@@ -12,8 +12,8 @@ html, body{
     width: 100%;
 }
 #header-full-width{
-    min-height: 100vh;
-    min-height: calc(100vh - 64px);
+    height: 100vh;
+    height: calc(100vh - 64px);
 
     video#bgvid {
         position: absolute; right: 0; bottom: 0;
@@ -33,22 +33,22 @@ html, body{
     }
 
     .zoning-title{
-
-        width: 100%;
-        //background: green;
         z-index: 1;
+        overflow: hidden;
+        margin: 0 auto;
         h1{
             font-family: 'Raleway', sans-serif;
             color: white;
-            font-size: 120px;
-            margin-bottom: 0px;
+            font-size: 5vh;
+            margin-bottom: 0;
             @media screen and (max-width: 600px) {
                 font-size: 5rem;
             }
         }
         svg{
             fill: white;
-            width: 25%;
+            width: auto;
+            height: 40vh;
         }
         span{
             color: white;

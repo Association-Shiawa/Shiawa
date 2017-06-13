@@ -1,6 +1,6 @@
 <!-- Navbar -->
 <div class='navbar-fixed'>
-    <nav>
+    <nav class="transparent">
         <div class="nav-wrapper grey darken-3">
             <!-- NAVBAR TITLE -->
             {% block navbar_title %}
@@ -101,7 +101,7 @@
             <a href="{{ path('shiawa_anime_homepage') }}">Accueil</a>
         </li>
         <li class=''>
-            <a  href="{{ path('shiawa_article_list', {'category': 'anime'}) }}">Articles</a>
+            <a  href="{{ path('shiawa_article_list') }}">Articles</a>
         </li>
         <li>
             <a href="#" >Anime</a>
@@ -147,6 +147,8 @@
     </li>
     {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
         <li><a href="{{ path('fos_user_profile_show') }}">Mon profil</a></li>
+        <li><a href="{{ path('fos_user_profile_edit') }}">Modifier mes informations</a></li>
+        <li><a href="{{ path('fos_user_change_password') }}">Modifier mon mot de passe</a></li>
         {% if is_granted('ROLE_AUTHOR') %}
             <li><div class="divider"></div></li>
             <li><a href="{{ path('shiawa_admin_homepage') }}">Dashboard Admin</a></li>
