@@ -19,7 +19,6 @@ var shiawa_module = (function () {
             var nav = navbar.firstElementChild;
             var navWrapper = nav.firstElementChild;
 
-            nav.classList.add('transparent');
             navWrapper.classList.add('transparent');
             nav.classList.add('z-depth-0');
             navWrapper.classList.remove('grey');
@@ -35,7 +34,6 @@ var shiawa_module = (function () {
             var nav = navbar.firstElementChild;
             var navWrapper = nav.firstElementChild;
 
-            nav.classList.remove('transparent');
             navWrapper.classList.remove('transparent');
             nav.classList.remove('z-depth-0');
             navWrapper.classList.add('grey');
