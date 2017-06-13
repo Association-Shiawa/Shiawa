@@ -6455,7 +6455,8 @@ html, body {
   #header-full-width .zoning-title {
     z-index: 1;
     overflow: hidden;
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-width: 100%; }
     #header-full-width .zoning-title h1, #header-full-width .zoning-title article.article .title-section, article.article #header-full-width .zoning-title .title-section {
       font-family: 'Raleway', sans-serif;
       color: white;
@@ -6467,7 +6468,8 @@ html, body {
     #header-full-width .zoning-title svg {
       fill: white;
       width: auto;
-      height: 40vh; }
+      height: 40vh;
+      max-width: 80%; }
     #header-full-width .zoning-title span {
       color: white;
       font-weight: 600; }
