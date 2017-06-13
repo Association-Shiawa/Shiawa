@@ -36,6 +36,7 @@ html, body{
         z-index: 1;
         overflow: hidden;
         margin: 0 auto;
+        max-width: 100%;
         h1{
             font-family: 'Raleway', sans-serif;
             color: white;
@@ -49,6 +50,7 @@ html, body{
             fill: white;
             width: auto;
             height: 40vh;
+            max-width: 80%;
         }
         span{
             color: white;
