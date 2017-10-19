@@ -57,8 +57,35 @@ SHIAWA
 {% block menu %}
 {% endblock %}
 
+{% block alerts %}
+<div class="container">
+    {# On affiche les messages flash que définissent les contrôleurs du bundle #}
+    {% for key, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+            <div class="alert-{{ key }}">
+                {{ message|trans({}, 'FOSUserBundle') }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div class="alert-danger">
+        Bonjour t'es une merde l'internet
+    </div>
+    <div class="alert-success">
+        Bonjour t'es une merde l'internet
+    </div>
+    <div class="alert-info">
+        Bonjour t'es une merde l'internet
+    </div>
+    <div class="alert-warning">
+        Bonjour t'es une merde l'internet
+    </div>
+</div>
+{% endblock %}
+
 
 {% block body %}
+
 {% endblock %}
 
 {% block footer %}
@@ -118,9 +145,8 @@ SHIAWA
 
         ga('create', 'UA-85511209-1', 'auto');
         ga('send', 'pageview');
-
     </script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="{{ asset('js/bin/materialize.min.js') }}"></script>
     <script src="{{ asset('js/shiawa_functions.js') }}"></script>
 
