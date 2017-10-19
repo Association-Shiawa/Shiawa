@@ -82,9 +82,6 @@ var shiawa_module = (function () {
         $(document).ready(function () {
             $('.slider').slider({full_width: true, height: 600});
         });
-        $(document).ready(function () {
-            $('.slider-anime').slider({indicators: false, height: 350});
-        });
     }();
 
     self.initMaterialboxed = function () {

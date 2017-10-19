@@ -6,16 +6,6 @@
 
 {% block body %}
 
-    {# On affiche les messages flash que définissent les contrôleurs du bundle #}
-    {% for key, messages in app.session.flashbag.all() %}
-        {% for message in messages %}
-            <div class="card-panel red white-text alert-{{ key }}">
-                {{ message|trans({}, 'FOSUserBundle') }}
-            </div>
-        {% endfor %}
-    {% endfor %}
-
-
     {% block fos_user_content %}
     {% endblock fos_user_content %}
 
