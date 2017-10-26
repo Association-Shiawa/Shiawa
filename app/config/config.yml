@@ -2,15 +2,19 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: admin/ }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    roles: { 'Utilisateur': 'ROLE_USER', 'Admin': 'ROLE_ADMIN', 'Auteur': 'ROLE_AUTHOR', 'Adhérent': 'ROLE_ADHERENT' }
     domain: shiawa.fr
     mail: shiawa.project@gmail.com
     youtube.api.key: AIzaSyCoi1XYGaWGRul5-t0lpJlaJT9Lp25-ivc
     youtube.channel.id: UCgPqRGhrra-liY7N7OQSD0A
+    app.path.articles_images: /uploads/files/articles
+    app.path.user_pic: /uploads/files/users/avatar
 
 framework:
     #esi:             ~
@@ -126,3 +130,61 @@ liip_imagine:
             quality: 75
             filters:
                 thumbnail: { size: [100, 190], mode: outbound }
+
+fm_elfinder:
+    #assets_path: / # default is /assets, this is where css/js elfinder files are
+    instances:
+        default:
+            locale: %locale% # defaults to current request locale
+            editor: ckeditor # other options are tinymce, tinymce4, fm_tinymce, form, simple, custom
+            #editor_template: custom template for your editor # default null
+            #path_prefix: / # for setting custom assets path prefix, useful for non vhost configurations, i.e. http://127.0.0.1/mysite/
+            #fullscreen: true|false # default is true, applies to simple and ckeditor editors
+            #theme: smoothness # jquery theme, default is 'smoothness'
+            include_assets: true # disable if you want to manage loading of javascript and css assets manually
+            #visible_mime_types: ['image/png', 'image/jpg', 'image/jpeg'] # only show these mime types, defaults to show all
+            connector:
+                #debug: true|false # defaults to false
+                roots:       # at least one root must be defined, defines root filemanager directories
+                    uploads:
+                        #show_hidden: true|false # defaults to false, hides dotfiles
+                        driver: LocalFileSystem
+                        path: uploads
+                        upload_allow: ['image/png', 'image/jpg', 'image/jpeg']
+                        upload_deny: ['all']
+                        upload_max_size: 2M # also file upload sizes restricted in php.ini
+                        #attributes: example of setting attributes permission
+                        #    - { pattern: '/(.*?)/', read: true, write: false, locked: true }
+
+easy_admin:
+    site_name: 'Shiawa'
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i:s'
+    design:
+        brand_color: '#EC407A'
+        assets:
+            js:
+                - '/bundles/cksourceckfinder/ckfinder/ckfinder.js'
+                - '/js/setup-ckfinder.js'
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        product_images:
+            uri_prefix:         '%app.path.articles_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/articles'
+
+ivory_ck_editor:
+    configs:
+        my_config:
+            toolbar: "standard"
+    toolbars:
+        items:
+            full.colors: [ "TextColor" ]
+            full.document: [ "Source", "Preview" ]
+
+ckfinder:
+    connector:
+        authenticationClass: AppBundle\CustomCKFinderAuth\CustomCKFinderAuth

@@ -43,3 +43,6 @@ security:
     access_control:
             #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
             - { path: ^/admin, roles: ROLE_AUTHOR }
+            - { path: ^/myAssoAdmin, roles: ROLE_AUTHOR }
+            - { path: ^/efconnect, role: ROLE_AUTHOR }
+            - { path: ^/elfinder, role: ROLE_AUTHOR }

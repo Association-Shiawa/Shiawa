@@ -33,7 +33,13 @@
         "friendsofsymfony/user-bundle": "dev-master",
         "google/apiclient": "^2.1",
         "liip/imagine-bundle": "^1.8",
-        "symfony/web-server-bundle": "^3.3"
+        "symfony/web-server-bundle": "^3.3",
+        "stfalcon/tinymce-bundle": "2.1",
+        "helios-ag/fm-elfinder-bundle": "~6",
+        "javiereguiluz/easyadmin-bundle": "^1.17",
+        "egeloen/ckeditor-bundle": "^6.0",
+        "vich/uploader-bundle": "^1.6",
+        "ckfinder/ckfinder-symfony3-bundle": "^3.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
@@ -67,5 +73,8 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         }
+    },
+    "config": {
+        "component-dir": "web/assets"
     }
 }

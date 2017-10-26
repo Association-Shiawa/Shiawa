@@ -32,6 +32,12 @@ class AppKernel extends Kernel
             new Shiawa\UserBundle\ShiawaUserBundle(),
             //new Shiawa\ContestBundle\ShiawaContestBundle(),
             new Shiawa\FileBundle\ShiawaFileBundle(),
+            new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
+            new FM\ElfinderBundle\FMElfinderBundle(),
+            new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
+            new CKSource\Bundle\CKFinderBundle\CKSourceCKFinderBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

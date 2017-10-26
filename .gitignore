@@ -98,8 +98,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /nbproject/private/
-/.idea/*
 .idea
-.idea/*
 /web/media/*
-/web/uploads
