@@ -97,6 +97,12 @@ class Event
      */
     private $articles;
 
+
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
     /**
      * Get id
      *

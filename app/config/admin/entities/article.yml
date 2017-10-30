@@ -20,7 +20,7 @@ easy_admin:
                     - id
                     - { property: 'published', type: 'toggle' }
                     - title
-                    - { property: 'thumbnail.getWebPath', type: 'image', base_path: '/' }
+                    - { property: 'thumbnail.getWebPath', label: 'Couverture', type: 'image', base_path: '/' }
                     - { property: 'createdAt'}
                     - tags
             show:
@@ -46,9 +46,7 @@ easy_admin:
                     - { type: 'section', label: 'Advanced Settings', icon: 'warning', help: 'Reserved for administrators use' }
                     - { property: 'published', label: 'Published' }
                     - { property: 'createdAt' }
-                    - { type: 'group', css_class: 'col-sm-8 new-row' }
-                    - { type: 'group', css_class: 'col-sm-4' }
-#                    - { property: 'tags' }
-#                    - { property: 'event' }
+                    - { property: 'tags' }
+                    - { property: 'event' }
                     - { type: 'group', css_class: 'col-sm-4', label: 'Attachments', icon: 'paperclip' }
 #                    - { property: 'thumbnail', type: 'file', type_options: { required: true } }
