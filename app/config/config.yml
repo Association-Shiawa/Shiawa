@@ -156,19 +156,6 @@ fm_elfinder:
                         #attributes: example of setting attributes permission
                         #    - { pattern: '/(.*?)/', read: true, write: false, locked: true }
 
-easy_admin:
-    site_name: 'Shiawa'
-    formats:
-        date:     'd/m/Y'
-        time:     'H:i'
-        datetime: 'd/m/Y H:i:s'
-    design:
-        brand_color: '#EC407A'
-        assets:
-            js:
-                - '/bundles/cksourceckfinder/ckfinder/ckfinder.js'
-                - '/js/setup-ckfinder.js'
-
 vich_uploader:
     db_driver: orm
     mappings:
@@ -188,3 +175,20 @@ ivory_ck_editor:
 ckfinder:
     connector:
         authenticationClass: AppBundle\CustomCKFinderAuth\CustomCKFinderAuth
+        backends:
+            default:
+                baseUrl: /
+                root: '%kernel.root_dir%/../web'
+        resourceTypes:
+#            Cache:
+#                name: Media
+#                backend: default
+#                directory: media
+            Media:
+                name: Media
+                backend: default
+                directory: wysiwyg
+            Uploads:
+                name: Uploads
+                backend: default
+                directory: uploads

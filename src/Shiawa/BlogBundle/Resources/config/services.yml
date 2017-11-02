@@ -13,3 +13,13 @@ services:
              - "%youtube.api.key%"
              - "%youtube.channel.id%"
              - "UUgPqRGhrra-liY7N7OQSD0A"
+
+     easy_admin.tag_subscriber:
+         class: Shiawa\BlogBundle\EventListener\EasyAdmin\TagsSubscriber
+         arguments: []
+
+     tag.form.type.tags:
+         class: Shiawa\BlogBundle\Form\Type\TagsType
+         arguments: ["@doctrine.orm.entity_manager"]
+         tags:
+             - { name: form.type }

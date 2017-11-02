@@ -1,0 +1,21 @@
+easy_admin:
+    site_name: 'Shiawa'
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i:s'
+    design:
+        brand_color: '#EC407A'
+        assets:
+            css:
+                - '/css/tags/bootstrap-tagsinput.css'
+                - '/css/tags/bootstrap-tagsinput-typeahead.css'
+            js:
+                - '/bundles/cksourceckfinder/ckfinder/ckfinder.js'
+                - '/js/setup-ckfinder.js'
+                - '/js/tags/bootstrap-tagsinput.min.js'
+                - '/js/typeahead/typeahead.js'
+                - '/js/admin.js'
+        form_theme:
+                - 'horizontal'
+                - 'easy_admin/form.html.twig'

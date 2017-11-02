@@ -46,7 +46,7 @@ easy_admin:
                     - { type: 'section', label: 'Advanced Settings', icon: 'warning', help: 'Reserved for administrators use' }
                     - { property: 'published', label: 'Published' }
                     - { property: 'createdAt' }
-                    - { property: 'tags' }
+                    - { property: 'tags', type: 'Shiawa\BlogBundle\Form\Type\TagsType' }
                     - { property: 'event' }
                     - { type: 'group', css_class: 'col-sm-4', label: 'Attachments', icon: 'paperclip' }
 #                    - { property: 'thumbnail', type: 'file', type_options: { required: true } }
