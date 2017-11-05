@@ -49,6 +49,11 @@ class Chapter
     private $tutorials;
 
 
+    public function __toString()
+    {
+        return $this->getFormation()->getTitle() . ' - ' . $this->getTitle();
+    }
+
     /**
      * Get id
      *

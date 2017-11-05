@@ -1,0 +1,34 @@
+easy_admin:
+    site_name: 'Shiawa'
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i:s'
+    design:
+        brand_color: '#EC407A'
+        menu:
+            - { label: 'Site Web', route: 'shiawa_homepage', icon: 'home' }
+            - { entity: 'Article', icon: 'pencil' }
+            - { entity: 'Tutorial', icon: 'book' }
+            - { entity: 'Review', icon: 'book' }
+            - { entity: 'Event', icon: 'calendar' }
+            - { entity: 'Category', icon: 'tag' }
+            - { entity: 'Tag', icon: 'tags' }
+            - { entity: 'User', icon: 'user' }
+            - label: 'A Propos'
+              icon: 'info'
+              children:
+                - { label: "Email de l'assocation", url: mailto:shiawa.project@gmail.com, icon: 'envelope' }
+        assets:
+            css:
+                - '/assets/dist/css/tags/bootstrap-tagsinput.css'
+                - 'assets/dist/css/tags/bootstrap-tagsinput-typeahead.css'
+            js:
+                - '/bundles/cksourceckfinder/ckfinder/ckfinder.js'
+                - '/assets/src/js/setup-ckfinder.js'
+                - '/assets/src/js/tags/bootstrap-tagsinput.min.js'
+                - '/assets/src/js/typeahead/typeahead.js'
+                - '/assets/src/js/admin.js'
+        form_theme:
+                - 'horizontal'
+                - 'easy_admin/form.html.twig'

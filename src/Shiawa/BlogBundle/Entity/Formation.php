@@ -4,7 +4,8 @@ namespace Shiawa\BlogBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Shiawa\UserBundle as User;
+use Shiawa\FileBundle\Entity\File;
+use Shiawa\UserBundle\Entity\User as User;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
@@ -40,7 +41,7 @@ class Formation
     private $slug;
 
     /**
-     * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\BlogFile", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=true)
      */
     private $thumbnail;
@@ -324,14 +325,15 @@ class Formation
      *
      * @param \Shiawa\FileBundle\Entity\File $thumbnail
      *
-     * @return Article
+     * @return File|void
      */
     public function setThumbnail(\Shiawa\FileBundle\Entity\File $thumbnail = null)
     {
-        $this->thumbnail = $thumbnail;
-        $this->setThumbnailDir();
+        if (empty($thumbnail->getFile())) {
+            return;
+        }
 
-        return $this;
+        $this->thumbnail = $thumbnail;
     }
 
     /**
@@ -341,17 +343,6 @@ class Formation
      */
     public function getThumbnail()
     {
-        if ($this->thumbnail != null) {
-            $this->setThumbnailDir();
-        }
         return $this->thumbnail;
-    }
-
-    public function setThumbnailDir()
-    {
-        $dir = "uploads/files/formations/".$this->id."/thumbnail/";
-        $this->thumbnail->setUploadDir($dir);
-
-        return $this;
     }
 }

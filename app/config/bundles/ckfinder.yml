@@ -1,0 +1,20 @@
+ckfinder:
+    connector:
+        authenticationClass: AppBundle\CustomCKFinderAuth\CustomCKFinderAuth
+        backends:
+            default:
+                baseUrl: /
+                root: '%kernel.root_dir%/../web'
+        resourceTypes:
+#            Cache:
+#                name: Media
+#                backend: default
+#                directory: media
+            Media:
+                name: Media
+                backend: default
+                directory: wysiwyg
+            Uploads:
+                name: Uploads
+                backend: default
+                directory: uploads

@@ -1,0 +1,14 @@
+#easy_admin:
+#    design:
+#        menu:
+#            - label: 'Clients'
+#              icon: 'users'
+#              children:
+#                - { label: 'New Invoice', icon: 'file-new', route: 'createInvoice' }
+#                - { label: 'Invoices', icon: 'file-list', entity: 'Invoice' }
+#                - { label: 'Payments Received', entity: 'Payment', params: { sortField: 'paidAt' } }
+#            - label: 'About'
+#              children:
+#                - { label: 'Help', route: 'help_index' }
+#                - { label: 'Docs', url: 'http://example.com/external-docs' }
+#                - { label: '%app.version%' }

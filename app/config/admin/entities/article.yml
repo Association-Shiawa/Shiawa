@@ -1,0 +1,45 @@
+# This file sets the configuration of the 'Product' entity.
+#
+# NOTE: this demo application splits the backend configuration into several
+# small files for educational purposes. In your application you can put the
+# entire backend configuration in just one file.
+#
+# The configuration options are explained in detail in the bundle documentation,
+# which is published at https://github.com/javiereguiluz/EasyAdminBundle
+easy_admin:
+    entities:
+        # the configuration of this entity is very verbose because it's used as
+        # an example to show all the configuration options available for entities
+        # check out the configuration of the other entities to see how concise
+        # can be the configuration of your backend
+        Article:
+            class: Shiawa\BlogBundle\Entity\Article
+            controller: AppBundle\Controller\EasyAdmin\ArticleController
+            label: 'Articles'
+            list:
+                fields:
+                    - id
+                    - { property: 'published', type: 'toggle' }
+                    - title
+                    - { property: 'thumbnail', label: 'Couverture', type: 'image', base_path: '%app.path.blog_file%', template: 'easy_admin/vich_uploader_image.html.twig' }
+                    - { property: 'createdAt'}
+                    - tags
+                    - category
+            form:
+                fields:
+                    - { type: 'group', css_class: 'col-sm-8', label: 'Basic information', icon: 'pencil' }
+                    - { property: 'title', css_class: 'large' }
+                    - { property: 'summary', css_class: 'large' }
+                    - { property: 'content', type: 'ckeditor' }
+                    - { type: 'divider' }
+                    - { property: 'category', type: 'easyadmin_autocomplete', type_options: { class: 'Shiawa\BlogBundle\Entity\Category' } }
+                    - { type: 'group', css_class: 'col-sm-4', label: 'Product Details', icon: 'cube' }
+                    - { type: 'section', label: 'Advanced Settings', icon: 'warning', help: 'Reserved for administrators use' }
+                    - { property: 'published', label: 'Published' }
+                    - { property: 'createdAt' }
+                    - { property: 'tags', type: 'Shiawa\BlogBundle\Form\Type\TagsType' }
+                    - { property: 'event' }
+                    - { property: 'chapter' }
+                    - { type: 'group', css_class: 'col-sm-4', label: 'Attachments', icon: 'paperclip' }
+#                    - { property: 'thumbnail', type: 'vich_image', type_options: { required: true } }
+                    - { property: 'thumbnail', type: 'Shiawa\FileBundle\Form\Type\FileType', type_options: { data_class: 'Shiawa\FileBundle\Entity\BlogFile' } }

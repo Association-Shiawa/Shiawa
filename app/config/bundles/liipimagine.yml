@@ -1,0 +1,40 @@
+liip_imagine:
+    # configure resolvers
+    resolvers:
+        # setup the default resolver
+        default:
+            # use the default web path
+            web_path: ~
+    # your filter sets are defined here
+    filter_sets:
+        # use the default cache configuration
+        cache: ~
+        # the name of the "filter set"
+        little_thumb:
+            quality: 75
+            filters:
+                thumbnail: { size: [100, 100], mode: inset }
+        middle_thumb:
+            # adjust the image quality to 75%
+            quality: 75
+            # list of transformations to apply (the "filters")
+            filters:
+                # create a thumbnail: set size to 120x90 and use the "outbound" mode
+                # to crop the image when the size ratio of the input differs
+                thumbnail: { size: [360, 200], mode: outbound }
+                # create a 2px black border: center the thumbnail on a black background
+                # 4px larger to create a 2px border around the final image
+                #background: { size: [124, 94], position: center, color: '#000000' }
+        big_thumb:
+            quality: 75
+            filters:
+                thumbnail: { size: [500, 250], mode: inset }
+                background : { size : [500, 250], position : center }
+        vertical_thumb:
+            quality: 75
+            filters:
+                thumbnail: { size: [100, 190], mode: outbound }
+        profile_thumbnail:
+            quality: 75
+            filters:
+                thumbnail: { size: [200, 200], mode: outbound }

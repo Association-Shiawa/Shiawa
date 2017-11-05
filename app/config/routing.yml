@@ -43,3 +43,15 @@ fos_user_change_password:
 
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.yaml"
+
+elfinder:
+     resource: "@FMElfinderBundle/Resources/config/routing.yml"
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /myAssoAdmin
+
+ckfinder_connector:
+    resource: "@CKSourceCKFinderBundle/Resources/config/routing.yml"
+    prefix:   /

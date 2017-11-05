@@ -49,7 +49,7 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
         }
 
         $query
-            ->andWhere('a.published = true')
+//            ->andWhere('a.published = true')
             ->orderBy('a.createdAt', 'DESC')
             ->setMaxResults($nb);
 

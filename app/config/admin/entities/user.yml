@@ -1,0 +1,35 @@
+easy_admin:
+    entities:
+        User:
+            class: Shiawa\UserBundle\Entity\User
+            controller: AppBundle\Controller\EasyAdmin\UserAdminController
+            label: 'Utilisateurs'
+            form:
+                fields:
+                    - username
+                    - email
+                    - name
+                    - surname
+                    - { property: 'birthdate', type: 'date', type_options: { widget: 'single_text' } }
+                    - { property: 'enabled', label: 'Activé' }
+                    # if administrators are allowed to edit users' passwords and roles, add this:
+                    - { property: 'plainPassword', ,label: 'Réinitialiser le mot de passe', type: 'text', type_options: { required: false } }
+                    - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: %roles% } }
+            edit:
+                fields:
+                    - username
+                    - email
+                    - enabled
+                    # if administrators are allowed to edit users' passwords and roles, add this:
+                    - { property: 'plainPassword', type: 'text', type_options: { required: false } }
+                    - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'Utilisateur': 'ROLE_USER', 'Admin': 'ROLE_ADMIN', 'Auteur': 'ROLE_AUTHOR', 'Adhérent': 'ROLE_ADHERENT' } } }
+                form_options: { validation_groups: ['Profile'] }
+            new:
+                fields:
+                    - username
+                    - email
+                    - enabled
+                    # if administrators are allowed to edit users' passwords and roles, add this:
+                    - { property: 'plainPassword', type_options: { required: true} }
+                    - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'Utilisateur': 'ROLE_USER', 'Admin': 'ROLE_ADMIN', 'Auteur': 'ROLE_AUTHOR', 'Adhérent': 'ROLE_ADHERENT' } } }
+                form_options: { validation_groups: ['Registration'] }

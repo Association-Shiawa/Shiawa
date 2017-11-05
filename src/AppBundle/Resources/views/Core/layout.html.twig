@@ -47,10 +47,8 @@ SHIAWA
         <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {#test2#}
-        <link type="text/css" rel="stylesheet" href="{{ asset('css/style.css') }}"  media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="{{ asset('css/horizontal_sly.css') }}"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset('assets/dist/css/style.css') }}"  media="screen,projection"/>
     {% endblock %}
-        <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
 </head>
 <body>
 
@@ -134,8 +132,8 @@ SHIAWA
         ga('send', 'pageview');
     </script>
     <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="{{ asset('js/bin/materialize.min.js') }}"></script>
-    <script src="{{ asset('js/shiawa_functions.js') }}"></script>
+    <script src="{{ asset('assets/src/js/materializecss/bin/materialize.min.js') }}"></script>
+    <script src="{{ asset('assets/src/js/shiawa_functions.js') }}"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -159,59 +157,6 @@ SHIAWA
                 menuWidth: 300, // Default is 240
                 edge: 'right', // Choose the horizontal origin
                 closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-            });
-
-            tinymce.init({
-                selector: '.wysiwyg',
-                height: 400,
-                plugins: [
-                    'advlist autolink lists link image charmap print preview anchor',
-                    'searchreplace visualblocks code fullscreen',
-                    'insertdatetime media table contextmenu paste code'
-                ],
-                toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-                content_css: [
-                    '//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i',
-                    '//www.tinymce.com/css/codepen.min.css'
-                ],
-                invalid_elements: "span",
-                extended_valid_elements : "span[!class]",
-                block_formats: 'Paragraph=p;Header 1=h1;Header 2=h2;Header 3=h3',
-                keep_styles: false,
-                //style_formats_merge: true,
-                //style_formats_autohide: true,
-                style_formats: [
-                    {
-                        title: 'Titres',
-                        items:
-                                [
-                                    {title: 'Niveau 2', block: 'h2'},
-                                    {title: 'Niveau 3', block: 'h3'},
-                                    {title: 'Niveau 4', block: 'h4'},
-                                    {title: 'Niveau 5', block: 'h5'},
-                                    {title: 'Niveau 6', block: 'h6'}
-                                ]
-                    },
-                    {
-                        title: 'Blocs',
-                        items:
-                                [
-                                    {title: 'Paragraphes', block: 'p'},
-                                    {title: 'Citation', block: 'blockquote', wrapper: true}
-                                ]
-                    }
-                ],
-                init_instance_callback: function (editor) {
-                    editor.on('BeforeSetContent', function (e) {
-                        e.content = e.content.replace(/(.+video-container.+)?<iframe.+<\/iframe>/g, function (x) {
-                            if(x.search("video-container") == -1){
-                                return correction = "<div class='video-container'>"+ x + "</div>";
-                            }else{
-                                return x;
-                            }
-                        });
-                    });
-                }
             });
         });
     </script>

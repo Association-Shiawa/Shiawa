@@ -11,9 +11,9 @@
     {% block body %}
         <!-- DEBUT BLOC -->
         <div id="header-full-width" class="valign-wrapper">
-            <video autoplay loop poster="{{ asset('imgs/poster.jpg') }}" id="bgvid">
-                <source src="{{ asset('bann.webm') }}" type="video/webm">
-                <source src="{{ asset('bann.mp4') }}" type="video/mp4">
+            <video autoplay loop poster="{{ asset('assets/dist/imgs/poster.jpg') }}" id="bgvid">
+                <source src="{{ asset('/assets/dist/imgs/bann.webm') }}" type="video/webm">
+                <source src="{{ asset('assets/dist/imgs/bann.mp4') }}" type="video/mp4">
             </video>
             <div class='overlay'></div>
             <div class='zoning-title valign center-align'>
@@ -93,7 +93,9 @@
                     <article class="col l4 m6 s12">
                         <div class="card">
                             <div class="card-image">
-                                <img src='{{ article.thumbnail ? asset(article.thumbnail.getWebPath) | imagine_filter('big_thumb') }}' />
+                                {% if article.thumbnail is not null %}
+                                    <img src='{{ vich_uploader_asset(article.thumbnail, 'file', 'Shiawa\\FileBundle\\Entity\\BlogFile') | imagine_filter('big_thumb') }}' />
+                                {% endif %}
                             </div>
                             <div class="card-content">
                                 <span class="card-title grey-text text-darken-4">{{ article.title }}</span>
@@ -163,7 +165,7 @@
                     <div class='carousel-item'>
                         <div class="card">
                             <div class="card-image">
-                                <img src="{% if user.avatar is null %}https://www.mautic.org/media/images/default_avatar.png{% else %}{{ asset(user.avatar.getWebPath) }}{% endif %}" />
+                                <img src="{% if user.avatar is null %}{{ asset('assets/dist/imgs/default_avatar.png') }}{% else %}{{ vich_uploader_asset(user, 'avatar') }}{% endif %}" />
                                 <span class="card-title bar">{{ user.username|title }}</span>
                             </div>
                             <div class="card-content">
@@ -201,7 +203,7 @@
                 <div class="slider">
                     <ul class="slides">
                         <li>
-                            <img src="{{ asset("imgs/slider_scene.jpg") }}"> <!-- random image -->
+                            <img src="{{ asset("assets/dist/imgs/slider_scene.jpg") }}"> <!-- random image -->
                             <div class="caption center-align">
                                 <h3>Des animations scéniques!</h3>
                                 <h5 class="light grey-text text-lighten-3">Quizz, show, JoJo Poses et pleins de
@@ -209,7 +211,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{ asset("imgs/slider_cmv.jpg") }}"> <!-- random image -->
+                            <img src="{{ asset("assets/dist/imgs/slider_cmv.jpg") }}"> <!-- random image -->
                             <div class="caption left-align">
                                 <h3 class="">Des Cosplay Music Video</h3>
                                 <h5 class="light grey-text text-lighten-3">Incarnez vos personnages préférés devant
@@ -218,14 +220,14 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{ asset("imgs/slider_shootings.jpg") }}"> <!-- random image -->
+                            <img src="{{ asset("assets/dist/imgs/slider_shootings.jpg") }}"> <!-- random image -->
                             <div class="caption right-align">
                                 <h3>Des shootings photos de Cosplay !</h3>
                                 <!--<h5 class="light grey-text text-lighten-3"></h5>-->
                             </div>
                         </li>
                         <li>
-                            <img src="{{ asset("imgs/slider_cosplay.jpg") }}"> <!-- random image -->
+                            <img src="{{ asset("assets/dist/imgs/slider_cosplay.jpg") }}"> <!-- random image -->
                             <div class="caption right-align">
                                 <h3>Immortaliser les Cosplay en convention</h3>
                                 <h5 class="light grey-text text-lighten-3"></h5>
@@ -269,7 +271,7 @@
                 <div class="col m5 s12">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light" style="max-height: 500px; overflow: hidden;">
-                            <img class="activator" src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) | imagine_filter('big_thumb') }}">
+                            <img class="activator" src="{{ vich_uploader_asset(event.thumbnail, 'file') | imagine_filter('big_thumb') }}">
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">{{ event.name }}<i

@@ -4,6 +4,7 @@ namespace Shiawa\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use Shiawa\FileBundle\Entity\File;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -56,7 +57,7 @@ class User extends BaseUser
      * @var File
      *
      *
-     * @ORM\ManyToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"remove", "persist"})
+     * @ORM\ManyToOne(targetEntity="Shiawa\FileBundle\Entity\ProfilePicture", cascade={"remove", "persist"})
      * @ORM\JoinColumn(nullable=true)
      */
     private $avatar;
@@ -262,39 +263,26 @@ class User extends BaseUser
     }
 
     /**
-     * Set image
-     *
-     * @param \Shiawa\FileBundle\Entity\File $image
-     *
-     * @return User
-     */
-    public function setAvatar(\Shiawa\FileBundle\Entity\File $image)
-    {
-        $this->avatar = $image;
-        $this->setAvatarDir();
-
-        return $this;
-    }
-
-    public function setAvatarDir()
-    {
-        $dir = "uploads/files/users/".$this->usernameCanonical."/avatar/";
-        $this->avatar->setUploadDir($dir);
-
-        return $this;
-    }
-
-    /**
-     * Get image
-     *
+     * @return File
      */
     public function getAvatar()
     {
-        if ($this->avatar != null) {
-            $this->setAvatarDir();
-        }
         return $this->avatar;
     }
+
+    /**
+     * @param File $profilePicture
+     */
+    public function setAvatar(File $profilePicture = null)
+    {
+        if (empty($profilePicture->getFile())) {
+            return;
+        }
+
+        $this->avatar = $profilePicture;
+    }
+
+
 
     /**
      * @Assert\Image(

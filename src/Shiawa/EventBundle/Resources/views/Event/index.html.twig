@@ -7,7 +7,9 @@
         <div class='col l4 m6 s12'>
             <div class="card-custom">
                 <div class="card-image">
-                    <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) }}">
+                    {% if event.thumbnail is not null %}
+                        <img src='{{ vich_uploader_asset(event.thumbnail, 'file', 'Shiawa\\FileBundle\\Entity\\BlogFile') | imagine_filter('middle_thumb') }}' />
+                    {% endif %}
                     <a href="{{ path('shiawa_event_view', {'slug': event.slug})}}" class="card-title">
                         {{ event.name }} - {{ event.beginAt|date('d/m/Y') }}
                     </a>

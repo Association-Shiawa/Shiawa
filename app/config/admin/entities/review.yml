@@ -1,0 +1,39 @@
+easy_admin:
+    entities:
+        Review:
+            class: Shiawa\BlogBundle\Entity\AnimeReview
+            label: 'Critiques'
+            list:
+                fields:
+                    - id
+                    - title
+                    - createdAt
+                    - author
+                    - tags
+                    - { property: 'thumbnail', type: 'image', base_path: '%app.path.blog_file%', template: 'easy_admin/vich_uploader_image.html.twig' }
+            form:
+                fields:
+                    - { type: 'group', css_class: 'col-sm-8', label: 'Basic information', icon: 'pencil' }
+                    - { property: 'title', css_class: 'large' }
+                    - { property: 'introduction', css_class: 'large' }
+#                    - { property: 'anime' }
+                    - { type: 'divider' }
+                    - { type: 'group', css_class: 'col-sm-4', label: 'Attachments', icon: 'paperclip' }
+                    - { property: 'thumbnail', type: 'Shiawa\FileBundle\Form\Type\FileType', type_options: { data_class: 'Shiawa\FileBundle\Entity\BlogFile' } }
+                    - { type: 'section', label: 'Advanced Settings', icon: 'warning', help: 'Reserved for administrators use' }
+                    - { property: 'published', label: 'Published' }
+                    - { property: 'createdAt' }
+                    - { property: 'tags', type: 'Shiawa\BlogBundle\Form\Type\TagsType' }
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Product Details', icon: 'cube' }
+                    - { property: 'critic_scenario' }
+                    - { property: 'note_scenario', type: 'range', type_options: { attr: {min: 1, max: 5 } } }
+                    - { property: 'critic_graphisms' }
+                    - { property: 'note_graphism', type: 'range', type_options: { attr: {min: 1, max: 5 } } }
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Product Details', icon: 'cube' }
+                    - { property: 'critic_soundtrack' }
+                    - { property: 'note_soundtrack', type: 'range', type_options: { attr: {min: 1, max: 5 } } }
+                    - { property: 'critic_consistency' }
+                    - { property: 'note_consistency', type: 'range', type_options: { attr: {min: 1, max: 5 } } }
+                    - { property: 'note_characters', type: 'range', type_options: { attr: {min: 1, max: 5 } } }
+                    - { type: 'group', css_class: 'col-sm-offset-2 col-sm-8', label: 'Product Details', icon: 'cube' }
+                    - { property: 'conclusion' }

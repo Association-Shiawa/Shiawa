@@ -30,6 +30,9 @@
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
+web/assets/
+/web/wysiwyg/
+/web/media/
 
 # Assets managed by Bower
 /web/assets/vendor/
@@ -98,8 +101,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /nbproject/private/
-/.idea/*
 .idea
-.idea/*
-/web/media/*
-/web/uploads
