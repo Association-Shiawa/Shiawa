@@ -22,18 +22,17 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
-            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            new FOS\UserBundle\FOSUserBundle(),
-            new Liip\ImagineBundle\LiipImagineBundle(),
-
             new AppBundle\AppBundle(),
             new Shiawa\BlogBundle\ShiawaBlogBundle(),
             new Shiawa\EventBundle\ShiawaEventBundle(),
             new Shiawa\UserBundle\ShiawaUserBundle(),
             //new Shiawa\ContestBundle\ShiawaContestBundle(),
             new Shiawa\FileBundle\ShiawaFileBundle(),
+
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
             new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
-            new FM\ElfinderBundle\FMElfinderBundle(),
             new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),

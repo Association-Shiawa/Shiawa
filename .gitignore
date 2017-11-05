@@ -30,9 +30,12 @@
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
+web/assets
 /web/assets
 /web/wysiwyg
 /web/media
+!web/assets/dist
+!web/assets/src
 
 # Assets managed by Bower
 /web/assets/vendor/
@@ -102,4 +105,3 @@ $RECYCLE.BIN/
 *.lnk
 /nbproject/private/
 .idea
-/web/media/*

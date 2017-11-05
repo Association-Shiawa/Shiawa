@@ -58,14 +58,6 @@
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/stfalcon/tinymce-bundle" />
-      <path value="$PROJECT_DIR$/vendor/kriswallsmith/assetic" />
-      <path value="$PROJECT_DIR$/vendor/intervention/image" />
-      <path value="$PROJECT_DIR$/vendor/components/jquery" />
-      <path value="$PROJECT_DIR$/vendor/components/elfinder" />
-      <path value="$PROJECT_DIR$/vendor/components/jqueryui" />
-      <path value="$PROJECT_DIR$/vendor/helios-ag/fm-elfinder-php-connector" />
-      <path value="$PROJECT_DIR$/vendor/helios-ag/fm-elfinder-bundle" />
-      <path value="$PROJECT_DIR$/vendor/robloach/component-installer" />
       <path value="$PROJECT_DIR$/vendor/twig/extensions" />
       <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
       <path value="$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle" />
