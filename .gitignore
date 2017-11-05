@@ -33,6 +33,8 @@
 web/assets/
 /web/wysiwyg/
 /web/media/
+web/build
+node_modules
 
 # Assets managed by Bower
 /web/assets/vendor/

@@ -21,14 +21,14 @@ easy_admin:
                 - { label: "Email de l'assocation", url: mailto:shiawa.project@gmail.com, icon: 'envelope' }
         assets:
             css:
-                - '/assets/dist/css/tags/bootstrap-tagsinput.css'
-                - 'assets/dist/css/tags/bootstrap-tagsinput-typeahead.css'
+                - '/resources/dist/css/tags/bootstrap-tagsinput.css'
+                - 'resources/dist/css/tags/bootstrap-tagsinput-typeahead.css'
             js:
                 - '/bundles/cksourceckfinder/ckfinder/ckfinder.js'
-                - '/assets/src/js/setup-ckfinder.js'
-                - '/assets/src/js/tags/bootstrap-tagsinput.min.js'
-                - '/assets/src/js/typeahead/typeahead.js'
-                - '/assets/src/js/admin.js'
+                - '/resources/src/js/setup-ckfinder.js'
+                - '/resources/src/js/tags/bootstrap-tagsinput.min.js'
+                - '/resources/src/js/typeahead/typeahead.js'
+                - '/resources/src/js/admin.js'
         form_theme:
                 - 'horizontal'
                 - 'easy_admin/form.html.twig'
