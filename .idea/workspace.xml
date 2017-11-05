@@ -2,14 +2,153 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="Mise à jour">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/bundles/fmelfinder.yml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Bold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Bold.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Bold.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Light.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Light.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Light.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Light.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Medium.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Medium.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Medium.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Medium.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Thin.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Thin.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Thin.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Thin.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/bann.mp4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/bann.webm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/default_avatar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/poster.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/slider_cmv.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/slider_cosplay.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/slider_scene.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/slider_shootings.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/watermark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/cropper.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/horizontal_sly.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/materialize.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/save.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/save.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/style.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/style.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/tags/bootstrap-tagsinput-typeahead.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/tags/bootstrap-tagsinput.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/icons/facebook.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/icons/instagram.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/icons/twitter.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/icons/youtube-play.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/css/style.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/admin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/cropper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/cropper.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/jquery.collection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/animation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/bin/materialize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/bin/materialize.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/buttons.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/cards.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/character_counter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/chips.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/collapsible.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/date_picker/picker.date.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/date_picker/picker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/forms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/global.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/hammer.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/initial.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/jquery.easing.1.3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/jquery.hammer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/jquery.timeago.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/leanModal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/materialbox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/parallax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/prism.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/pushpin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/scrollFire.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/scrollspy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/sideNav.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/tabs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/toasts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/transitions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/velocity.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/waves.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/setup-ckfinder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/shiawa_functions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/sly.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/tags/bootstrap-tagsinput.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/typeahead/typeahead.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_badges.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_cards.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_carousel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_chips.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_collapsible.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_color.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_dropdown.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_global.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_icons-material-design.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_materialbox.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_modal.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_navbar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_normalize.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_prefixer.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_preloader.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_roboto.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_sideNav.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_slider.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_table_of_contents.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_tabs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_toast.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_tooltip.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_typography.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_waves.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/date_picker/_default.date.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/date_picker/_default.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/date_picker/_default.time.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_checkboxes.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_file-input.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_forms.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_input-fields.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_radio-buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_range.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_select.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_switches.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_alert.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_article.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_avatar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_cards.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_global.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_list-videos.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_navbar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_style-accueil.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_style-anime.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_tinymce.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/materialize.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/save.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/style.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Shiawa.iml" afterPath="$PROJECT_DIR$/.idea/Shiawa.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
     </list>
     <ignored path="Shiawa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,11 +225,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            <state relative-caret-position="612">
+              <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/resources/src/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -106,7 +255,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
@@ -227,9 +376,9 @@
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/DoctrineFilterListener.php" />
         <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Doctrine/PostDatedFilter.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -404,107 +553,6 @@
             <path>
               <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="easy_admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="EasyAdmin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Doctrine" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="EventListener" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -547,11 +595,11 @@
       <recent name="C:\wamp\www\Shiawa\src\Shiawa\BlogBundle\Controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\shiawa-website\web\resources" />
+      <recent name="C:\dev\shiawa-website\web" />
       <recent name="C:\dev\shiawa-website\src\AppBundle\Controller\EasyAdmin" />
       <recent name="C:\dev\shiawa-website\web\assets\dist\imgs" />
       <recent name="C:\dev\shiawa-website\web\assets\src" />
-      <recent name="C:\dev\shiawa-website\web\assets\dist" />
-      <recent name="C:\dev\shiawa-website\src\Shiawa\FileBundle\Form" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -778,7 +826,7 @@
       <workItem from="1509790555563" duration="2195000" />
       <workItem from="1509799103129" duration="16241000" />
       <workItem from="1509822575437" duration="13227000" />
-      <workItem from="1509891270488" duration="16450000" />
+      <workItem from="1509891270488" duration="17459000" />
     </task>
     <task id="LOCAL-00001" summary="Mise à jour">
       <created>1508451569063</created>
@@ -826,14 +874,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="587705000" />
+    <option name="totallyTimeSpent" value="588714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23720682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20131291" sideWeight="0.45" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30277187" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -877,7 +924,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/ChaptersType.php" />
     <entry file="file://$PROJECT_DIR$/src/Shiawa/FileBundle/Form/Type/FileType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -1122,7 +1168,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/src/js/admin.js">
+    <entry file="file://$PROJECT_DIR$/web/resources/src/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
@@ -1236,14 +1282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/bundles/ckfinder.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1280,6 +1318,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="73" column="73" lean-forward="false" selection-start-line="73" selection-start-column="73" selection-end-line="73" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/src/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
           <folding />
         </state>
       </provider>

@@ -1,0 +1,44 @@
+// 1. Colors
+// ==========================================================================
+
+$primary-color: #ec407a !default;
+//$primary-color-light: lighten($primary-color, 15%) !default;
+//$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: #ec407a !default;
+//$success-color: color("green", "base") !default;
+//$error-color: color("red", "base") !default;
+$link-color: darken($secondary-color, 10%) !default;
+
+// 4. Cards
+// ==========================================================================
+
+$card-link-color: $link-color !default;
+
+// 8. Dropdown
+// ==========================================================================
+
+$dropdown-bg-color: #fff !default;
+$dropdown-hover-bg-color: #eee !default;
+$dropdown-color: $secondary-color !default;
+$dropdown-item-height: 50px !default;
+
+/* 11. Global
+   ========================================================================== */
+
+// Media Query Ranges
+
+$medium-screen-up: 993px !default;
+
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+
+// 13. Navigation Bar
+// ==========================================================================
+
+//$navbar-height: 64px !default;
+
+// 23. Collections
+// ==========================================================================
+
+$collection-active-bg-color: #ec407a !default;
+$collection-active-color: lighten(#ec407a, 55%) !default;

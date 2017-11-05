@@ -30,12 +30,9 @@
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
-web/assets
-/web/assets
-/web/wysiwyg
-/web/media
-!web/assets/dist
-!web/assets/src
+web/assets/
+/web/wysiwyg/
+/web/media/
 
 # Assets managed by Bower
 /web/assets/vendor/
