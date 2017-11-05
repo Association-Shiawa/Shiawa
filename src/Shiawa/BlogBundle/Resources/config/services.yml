@@ -2,24 +2,29 @@ services:
 #    shiawa_blog.example:
 #        class: Shiawa\BlogBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
-     shiawa_blog.tags:
-         class: Shiawa\BlogBundle\Utils\TagsManagement
-         arguments:
-             - "@doctrine.orm.entity_manager"
 
-     shiawa_blog.youtube:
-         class: Shiawa\BlogBundle\Utils\YoutubeService
-         arguments:
-             - "%youtube.api.key%"
-             - "%youtube.channel.id%"
-             - "UUgPqRGhrra-liY7N7OQSD0A"
+    shiawa_blog.tags:
+        class: Shiawa\BlogBundle\Utils\TagsManagement
+        arguments:
+            - "@doctrine.orm.entity_manager"
 
-     easy_admin.tag_subscriber:
-         class: Shiawa\BlogBundle\EventListener\EasyAdmin\TagsSubscriber
-         arguments: []
+    shiawa_blog.youtube:
+        class: Shiawa\BlogBundle\Utils\YoutubeService
+        arguments:
+            - "%youtube.api.key%"
+            - "%youtube.channel.id%"
+            - "UUgPqRGhrra-liY7N7OQSD0A"
 
-     tag.form.type.tags:
-         class: Shiawa\BlogBundle\Form\Type\TagsType
-         arguments: ["@doctrine.orm.entity_manager"]
-         tags:
-             - { name: form.type }
+    tag.form.type.tags:
+        class: Shiawa\BlogBundle\Form\Type\TagsType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type }
+
+
+    shiawa_blog.doctrine_filters:
+        class: Shiawa\BlogBundle\EventListener\DoctrineFilterListener
+        arguments:
+            - "@doctrine.orm.entity_manager"
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }

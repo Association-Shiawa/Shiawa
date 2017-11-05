@@ -2,7 +2,7 @@
 
 namespace Shiawa\BlogBundle\Form;
 
-use Shiawa\FileBundle\Form\FileUploadType;
+use Shiawa\FileBundle\Form\Type\FileType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
@@ -21,25 +21,25 @@ class FormationType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('thumbnail', FileUploadType::class, array(
-                'required' => false
-            ))
+//            ->add('thumbnail', FileType::class, array(
+//                'required' => false
+//            ))
             ->add('createdAt', DateType::class, array(
                 'widget' => 'single_text',
                 'html5' => false
             ))
-            ->add('description')
+//            ->add('description')
             ->add('category', EntityType::class, array(
                 'class'        => 'ShiawaBlogBundle:Category',
                 'choice_label' => 'name',
                 'multiple'     => false,
             ))
-            ->add('tags', CollectionType::class, array(
-                'entry_type'   => TagType::class,
-                'allow_add'    => true,
-                'allow_delete' => true,
-                'required' => false
-            ))
+//            ->add('tags', CollectionType::class, array(
+//                'entry_type'   => TagType::class,
+//                'allow_add'    => true,
+//                'allow_delete' => true,
+//                'required' => false
+//            ))
             ->add('save', SubmitType::class, array(
                 'label' => "Valider"
             ))

@@ -328,11 +328,21 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/jquery-ui/themes/vader/images/ui-icons_cccccc_256x240.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/jquery-ui/themes/vader/images/ui-icons_cd0a0a_256x240.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/jquery-ui/themes/vader/images/ui-icons_f29a00_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/easy_admin/form.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/admin/design.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/EasyAdmin/TagsSubscriber.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/DataTransformer/TagsTransformer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/TagsType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/easy_admin/vich_uploader_image.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/bundles/ckeditor.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/bundles/ckfinder.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/bundles/fmelfinder.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/bundles/fosuser.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/bundles/liipimagine.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/bundles/vichuploader.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/EasyAdmin/ArticleController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/EasyAdmin/UserAdminController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Doctrine/PostDatedFilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Doctrine/PublishedFilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/DoctrineFilterListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/BlogFile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/ProfilePicture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shiawa/FileBundle/Form/Type/FileType.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/elfinder/dist/css/elfinder.min.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/elfinder/dist/css/theme.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/elfinder/dist/js/elfinder.min.js" />
@@ -709,53 +719,315 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/require.config.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/require.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/require.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/tags/bootstrap-tagsinput-typeahead.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/tags/bootstrap-tagsinput.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/tags/bootstrap-tagsinput.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/typeahead/typeahead.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/animation.js" afterPath="$PROJECT_DIR$/web/js/materializecss/animation.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/bin/materialize.js" afterPath="$PROJECT_DIR$/web/js/materializecss/bin/materialize.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/bin/materialize.min.js" afterPath="$PROJECT_DIR$/web/js/materializecss/bin/materialize.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/buttons.js" afterPath="$PROJECT_DIR$/web/js/materializecss/buttons.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/cards.js" afterPath="$PROJECT_DIR$/web/js/materializecss/cards.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/carousel.js" afterPath="$PROJECT_DIR$/web/js/materializecss/carousel.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/character_counter.js" afterPath="$PROJECT_DIR$/web/js/materializecss/character_counter.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/chips.js" afterPath="$PROJECT_DIR$/web/js/materializecss/chips.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/collapsible.js" afterPath="$PROJECT_DIR$/web/js/materializecss/collapsible.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/date_picker/picker.date.js" afterPath="$PROJECT_DIR$/web/js/materializecss/date_picker/picker.date.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/date_picker/picker.js" afterPath="$PROJECT_DIR$/web/js/materializecss/date_picker/picker.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/dropdown.js" afterPath="$PROJECT_DIR$/web/js/materializecss/dropdown.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/forms.js" afterPath="$PROJECT_DIR$/web/js/materializecss/forms.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/global.js" afterPath="$PROJECT_DIR$/web/js/materializecss/global.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/hammer.min.js" afterPath="$PROJECT_DIR$/web/js/materializecss/hammer.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/init.js" afterPath="$PROJECT_DIR$/web/js/materializecss/init.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/initial.js" afterPath="$PROJECT_DIR$/web/js/materializecss/initial.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/web/js/materializecss/jquery.easing.1.3.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/jquery.hammer.js" afterPath="$PROJECT_DIR$/web/js/materializecss/jquery.hammer.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/jquery.timeago.min.js" afterPath="$PROJECT_DIR$/web/js/materializecss/jquery.timeago.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/leanModal.js" afterPath="$PROJECT_DIR$/web/js/materializecss/leanModal.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/materialbox.js" afterPath="$PROJECT_DIR$/web/js/materializecss/materialbox.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/modal.js" afterPath="$PROJECT_DIR$/web/js/materializecss/modal.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/parallax.js" afterPath="$PROJECT_DIR$/web/js/materializecss/parallax.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/prism.js" afterPath="$PROJECT_DIR$/web/js/materializecss/prism.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/pushpin.js" afterPath="$PROJECT_DIR$/web/js/materializecss/pushpin.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/scrollFire.js" afterPath="$PROJECT_DIR$/web/js/materializecss/scrollFire.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/scrollspy.js" afterPath="$PROJECT_DIR$/web/js/materializecss/scrollspy.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/sideNav.js" afterPath="$PROJECT_DIR$/web/js/materializecss/sideNav.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/slider.js" afterPath="$PROJECT_DIR$/web/js/materializecss/slider.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/tabs.js" afterPath="$PROJECT_DIR$/web/js/materializecss/tabs.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/toasts.js" afterPath="$PROJECT_DIR$/web/js/materializecss/toasts.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/tooltip.js" afterPath="$PROJECT_DIR$/web/js/materializecss/tooltip.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/transitions.js" afterPath="$PROJECT_DIR$/web/js/materializecss/transitions.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/velocity.min.js" afterPath="$PROJECT_DIR$/web/js/materializecss/velocity.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/waves.js" afterPath="$PROJECT_DIR$/web/js/materializecss/waves.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserAdminController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/EasyAdmin/TagsSubscriber.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bann.mp4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bann.webm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/cropper.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/horizontal_sly.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/materialize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/save.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/save.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/style.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/style.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/tags/bootstrap-tagsinput-typeahead.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/tags/bootstrap-tagsinput.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/css/autoFill.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/css/autoFill.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/css/autoFill.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/css/autoFill.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/css/autoFill.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/css/autoFill.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/css/autoFill.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/css/autoFill.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/js/autoFill.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/js/autoFill.bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/js/autoFill.foundation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/js/autoFill.foundation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/js/autoFill.jqueryui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/js/autoFill.jqueryui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/js/dataTables.autoFill.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/AutoFill-2.1.2/js/dataTables.autoFill.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/buttons.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/buttons.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/buttons.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/buttons.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/buttons.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/buttons.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/buttons.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/buttons.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/common.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/common.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/common.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/mixins.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/mixins.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/css/mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.colVis.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.colVis.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.flash.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.flash.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.foundation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.foundation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.html5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.html5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.jqueryui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.jqueryui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.print.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/buttons.print.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/dataTables.buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/js/dataTables.buttons.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Buttons-1.2.2/swf/flashExport.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/css/dataTables.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/css/dataTables.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/css/dataTables.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/css/dataTables.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/css/dataTables.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/css/dataTables.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/css/jquery.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/css/jquery.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/css/jquery.dataTables_themeroller.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/images/sort_asc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/images/sort_asc_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/images/sort_both.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/images/sort_desc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/images/sort_desc_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/js/dataTables.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/js/dataTables.bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/js/dataTables.foundation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/js/dataTables.foundation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/js/dataTables.jqueryui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/js/dataTables.jqueryui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/js/jquery.dataTables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/DataTables-1.10.12/js/jquery.dataTables.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/FixedHeader-3.1.2/css/fixedHeader.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/FixedHeader-3.1.2/css/fixedHeader.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/FixedHeader-3.1.2/css/fixedHeader.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/FixedHeader-3.1.2/css/fixedHeader.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/FixedHeader-3.1.2/css/fixedHeader.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/FixedHeader-3.1.2/css/fixedHeader.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/FixedHeader-3.1.2/css/fixedHeader.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/FixedHeader-3.1.2/css/fixedHeader.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/FixedHeader-3.1.2/js/dataTables.fixedHeader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/FixedHeader-3.1.2/js/dataTables.fixedHeader.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/JSZip-2.5.0/jszip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/JSZip-2.5.0/jszip.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/css/responsive.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/css/responsive.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/css/responsive.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/css/responsive.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/css/responsive.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/css/responsive.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/css/responsive.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/css/responsive.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/js/dataTables.responsive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/js/dataTables.responsive.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/js/responsive.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/js/responsive.bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/js/responsive.foundation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/js/responsive.foundation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/js/responsive.jqueryui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Responsive-2.1.0/js/responsive.jqueryui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/RowReorder-1.1.2/css/rowReorder.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/RowReorder-1.1.2/css/rowReorder.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/RowReorder-1.1.2/css/rowReorder.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/RowReorder-1.1.2/css/rowReorder.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/RowReorder-1.1.2/css/rowReorder.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/RowReorder-1.1.2/css/rowReorder.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/RowReorder-1.1.2/css/rowReorder.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/RowReorder-1.1.2/css/rowReorder.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/RowReorder-1.1.2/js/dataTables.rowReorder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/RowReorder-1.1.2/js/dataTables.rowReorder.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Scroller-1.4.2/css/scroller.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Scroller-1.4.2/css/scroller.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Scroller-1.4.2/css/scroller.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Scroller-1.4.2/css/scroller.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Scroller-1.4.2/css/scroller.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Scroller-1.4.2/css/scroller.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Scroller-1.4.2/css/scroller.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Scroller-1.4.2/css/scroller.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Scroller-1.4.2/js/dataTables.scroller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Scroller-1.4.2/js/dataTables.scroller.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Select-1.2.0/css/select.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Select-1.2.0/css/select.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Select-1.2.0/css/select.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Select-1.2.0/css/select.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Select-1.2.0/css/select.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Select-1.2.0/css/select.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Select-1.2.0/css/select.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Select-1.2.0/css/select.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Select-1.2.0/js/dataTables.select.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/Select-1.2.0/js/dataTables.select.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/datatables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/datatables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/datatables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/datatable/datatables.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Bold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Bold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Bold.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Light.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Light.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Light.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Light.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Medium.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Medium.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Medium.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Medium.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Thin.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Thin.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Thin.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/fonts/roboto/Roboto-Thin.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/imgs/icons/facebook.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/imgs/icons/instagram.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/imgs/icons/twitter.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/imgs/icons/youtube-play.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/imgs/poster.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/imgs/slider_cmv.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/imgs/slider_cosplay.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/imgs/slider_scene.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/imgs/slider_shootings.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/imgs/watermark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/admin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/cropper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/cropper.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery.collection.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/animation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/bin/materialize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/bin/materialize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/cards.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/carousel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/character_counter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/chips.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/collapsible.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/date_picker/picker.date.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/date_picker/picker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/forms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/global.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/hammer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/initial.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/jquery.easing.1.3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/jquery.hammer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/jquery.timeago.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/leanModal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/materialbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/modal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/parallax.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/prism.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/pushpin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/scrollFire.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/scrollspy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/sideNav.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/slider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/tabs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/toasts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/transitions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/velocity.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/materializecss/waves.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/setup-ckfinder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/shiawa_functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/sly.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tags/bootstrap-tagsinput.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/typeahead/typeahead.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_badges.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_cards.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_carousel.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_chips.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_collapsible.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_color.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_dropdown.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_global.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_icons-material-design.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_materialbox.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_modal.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_navbar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_normalize.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_prefixer.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_preloader.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_roboto.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_sideNav.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_slider.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_table_of_contents.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_tabs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_toast.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_tooltip.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_typography.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/_waves.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/date_picker/_default.date.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/date_picker/_default.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/date_picker/_default.time.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/forms/_checkboxes.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/forms/_file-input.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/forms/_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/forms/_input-fields.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/forms/_radio-buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/forms/_range.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/forms/_select.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/components/forms/_switches.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_alert.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_article.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_avatar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_cards.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_global.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_list-videos.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_navbar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_style-accueil.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_style-anime.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_tinymce.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/custom/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/materialize.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/save.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/sass/style.scss" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/admin/design.yml" afterPath="$PROJECT_DIR$/app/config/admin/design.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/admin/entities/article.yml" afterPath="$PROJECT_DIR$/app/config/admin/entities/article.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/admin/entities/category.yml" afterPath="$PROJECT_DIR$/app/config/admin/entities/category.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/admin/entities/event.yml" afterPath="$PROJECT_DIR$/app/config/admin/entities/event.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/admin/entities/review.yml" afterPath="$PROJECT_DIR$/app/config/admin/entities/review.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/admin/entities/tutorial.yml" afterPath="$PROJECT_DIR$/app/config/admin/entities/tutorial.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/admin/entities/user.yml" afterPath="$PROJECT_DIR$/app/config/admin/entities/user.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/comments.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/comments.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/AnimeReview.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/AnimeReview.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Article.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Article.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Chapter.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Chapter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Formation.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Formation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ChapterType.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ChapterType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/FormationType.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/FormationType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/ArticleRepository.php" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/ArticleRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeCharacter/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeCharacter/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/edit.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/form_manage.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/form_manage.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/EventBundle/Entity/Event.php" afterPath="$PROJECT_DIR$/src/Shiawa/EventBundle/Entity/Event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig" afterPath="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/File.php" afterPath="$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/File.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shiawa/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/Shiawa/UserBundle/Entity/User.php" />
     </list>
     <ignored path="Shiawa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -789,52 +1061,84 @@
       <file leaf-file-name="article.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/admin/entities/article.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-              <folding>
-                <marker date="1509664717786" expanded="true" signature="419:2843" ph="easy_admin: &lt;1 key&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="design.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/admin/design.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="697">
+              <caret line="41" column="42" lean-forward="false" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/admin.js">
+      <file leaf-file-name="ArticleController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/EasyAdmin/ArticleController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding>
+                <element signature="e#50#136#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoctrineFilterListener.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/DoctrineFilterListener.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TagsSubscriber.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/EasyAdmin/TagsSubscriber.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+              <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
-                <element signature="e#61#98#0#PHP" expanded="true" />
+                <element signature="e#51#82#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataListType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/DataListType.php">
+      <file leaf-file-name="PostDatedFilter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Doctrine/PostDatedFilter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="425">
+              <caret line="25" column="47" lean-forward="false" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+              <folding>
+                <element signature="e#47#86#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoreController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Controller/AdminController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4539">
+              <caret line="294" column="11" lean-forward="false" selection-start-line="277" selection-start-column="8" selection-end-line="294" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="93" lean-forward="false" selection-start-line="29" selection-start-column="93" selection-end-line="29" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -844,27 +1148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>class CKfi</find>
-      <find>class CKf</find>
-      <find>class CKF</find>
-      <find>class CKFi</find>
-      <find>class CKFind</find>
-      <find>class CKFinder</find>
-      <find>Dashboard Admin</find>
-      <find>image</find>
-      <find>select2</find>
-      <find>select</find>
-      <find>select2-hidden-accessible</find>
-      <find>data-widget</find>
-      <find>easyadmin_autocomplete_inner_label</find>
-      <find>choice</find>
-      <find>field_</find>
-      <find>field-entity</find>
-      <find>entity</find>
-      <find>choice_wi</find>
-      <find>entity_row</find>
-      <find>loadResourceForBlo</find>
-      <find>media</find>
       <find>userfile</find>
       <find>backends</find>
       <find>userfiles</find>
@@ -874,15 +1157,38 @@
       <find>tag</find>
       <find>DataListType</find>
       <find>dispa</find>
+      <find>Gedmo</find>
+      <find>targetEntity=&quot;Shiawa\FileBundle\Entity\File&quot;</find>
+      <find>class BlogDocu</find>
+      <find>app.path.articles_images</find>
+      <find>BlogDocument</find>
+      <find>app.path.blog</find>
+      <find>app.path.blog_document</find>
+      <find>BlogFile</find>
+      <find>getWebpath</find>
+      <find>vich_uploader_asset(article</find>
+      <find>namer_directory_property</find>
+      <find>bann</find>
+      <find>webp</find>
+      <find>vich</find>
+      <find>webpa</find>
+      <find>disq</find>
+      <find>subs</find>
+      <find>implements EventSubscriberInterface</find>
+      <find>UserAdminController</find>
+      <find>ArticleController.phphp</find>
+      <find>getLastArticles</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>app.path.blog_file</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\dev\shiawa-website\</dir>
       <dir>D:\dev\shiawa-website\src</dir>
       <dir>D:\dev\shiawa-website</dir>
       <dir>C:\dev\shiawa-website\vendor</dir>
+      <dir>C:\dev\shiawa-website</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -901,57 +1207,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/composer.lock" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/composer.json" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/config.yml" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/parameters.yml" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/Security/login.html.twig" />
-        <option value="$PROJECT_DIR$/web/sass/custom/_global.scss" />
-        <option value="$PROJECT_DIR$/web/sass/style.scss" />
-        <option value="$PROJECT_DIR$/web/js/shiawa_functions.js" />
-        <option value="$PROJECT_DIR$/web/sass/custom/_alert.scss" />
-        <option value="$PROJECT_DIR$/src/Shiawa/UserBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog_layout.html.twig" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/web/js/setup-ckfinder.js" />
-        <option value="$PROJECT_DIR$/src/AppBundle/CustomCKFinderAuth/CustomCKFinderAuth.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Category.php" />
-        <option value="$PROJECT_DIR$/app/config/admin/entities/category.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/UserAdminController.php" />
-        <option value="$PROJECT_DIR$/app/config/admin/entities/review.yml" />
-        <option value="$PROJECT_DIR$/app/config/admin/entities/event.yml" />
-        <option value="$PROJECT_DIR$/app/config/admin/entities/tag.yml" />
-        <option value="$PROJECT_DIR$/app/config/admin/menu.yml" />
-        <option value="$PROJECT_DIR$/app/config/admin/entities/tutorial.yml" />
-        <option value="$PROJECT_DIR$/app/config/admin/entities/user.yml" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Tag.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Entity/Event.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Form/TwigRendererEngine.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/easy_admin/tag_collection.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/easy_admin/Article/edit.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/easy_admin/Article/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/Type/FileType.php" />
+        <option value="$PROJECT_DIR$/app/config/bundles/vichuploader.yml" />
+        <option value="$PROJECT_DIR$/app/config/bundles/liipimagine.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/easy_admin/vich_uploader_image.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig" />
-        <option value="$PROJECT_DIR$/vendor/ckfinder/ckfinder-symfony3-bundle/DependencyInjection/Configuration.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/web/js/tags/bootstrap-tagsinput.min.js" />
-        <option value="$PROJECT_DIR$/web/css/tags/bootstrap-tagsinput.css" />
-        <option value="$PROJECT_DIR$/web/css/tags/bootstrap-tagsinput-typeahead.css" />
-        <option value="$PROJECT_DIR$/web/js/typeahead/typehead.js" />
-        <option value="$PROJECT_DIR$/app/Resources/views/easy_admin/form.html.twig" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/EasyAdmin/TagsSubscriber.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/TagsType.php" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/DataTransformer/TagsTransformer.php" />
-        <option value="$PROJECT_DIR$/app/config/admin/entities/article.yml" />
-        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeCharacter/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/comments.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/admin/entities/category.yml" />
+        <option value="$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/File.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Entity/Event.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/FileBundle/Form/Type/FileType.php" />
+        <option value="$PROJECT_DIR$/app/config/admin/entities/event.yml" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/AnimeReview.php" />
+        <option value="$PROJECT_DIR$/app/config/admin/entities/review.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/nav.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/aside.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/AnimeReview/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Formation.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/FormationType.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/form_manage.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/ChaptersType.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/TutorialController.php" />
+        <option value="$PROJECT_DIR$/app/config/admin/entities/tutorial.yml" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ChapterType.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig" />
         <option value="$PROJECT_DIR$/app/config/admin/design.yml" />
-        <option value="$PROJECT_DIR$/web/js/admin.js" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/TutorialListener.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/EasyAdmin/AdminController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/UserAdminController.php" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/config/admin/entities/user.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/EasyAdmin/UserAdminController.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/AddToType.php" />
+        <option value="$PROJECT_DIR$/web/assets/src/js/admin.js" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Chapter.php" />
+        <option value="$PROJECT_DIR$/app/config/admin/entities/article.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/EasyAdmin/ArticleController.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/ArticleRepository.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/SQLFilter/PublishedFilter.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Doctrine/PublishedFilter.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/DoctrineFilterListener.php" />
+        <option value="$PROJECT_DIR$/src/Shiawa/BlogBundle/Doctrine/PostDatedFilter.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -1089,6 +1395,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -1122,6 +1429,13 @@
               <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="entities" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
@@ -1161,30 +1475,21 @@
               <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="EventListener" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="EventListener" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="EasyAdmin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -1192,8 +1497,6 @@
               <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
@@ -1201,8 +1504,6 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DataTransformer" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
@@ -1210,8 +1511,15 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Type" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Doctrine" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Shiawa" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EventListener" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
@@ -1239,19 +1547,26 @@
               <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="elfinder" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="shiawa-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shiawa-website" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1270,7 +1585,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="add_unversioned_files" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="design&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/admin/design.yml&#10;form.html.t&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Resources/views/Article/form.html.twig&#10;form&#9;FILE&#9;file://C:/dev/shiawa-website/app/Resources/views/easy_admin/form.html.twig&#10;articlet&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Form/ArticleType.php&#10;form_div_layout&#9;FILE&#9;file://C:/dev/shiawa-website/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig&#10;design.&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/admin/design.yml&#10;articletype&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Form/ArticleType.php&#10;TwigRendererEngine&#9;null&#9;null&#10;tagtype&#9;null&#9;null&#10;event&#9;null&#9;null&#10;Tag.php&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Entity/Tag.php&#10;Article.php&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Entity/Article.php" />
+    <property name="SearchEverywhereHistoryKey" value="config.&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/config.yml&#10;CoreContr&#9;null&#9;null&#10;admin.js&#9;FILE&#9;file://C:/dev/shiawa-website/web/assets/src/js/admin.js&#10;user.ym&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/admin/entities/user.yml&#10;routin.yml&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/routing.yml&#10;Event/vi&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig&#10;index.html.twig&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig&#10;view.html.twig&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Resources/views/Article/view.html.twig&#10;blog.html&#9;FILE&#9;file://C:/dev/shiawa-website/src/AppBundle/Resources/views/Core/blog.html.twig&#10;Index.html.twig&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig&#10;Formatio&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Entity/Formation.php&#10;BlogFile&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/FileBundle/Entity/BlogFile.php&#10;index.html&#9;FILE&#9;file://C:/dev/shiawa-website/src/AppBundle/Resources/views/Core/index.html.twig&#10;config.yml&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/config.yml&#10;design&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/admin/design.yml&#10;Chapt&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Form/ChapterType.php&#10;Formation.php&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Entity/Formation.php&#10;formation&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Controller/FormationController.php&#10;form_mana&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Resources/views/Formation/form_manage.html.twig&#10;user&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/admin/entities/user.yml&#10;article.y&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/admin/entities/article.yml&#10;FormationContr&#9;null&#9;null&#10;FormationType&#9;null&#9;null&#10;Formation&#9;null&#9;null&#10;aside.html&#9;FILE&#9;file://C:/dev/shiawa-website/src/AppBundle/Resources/views/Core/aside.html.twig&#10;nav.html.twig&#9;FILE&#9;file://C:/dev/shiawa-website/src/AppBundle/Resources/views/Core/nav.html.twig&#10;AnimeReview&#9;null&#9;null&#10;FileType&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/FileBundle/Form/Type/FileType.php&#10;eve&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/EventBundle/Entity/Event.php&#10;Article.php&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Entity/Article.php&#10;event.php&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/EventBundle/Entity/Event.php&#10;event.yml&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/admin/entities/event.yml&#10;file.php&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/FileBundle/Entity/File.php&#10;blog.html.&#9;FILE&#9;file://C:/dev/shiawa-website/src/AppBundle/Resources/views/Core/blog.html.twig&#10;liip&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/bundles/liipimagine.yml&#10;index&#9;FILE&#9;file://C:/dev/shiawa-website/src/AppBundle/Resources/views/Core/index.html.twig&#10;vich_&#9;FILE&#9;file://C:/dev/shiawa-website/app/Resources/views/easy_admin/vich_uploader_image.html.twig&#10;art&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/admin/entities/article.yml&#10;article&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Entity/Article.php&#10;tim&#9;FILE&#9;file://C:/dev/shiawa-website/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Traits/TimestampableEntity.php&#10;TimestampableEnt&#9;null&#9;null&#10;article.php&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Entity/Article.php&#10;corecontr&#9;null&#9;null&#10;articl&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/admin/entities/article.yml&#10;form.html.t&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Resources/views/Article/form.html.twig&#10;form&#9;FILE&#9;file://C:/dev/shiawa-website/app/Resources/views/easy_admin/form.html.twig&#10;articlet&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Form/ArticleType.php&#10;form_div_layout&#9;FILE&#9;file://C:/dev/shiawa-website/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig&#10;design.&#9;FILE&#9;file://C:/dev/shiawa-website/app/config/admin/design.yml&#10;articletype&#9;FILE&#9;file://C:/dev/shiawa-website/src/Shiawa/BlogBundle/Form/ArticleType.php" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
@@ -1282,10 +1597,11 @@
       <recent name="C:\wamp\www\Shiawa\src\Shiawa\BlogBundle\Controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\dev\shiawa-website\web\js\materializecss" />
-      <recent name="D:\dev\shiawa-website\app\Resources" />
-      <recent name="C:\wamp\www\Shiawa\src\AppBundle\Resources\views\Core" />
-      <recent name="C:\wamp\www\Shiawa\src\Shiawa\BlogBundle\Form" />
+      <recent name="C:\dev\shiawa-website\src\AppBundle\Controller\EasyAdmin" />
+      <recent name="C:\dev\shiawa-website\web\assets\dist\imgs" />
+      <recent name="C:\dev\shiawa-website\web\assets\src" />
+      <recent name="C:\dev\shiawa-website\web\assets\dist" />
+      <recent name="C:\dev\shiawa-website\src\Shiawa\FileBundle\Form" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1507,7 +1823,12 @@
       <workItem from="1509314666125" duration="2119000" />
       <workItem from="1509390357601" duration="2355000" />
       <workItem from="1509549516315" duration="16063000" />
-      <workItem from="1509649670049" duration="9177000" />
+      <workItem from="1509649670049" duration="9628000" />
+      <workItem from="1509734542790" duration="6484000" />
+      <workItem from="1509790555563" duration="2195000" />
+      <workItem from="1509799103129" duration="16241000" />
+      <workItem from="1509822575437" duration="13227000" />
+      <workItem from="1509891270488" duration="13765000" />
     </task>
     <task id="LOCAL-00001" summary="Mise à jour">
       <created>1508451569063</created>
@@ -1537,18 +1858,24 @@
       <option name="project" value="LOCAL" />
       <updated>1509402501437</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mise à jour">
+      <created>1509666310700</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1509666310700</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="532657000" />
+    <option name="totallyTimeSpent" value="585020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23720682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20131291" sideWeight="0.45" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30277187" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1592,380 +1919,395 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Resources/views/default/field_string.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-845">
+          <caret line="0" column="43" lean-forward="true" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/FormationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Resources/views/default/includes/_actions.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Resources/views/default/includes/_delete_form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Resources/views/default/includes/_select2_widget.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Form/TwigRendererEngine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="97" column="5" lean-forward="false" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+        <state relative-caret-position="1501">
+          <caret line="99" column="42" lean-forward="false" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Resources/views/default/edit.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Tutorial/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Resources/views/default/new.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/FormationEditType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/easy_admin/tag_collection.html.twig" />
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/easy_admin/Article/new.html.twig" />
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/easy_admin/Article/edit.html.twig" />
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Form/jquery.collection.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Form/fields.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/setup-ckfinder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/cropper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="73" lean-forward="true" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+        <state relative-caret-position="340">
+          <caret line="22" column="11" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="22" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog_layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/ChaptersType.php" />
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/FileBundle/Form/Type/FileType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+        <state relative-caret-position="561">
+          <caret line="36" column="11" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Formation/form_manage.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/admin/entities/tutorial.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/ckfinder/ckfinder-symfony3-bundle/DependencyInjection/CKSourceCKFinderExtension.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DomCrawler/Link.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ChapterType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/ckfinder/ckfinder-symfony3-bundle/_connector/CKFinder.php">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Controller/TutorialController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="63" column="6" lean-forward="false" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+        <state relative-caret-position="187">
+          <caret line="52" column="11" lean-forward="false" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/ckfinder/ckfinder-symfony3-bundle/Controller/CKFinderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/ckfinder/ckfinder-symfony3-bundle/DependencyInjection/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="54" column="63" lean-forward="false" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/imgs/slider_cosplay.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/imgs/watermark.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/imgs/slider_shootings.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/imgs/slider_cmv.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/tags/bootstrap-tagsinput.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="59" column="1" lean-forward="false" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/tags/bootstrap-tagsinput-typeahead.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="53" column="1" lean-forward="false" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/typeahead/typeahead.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="2574" column="3" lean-forward="false" selection-start-line="2574" selection-start-column="3" selection-end-line="2574" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/ckfinder/ckfinder-symfony3-bundle/Resources/config/ckfinder_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="79" column="22" lean-forward="false" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/admin/entities/tag.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Resources/views/form/bootstrap_3_horizontal_layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="13" lean-forward="false" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Resources/views/form/bootstrap_3_layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="50" lean-forward="false" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="167" column="18" lean-forward="false" selection-start-line="167" selection-start-column="18" selection-end-line="167" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/TagType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/tags/bootstrap-tagsinput.min.js">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/FileBundle/Entity/BlogFile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="5" column="6308" lean-forward="false" selection-start-line="5" selection-start-column="6297" selection-end-line="5" selection-end-column="6308" />
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/easyadmin/javascript/select2.full.min.js">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="1" column="4480" lean-forward="false" selection-start-line="1" selection-start-column="4477" selection-end-line="1" selection-end-column="4480" />
+        <state relative-caret-position="620">
+          <caret line="92" column="51" lean-forward="true" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="29" column="44" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="29" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Core/blog.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="27" column="63" lean-forward="true" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="92" column="68" lean-forward="false" selection-start-line="92" selection-start-column="68" selection-end-line="92" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/EventBundle/Resources/views/Event/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" column="52" lean-forward="false" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#12#52#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/easy_admin/form.html.twig">
+    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Event/EasyAdminEvents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="46" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <marker date="1509657835048" expanded="false" signature="10:38" ph="bootstrap_3_layout" />
-          </folding>
+        <state relative-caret-position="298">
+          <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/form.html.twig">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/listeners.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="89" column="89" lean-forward="true" selection-start-line="89" selection-start-column="89" selection-end-line="89" selection-end-column="89" />
-          <folding>
-            <element signature="e#3441#3491#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/views/Article/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#53#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/ArticleType.php">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/email_confirmation.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+        <state relative-caret-position="136">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/EventListener/EmailConfirmationListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/GenericEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/TutorialListener.php" />
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/admin/design.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="50" column="15" lean-forward="true" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/media/uploads/articles/5/9/59fe1e949941c_14195179_867020150098236_6858075990965996843_o.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/admin/entities/user.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="74" lean-forward="false" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/EasyAdmin/UserAdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/DataListType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/DataTransformer/TagsTransformer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-          <folding>
-            <element signature="e#57#103#0#PHP" expanded="true" />
-            <element signature="e#710#732#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/admin/entities/article.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <marker date="1509664717786" expanded="true" signature="419:2843" ph="easy_admin: &lt;1 key&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/admin/design.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Utils/TagsManagement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="181" column="49" lean-forward="false" selection-start-line="181" selection-start-column="41" selection-end-line="181" selection-end-column="49" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/TagsType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="45" lean-forward="false" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        <state relative-caret-position="170">
+          <caret line="16" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Formation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding>
-            <element signature="e#47#93#0#PHP" expanded="true" />
+            <element signature="e#44#92#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/EasyAdmin/TagsSubscriber.php">
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        <state relative-caret-position="255">
+          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/FormationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="37" column="48" lean-forward="true" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Form/Type/AddToType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="69" column="27" lean-forward="false" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/src/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Entity/Chapter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="53" column="55" lean-forward="false" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/admin/entities/article.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="42" lean-forward="false" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle/src/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4539">
+          <caret line="294" column="11" lean-forward="false" selection-start-line="277" selection-start-column="8" selection-end-line="294" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="376" column="20" lean-forward="false" selection-start-line="376" selection-start-column="20" selection-end-line="376" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="93" lean-forward="false" selection-start-line="29" selection-start-column="93" selection-end-line="29" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/EasyAdmin/ArticleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding>
-            <element signature="e#61#98#0#PHP" expanded="true" />
+            <element signature="e#50#136#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Doctrine/PublishedFilter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="84" lean-forward="false" selection-start-line="25" selection-start-column="84" selection-end-line="25" selection-end-column="84" />
+          <folding>
+            <element signature="e#47#86#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="73" column="73" lean-forward="false" selection-start-line="73" selection-start-column="73" selection-end-line="73" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/EventListener/DoctrineFilterListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#51#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Doctrine/PostDatedFilter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="47" lean-forward="false" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+          <folding>
+            <element signature="e#47#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shiawa/BlogBundle/Repository/ArticleRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="52" column="43" lean-forward="false" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CoreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

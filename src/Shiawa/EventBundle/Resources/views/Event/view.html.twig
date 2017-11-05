@@ -20,7 +20,7 @@
 
 {%  block OG_title %}{{ event.name|title }} - Shiawa.fr{% endblock %}
 
-{%  block OG_image %}{{ event.thumbnail ? asset(event.thumbnail.getWebPath) }}{% endblock %}
+{%  block OG_image %}{{ vich_uploader_asset(event.thumbnail, 'file') | imagine_filter('middle_thumb') }}{% endblock %}
 
 {% block title %}
    {{ event.name }} - Shiawa.fr
@@ -31,7 +31,9 @@
 <div class='col s12 m6 offset-m1'>
     <div class='card z-depth-1'>
         <div class="card-image" style="max-height: 500px; overflow: hidden;">
-            <img src="{{ event.thumbnail ? asset(event.thumbnail.getWebPath) }}">
+            {% if event.thumbnail is not null %}
+                <img src='{{ vich_uploader_asset(event.thumbnail, 'file', 'Shiawa\\FileBundle\\Entity\\BlogFile') | imagine_filter('big_thumb') }}' />
+            {% endif %}
         </div>
         <div class='card-content'>
 
@@ -104,7 +106,7 @@
                 {% if event.beginAt == event.endAt %}
                     le <a href="#"> {{ event.beginAt|date('d/m/Y') }}</a>
                 {% else %}
-                     du <a href="#"> {{ event.beginAt|date('d/m/Y') }}</a>au <a href="#">{{
+                     du <a href="#">{{ event.beginAt|date('d/m/Y') }}</a> au <a href="#">{{
                     event.endAt|date('d/m/Y') }}</a>
                 {% endif %}
             {% endif %}
@@ -133,7 +135,7 @@
                         <h5 class='title-article'><a href='#'>{{ article.title }}</a></h5>
                         <hr />
                         <a href='{{ path('shiawa_article_view', {'slug': article.slug, 'category' : article.category.name}) }}'>
-                            <img src='{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}' style='width:100%;
+                            <img src='{{ vich_uploader_asset(event, 'thumbnail') }}' style='width:100%;
                         background-size: cover' />
                         </a>
                     </div>

@@ -1,0 +1,8 @@
+ivory_ck_editor:
+    configs:
+        my_config:
+            toolbar: "standard"
+    toolbars:
+        items:
+            full.colors: [ "TextColor" ]
+            full.document: [ "Source", "Preview" ]

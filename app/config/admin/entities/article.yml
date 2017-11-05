@@ -14,26 +14,17 @@ easy_admin:
         # can be the configuration of your backend
         Article:
             class: Shiawa\BlogBundle\Entity\Article
+            controller: AppBundle\Controller\EasyAdmin\ArticleController
             label: 'Articles'
             list:
                 fields:
                     - id
                     - { property: 'published', type: 'toggle' }
                     - title
-                    - { property: 'thumbnail.getWebPath', label: 'Couverture', type: 'image', base_path: '/' }
+                    - { property: 'thumbnail', label: 'Couverture', type: 'image', base_path: '%app.path.blog_file%', template: 'easy_admin/vich_uploader_image.html.twig' }
                     - { property: 'createdAt'}
                     - tags
-            show:
-                fields:
-                    - id
-                    - { property: 'title', css_class: 'large' }
-                    - summary
-                    - content
-                    - { property: 'published', label: 'Published' }
-                    - createdAt
-                    - { property: 'thumbnail', type: 'image', base_path: '%app.path.articles_images%' }
-#                    - categories
-#                    - tags
+                    - category
             form:
                 fields:
                     - { type: 'group', css_class: 'col-sm-8', label: 'Basic information', icon: 'pencil' }
@@ -48,5 +39,7 @@ easy_admin:
                     - { property: 'createdAt' }
                     - { property: 'tags', type: 'Shiawa\BlogBundle\Form\Type\TagsType' }
                     - { property: 'event' }
+                    - { property: 'chapter' }
                     - { type: 'group', css_class: 'col-sm-4', label: 'Attachments', icon: 'paperclip' }
-#                    - { property: 'thumbnail', type: 'file', type_options: { required: true } }
+#                    - { property: 'thumbnail', type: 'vich_image', type_options: { required: true } }
+                    - { property: 'thumbnail', type: 'Shiawa\FileBundle\Form\Type\FileType', type_options: { data_class: 'Shiawa\FileBundle\Entity\BlogFile' } }

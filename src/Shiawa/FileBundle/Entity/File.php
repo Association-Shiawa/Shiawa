@@ -3,20 +3,32 @@
 namespace Shiawa\FileBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Shiawa\UserBundle as User;
+use Shiawa\UserBundle\Entity\User as User;
 use Gedmo\Mapping\Annotation as Gedmo;
-use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File as BaseFile;
 
 /**
  * File
  *
  * @ORM\Table(name="shiawa_file")
  * @ORM\Entity(repositoryClass="Shiawa\FileBundle\Repository\FileRepository")
- * @ORM\HasLifecycleCallbacks
+ * @ORM\InheritanceType("SINGLE_TABLE")
+ * @ORM\DiscriminatorColumn(name="type", type="string")
+ * @ORM\DiscriminatorMap({
+ *     "profile_picture" = "ProfilePicture",
+ *     "blog_file" = "BlogFile"
+ * })
+ *
+ * @Vich\Uploadable
  */
-class File
+abstract class File
 {
+
+    use TimestampableEntity;
+
     /**
      * @var int
      *
@@ -41,13 +53,6 @@ class File
     private $alt;
 
     /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="created_at", type="datetime")
-     */
-    private $createdAt;
-
-    /**
      * @var
      * @ORM\Column(name="summary", type="text", nullable=true)
      */
@@ -63,108 +68,19 @@ class File
     private $author;
 
     /**
-     * @var UploadedFile
-     * @Assert\File (
-     *   mimeTypes = {"image/png", "image/jpg"}
-     *  )
+     * Please add VichUploader Annotation on subclass.
      */
-    private $file;
-
-    // On ajoute cet attribut pour y stocker le nom du fichier temporairement
-    private $tempFilename;
-
-    // le dossier par defaut
-    private $uploadDir = 'uploads/files/';
+    protected $file;
 
 
     public function __construct()
     {
-        $this->createdAt = new \DateTime();
+
     }
 
-    /**
-     * @ORM\PrePersist()
-     * @ORM\PreUpdate()
-     */
-    public function preUpload()
+    public function __toString()
     {
-        // Si jamais il n'y a pas de fichier (champ facultatif), on ne fait rien
-        if (null === $this->file) {
-            return;
-        }
-        // Le nom du fichier est son nom original + l'extension
-        $this->filename = $this->file->getClientOriginalName();
-        // Et on génère l'attribut alt de la balise <img>, à la valeur du nom du fichier sur le PC de l'internaute
-        $this->alt = $this->file->getClientOriginalName();
-    }
-
-    /**
-     * @ORM\PostPersist()
-     * @ORM\PostUpdate()
-     */
-    public function upload()
-    {
-        // Si jamais il n'y a pas de fichier (champ facultatif), on ne fait rien
-        if (null === $this->file) {
-            return;
-        }
-        // Si on avait un ancien fichier (attribut tempFilename non null), on le supprime
-        if (null !== $this->tempFilename) {
-            $oldFile = $this->getUploadRootDir().'/'.$this->id.'-'.$this->tempFilename;
-            if (file_exists($oldFile)) {
-                unlink($oldFile);
-            }
-        }
-        // On déplace le fichier envoyé dans le répertoire de notre choix
-        $this->file->move(
-            $this->getUploadRootDir(), // Le répertoire de destination
-            $this->id.'-'.$this->filename   // Le nom du fichier à créer, ici « id.extension »
-        );
-    }
-
-    /**
-     * @ORM\PreRemove()
-     */
-    public function preRemoveUpload()
-    {
-        // On sauvegarde temporairement le nom du fichier, car il dépend de l'id
-        $this->tempFilename = $this->getUploadRootDir().'/'.$this->id.'-'.$this->filename;
-    }
-
-    /**
-     * @ORM\PostRemove()
-     */
-    public function removeUpload()
-    {
-        // En PostRemove, on n'a pas accès à l'id, on utilise notre nom sauvegardé
-        if (file_exists($this->tempFilename)) {
-            // On supprime le fichier
-            unlink($this->tempFilename);
-        }
-    }
-
-    public function setUploadDir($uploadDir)
-    {
-        $this->uploadDir = $uploadDir;
-
-        return $this;
-    }
-
-    public function getUploadDir()
-    {
-        // On retourne le chemin relatif vers l'image pour un navigateur (relatif au répertoire /web donc)
-        return $this->uploadDir;
-    }
-
-    protected function getUploadRootDir()
-    {
-        // On retourne le chemin relatif vers l'image pour notre code PHP
-        return __DIR__.'/../../../../web/'.$this->getUploadDir();
-    }
-
-    public function getWebPath()
-    {
-        return $this->getUploadDir().'/'.$this->getId().'-'.$this->getFilename();
+        return $this->getFilename();
     }
 
     /**
@@ -210,21 +126,18 @@ class File
     }
 
     /**
-     * @param UploadedFile $file
+     * @param BaseFile|null $file
      */
-    // On modifie le setter de File, pour prendre en compte l'upload d'un fichier lorsqu'il en existe déjà un autre
-    public function setFile(UploadedFile $file)
+    public function setFile(BaseFile $file = null)
     {
         $this->file = $file;
-        // On vérifie si on avait déjà un fichier pour cette entité
-        if (null !== $this->filename) {
-            // On sauvegarde l'extension du fichier pour le supprimer plus tard
-            $this->tempFilename = $this->filename;
-            // On réinitialise les valeurs des attributs extension et alt
-            $this->filename = null;
-            $this->alt = null;
+
+        if (null !== $file) {
+            $this->setUpdatedAt(new \DateTime('now'));
+            $this->setAlt(str_replace(['-', '_'], ' ', $this->getFilename()));
         }
     }
+
 
     /**
      * Set filename
@@ -248,30 +161,6 @@ class File
     public function getFilename()
     {
         return $this->filename;
-    }
-
-    /**
-     * Set createdAt
-     *
-     * @param \DateTime $createdAt
-     *
-     * @return File
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
-
-    /**
-     * Get createdAt
-     *
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
     }
 
     /**

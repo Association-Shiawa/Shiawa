@@ -21,18 +21,8 @@ easy_admin:
                     - name
                     - beginAt
                     - endAt
-#                    - { property: 'thumbnail', type: 'image', base_path: '%app.path.articles_images%' }
+                    - { property: 'thumbnail', type: 'image', base_path: '%app.path.blog_file%', template: 'easy_admin/vich_uploader_image.html.twig' }
                     - { property: 'isPublic', type: 'toggle' }
-            show:
-                fields:
-                    - id
-                    - name
-                    - beginAt
-                    - endAt
-                    - { property: 'thumbnail', type: 'image', base_path: '%app.path.articles_images%' }
-                    - isPublic
-                    - adress
-                    - place
             form:
                 fields:
                     - { type: 'group', css_class: 'col-sm-8', label: 'Basic information', icon: 'pencil' }
@@ -44,3 +34,4 @@ easy_admin:
                     - place
                     - website
                     - { property: 'description', type: 'ckeditor' }
+                    - { property: 'thumbnail', type: 'Shiawa\FileBundle\Form\Type\FileType', type_options: { data_class: 'Shiawa\FileBundle\Entity\BlogFile' } }

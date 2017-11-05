@@ -16,7 +16,7 @@
 
 {%  block OG_title %}{{ article.title }} - Shiawa.fr{% endblock %}
 
-{%  block OG_image %}{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}{% endblock %}
+{%  block OG_image %}{{ vich_uploader_asset(article.thumbnail, 'file') | imagine_filter("middle_thumb") }}{% endblock %}
 
 {% block title %}
    {{ article.title }} - Shiawa.fr
@@ -97,7 +97,9 @@
                                     {{ path('shiawa_anime_review_view', {'slug': content.slug}) }}
                                 {% endif %}
                             '>
-                                <img src='{{ content.thumbnail ? asset(content.thumbnail.getWebPath) }}' style='width:100%;background-size: cover' />
+                                {% if content.thumbnail is not null %}
+                                    <img src='{{ vich_uploader_asset(content.thumbnail, 'file', 'Shiawa\\FileBundle\\Entity\\BlogFile') | imagine_filter('middle_thumb') }}' style='width:100%;background-size: cover' />
+                                {% endif %}
                             </a>
                         </div>
                     </div>

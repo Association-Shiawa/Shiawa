@@ -22,12 +22,15 @@
                         {{ form_widget(form.title, {'attr': {'class': ''}}) }}
                     </div>
 
-                    <div class="input-field">
-                        {{ form_label(form.description, "Résumé de la formation", {'label_attr': {'class': ''}}) }}
-                        {{ form_errors(form.description) }}
-                        {{ form_widget(form.description, {'attr': {'class': 'materialize-textarea'}}) }}
-                    </div>
+                    {% if form.description is defined %}
+                        <div class="input-field">
+                            {{ form_label(form.description, "Résumé de la formation", {'label_attr': {'class': ''}}) }}
+                            {{ form_errors(form.description) }}
+                            {{ form_widget(form.description, {'attr': {'class': 'materialize-textarea'}}) }}
+                        </div>
+                    {% endif %}
 
+                   {% if form.thumbnail is defined %}
                     <div class="file-field input-field">
                         <div class="btn pink lighten-2">
                             <span>Image à la Une</span>
@@ -38,15 +41,18 @@
                             {{ form_errors(form.thumbnail) }}
                         </div>
                     </div>
+                    {% endif %}
 
-                    <p>
-                        Les tags
-                    </p>
-                    <div class="tags">
+                    {% if form.tags is defined %}
+                        <p>
+                            Les tags
+                        </p>
+                        <div class="tags">
 
-                    </div>
+                        </div>
 
-                    <div style="width: 1px; height: 1px; overflow: hidden;">{{ form_row(form.tags) }}</div>
+                        <div style="width: 1px; height: 1px; overflow: hidden;">{{ form_row(form.tags) }}</div>
+                    {% endif %}
                 </div>
                 </div>
             </div>

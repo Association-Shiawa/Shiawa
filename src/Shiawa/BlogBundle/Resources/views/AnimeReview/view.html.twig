@@ -1,22 +1,22 @@
 {% extends "ShiawaBlogBundle:AnimeReview:layout.html.twig" %}
 
 {% block DC_description %}
-    {% for letter in review.anime.synopsis|split('')|slice(0,300) %}{{ letter }}{% endfor %}...
+    {% if review.anime is not null %}{% for letter in review.anime.synopsis|split('')|slice(0,300) %}{{ letter }}{% endfor %}... {% endif %}
 {% endblock %}
 
 {% block desc %}
-    {% for letter in review.anime.synopsis|split('')|slice(0,155) %}{{ letter }}{% endfor %}...
+    {% if review.anime is not null %}{% for letter in review.anime.synopsis|split('')|slice(0,300) %}{{ letter }}{% endfor %}... {% endif %}
 {% endblock %}
 
 {%  block OG_desc %}
-    {% for letter in review.anime.synopsis|split('')|slice(0,300) %}{{ letter }}{% endfor %}...
+    {% if review.anime is not null %}{% for letter in review.anime.synopsis|split('')|slice(0,300) %}{{ letter }}{% endfor %}... {% endif %}
 {% endblock %}
 
 {% block DC_title %}{{ review.title }} - Shiawa.fr{% endblock %}
 
 {%  block OG_title %}{{ review.title }} - Shiawa.fr{% endblock %}
 
-{%  block OG_image %}{{ review.thumbnail ? asset(review.thumbnail.getWebPath) }}{% endblock %}
+{%  block OG_image %}{{ vich_uploader_asset(review.thumbnail, 'file') | imagine_filter('middle_thumb') }}{% endblock %}
 
 {% block title %}
     {{ review.title }} - Shiawa.fr
@@ -27,7 +27,7 @@
     <div class='col s12 m6 offset-m1'>
         <div class='card z-depth-1'>
             <div class="card-image">
-                <img src="{{ review.thumbnail ? asset(review.thumbnail.getWebPath) }}">
+                <img src="{{ vich_uploader_asset(review.thumbnail, 'file') | imagine_filter('middle_thumb') }}">
                 <span class="card-title"><b>{{ review.title }}</b></span>
             </div>
             <div class='card-content'>
@@ -37,18 +37,22 @@
                 <br />
                 <div class='divider'></div>
                 <br />
-                <nav>
-                    <div class="nav-wrapper">
-                        <div class="col s12">
+                {% if review.anime is not null %}
+                    <nav>
+                        <div class="nav-wrapper">
+                            <div class="col s12">
+
                             <span class="breadcrumb">Présentation de l'anime : <a href="{{ path('shiawa_anime_view',
                                 {'slug' : review.anime.slug}
                                 ) }}">{{ review.anime
                                     .title
-                                }}</a></span>
+                                    }}</a></span>
+                            </div>
                         </div>
-                    </div>
-                </nav>
+                    </nav>
+                {% endif %}
 
+                {% if review.anime is not null %}
                 <div class='card grey lighten-4'>
                     <div class='card-content'>
                         <p>{{ review.anime.synopsis|raw }}</p>
@@ -65,9 +69,9 @@
                             <li class="collection-item"><b>Editeur Français: </b> {% if review.anime.editor.name is
                                 defined %}{{ review.anime.editor.name }}{% else %}Non renseigné{% endif %}</li>
                         </ul>
-
                     </div>
                 </div>
+                {% endif %}
 
                 <!-- Le scénario -->
                 <nav class='title-crit'>
@@ -130,42 +134,6 @@
                     {{ review.criticConsistency|raw }}
                 </div>
 
-                <!-- Les personnages -->
-                <nav class='title-crit'>
-                    <div class="nav-wrapper">
-                        <div class="col s12">
-                            <span href="#!" class="breadcrumb left">Les personnages</span>
-                            <span href="#!" class="breadcrumb right"><span class='badge white
-                            pink-text'><b>{{ review.noteCharacters }}/5</b></span></span>
-                        </div>
-                    </div>
-                </nav>
-
-                <div class='content-article'>
-                    {% if review.anime.characters is empty %}
-                    <p class="card-panel">
-                        Pas de personnage disponible. :(
-                    </p>
-                    {% else %}
-                    <p class="center-align"><b>Faites défiler avec votre souris les différents personnages de la série</b></p>
-                    <div class="car2">
-                        {% for character in review.anime.characters %}
-                        <a class="carousel-item" href="#one!">
-                            <div class='card waves-effect'>
-                                <div class='card-image'>
-                                    <img src="{{ character.avatar }}">
-                                    <div class='card-title'>{{ character.name }}</div>
-                                </div>
-                            </div>
-                        </a>
-                        {% endfor %}
-
-                    </div>
-                    {% endif %}
-
-                </div>
-
-
                 <!-- La conclusion + premier EP -->
                 <nav class='title-crit'>
                     <div class="nav-wrapper">
@@ -190,30 +158,31 @@
                     </div>
                 </div>
 
-
-                <nav class='title-crit'>
-                    <div class="nav-wrapper">
-                        <div class="col s12">
-                            <span href="#!" class="breadcrumb left">Découvrez le premier épisode</span>
+                {% if review.anime is not null %}
+                    <nav class='title-crit'>
+                        <div class="nav-wrapper">
+                            <div class="col s12">
+                                <span href="#!" class="breadcrumb left">Découvrez le premier épisode</span>
+                            </div>
                         </div>
+                    </nav>
+
+                    <div class='content-article'>
+                        {% if review.anime.episodes[0].embed is not defined %}
+
+                            <p class="card-panel">
+                                Le premier épisode n'est pas disponible !
+                            </p>
+
+                        {% else %}
+
+                            <div class="video-container">
+                                <iframe width="853" height="480" src="http://animedigitalnetwork.fr/embedded/tales-of-zestiria-the-x/7463" frameborder="0" allowfullscreen></iframe>
+                            </div>
+
+                        {% endif %}
                     </div>
-                </nav>
-
-                <div class='content-article'>
-                    {% if review.anime.episodes[0].embed is not defined %}
-
-                        <p class="card-panel">
-                            Le premier épisode n'est pas disponible !
-                        </p>
-
-                    {% else %}
-
-                    <div class="video-container">
-                        <iframe width="853" height="480" src="http://animedigitalnetwork.fr/embedded/tales-of-zestiria-the-x/7463" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    {% endif %}
-                </div>
+                {% endif %}
 
 
             </div>

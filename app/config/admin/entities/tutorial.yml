@@ -25,4 +25,14 @@ easy_admin:
 #                    - description
                     - tags
                     - category
-                    - { property: 'thumbnail', type: 'image', base_path: '%app.path.articles_images%' }
+                    - { property: 'thumbnail', type: 'image', base_path: '%app.path.blog_file%', template: 'easy_admin/vich_uploader_image.html.twig' }
+            form:
+                fields:
+                    - title
+                    - category
+                    - { property: 'tags', type: 'Shiawa\BlogBundle\Form\Type\TagsType' }
+                    - { property: 'thumbnail', type: 'Shiawa\FileBundle\Form\Type\FileType', type_options: { data_class: 'Shiawa\FileBundle\Entity\BlogFile' } }
+                    - description
+                    - createdAt
+                    - { property: 'chapters', type: 'collection', type_options: { entry_type: 'Shiawa\BlogBundle\Form\ChapterType' } }
+

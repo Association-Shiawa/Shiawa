@@ -64,7 +64,7 @@ class AnimeReview
     private $updatedAt;
 
     /**
-     * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\File", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity="Shiawa\FileBundle\Entity\BlogFile", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=true)
      */
     private $thumbnail;
@@ -143,7 +143,7 @@ class AnimeReview
 
     /**
      * @ORM\OneToOne(targetEntity="Shiawa\BlogBundle\Entity\Anime", cascade={"persist"}, inversedBy="review")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $anime;
 
@@ -647,14 +647,15 @@ class AnimeReview
      *
      * @param \Shiawa\FileBundle\Entity\File $thumbnail
      *
-     * @return AnimeReview
+     * @return AnimeReview|void
      */
     public function setThumbnail(\Shiawa\FileBundle\Entity\File $thumbnail = null)
     {
-        $this->thumbnail = $thumbnail;
-        $this->setThumbnailDir();
+        if (empty($thumbnail->getFile())) {
+            return;
+        }
 
-        return $this;
+        $this->thumbnail = $thumbnail;
     }
 
     /**
@@ -664,17 +665,6 @@ class AnimeReview
      */
     public function getThumbnail()
     {
-        if ($this->thumbnail != null) {
-            $this->setThumbnailDir();
-        }
         return $this->thumbnail;
-    }
-
-    public function setThumbnailDir()
-    {
-        $dir = "uploads/files/anime/".$this->getAnime()->getId()."/review/".$this->id."/thumbnail/";
-        $this->thumbnail->setUploadDir($dir);
-
-        return $this;
     }
 }
