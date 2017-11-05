@@ -1,155 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="Mise à jour">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Bold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Bold.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Light.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Light.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Medium.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Medium.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Medium.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Medium.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Thin.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Thin.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Thin.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/fonts/roboto/Roboto-Thin.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/bann.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/bann.webm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/default_avatar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/poster.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/slider_cmv.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/slider_cosplay.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/slider_scene.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/slider_shootings.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/watermark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/cropper.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/horizontal_sly.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/materialize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/save.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/save.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/style.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/style.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/tags/bootstrap-tagsinput-typeahead.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/css/tags/bootstrap-tagsinput.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/icons/facebook.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/icons/instagram.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/icons/twitter.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/dist/imgs/icons/youtube-play.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/css/style.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/cropper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/cropper.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/jquery.collection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/animation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/bin/materialize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/bin/materialize.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/buttons.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/cards.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/character_counter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/chips.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/collapsible.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/date_picker/picker.date.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/date_picker/picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/forms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/global.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/hammer.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/initial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/jquery.easing.1.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/jquery.hammer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/jquery.timeago.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/leanModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/materialbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/parallax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/prism.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/pushpin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/scrollFire.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/sideNav.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/tabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/toasts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/transitions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/velocity.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/materializecss/waves.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/setup-ckfinder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/shiawa_functions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/sly.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/tags/bootstrap-tagsinput.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/js/typeahead/typeahead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_badges.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_cards.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_carousel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_chips.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_collapsible.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_color.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_dropdown.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_global.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_icons-material-design.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_materialbox.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_modal.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_navbar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_normalize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_prefixer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_preloader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_roboto.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_sideNav.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_slider.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_table_of_contents.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_tabs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_toast.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_tooltip.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_typography.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/_waves.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/date_picker/_default.date.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/date_picker/_default.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/date_picker/_default.time.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_checkboxes.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_file-input.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_input-fields.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_radio-buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_range.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_select.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/components/forms/_switches.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_alert.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_article.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_avatar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_cards.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_global.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_list-videos.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_navbar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_style-accueil.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_style-anime.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_tinymce.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/custom/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/materialize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/save.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/src/sass/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="51f77c65-15f5-4890-9ef4-ca2a4d394fb9" name="Default" comment="" />
     <ignored path="Shiawa.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -874,31 +726,44 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="588714000" />
+    <option name="totallyTimeSpent" value="588745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23720682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20131291" sideWeight="0.45" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27391306" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13478261" sideWeight="0.55" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23720682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30277187" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32717392" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13478261" sideWeight="0.55" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16950959" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20131291" sideWeight="0.45" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13478261" sideWeight="0.55" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23720682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30277187" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32717392" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16950959" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -916,6 +781,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Mise à jour" />
     <option name="LAST_COMMIT_MESSAGE" value="Mise à jour" />
   </component>
