@@ -12,6 +12,7 @@ Encore
 
     // will output as web/build/app.js
     .addEntry('app', './assets/js/main.js')
+    .addEntry('admin', './assets/js/admin.js')
 
     // will output as web/build/global.css
     .addStyleEntry('global', './assets/scss/global.scss')
@@ -20,12 +21,18 @@ Encore
     .enableSassLoader(function(sassOptions) {})
 
     // allow legacy applications to use $/jQuery as a global variable
-    .autoProvidejQuery()
-    // .autoProvideVariables({
-    //     $: 'jquery',
-    //     jQuery: 'jquery',
-    //     'window.jQuery': 'jquery',
-    // })
+    // .autoProvidejQuery()
+    .autoProvideVariables({
+        jQuery: 'jquery',
+        $: 'jquery',
+        'window.jQuery': 'jquery',
+        // 'Materialize': 'Materialize',
+    })
+    .createSharedEntry('vendor', [
+        'jquery',
+        'materialize-css'
+    ])
+
     .enableReactPreset()
     // Enable TypeScript
     // .enableTypeScriptLoader(function(tsConfig) {})

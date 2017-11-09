@@ -46,8 +46,6 @@ SHIAWA
     {% block stylesheets %}
         <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-{#test2#}
-        <link type="text/css" rel="stylesheet" href="{{ asset('resources/dist/css/style.css') }}"  media="screen,projection"/>
         <link href="{{ asset('build/global.css') }}" rel="stylesheet" />
     {% endblock %}
 </head>
@@ -132,37 +130,9 @@ SHIAWA
         ga('create', 'UA-85511209-1', 'auto');
         ga('send', 'pageview');
     </script>
-    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="{{ asset('resources/src/js/materializecss/bin/materialize.min.js') }}"></script>
-    <script src="{{ asset('resources/src/js/shiawa_functions.js') }}"></script>
+    <script src="{{ asset('build/manifest.js') }}"></script>
+    <script src="{{ asset('build/vendor.js') }}"></script>
     <script src="{{ asset('build/app.js') }}"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.datepicker').pickadate({
-                selectMonths: true, // Creates a dropdown to control month
-                selectYears: 5, // Creates a dropdown of 15 years to control year
-                format: 'yyyy-mm-dd',
-                close: 'Valider'
-            });
-
-            $('.birthdate').pickadate({
-                selectMonths: true, // Creates a dropdown to control month
-                selectYears: 100,
-                min: new Date(new Date().setFullYear(new Date().getFullYear() - 80)),
-                max: true,
-                format: 'yyyy-mm-dd',
-                close: 'Valider'
-            });
-
-            $('.button-collapse2').sideNav({
-                menuWidth: 300, // Default is 240
-                edge: 'right', // Choose the horizontal origin
-                closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-            });
-        });
-    </script>
-
 
 {% endblock %}
 

@@ -44,14 +44,14 @@
                         </div>
                     </div>
 
-                    <blockquote class="grey-text">
-                        Pour valider votre message, cliquez sur le bouton "Contactez nous" à droite :)
-                    </blockquote>
+                    <div>
+                        {{ form_widget(form.submit, {'icon': 'email', 'left': true, 'attr': {'class': 'btn waves-effect waves-light pink lighten-2'}}) }}
+                    </div>
                 </div>
                 <div class="col m4 s12">
                     <div class="carousel carousel-slider center" data-indicators="true">
-                        <div class="carousel-fixed-item center">
-                            {{ form_widget(form.Envoyer, {'attr': {'class': 'btn waves-effect waves-light pink lighten-2'}}) }}
+                        <div class="carousel-fixed-item center white-text">
+                            Faites glisser pour plus d'informations
                         </div>
                         <div class="carousel-item red white-text" href="#one!">
                             <h2>Un problème, un bug, une erreur sur le site ?</h2>

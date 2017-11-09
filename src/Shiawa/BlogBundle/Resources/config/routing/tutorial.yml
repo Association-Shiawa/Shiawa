@@ -1,16 +1,3 @@
 shiawa_tutorial_view:
     path:     /tutoriel/{category}/{formation}/{slug}
     defaults: { _controller: ShiawaBlogBundle:Tutorial:view }
-
-shiawa_tutorial_create:
-    path:     /admin/{formation}/{chapter}/tutoriel/create
-    defaults: { _controller: "ShiawaBlogBundle:Tutorial:add" }
-    methods:  [GET, POST]
-
-shiawa_tutorial_edit:
-    path:     /admin/{formation}/{chapter}/tutoriel-{slug}/edit
-    defaults: { _controller: "ShiawaBlogBundle:Tutorial:edit" }
-
-shiawa_tutorial_delete:
-    path:     /admin/{formation}/{chapter}/{slug}/delete
-    defaults: { _controller: "ShiawaBlogBundle:Tutorial:delete" }

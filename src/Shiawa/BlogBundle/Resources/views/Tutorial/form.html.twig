@@ -53,16 +53,18 @@
 
     <div class="card-panel">
 
-        <div class="file-field input-field">
-            <div class="btn pink lighten-2">
-                <span>Image à la Une</span>
-                {{ form_widget(form.thumbnail.file, {'attr': {'class': ''}}) }}
-            </div>
-            <div class="file-path-wrapper">
-                <input class="file-path validate" type="text">
-                {{ form_errors(form.thumbnail) }}
-            </div>
-        </div>
+       {% if form.thumbnail is defined %}
+           <div class="file-field input-field">
+               <div class="btn pink lighten-2">
+                   <span>Image à la Une</span>
+                   {{ form_widget(form.thumbnail.file, {'attr': {'class': ''}}) }}
+               </div>
+               <div class="file-path-wrapper">
+                   <input class="file-path validate" type="text">
+                   {{ form_errors(form.thumbnail) }}
+               </div>
+           </div>
+       {% endif %}
 
         <p>
             Les tags

@@ -9,18 +9,3 @@ shiawa_anime_review_list:
 shiawa_anime_review_view:
     path:     /anime/review/{slug}
     defaults: { _controller: ShiawaBlogBundle:AnimeReview:view }
-
-shiawa_anime_review_create:
-    path:     /admin/review/create/{anime}
-    defaults:
-        _controller: "ShiawaBlogBundle:AnimeReview:add" 
-        anime: null
-    methods:  [GET, POST]
-
-shiawa_anime_review_edit:
-    path:     /admin/review/{slug}/edit
-    defaults: { _controller: "ShiawaBlogBundle:AnimeReview:edit" }
-
-shiawa_anime_review_delete:
-    path:     /admin/review/{slug}/delete
-    defaults: { _controller: "ShiawaBlogBundle:AnimeReview:delete" }

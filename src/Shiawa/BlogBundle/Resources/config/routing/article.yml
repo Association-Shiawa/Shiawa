@@ -9,20 +9,3 @@ shiawa_article_list:
 shiawa_article_view:
     path:     /{category}/articles/article-{slug}
     defaults: { _controller: ShiawaBlogBundle:Article:view }
-
-shiawa_article_create:
-    path:     /admin/article/create
-    defaults: { _controller: "ShiawaBlogBundle:Article:add" }
-    methods:  [GET, POST]
-
-shiawa_article_edit:
-    path:     /admin/article/{slug}/edit
-    defaults: { _controller: "ShiawaBlogBundle:Article:edit" }
-
-shiawa_article_delete:
-    path:     /admin/article/{slug}/delete
-    defaults: { _controller: "ShiawaBlogBundle:Article:delete" }
-
-shiawa_admin_article_list:
-    path:     /admin/article/list
-    defaults: { _controller: ShiawaBlogBundle:Article:adminList }

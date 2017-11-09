@@ -4,7 +4,7 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('css/cropper.min.css') }}">
+    {#<link rel="stylesheet" href="{{ asset('resources/dist/css/cropper.min.css') }}">#}
 {% endblock %}
 
 {% block navbar_title %}
@@ -18,85 +18,4 @@
 
 {% block javascript %}
     {{ parent() }}
-    <script src="{{ asset('js/cropper.min.js') }}"></script>
-    <script>
-        $(document).ready(function(){
-            $inputFile = $('#upload-file');
-            $avatarCropping = $('#avatar-cropping');
-
-            var cropper;
-
-            $inputFile.change(function(e){
-                var files = e.target.files;
-                if (files && files[0]) {
-                    var f = files[0];
-                    var reader = new FileReader();
-
-                    // Closure to capture the file information.
-                    reader.onload = (function(theFile) {
-                        return function(e) {
-                            // Render thumbnail.
-                            console.log(theFile.name);
-                            $('#avatar-cropping').attr('src', e.target.result);
-                            $('#avatar-cropping').attr('title', theFile.name);
-                            $('#avatar-cropping').attr('alt', theFile.name);
-                            crop();
-                        };
-                    })(f);
-
-                    // Read in the image file as a data URL.
-                    reader.readAsDataURL(f);
-                }
-                $('#modal-avatar').openModal({dismissible: true});
-            });
-
-            function crop(){
-                var avatar = document.getElementById('avatar-cropping');
-                cropper = new Cropper(avatar,{
-                    aspectRatio: 1,
-                    ready: function () {
-                        // Do something here
-                        // ...
-
-                        // And then
-                        //this.cropper.crop();
-                    }
-                });
-
-                $('#crop').on('click', function (e) {
-                    e.preventDefault();
-                    cropper.getCroppedCanvas({
-                        width: 200,
-                        height: 200
-                    }).toBlob(function (blob) {
-                        cropper.destroy();
-                        console.log(blob);
-                        var formData = new FormData();
-                        formData.append('avatar_avatar', blob);
-
-                        $('img.avatar').each(function () {
-                            $(this).attr('src', window.URL.createObjectURL(blob));
-                        });
-                        $.ajax('{{ path('shiawa_user_avatar_upload') }}', {
-                            method: "POST",
-                            data: formData,
-                            processData: false,
-                            contentType: false,
-                            success: function (res) {
-                                console.log(res);
-                                console.log('Upload success');
-                            },
-                            error: function (res) {
-                                console.log(res);
-                                console.log('Upload error');
-                            }
-                        });
-                    });
-                })
-            }
-        });
-
-
-
-    </script>
 {% endblock %}

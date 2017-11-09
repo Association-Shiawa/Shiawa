@@ -124,7 +124,7 @@
     <li style="list-style: none;">
         <div class="userView">
             <div class="background">
-                <img class="background" src="{{ asset('assets/dist/imgs/poster.jpg') | imagine_filter('middle_thumb') }}">
+                <img class="background" src="{{ asset('resources/dist/imgs/poster.jpg') | imagine_filter('middle_thumb') }}">
             </div>
             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                 <a href="{{ path('fos_user_profile_show') }}">

@@ -165,7 +165,7 @@
                     <div class='carousel-item'>
                         <div class="card">
                             <div class="card-image">
-                                <img src="{% if user.avatar is null %}{{ asset('resources/dist/imgs/default_avatar.png') }}{% else %}{{ vich_uploader_asset(user, 'avatar') }}{% endif %}" />
+                                <img src="{% if user.avatar is null %}{{ asset('resources/dist/imgs/default_avatar.png') }}{% else %}{{ vich_uploader_asset(user.avatar, 'file') }}{% endif %}" />
                                 <span class="card-title bar">{{ user.username|title }}</span>
                             </div>
                             <div class="card-content">

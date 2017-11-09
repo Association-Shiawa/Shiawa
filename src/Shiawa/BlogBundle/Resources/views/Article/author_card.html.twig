@@ -6,7 +6,7 @@
                     <div class="valign-wrapper">
                         <div class="valign">
                             <div class="circle" style="width: 100px; height: 100px; overflow: hidden;">
-                                <img src="{{ asset(article.author.avatar.getWebPath) }}" alt="" class="circle responsive-img" >
+                                <img src="{{ vich_uploader_asset(article.author.avatar, 'file') | imagine_filter('profile_thumbnail') }}" alt="" class="circle responsive-img" >
                             </div>
                         </div>
                     </div>

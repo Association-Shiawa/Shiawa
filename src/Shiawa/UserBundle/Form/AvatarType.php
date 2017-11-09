@@ -2,7 +2,7 @@
 
 namespace Shiawa\UserBundle\Form;
 
-use Shiawa\FileBundle\Form\FileUploadType;
+use Shiawa\FileBundle\Form\ProfilePictureType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -11,7 +11,7 @@ class AvatarType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('avatar', FileUploadType::class, array(
+        $builder->add('avatar', ProfilePictureType::class, array(
             'required'     => true
         ))
         ;

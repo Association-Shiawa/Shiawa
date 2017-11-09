@@ -9,16 +9,3 @@ shiawa_character_list:
 shiawa_character_view:
     path:     /anime/personnage/fiche/{slug}
     defaults: { _controller: ShiawaBlogBundle:AnimeCharacter:view }
-
-shiawa_character_create:
-    path:     /admin/personnage/create
-    defaults: { _controller: "ShiawaBlogBundle:AnimeCharacter:add" }
-    methods:  [GET, POST]
-
-shiawa_character_edit:
-    path:     /admin/personnage/{slug}/edit
-    defaults: { _controller: "ShiawaBlogBundle:AnimeCharacter:edit" }
-
-shiawa_character_delete:
-    path:     /admin/personnage/{slug}/delete
-    defaults: { _controller: "ShiawaBlogBundle:AnimeCharacter:delete" }

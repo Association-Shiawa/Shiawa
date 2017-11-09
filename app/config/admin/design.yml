@@ -25,10 +25,11 @@ easy_admin:
                 - 'resources/dist/css/tags/bootstrap-tagsinput-typeahead.css'
             js:
                 - '/bundles/cksourceckfinder/ckfinder/ckfinder.js'
-                - '/resources/src/js/setup-ckfinder.js'
-                - '/resources/src/js/tags/bootstrap-tagsinput.min.js'
-                - '/resources/src/js/typeahead/typeahead.js'
-                - '/resources/src/js/admin.js'
+                - '/resources/dist/js/admin/bootstrap-tagsinput.min.js'
+                - '/resources/dist/js/admin/typeahead.js'
+                - '/resources/dist/js/admin/admin.js'
         form_theme:
                 - 'horizontal'
                 - 'easy_admin/form.html.twig'
+        templates:
+            layout: 'easy_admin/layout.html.twig'

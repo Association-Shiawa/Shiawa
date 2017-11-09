@@ -214,13 +214,11 @@
 
     {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
         {% if is_granted('ROLE_AUTHOR') %}
-            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-                <a class="btn-floating btn-large pink lighten-2" href="{{ path("shiawa_anime_review_edit", {'slug':
-                    review
-                    .slug}) }}">
-                    <i class="large material-icons">mode_edit</i>
-                </a>
-            </div>
+            {#<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">#}
+                {#<a class="btn-floating btn-large pink lighten-2" href="">#}
+                    {#<i class="large material-icons">mode_edit</i>#}
+                {#</a>#}
+            {#</div>#}
 
         {% endif %}
     {% endif %}
