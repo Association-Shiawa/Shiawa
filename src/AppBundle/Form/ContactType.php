@@ -30,7 +30,9 @@ class ContactType extends AbstractType
             ->add('message', TextareaType::class, array(
                 'mapped' =>false
             ))
-            ->add('Envoyer', SubmitType::class)
+            ->add('submit', SubmitType::class, [
+                'label' => 'Envoyer'
+            ])
         ;
     }
 

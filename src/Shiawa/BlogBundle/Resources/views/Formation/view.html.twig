@@ -53,14 +53,14 @@
                                 {% for tuto in chapter.tutorials %}
 
                                     <li class="collection-item">
-                                        <a href="{{ path('shiawa_tutorial_view', {'slug': tuto.slug, 'formation': formation.slug, 'category': tuto.category.slug }) }}">{{ tuto.title }}</a>
+                                        <a href="{{ path('easyadmin', {'action': 'edit', 'entity': 'Article', 'id': tuto.id ,'chapter': chapter.id }) }}">{{ tuto.title }}</a>
                                     </li>
 
                                 {% endfor %}
                                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                                     {% if is_granted('ROLE_AUTHOR') %}
                                         <li class="collection-item center-align">
-                                            <a href="{{ path('shiawa_tutorial_create', {'formation': formation.slug, 'chapter': chapter.slug}) }}" class="btn-flat">
+                                            <a href="{{ path('easyadmin', {'action': 'new', 'entity': 'Article' ,'chapter': chapter.id }) }}" class="btn-flat">
                                                 <i class="material-icons">add</i>
                                             </a>
                                         </li>

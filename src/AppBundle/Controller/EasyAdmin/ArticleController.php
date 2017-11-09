@@ -15,6 +15,8 @@ class ArticleController extends BaseAdminController
         if($this->request->query->has('chapter')) {
             $chapter = $this->em->find('ShiawaBlogBundle:Chapter', $this->request->query->get('chapter'));
             $article->setChapter($chapter);
+            $category = $chapter->getFormation()->getCategory();
+            $article->setCategory($category);
         }
         return $article;
     }

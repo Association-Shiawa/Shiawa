@@ -6,3 +6,25 @@
         {% endfor %}
     </datalist>
 {% endblock %}
+
+{% block submit_widget -%}
+    {% if label is empty %}
+        {% if label_format is not empty %}
+            {% set label = label_format|replace({
+            '%name%' : name,
+            '%id%' : id,
+            }) %}
+        {% else %}
+            {% set label = name|humanize %}
+        {% endif %}
+    {% endif %}
+    <button type="{{ type|default('button') }}" {{ block('button_attributes') }}>
+        {% if icon is defined %}
+            {% set position = position|default('left') %}
+            <i class="material-icons {{ position }}">{{ icon }}</i>
+            {{ translation_domain is same as(false) ? label : label|trans({}, translation_domain) }}
+        {% else %}
+            {{ translation_domain is same as(false) ? label : label|trans({}, translation_domain) }}
+        {% endif %}
+    </button>
+{%- endblock submit_widget %}

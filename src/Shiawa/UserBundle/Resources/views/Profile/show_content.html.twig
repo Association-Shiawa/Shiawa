@@ -4,20 +4,22 @@
 
     <div id="profile-page-header" class="card">
         <div class="card-image waves-effect waves-block waves-light" style="max-height: 200px;">
-            <img src="{{ asset('imgs/poster.jpg') }}" alt="user background">
+            <img src="{{ asset('resources/dist/imgs/poster.jpg') }}" alt="user background">
         </div>
         <figure class="card-profile-image circle z-depth-2 " style="position: absolute; top: 150px; left: 40px; z-index: 1;
         overflow: hidden; width: 100px; height: 100px;">
             <img
             {% if user.avatar is null %}
-                src="https://www.mautic.org/media/images/default_avatar.png"
+                src="{{ asset('resources/dist/imgs/default_avatar.png') }}"
             {% else %}
-            src="{{ asset(user.avatar.getWebPath) }}"
+            src="{{ vich_uploader_asset(user.avatar, 'file') | imagine_filter('profile_thumbnail') }}"
             {% endif %}
             alt="{{ user.username }}'s profile image" class="responsive-img avatar">
             <div id="upload-file-container">
-                <label for="upload-file">Modifier la photo de profil</label>
-                <input type="file" name="uploadFile" id="upload-file" accept="image/*" title="choisir une image à importer">
+                <form action="{{ path('shiawa_user_avatar_upload') }}" method="post">
+                    <label for="upload-file">Modifier la photo de profil</label>
+                    <input type="file" name="uploadFile" id="upload-file" accept="image/*" title="choisir une image à importer">
+                </form>
             </div>
         </figure>
         <div class="card-content">
@@ -57,9 +59,9 @@
                         <div class="center-align col m4">
                             <img class="responsive-img avatar" src="
                         {% if user.avatar is null %}
-                        https://www.mautic.org/media/images/default_avatar.png
+                            {{ asset('resources/dist/imgs/default_avatar.png') }}
                         {% else %}
-                        {{ asset(user.avatar.getWebPath) }}
+                            {{ vich_uploader_asset(user.avatar, 'file') | imagine_filter('profile_thumbnail') }}
                         {% endif %}
                         " alt=""/>
                         </div>

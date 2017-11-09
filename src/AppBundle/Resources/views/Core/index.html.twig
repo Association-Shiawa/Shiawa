@@ -11,9 +11,9 @@
     {% block body %}
         <!-- DEBUT BLOC -->
         <div id="header-full-width" class="valign-wrapper">
-            <video autoplay loop poster="{{ asset('assets/dist/imgs/poster.jpg') }}" id="bgvid">
-                <source src="{{ asset('/assets/dist/imgs/bann.webm') }}" type="video/webm">
-                <source src="{{ asset('assets/dist/imgs/bann.mp4') }}" type="video/mp4">
+            <video autoplay loop poster="{{ asset('resources/dist/imgs/poster.jpg') }}" id="bgvid">
+                <source src="{{ asset('resources/dist/imgs/bann.webm') }}" type="video/webm">
+                <source src="{{ asset('resources/dist/imgs/bann.mp4') }}" type="video/mp4">
             </video>
             <div class='overlay'></div>
             <div class='zoning-title valign center-align'>
@@ -165,7 +165,7 @@
                     <div class='carousel-item'>
                         <div class="card">
                             <div class="card-image">
-                                <img src="{% if user.avatar is null %}{{ asset('assets/dist/imgs/default_avatar.png') }}{% else %}{{ vich_uploader_asset(user, 'avatar') }}{% endif %}" />
+                                <img src="{% if user.avatar is null %}{{ asset('resources/dist/imgs/default_avatar.png') }}{% else %}{{ vich_uploader_asset(user.avatar, 'file') }}{% endif %}" />
                                 <span class="card-title bar">{{ user.username|title }}</span>
                             </div>
                             <div class="card-content">
@@ -203,7 +203,7 @@
                 <div class="slider">
                     <ul class="slides">
                         <li>
-                            <img src="{{ asset("assets/dist/imgs/slider_scene.jpg") }}"> <!-- random image -->
+                            <img src="{{ asset("resources/dist/imgs/slider_scene.jpg") }}"> <!-- random image -->
                             <div class="caption center-align">
                                 <h3>Des animations scéniques!</h3>
                                 <h5 class="light grey-text text-lighten-3">Quizz, show, JoJo Poses et pleins de
@@ -211,7 +211,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{ asset("assets/dist/imgs/slider_cmv.jpg") }}"> <!-- random image -->
+                            <img src="{{ asset("resources/dist/imgs/slider_cmv.jpg") }}"> <!-- random image -->
                             <div class="caption left-align">
                                 <h3 class="">Des Cosplay Music Video</h3>
                                 <h5 class="light grey-text text-lighten-3">Incarnez vos personnages préférés devant
@@ -220,14 +220,14 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{ asset("assets/dist/imgs/slider_shootings.jpg") }}"> <!-- random image -->
+                            <img src="{{ asset("resources/dist/imgs/slider_shootings.jpg") }}"> <!-- random image -->
                             <div class="caption right-align">
                                 <h3>Des shootings photos de Cosplay !</h3>
                                 <!--<h5 class="light grey-text text-lighten-3"></h5>-->
                             </div>
                         </li>
                         <li>
-                            <img src="{{ asset("assets/dist/imgs/slider_cosplay.jpg") }}"> <!-- random image -->
+                            <img src="{{ asset("resources/dist/imgs/slider_cosplay.jpg") }}"> <!-- random image -->
                             <div class="caption right-align">
                                 <h3>Immortaliser les Cosplay en convention</h3>
                                 <h5 class="light grey-text text-lighten-3"></h5>
