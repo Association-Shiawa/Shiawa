@@ -34,7 +34,6 @@
         "google/apiclient": "^2.1",
         "liip/imagine-bundle": "^1.8",
         "symfony/web-server-bundle": "^3.3",
-        "stfalcon/tinymce-bundle": "2.1",
         "javiereguiluz/easyadmin-bundle": "^1.17",
         "egeloen/ckeditor-bundle": "^6.0",
         "vich/uploader-bundle": "^1.6",

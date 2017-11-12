@@ -18,7 +18,7 @@
                 <div class='col l4 m6 s12'>
                     <div class="card-custom">
                         <div class="card-image">
-                            <img src="{{ review.thumbnail ? asset(review.thumbnail.getWebPath)}}">
+                            <img src="{{ vich_uploader_asset(review.thumbnail, 'file') | imagine_filter('middle_thumb') }}">
                             <a href='{{ path('shiawa_anime_review_view', {'slug': review.slug}) }}' class="card-title">{{ review.title }}</a>
                         </div>
                         <div class="card-content">

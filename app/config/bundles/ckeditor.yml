@@ -1,8 +1,27 @@
 ivory_ck_editor:
     configs:
         my_config:
+#            filebrowserBrowseRoute: "ckfinder_connector"
             toolbar: "standard"
+            stylesSet: "my_styles"
+            extraPlugins: "youtube"
+            format_tags: 'p;h2;h3;h4;h5;h6;pre;address'
+            allowedContent: true
+            youtube_responsive: true
+            youtube_disabled_fields : ['chkResponsive']
+#            contentsCss: ['build/article.css'] # Charge les styles dans l'éditeur (permet de voir en temps réel le résultat)
     toolbars:
+        configs:
+#            my_toolbar_1: [ "@document", "/", "@link" , "/", "@tool" ]
         items:
-            full.colors: [ "TextColor" ]
-            full.document: [ "Source", "Preview" ]
+            standard.colors: [ "TextColor" ]
+            standard.document: [ "Source" ]
+            standard.insert: ['Image', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak', 'Iframe', "Youtube"]
+#            standard.format_tags: 'p;h2;h3;h4;h5;h6;pre;address'
+    styles:
+        my_styles:
+#            - { name: "CSS Style", element: "ul", attributes: { class: "my_style" }}
+    plugins:
+        youtube:
+            path:     "/resources/ckeditor-plugins/youtube/"
+            filename: "plugin.js"

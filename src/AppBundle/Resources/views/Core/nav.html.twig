@@ -4,9 +4,9 @@
         <div class="nav-wrapper grey darken-3">
             <!-- NAVBAR TITLE -->
             {% block navbar_title %}
-                <a href="{{ path('shiawa_blog_homepage') }}" class="brand-logo" style="padding-left: 10px;">Shiawa</a>
+                <a href="{{ path('shiawa_blog_homepage') }}" class="brand-logo">Shiawa</a>
             {% endblock %}
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons left">menu</i>Shiawa</a>
             <ul class="right hide-on-med-and-down">
                 <!--NAVBAR MODULABLE -->
                 {% block nav_content%}
@@ -97,23 +97,54 @@
 <!-- NAVBAR MOBILE -->
 <ul class="side-nav collapsible collapsible-accordion" id="mobile-demo">
     {% block nav_mobile_content %}
+        <li class="logo">
+            <a href="{{ path('shiawa_homepage') }}">
+                <img src="{{ asset('resources/dist/imgs/logo_shiwa__white_text.svg') }}" alt="" class="responsive-img left">
+            </a>
+        </li>
         <li>
-            <a href="{{ path('shiawa_anime_homepage') }}">Accueil</a>
+            <a href="{{ path('shiawa_blog_homepage') }}">Accueil</a>
         </li>
         <li class=''>
             <a  href="{{ path('shiawa_article_list') }}">Articles</a>
         </li>
         <li>
-            <a href="#" >Anime</a>
-        </li>
-        <li>
-            <a href="#" >Cosplay</a>
-        </li>
-        <li>
-            <a href="{{ path('shiawa_event_list') }}">Evénements</a>
-        </li>
-        <li>
             <a href="{{ path('shiawa_formation_list') }}">Tutoriels</a>
+        </li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header active waves-effect waves-pink">Anime</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="{{ path('shiawa_anime_review_list') }}">Critiques</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLITDrG6K2FHf8HoECBnJmOyrlPSnMA_FN" target="_blank">Shiawa AMVs</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bold"><a class="collapsible-header active waves-effect waves-pink">Cosplay</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="https://www.youtube.com/playlist?list=PLITDrG6K2FHdyPJYL9K97090uP5TX7ObI" target="_blank">Shiawa CMVs</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bold"><a class="collapsible-header active waves-effect waves-pink">Evénements</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="{{ path('shiawa_event_list') }}">Les prochains</a></li>
+                            <li><a href="{{ path('shiawa_contact') }}">Proposer un événement</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bold"><a class="collapsible-header active waves-effect waves-pink">Divertissements</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="https://www.youtube.com/channel/UCgPqRGhrra-liY7N7OQSD0A/videos" target="_blank">Toutes nos Videos</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLITDrG6K2FHeI4hT8FKEcJWcs2ezaA001" target="_blank">Interviews Shiawa</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </li>
     {% endblock %}
     <!-- END MOBILE NAVBAR MODULE -->
@@ -152,7 +183,6 @@
         {% if is_granted('ROLE_AUTHOR') %}
             <li><div class="divider"></div></li>
             <li><a href="{{ path('easyadmin') }}">Administration</a></li>
-            <li><a href="{{ path('shiawa_admin_homepage') }}">Dashboard Admin</a></li>
             <li><a href='{{ path('shiawa_cache_clear') }}'>Nettoyer le cache</a></li>
         {% endif %}
         <li class='red'><a href='{{ path('fos_user_security_logout') }}' class="white-text">Deconnexion</a></li>

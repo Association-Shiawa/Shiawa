@@ -50,35 +50,35 @@
             </div>
         </aside>
 
-        <section class="col m8">
-            <div class="card-panel">
+        {#<section class="col m8">#}
+            {#<div class="card-panel">#}
                 {# On définit ce block, dans lequel vont venir s'insérer les autres vues du bundle #}
-                <div class="fos_user_user_show">
-                    <div class="row">
+                {#<div class="fos_user_user_show">#}
+                    {#<div class="row">#}
 
-                        <div class="center-align col m4">
-                            <img class="responsive-img avatar" src="
-                        {% if user.avatar is null %}
-                            {{ asset('resources/dist/imgs/default_avatar.png') }}
-                        {% else %}
-                            {{ vich_uploader_asset(user.avatar, 'file') | imagine_filter('profile_thumbnail') }}
-                        {% endif %}
-                        " alt=""/>
-                        </div>
+                        {#<div class="center-align col m4">#}
+                            {#<img class="responsive-img avatar" src="#}
+                        {#{% if user.avatar is null %}#}
+                            {#{{ asset('resources/dist/imgs/default_avatar.png') }}#}
+                        {#{% else %}#}
+                            {#{{ vich_uploader_asset(user.avatar, 'file') | imagine_filter('profile_thumbnail') }}#}
+                        {#{% endif %}#}
+                        {#" alt=""/>#}
+                        {#</div>#}
 
-                        <div class="col m8">
-                            {#
-                             <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-                             <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
-                            #}
-                            <p>Votre préférence: {% if user.preference is null %}Aucune{% else %}{{ user.preference }}{% endif %}</p>
-                        </div>
+                        {#<div class="col m8">#}
+                            {##}
+                             {#<p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>#}
+                             {#<p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>#}
+                            {##}
+                            {#<p>Votre préférence: {% if user.preference is null %}Aucune{% else %}{{ user.preference }}{% endif %}</p>#}
+                        {#</div>#}
 
-                    </div>
+                    {#</div>#}
 
-                </div>
-            </div>
-        </section>
+                {#</div>#}
+            {#</div>#}
+        {#</section>#}
     </main>
 
     <!-- Modal Avatar -->

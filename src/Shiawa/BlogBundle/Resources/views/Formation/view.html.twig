@@ -53,7 +53,7 @@
                                 {% for tuto in chapter.tutorials %}
 
                                     <li class="collection-item">
-                                        <a href="{{ path('easyadmin', {'action': 'edit', 'entity': 'Article', 'id': tuto.id ,'chapter': chapter.id }) }}">{{ tuto.title }}</a>
+                                        <a href="{{ path('shiawa_tutorial_view', {'slug': tuto.slug, 'formation': formation.slug, 'category': tuto.category.slug }) }}">{{ tuto.title }}</a>
                                     </li>
 
                                 {% endfor %}
