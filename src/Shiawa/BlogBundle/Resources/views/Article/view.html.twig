@@ -24,7 +24,7 @@
 
 {% block content %}
     <!-- CONTENT -->
-<div class='col s12 m6 offset-m1'>
+<div class='col s12 m10 l8 offset-m1'>
     <article class='card z-depth-1 article'>
 
         <div class='card-content'>
@@ -56,12 +56,9 @@
 
         <div class="card-action">
             <a href="#">Publié le {{ article.createdAt|date('d/m/Y') }}</a>
-
-
             {% include "AppBundle:Rsn:fb.html.twig" %}
             <div class='clear'></div>
-           {% include "ShiawaBlogBundle:Article:author_card.html.twig" %}
-
+            {% include "ShiawaBlogBundle:Article:author_card.html.twig" %}
         </div>
 
     </article>

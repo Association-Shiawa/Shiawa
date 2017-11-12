@@ -1,3 +1,18 @@
-.brand-logo{
-  @extend .hide-on-small-only;
+nav {
+  .brand-logo{
+    @extend .hide-on-small-only;
+    padding-left: 10px;
+  }
+}
+
+.side-nav .logo {
+  @extend .pink;
+  a {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    img {
+      max-width: 70%;
+    }
+  }
 }

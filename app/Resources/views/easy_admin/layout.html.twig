@@ -152,9 +152,12 @@
         {% endblock wrapper %}
     </div>
 
-    {#<script src="{{ asset('build/manifest.js') }}"></script>#}
+    <script src="{{ asset('build/manifest.js') }}"></script>
     {#<script src="{{ asset('build/vendor.js') }}"></script>#}
     {#<script src="{{ asset('build/admin.js') }}"></script>#}
+    <script>
+        var cssArticle = "{{ asset('build/article.css') }}"
+    </script>
 
     {% block body_javascript %}{% endblock body_javascript %}
 
