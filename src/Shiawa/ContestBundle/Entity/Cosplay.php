@@ -46,7 +46,7 @@ class Cosplay
     /**
      * @var string
      *
-     * @Gedmo\Slug(fields={"characterName"})
+     * @Gedmo\Slug(fields={"characterName"}, updatable=false)
      * @ORM\Column(name="slug", type="string", length=255, unique=true)
      */
     private $slug;

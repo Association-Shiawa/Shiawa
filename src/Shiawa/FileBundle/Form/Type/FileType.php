@@ -33,7 +33,8 @@ class FileType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-//            'data_class' => 'Shiawa\FileBundle\Entity\File'
+//            'data_class' => 'Shiawa\FileBundle\Entity\File',
+            'csrf_protection' => false
         ));
     }
 }

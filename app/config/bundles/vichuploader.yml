@@ -1,13 +1,15 @@
 parameters:
-    app.path.blog_file: /media/uploads/articles
+    app.path.blog_file: /media/uploads/blog
+    app.fullpath.blog_file: '%kernel.project_dir%/web/%app.path.blog_file%'
     app.path.user_pic: /media/uploads/users/avatar
+    app.fullpath.user_pic: '%kernel.project_dir%/web/%app.path.user_pic%'
 
 vich_uploader:
     db_driver: orm
     mappings:
         blog_file:
             uri_prefix:         '%app.path.blog_file%'
-            upload_destination: '%kernel.root_dir%/../web/%app.path.blog_file%'
+            upload_destination: '%app.fullpath.blog_file%'
             namer:              vich_uploader.namer_origname
             directory_namer:
                 service: vich_uploader.directory_namer_subdir
@@ -16,7 +18,7 @@ vich_uploader:
             delete_on_remove: true
         profile_picture:
             uri_prefix:         '%app.path.user_pic%'
-            upload_destination: '%kernel.root_dir%/../web/%app.path.user_pic%'
+            upload_destination: '%app.fullpath.user_pic%'
             namer:              vich_uploader.namer_origname
             delete_on_update: true
             delete_on_remove: true
