@@ -4,6 +4,7 @@ namespace Shiawa\BlogBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Eko\FeedBundle\Item\Writer\RoutedItemInterface;
 use Shiawa\EventBundle\Entity\Event;
 use Shiawa\FileBundle\Entity\File;
 use Shiawa\UserBundle as User;
@@ -15,7 +16,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * @ORM\Table(name="shiawa_article")
  * @ORM\Entity(repositoryClass="Shiawa\BlogBundle\Repository\ArticleRepository")
  */
-class Article
+class Article implements RoutedItemInterface
 {
     /**
      * @var int
@@ -484,4 +485,39 @@ class Article
     {
         return $this->chapter;
     }
+
+    public function getFeedItemTitle()
+    {
+        return $this->getTitle();
+    }
+
+    public function getFeedItemDescription()
+    {
+        return $this->getSummary();
+    }
+
+    public function getFeedItemRouteName()
+    {
+        return 'shiawa_article_view';
+    }
+
+    public function getFeedItemRouteParameters()
+    {
+        return [
+            'slug' => $this->getSlug(),
+            'category' => $this->getCategory()->getId()
+        ];
+    }
+
+    public function getFeedItemUrlAnchor()
+    {
+        return '';
+    }
+
+    public function getFeedItemPubDate()
+    {
+        return $this->getCreatedAt();
+    }
+
+
 }
