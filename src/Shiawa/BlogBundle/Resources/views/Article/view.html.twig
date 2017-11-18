@@ -12,14 +12,14 @@
     {% for letter in article.summary|split('')|slice(0,300) %}{{ letter }}{% endfor %}
 {% endblock %}
 
-{% block DC_title %}{{ article.title }} - Shiawa.fr{% endblock %}
+{% block DC_title %}{{ article.title }} - Shiawa{% endblock %}
 
-{%  block OG_title %}{{ article.title }} - Shiawa.fr{% endblock %}
+{%  block OG_title %}{{ article.title }} - Shiawa{% endblock %}
 
 {%  block OG_image %}{{ vich_uploader_asset(article.thumbnail, 'file') | imagine_filter("middle_thumb") }}{% endblock %}
 
 {% block title %}
-   {{ article.title }} - Shiawa.fr
+   {{ article.title }} - Shiawa
 {% endblock %}
 
 {% block content %}

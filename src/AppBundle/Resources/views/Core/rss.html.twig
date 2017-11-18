@@ -1,0 +1,47 @@
+{% extends "@App/Core/layout.html.twig" %}
+
+{% block title %}
+    Liste des flux RSS - {{ parent() }}
+{% endblock %}
+
+{% block menu %}
+    {{ include("AppBundle:Core:nav.html.twig") }}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <h1>
+                Les flux RSS de Shiawa
+            </h1>
+        </div>
+
+        <div class="row card-panel">
+            <div class="col s12">
+                <h2>
+                    Suivre toutes l'actualité de Shiawa
+                </h2>
+                <p>
+                    <a href="{{ asset('feed/actualites.rss') }}" class="btn-large">Actualités (flux principal)</a>
+                    Toute notre actualité, articles, événéments, tutoriels, critiques...
+                </p>
+                <h2>
+                    Toutes les publications de Shiawa
+                </h2>
+                <p>
+                    <a href="{{ asset('feed/publications.rss') }}" class="btn-large">Publications</a>
+                    Les articles, tutoriels et critiques de Shiawa
+                </p>
+                <h2>
+                    Les événements de Shiawa
+                </h2>
+                <p>
+                    <a href="{{ asset('feed/evenements.rss') }}" class="btn-large">Evénements</a>
+                    La liste des événements de Shiawa
+                </p>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+

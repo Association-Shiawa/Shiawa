@@ -28,3 +28,10 @@ services:
             - "@doctrine.orm.entity_manager"
         tags:
             - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+
+    shiawa_blog.article_rss_subscriber:
+        class: Shiawa\BlogBundle\EventListener\UpdateRssSubscriber
+        arguments:
+            - "@service_container"
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }

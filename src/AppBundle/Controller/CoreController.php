@@ -10,6 +10,9 @@ use AppBundle\Form\ContactType;
 
 class CoreController extends Controller
 {
+    /**
+     * @Route("/", name="shiawa_homepage")
+     */
     public function indexAction(Request $request)
     {
         $lastArticles = $this->getDoctrine()
@@ -38,6 +41,9 @@ class CoreController extends Controller
         ));
     }
 
+    /**
+     * @Route("/blog", name="shiawa_blog_homepage")
+     */
     public function blogAction()
     {
         $em = $this->getDoctrine()
@@ -81,6 +87,9 @@ class CoreController extends Controller
         ));
     }
 
+    /**
+     * @Route("/contact", name="shiawa_contact")
+     */
     public function contactAction(Request $request) {
         $user = $this->getUser();
 
@@ -115,5 +124,12 @@ class CoreController extends Controller
         return $this->render('AppBundle:Core:contact.html.twig', array(
             'form' => $form->createView(),
         ));
+    }
+
+    /**
+     * @Route("/rss", name="rss_feeds")
+     */
+    public function rssAction() {
+        return $this->render('@App/Core/rss.html.twig');
     }
 }

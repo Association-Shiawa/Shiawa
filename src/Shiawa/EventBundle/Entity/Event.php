@@ -3,6 +3,7 @@
 namespace Shiawa\EventBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Eko\FeedBundle\Item\Writer\RoutedItemInterface;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Shiawa\FileBundle\Entity\File;
 
@@ -12,7 +13,7 @@ use Shiawa\FileBundle\Entity\File;
  * @ORM\Table(name="shiawa_event")
  * @ORM\Entity(repositoryClass="Shiawa\EventBundle\Repository\EventRepository")
  */
-class Event
+class Event implements RoutedItemInterface
 {
     /**
      * @var int
@@ -396,5 +397,39 @@ class Event
     {
 
         return $this->thumbnail;
+    }
+
+
+
+    public function getFeedItemTitle()
+    {
+        return $this->getName();
+    }
+
+    public function getFeedItemDescription()
+    {
+        return $this->getDescription();
+    }
+
+    public function getFeedItemRouteName()
+    {
+        return 'shiawa_event_view';
+    }
+
+    public function getFeedItemRouteParameters()
+    {
+        return [
+            'slug' => $this->getSlug()
+        ];
+    }
+
+    public function getFeedItemUrlAnchor()
+    {
+        return '';
+    }
+
+    public function getFeedItemPubDate()
+    {
+        return $this->getBeginAt();
     }
 }

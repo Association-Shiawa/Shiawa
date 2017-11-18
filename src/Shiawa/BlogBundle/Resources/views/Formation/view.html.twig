@@ -12,14 +12,14 @@
     {% for letter in formation.description|split('')|slice(0,300) %}{{ letter }}{% endfor %}
 {% endblock %}
 
-{% block DC_title %}{{ formation.title }} - Shiawa.fr{% endblock %}
+{% block DC_title %}{{ formation.title }} - Shiawa{% endblock %}
 
-{%  block OG_title %}{{ formation.title }} - Shiawa.fr{% endblock %}
+{%  block OG_title %}{{ formation.title }} - Shiawa{% endblock %}
 
 {#{%  block OG_image %}{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}{% endblock %}#}
 
 {% block title %}
-    {{ formation.title }} - Shiawa.fr
+    {{ formation.title }} - Shiawa
 {% endblock %}
 
 {% block content %}

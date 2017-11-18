@@ -55,6 +55,19 @@ class EventController extends Controller
         ));
     }
 
+    public function nextAction()
+    {
+        /** @var Event $nextEvent */
+        $nextEvent = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('ShiawaEventBundle:Event')
+            ->getNext(1)[0];
+
+        return $this->redirectToRoute('shiawa_event_view', [
+            'slug' => $nextEvent->getSlug()
+        ]);
+    }
+
     /**
      * //@Security("has_role('ROLE_AUTHOR')")
      */

@@ -33,40 +33,40 @@
 
     {% if nextEvent is not empty %}
         {% for event in nextEvent %}
-    <div class='card z-depth-1'>
+            <div class='card z-depth-1'>
 
-        <div class='card-content'>
+                <div class='card-content'>
 
-            <h2 class='title-section'>
-                Le prochain évènement
-                <small>L'association bouge !
-                    <span class='right badge pink lighten-2 white-text'>
-                        {% set now = "now"|date('Ymd') %}
+                    <h2 class='title-section'>
+                        Le prochain évènement
+                        <small>L'association bouge !
+                            <span class='right badge pink lighten-2 white-text'>
+                                {% set now = "now"|date('Ymd') %}
 
-                        {% set diff = date(event.beginAt).diff(date("now")) %}
-                        {% set diffDays = diff.days %}
+                                {% set diff = date(event.beginAt).diff(date("now")) %}
+                                {% set diffDays = diff.days %}
 
-                         {% if now  <= event.endAt|date('Ymd') and now >= event.beginAt|date('Ymd') %}
-                             En cours
-                         {% elseif  now > event.endAt|date('Ymd')  %}
-                            Il y a {{ diffDays }} jours
-                         {% else %}
-                             Dans {{ diffDays }} jours
-                         {% endif %}
-                    </span>
-                </small>
-            </h2>
-            <div class="card-image" style="max-height: 300px; overflow: hidden;">
-                <a href='{{ path('shiawa_event_view', {'slug': event.slug}) }}'>
-                    <img src="{{ vich_uploader_asset(event.thumbnail, 'file') | imagine_filter('big_thumb') }}">
-                    <span class="card-title">{{ event.name|title }}</span>
-                </a>
+                                 {% if now  <= event.endAt|date('Ymd') and now >= event.beginAt|date('Ymd') %}
+                                     En cours
+                                 {% elseif  now > event.endAt|date('Ymd')  %}
+                                    Il y a {{ diffDays }} jours
+                                 {% else %}
+                                     Dans {{ diffDays }} jours
+                                 {% endif %}
+                            </span>
+                        </small>
+                    </h2>
+                    <div class="card-image" style="max-height: 300px; overflow: hidden;">
+                        <a href='{{ path('shiawa_event_view', {'slug': event.slug}) }}'>
+                            <img src="{{ vich_uploader_asset(event.thumbnail, 'file') | imagine_filter('big_thumb') }}">
+                            <span class="card-title">{{ event.name|title }}</span>
+                        </a>
+                    </div>
+                </div>
+                <div class='card-action center-align'>
+                    <a href='{{ path('shiawa_event_list') }}'>Voir nos évènements</a>
+                </div>
             </div>
-        </div>
-        <div class='card-action center-align'>
-            <a href='{{ path('shiawa_event_list') }}'>Voir nos évènements</a>
-        </div>
-    </div>
         {% endfor %}
     {% else %}
         <div class='card z-depth-1'>

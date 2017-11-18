@@ -36,6 +36,7 @@ class AppKernel extends Kernel
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
             new CKSource\Bundle\CKFinderBundle\CKSourceCKFinderBundle(),
+            new Eko\FeedBundle\EkoFeedBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

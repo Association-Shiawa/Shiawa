@@ -10,6 +10,10 @@ shiawa_event_view:
     path:     /event/{slug}
     defaults: { _controller: ShiawaEventBundle:Event:view }
 
+shiawa_event_next:
+    path:     /events/next-event
+    defaults: { _controller: ShiawaEventBundle:Event:next }
+
 shiawa_event_create:
     path:     /admin/event/create
     defaults: { _controller: "ShiawaEventBundle:Event:add" }
