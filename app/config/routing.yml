@@ -19,8 +19,8 @@ shiawa_blog:
     prefix:   /
 
 app:
-    resource: "@AppBundle/Resources/config/routing.yml"
-    prefix:   /
+    resource: "@AppBundle/Controller"
+    type: annotation
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

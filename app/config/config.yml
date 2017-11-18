@@ -10,7 +10,7 @@ imports:
 parameters:
     locale: fr
     roles: { 'Utilisateur': 'ROLE_USER', 'Admin': 'ROLE_ADMIN', 'Auteur': 'ROLE_AUTHOR', 'Adhérent': 'ROLE_ADHERENT' }
-    domain: shiawa.fr
+    domain: association-shiawa.fr
     mail: shiawa.project@gmail.com
     youtube.api.key: AIzaSyCoi1XYGaWGRul5-t0lpJlaJT9Lp25-ivc
     youtube.channel.id: UCgPqRGhrra-liY7N7OQSD0A

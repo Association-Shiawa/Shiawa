@@ -4,7 +4,7 @@ SHIAWA
 -->
 <html lang="fr">
 <head>
-    <title>{% block title %}Shiawa.fr{% endblock %} - Site actualité otaku</title>
+    <title>{% block title %}Shiawa{% endblock %} - Site actualité otaku</title>
     <meta charset="UTF-8">
 
     <meta name="google-site-verification" content="RqPJLTSk9eZncldWQJclR9yhMX4BUJJrQ-jDiItMhiY" />
@@ -18,28 +18,28 @@ SHIAWA
     <!-- Schema.dc -->
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
     <meta name="DC.coverage" content="France" />
-    <meta name="DC.description" content="{% block DC_description %}Shiawa.fr, le site d'actualité sur la
+    <meta name="DC.description" content="{% block DC_description %}Shiawa, le site d'actualité sur la
     Japanimation, le Cosplay et l'actualité japonaise ! Rejoignez la communauté des pandas.{% endblock
     %}" />
     <!-- A
     MODIFIER -->
     <meta name="DC.format" content="text/html" />
-    <meta name="DC.identifier" content="http://shiawa.fr" />
-    <meta name="DC.publisher" content="Association Shiawa - Shiawa.fr" />
-    <meta name="DC.title" content="{% block DC_title %}Shiawa.fr - Site d'actualité Anime, Cosplay, Culture Pop.
+    <meta name="DC.identifier" content="http://association-shiawa.fr" />
+    <meta name="DC.publisher" content="Association Shiawa" />
+    <meta name="DC.title" content="{% block DC_title %}Shiawa - Site d'actualité Anime, Cosplay, Culture Pop.
     Japonaise{% endblock %}" />
     <!-- A MODIFIER
      -->
     <meta name="DC.type" content="Text" />
-    <meta name="description" content="{% block desc %}Shiawa.fr, le site d'actualité sur la
+    <meta name="description" content="{% block desc %}Shiawa, le site d'actualité sur la
     Japanimation, le Cosplay et l'actualité japonaise ! Rejoignez la communauté des pandas.{% endblock %}"> <!-- A MODIFIER -->
-    <meta name="keywords" content="Shiawa , Shiawa.fr, anime, animes, fansub, japanimation, japan, mangas, manga, streaming, scantrads, scan, stream, drama, OST, AMV, Association, Japon, Cosplay">
+    <meta name="keywords" content="Shiawa, anime, animes, fansub, japanimation, japan, mangas, manga, streaming, scantrads, scan, stream, drama, OST, AMV, Association, Japon, Cosplay">
     <!-- RSN : FB -->
     <meta property="og:url" content="{{ app.request.uri|url_encode }}" /> <!-- A MODIFIER -->
     <meta property="og:image" content="{%  block OG_image %}http://puu.sh/o7wOs/14be55f37a.png{% endblock %}" /> <!-- A MODIFIER -->
-    <meta property="og:title" content="{%  block OG_title %}Shiawa.fr - Site d'actualité Anime, Cosplay, Culture Pop.
+    <meta property="og:title" content="{%  block OG_title %}Shiawa - Site d'actualité Anime, Cosplay, Culture Pop.
     Japonaise{% endblock %}" /> <!-- A MODIFIER -->
-    <meta property="og:description" content="{%  block OG_desc %}Shiawa.fr, le site d'actualité sur la
+    <meta property="og:description" content="{%  block OG_desc %}Shiawa, le site d'actualité sur la
     Japanimation, le Cosplay et l'actualité japonaise ! Rejoignez la communauté des pandas.{% endblock %}" /> <!-- A MODIFIER -->
     <!-- Google Verification -->
     <meta name="google-site-verification" content="kEB2-IqD2qVsqdPFPrEd-yYeIc1epBeaDePVshpBmBg" />
@@ -89,6 +89,11 @@ SHIAWA
                     </p>
                     <p class="grey-text text-lighten-4">
                         Nous agissons aussi dans l'évenementiel, nous participons à la réussite des salons principalement dans le sud de la France. Vidéos, Interviews, Jeux, nos pandas s'occupent de tout !
+                    </p>
+                    <p>
+                        Suivez notre actualité via notre
+                        <a class="grey-text text-lighten-3" href="{{ path('rss_feeds') }}">Flux RSS<i class="material-icons ">rss_feed</i></a>
+                        ou via les réseaux sociaux.
                     </p>
                     <hr />
                     <div class='row'>

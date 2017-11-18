@@ -16,14 +16,14 @@
         Evenement auquel vous pouvez retrouver Shiawa !{% endfor %}...
 {% endblock %}
 
-{% block DC_title %}{{ event.name|title }} - Shiawa.fr{% endblock %}
+{% block DC_title %}{{ event.name|title }} - Shiawa{% endblock %}
 
-{%  block OG_title %}{{ event.name|title }} - Shiawa.fr{% endblock %}
+{%  block OG_title %}{{ event.name|title }} - Shiawa{% endblock %}
 
 {%  block OG_image %}{{ vich_uploader_asset(event.thumbnail, 'file') | imagine_filter('middle_thumb') }}{% endblock %}
 
 {% block title %}
-   {{ event.name }} - Shiawa.fr
+   {{ event.name }} - Shiawa
 {% endblock %}
 
 {% block content %}

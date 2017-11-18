@@ -12,14 +12,14 @@
     {% for letter in episode.anime.synopsis|split('')|slice(0,300) %}{{ letter }}{% endfor %}
 {% endblock %}
 
-{% block DC_title %}{{ episode.title }} - Shiawa.fr{% endblock %}
+{% block DC_title %}{{ episode.title }} - Shiawa{% endblock %}
 
-{%  block OG_title %}{{ episode.title }} - Shiawa.fr{% endblock %}
+{%  block OG_title %}{{ episode.title }} - Shiawa{% endblock %}
 
 {%  block OG_image %}{{ episode.anime.image }}{% endblock %}
 
 {% block title %}
-   {{ episode.title }} - Shiawa.fr
+   {{ episode.title }} - Shiawa
 {% endblock %}
 
 {% block content %}

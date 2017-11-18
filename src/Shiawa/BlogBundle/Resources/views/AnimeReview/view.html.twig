@@ -12,14 +12,14 @@
     {% if review.anime is not null %}{% for letter in review.anime.synopsis|split('')|slice(0,300) %}{{ letter }}{% endfor %}... {% endif %}
 {% endblock %}
 
-{% block DC_title %}{{ review.title }} - Shiawa.fr{% endblock %}
+{% block DC_title %}{{ review.title }} - Shiawa{% endblock %}
 
-{%  block OG_title %}{{ review.title }} - Shiawa.fr{% endblock %}
+{%  block OG_title %}{{ review.title }} - Shiawa{% endblock %}
 
 {%  block OG_image %}{{ vich_uploader_asset(review.thumbnail, 'file') | imagine_filter('middle_thumb') }}{% endblock %}
 
 {% block title %}
-    {{ review.title }} - Shiawa.fr
+    {{ review.title }} - Shiawa
 {% endblock %}
 
 {% block content %}

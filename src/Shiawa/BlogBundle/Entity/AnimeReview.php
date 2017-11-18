@@ -4,6 +4,7 @@ namespace Shiawa\BlogBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Eko\FeedBundle\Item\Writer\RoutedItemInterface;
 use Shiawa\UserBundle as User;
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -13,7 +14,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * @ORM\Table(name="shiawa_anime_review")
  * @ORM\Entity(repositoryClass="Shiawa\BlogBundle\Repository\AnimeReviewRepository")
  */
-class AnimeReview
+class AnimeReview implements RoutedItemInterface
 {
     /**
      * @var int
@@ -666,5 +667,39 @@ class AnimeReview
     public function getThumbnail()
     {
         return $this->thumbnail;
+    }
+
+
+
+    public function getFeedItemTitle()
+    {
+        return $this->getTitle();
+    }
+
+    public function getFeedItemDescription()
+    {
+        return $this->getIntroduction();
+    }
+
+    public function getFeedItemRouteName()
+    {
+        return 'shiawa_anime_review_view';
+    }
+
+    public function getFeedItemRouteParameters()
+    {
+        return [
+            'slug' => $this->getSlug()
+        ];
+    }
+
+    public function getFeedItemUrlAnchor()
+    {
+        return '';
+    }
+
+    public function getFeedItemPubDate()
+    {
+        return $this->getCreatedAt();
     }
 }
