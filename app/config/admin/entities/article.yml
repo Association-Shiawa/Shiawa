@@ -19,27 +19,26 @@ easy_admin:
             list:
                 fields:
                     - id
-                    - { property: 'published', type: 'toggle' }
-                    - title
+                    - { property: 'published', type: 'toggle', label: 'Publié ?' }
+                    - { property: 'title', label: 'Titre' }
                     - { property: 'thumbnail', label: 'Couverture', type: 'image', base_path: '%app.path.blog_file%', template: 'easy_admin/vich_uploader_image.html.twig' }
-                    - { property: 'createdAt'}
+                    - { property: 'createdAt', label: 'Crée le'}
                     - tags
-                    - category
+                    - { property: 'category', label: 'Categorie' }
             form:
                 fields:
-                    - { type: 'group', css_class: 'col-sm-8', label: 'Basic information', icon: 'pencil' }
-                    - { property: 'title', css_class: 'large' }
-                    - { property: 'summary', css_class: 'large' }
-                    - { property: 'content', type: 'ckeditor' }
+                    - { type: 'group', css_class: 'col-sm-8', label: 'Général', icon: 'pencil' }
+                    - { property: 'title', label: 'Titre', css_class: 'large' }
+                    - { property: 'summary', label: 'Résumé', css_class: 'large' }
+                    - { property: 'content', label: 'Contenu', type: 'ckeditor' }
                     - { type: 'divider' }
-                    - { property: 'category', type: 'easyadmin_autocomplete', type_options: { class: 'Shiawa\BlogBundle\Entity\Category' } }
-                    - { type: 'group', css_class: 'col-sm-4', label: 'Product Details', icon: 'cube' }
-                    - { type: 'section', label: 'Advanced Settings', icon: 'warning', help: 'Reserved for administrators use' }
-                    - { property: 'published', label: 'Published' }
-                    - { property: 'createdAt' }
+                    - { property: 'category', label: 'Categorie', type: 'easyadmin_autocomplete', type_options: { class: 'Shiawa\BlogBundle\Entity\Category' } }
+                    - { type: 'group', css_class: 'col-sm-4', label: 'Configuration', icon: 'cube', help: 'Si vous hésitez, reportez-vous à un administrateur' }
+                    - { property: 'published', label: 'Publié ?', label: 'Published' }
+                    - { property: 'createdAt', label: 'Crée le' }
                     - { property: 'tags', type: 'Shiawa\BlogBundle\Form\Type\TagsType' }
-                    - { property: 'event' }
-                    - { property: 'chapter' }
-                    - { type: 'group', css_class: 'col-sm-4', label: 'Attachments', icon: 'paperclip' }
+                    - { property: 'event', label: 'Evénement' }
+                    - { property: 'chapter', label: 'Chapitre' }
+                    - { type: 'group', css_class: 'col-sm-4', label: 'Fichiers', icon: 'paperclip' }
 #                    - { property: 'thumbnail', type: 'vich_image', type_options: { required: true } }
-                    - { property: 'thumbnail', type: 'Shiawa\FileBundle\Form\Type\FileType', type_options: { data_class: 'Shiawa\FileBundle\Entity\BlogFile' } }
+                    - { property: 'thumbnail', label: 'Miniature', type: 'Shiawa\FileBundle\Form\Type\FileType', type_options: { data_class: 'Shiawa\FileBundle\Entity\BlogFile' } }
