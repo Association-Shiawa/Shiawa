@@ -17,8 +17,9 @@ class FileType extends AbstractType
     {
         $builder
             ->add('file', VichImageType::class, [
+                'label' => 'fichier',
                 'required' => false,
-                'allow_delete' => true,
+                'allow_delete' => false,
                 'download_label' => '...',
                 'download_uri' => true,
                 'image_uri' => true,

@@ -18,21 +18,21 @@ easy_admin:
             list:
                 fields:
                     - id
-                    - title
-                    - createdAt
-                    - author
-                    - chapters
+                    - { property: 'title', label: 'Titre'}
+                    - { property: 'createdAt', label: 'Créé le'}
+                    - { property: 'author', label: 'Auteur' }
+                    - { property: 'chapters', label: 'Chapitres'}
 #                    - description
-                    - tags
-                    - category
-                    - { property: 'thumbnail', type: 'image', base_path: '%app.path.blog_file%', template: 'easy_admin/vich_uploader_image.html.twig' }
+                    - { property: 'tags'}
+                    - { property: 'category', label: 'Catégorie' }
+                    - { property: 'thumbnail', label: 'Miniature', type: 'image', base_path: '%app.path.blog_file%', template: 'easy_admin/vich_uploader_image.html.twig' }
             form:
                 fields:
-                    - title
-                    - category
+                    - { property: 'title', label: 'Titre'}
+                    - { property: 'category', label: 'Catégorie' }
                     - { property: 'tags', type: 'Shiawa\BlogBundle\Form\Type\TagsType' }
-                    - { property: 'thumbnail', type: 'Shiawa\FileBundle\Form\Type\FileType', type_options: { data_class: 'Shiawa\FileBundle\Entity\BlogFile' } }
+                    - { property: 'thumbnail', label: 'Miniature', type: 'Shiawa\FileBundle\Form\Type\FileType', type_options: { data_class: 'Shiawa\FileBundle\Entity\BlogFile' } }
                     - description
-                    - createdAt
-                    - { property: 'chapters', type: 'collection', type_options: { entry_type: 'Shiawa\BlogBundle\Form\ChapterType' } }
+                    - { property: 'createdAt', label: 'Créé le'}
+                    - { property: 'chapters', label: 'Chapitres', type: 'collection', type_options: { entry_type: 'Shiawa\BlogBundle\Form\ChapterType' } }
 
