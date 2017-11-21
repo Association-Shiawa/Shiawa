@@ -16,7 +16,7 @@
 
 {%  block OG_title %}{{ review.title }} - Shiawa{% endblock %}
 
-{%  block OG_image %}{{ vich_uploader_asset(review.thumbnail, 'file') | imagine_filter('middle_thumb') }}{% endblock %}
+{%  block OG_image %}{{ vich_uploader_asset(review.thumbnail, 'file', 'Shiawa\\FileBundle\\Entity\\BlogFile') | imagine_filter('middle_thumb') }}{% endblock %}
 
 {% block title %}
     {{ review.title }} - Shiawa

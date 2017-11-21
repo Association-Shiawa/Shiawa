@@ -154,7 +154,8 @@ class MoveFileToNewDirCommand extends ContainerAwareCommand
                 /** @var Anime $anime */
                 $anime = $em->find(Anime::class, $id);
                 if($anime) {
-                    $output->writeln('Review Title : '.$anime->getTitle());
+                    $output->writeln('Anime Title : '.$anime->getTitle());
+                    $blogFile = $this->setFileInfo($file, $blogFile, $anime->getThumbnail());
                     $anime->setThumbnail($blogFile);
                     $this->moveFile($blogFile);
                     $em->persist($anime);
@@ -170,16 +171,24 @@ class MoveFileToNewDirCommand extends ContainerAwareCommand
         $second = substr($filename, 1, 1);
         if($file instanceof BlogFile) {
             $path = $this->getContainer()->getParameter('app.fullpath.blog_file');
-            $path .= $path.'/'.$first.'/'.$second;
+            $path .= '/'.$first.'/'.$second;
         }else {
             $path = $this->getContainer()->getParameter('app.fullpath.user_pic');
         }
 
+        dump($first, $second, $path, $filename);
+
         $file->getFile()->move($path, $filename);
     }
 
-    private function setFileInfo(File $file, \Shiawa\FileBundle\Entity\File $object, \Shiawa\FileBundle\Entity\File $oldFile) {
-        $author = $oldFile->getAuthor();
+    private function setFileInfo(File $file, \Shiawa\FileBundle\Entity\File $object, \Shiawa\FileBundle\Entity\File $oldFile = null) {
+        if($oldFile)
+        {
+            $author = $oldFile->getAuthor();
+        } else {
+            $em = $this->getContainer()->get('doctrine.orm.default_entity_manager');
+            $author = $em->getRepository('ShiawaUserBundle:User')->findOneBy(['id' => 1]);
+        }
         $object->setFile($file);
         $object->setFilename($file->getFilename());
         $object->setAuthor($author);

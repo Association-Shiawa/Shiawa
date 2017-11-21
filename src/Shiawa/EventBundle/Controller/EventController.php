@@ -55,13 +55,20 @@ class EventController extends Controller
         ));
     }
 
-    public function nextAction()
+    public function nextAction(Request $request)
     {
         /** @var Event $nextEvent */
         $nextEvent = $this->getDoctrine()
             ->getManager()
             ->getRepository('ShiawaEventBundle:Event')
-            ->getNext(1)[0];
+            ->getNext(1);
+
+        if(empty($nextEvent)) {
+            $request->getSession()->getFlashbag()->add('warning', "Il n'y a pas de prochain événement :(");
+            return $this->redirectToRoute('shiawa_event_list');
+        }
+
+        $nextEvent = $nextEvent[0];
 
         return $this->redirectToRoute('shiawa_event_view', [
             'slug' => $nextEvent->getSlug()

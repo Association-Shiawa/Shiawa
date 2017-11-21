@@ -19,7 +19,7 @@ class AnimeReviewController extends Controller
         $em = $this->getDoctrine()->getManager();
         $reviewRep = $em->getRepository('ShiawaBlogBundle:AnimeReview');
 
-        $nbPerPage = 3;
+        $nbPerPage = 9;
 
         $listReview = $reviewRep->getReview($page, $nbPerPage);
         $nbPage = ceil(count($listReview)/$nbPerPage);

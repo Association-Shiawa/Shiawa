@@ -1,26 +1,46 @@
 {% extends "ShiawaEventBundle:Event:layout.html.twig" %}
 
 {% block body %}
+    <div class="container">
+
+    <div class="row">
+        <div class="col l10 m12 offset-l1">
+            <div class="card-panel pink lighten-2 white-text">
+                <h2>
+                    Toutes les événements de Shiawa
+                </h2>
+            </div>
+        </div>
+    </div>
     <section class="row">
     {% for event in listEvents %}
 
-        <div class='col l4 m6 s12'>
-            <div class="card-custom">
+        <div class='col l12 m12 s12'>
+
+            <div class="card horizontal custom">
                 <div class="card-image">
-                    {% if event.thumbnail is not null %}
-                        <img src='{{ vich_uploader_asset(event.thumbnail, 'file', 'Shiawa\\FileBundle\\Entity\\BlogFile') | imagine_filter('middle_thumb') }}' />
-                    {% endif %}
-                    <a href="{{ path('shiawa_event_view', {'slug': event.slug})}}" class="card-title">
-                        {{ event.name }} - {{ event.beginAt|date('d/m/Y') }}
+                     <a href='{{ path('shiawa_event_view', {'slug': event.slug}) }}'>
+                         {% if event.thumbnail is not null %}
+                            <img src='{{ vich_uploader_asset(event.thumbnail, 'file', 'Shiawa\\FileBundle\\Entity\\BlogFile') | imagine_filter('middle_thumb') }}' />
+                        {% endif %}
                     </a>
                 </div>
-                <div class="card-content truncate">
-                    {{ event.description|raw }}
-                </div>
-                <div class="card-action">
-                    <a href="{{ path('shiawa_event_view', {'slug': event.slug})}}" class="pink-text text-accent-1">
-                        Lire : {{ event.name }}
-                    </a>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h3 style="font-size: 2rem; margin: 5px;">
+                            <a href='{{ path('shiawa_event_view', {'slug': event.slug}) }}'>
+                                {{ event.name }}
+                            </a>
+                        </h3>
+                        <p style="font-size: .8rem;">
+                            {{ event.description | raw  }}
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href='{{ path('shiawa_event_view', {'slug': event.slug}) }}'>
+                            Lire : {{ event.name }}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,4 +68,6 @@
             </ul>
         </div>
     {% endif %}
+
+    </div>
 {% endblock %}

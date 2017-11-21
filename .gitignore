@@ -36,6 +36,7 @@ web/assets/
 web/build
 node_modules
 web/feed
+feed
 
 # Assets managed by Bower
 /web/assets/vendor/

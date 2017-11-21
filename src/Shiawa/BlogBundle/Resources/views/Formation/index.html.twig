@@ -1,21 +1,46 @@
 {% extends "ShiawaBlogBundle:Formation:layout.html.twig" %}
 
 {% block body %}
-    <section class="row">
+    <div class="container">
+
+        <div class="row">
+            <div class="col l10 m12 offset-l1">
+                <div class="card-panel pink lighten-2 white-text">
+                    <h2>
+                        Toutes les tutoriels de Shiawa
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <section class="row">
         {% for formation in listFormations %}
 
-            <div class='col l3 m4 s12'>
-                <div class="card">
+            <div class='col l12 m12 s12'>
+
+                <div class="card horizontal custom">
                     <div class="card-image">
-                        {#<img src="{{ article.thumbnail ? asset(article.thumbnail.getWebPath) }}">#}
-                        <a href="{{ path('shiawa_formation_view', {'slug': formation.slug, 'category': formation.category.slug} ) }}" class="card-title">
-                            {{ formation.title }} - {{ formation.createdAt|date('d/m/Y') }}
+                        <a href='{{ path('shiawa_formation_view', {'slug': formation.slug, 'category': formation.category.slug}) }}'>
+                            {% if formation.thumbnail is not null %}
+                                <img src='{{ vich_uploader_asset(formation.thumbnail, 'file', 'Shiawa\\FileBundle\\Entity\\BlogFile') | imagine_filter('middle_thumb') }}' />
+                            {% endif %}
                         </a>
                     </div>
-                    <div class="card-action">
-                        <a href="{{ path('shiawa_formation_view', {'slug': formation.slug, 'category': formation.category.slug} ) }}" class="pink-text text-accent-1">
-                            Lire : {{ formation.title }}
-                        </a>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <h3 style="font-size: 2rem; margin: 5px;">
+                                <a href='{{ path('shiawa_formation_view', {'slug': formation.slug, 'category': formation.category.slug}) }}'>
+                                    {{ formation.title }}
+                                </a>
+                            </h3>
+                            <p style="font-size: .8rem;">
+                                {{ formation.description | raw  }}
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a href='{{ path('shiawa_formation_view', {'slug': formation.slug, 'category': formation.category.slug}) }}'>
+                                Lire : {{ formation.title }}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -23,7 +48,8 @@
         {% else %}
             Pas (encore !) de tutoriel
         {% endfor %}
-    </section>
+        </section>
+    </div>
 
     {% if nbPages == 1 %}
     {% else %}
