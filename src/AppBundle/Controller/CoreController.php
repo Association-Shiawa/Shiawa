@@ -101,7 +101,6 @@ class CoreController extends Controller
             $message = \Swift_Message::newInstance()
                 ->setSubject($form->get('subject')->getData())
                 ->setFrom($form->get('email')->getData())
-                //->setTo('shiawa.project@gmail.com')
                 ->setTo($this->getParameter('mail'))
                 ->setBody(
                     $this->renderView(
