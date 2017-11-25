@@ -34,7 +34,6 @@ class UserController extends Controller
 
         $file = $request->files->get('avatar_avatar');
         $submitted['avatar']['file'] = $file;
-        dump($file, $form);
 
         $form->submit($submitted);
 
