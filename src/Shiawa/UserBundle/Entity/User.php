@@ -275,7 +275,6 @@ class User extends BaseUser
      */
     public function setAvatar($profilePicture = null)
     {
-        dump($profilePicture);
         if (empty($profilePicture->getFile())) {
             return;
         }
